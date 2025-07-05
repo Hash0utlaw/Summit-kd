@@ -15,7 +15,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Menu, Mountain, Home, Building } from "lucide-react"
+import { Menu, Mountain } from "lucide-react"
 
 const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a">>(
   ({ className, title, children, ...props }, ref) => {
@@ -43,35 +43,28 @@ ListItem.displayName = "ListItem"
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
-  const residentialServiceLinks = [
+  const residentialLinks = [
     {
-      title: "Residential Roofing",
+      title: "Residential Roofing Hub",
       href: "/services/residential-roofing",
       description: "High-quality roofing solutions for your home.",
     },
-    {
-      title: "Slate Roofing",
-      href: "/services/slate-roofing",
-      description: "Elegant and enduring slate for a timeless look.",
-    },
+    { title: "Slate Roofing", href: "/services/slate-roofing", description: "Elegant and enduring slate." },
     {
       title: "Cedar Shake Roofing",
       href: "/services/cedar-shake-roofing",
-      description: "Natural beauty and excellent insulation.",
+      description: "Natural beauty and insulation.",
     },
-    {
-      title: "Tile Roofing",
-      href: "/services/tile-roofing",
-      description: "Durable and stylish clay or concrete tiles.",
-    },
+    { title: "Tile Roofing", href: "/services/tile-roofing", description: "Durable and stylish clay or concrete." },
     {
       title: "Metal Shingles",
       href: "/services/metal-shingles",
-      description: "Modern aesthetics with unmatched longevity.",
+      description: "Modern aesthetics, unmatched longevity.",
     },
+    { title: "Roof Repairs", href: "/services/roof-repairs", description: "Prompt and effective repairs." },
   ]
 
-  const commercialServiceLinks = [
+  const commercialLinks = [
     {
       title: "Commercial Roofing Hub",
       href: "/services/commercial-roofing",
@@ -80,17 +73,27 @@ export default function Header() {
     {
       title: "Modified Bitumen",
       href: "/services/commercial/modified-bitumen",
-      description: "Time-tested, multi-layer protection for flat roofs.",
+      description: "Time-tested, multi-layer protection.",
     },
     {
       title: "Single-Ply (TPO/EPDM)",
       href: "/services/commercial/single-ply",
-      description: "Modern, lightweight, and energy-efficient systems.",
+      description: "Modern, lightweight, energy-efficient.",
     },
     {
       title: "Fluid-Applied Roofing",
       href: "/services/commercial/fluid-applied",
-      description: "Seamless, restorative coatings to extend roof life.",
+      description: "Seamless, restorative coatings.",
+    },
+    {
+      title: "Commercial Roof Repair",
+      href: "/services/commercial/repair",
+      description: "Fast and reliable repairs for all systems.",
+    },
+    {
+      title: "Inspections & Maintenance",
+      href: "/services/commercial/inspections-maintenance",
+      description: "Proactive plans to protect your investment.",
     },
   ]
 
@@ -113,48 +116,31 @@ export default function Header() {
             <NavigationMenuItem>
               <NavigationMenuTrigger>Services</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] lg:w-[600px] lg:grid-cols-2 ">
-                  <li className="row-span-4">
-                    <NavigationMenuLink asChild>
-                      <a
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-orange-50 to-orange-100 p-6 no-underline outline-none focus:shadow-md"
-                        href="/services/residential-roofing"
-                      >
-                        <Home className="h-6 w-6 text-orange-500" />
-                        <div className="mb-2 mt-4 text-lg font-medium text-orange-800">Residential Services</div>
-                        <p className="text-sm leading-tight text-orange-700">
-                          Protecting your home with high-quality roofing solutions, from repairs to full replacements.
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  {residentialServiceLinks.map((service) => (
-                    <ListItem key={service.title} href={service.href} title={service.title}>
-                      {service.description}
-                    </ListItem>
-                  ))}
+                <div className="grid w-[600px] grid-cols-2 gap-4 p-4">
+                  {/* Residential column */}
+                  <div className="flex flex-col space-y-1">
+                    <h3 className="px-3 py-2 font-medium text-orange-500">Residential Services</h3>
+                    <ul className="flex flex-col">
+                      {residentialLinks.map((link) => (
+                        <ListItem key={link.title} href={link.href} title={link.title}>
+                          {link.description}
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </div>
 
-                  <li className="row-span-4">
-                    <NavigationMenuLink asChild>
-                      <a
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-blue-50 to-blue-100 p-6 no-underline outline-none focus:shadow-md"
-                        href="/services/commercial-roofing"
-                      >
-                        <Building className="h-6 w-6 text-blue-600" />
-                        <div className="mb-2 mt-4 text-lg font-medium text-blue-800">Commercial Services</div>
-                        <p className="text-sm leading-tight text-blue-700">
-                          Durable and efficient systems for businesses, industrial facilities, and multi-family
-                          properties.
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  {commercialServiceLinks.map((service) => (
-                    <ListItem key={service.title} href={service.href} title={service.title}>
-                      {service.description}
-                    </ListItem>
-                  ))}
-                </ul>
+                  {/* Commercial column */}
+                  <div className="flex flex-col space-y-1">
+                    <h3 className="px-3 py-2 font-medium text-blue-600">Commercial Services</h3>
+                    <ul className="flex flex-col">
+                      {commercialLinks.map((link) => (
+                        <ListItem key={link.title} href={link.href} title={link.title}>
+                          {link.description}
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -213,27 +199,42 @@ export default function Header() {
                     Services
                   </AccordionTrigger>
                   <AccordionContent className="pl-4">
-                    <Link
-                      href="/services/residential-roofing"
-                      className="block py-2 font-semibold text-gray-600 hover:text-orange-500"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Residential Services
-                    </Link>
-                    <Link
-                      href="/services/commercial-roofing"
-                      className="block py-2 font-semibold text-gray-600 hover:text-blue-600"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Commercial Services
-                    </Link>
-                    <Link
-                      href="/services/roof-repairs"
-                      className="block py-2 font-semibold text-gray-600 hover:text-gray-900"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Roof Repairs
-                    </Link>
+                    <Accordion type="multiple" className="w-full">
+                      <AccordionItem value="residential" className="border-b-0">
+                        <AccordionTrigger className="text-base font-semibold text-orange-500 hover:no-underline">
+                          Residential
+                        </AccordionTrigger>
+                        <AccordionContent className="pl-4">
+                          {residentialLinks.map((link) => (
+                            <Link
+                              key={link.href}
+                              href={link.href}
+                              className="block py-2 text-gray-600 hover:text-orange-500"
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              {link.title}
+                            </Link>
+                          ))}
+                        </AccordionContent>
+                      </AccordionItem>
+                      <AccordionItem value="commercial" className="border-b-0">
+                        <AccordionTrigger className="text-base font-semibold text-blue-600 hover:no-underline">
+                          Commercial
+                        </AccordionTrigger>
+                        <AccordionContent className="pl-4">
+                          {commercialLinks.map((link) => (
+                            <Link
+                              key={link.href}
+                              href={link.href}
+                              className="block py-2 text-gray-600 hover:text-blue-600"
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              {link.title}
+                            </Link>
+                          ))}
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
