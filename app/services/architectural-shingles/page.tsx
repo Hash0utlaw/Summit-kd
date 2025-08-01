@@ -7,7 +7,7 @@ import { CheckCircle } from "lucide-react"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "Architectural Shingle Roofing",
+  title: "Architectural Shingle Roofing | Summit Roofing Professionals",
   description:
     "Discover the beauty and durability of architectural shingles with Summit Roofing. We offer expert installation for a high-performance, dimensional look in Alabama and Georgia.",
 }
@@ -45,9 +45,7 @@ export default function ArchitecturalShinglesPage() {
       <ServicePageHero
         title="Architectural Shingle Roofing"
         subtitle="Dimensional Beauty, Lasting Performance"
-        backgroundImage="/images/architectural-shingles.png"
-        ctaText="Get a Quote for Architectural Shingles"
-        ctaLink="/contact"
+        imageUrl="/images/architectural-shingles.png"
       />
 
       <section className="py-16 bg-white">
@@ -102,13 +100,13 @@ export default function ArchitecturalShinglesPage() {
         </div>
       </section>
 
-      <FaqSection faqItems={faqItems} />
+      <FaqSection faqs={faqItems} title="Architectural Shingle Questions" />
 
       <CtaSection
         title="Ready to Upgrade Your Roof?"
         description="Contact Summit Roofing Professionals today for a free, no-obligation estimate on a beautiful new architectural shingle roof."
-        ctaText="Schedule Your Free Inspection"
-        ctaLink="/contact"
+        buttonText="Schedule Your Free Inspection"
+        buttonLink="/contact"
       />
     </>
   )
