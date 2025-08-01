@@ -71,8 +71,8 @@ export default function ContactCTAHomepage() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8446.PNG-iOVvKhMJ35bQqNiLCqLPeH1iNmHwQp.jpeg"
-                alt="Beautiful residential home with new roof installed by Summit Roofing Professionals"
+                src="/images/owner-in-front-of-house-2.jpeg"
+                alt="Owner of Summit Roofing Professionals in front of a completed residential project"
                 width={600}
                 height={400}
                 className="w-full h-auto object-cover"

@@ -25,9 +25,9 @@ const testimonials = [
     rating: 5,
     date: "June 29, 2024",
     review:
-      "We cannot say enough about the fabulous reroofing job the team at Summit Roofing Professionals did from start to finish, from initial consultation with us and our insurance company to the wonderful finish. To say are pleased and satisfied is an understatement. This team is highly professional, hard-working, conscientious, and so very courteous! They went out of their way to accommodate us at every turn, from coverage of shrubs and plants to placing all our outdoor furniture back in the exact spot! Their clean-up was swift and immaculate and their attention to detail was amazing. But most of all we were so impressed by their courtesy and manners! Thank you, Summit Roofing Professionals! You get an A+.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8435.PNG-kHcxPRiMJUmvv5ALmv0d3Ieh2Sy3Ph.jpeg",
-    alt: "Bill P. customer review for Summit Roofing Professionals",
+      "We cannot say enough about the fabulous reroofing job the team at Summit Roofing Professionals did from start to finish... To say are pleased and satisfied is an understatement. This team is highly professional, hard-working, conscientious, and so very courteous!",
+    image: "/images/testimonials/bill-p.jpeg",
+    alt: "Customer Bill P. with a Summit Roofing representative in front of his new roof.",
   },
   {
     id: 3,
@@ -36,12 +36,34 @@ const testimonials = [
     rating: 5,
     date: "July 6, 2024",
     review:
-      "Davis got my whole roof replaced even after previously being denied by my insurance company. It pays to know the process and how to work the system insurance companies set up for their (not its customers) benefit. Every detail of my job was handled with excellence and diligence, something the owner probably learned during his military service. Davis even came back after my job was closed out to make sure every detail was taken care of.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8436.PNG-mXDJt2UhWchZl5nhPDzqsz1bOE8ltX.jpeg",
-    alt: "Rick B. customer review for Summit Roofing Professionals",
+      "Davis got my whole roof replaced even after previously being denied by my insurance company. It pays to know the process... Every detail of my job was handled with excellence and diligence, something the owner probably learned during his military service.",
+    image: "/images/testimonials/rick-b.jpeg",
+    alt: "A new roof installed by Summit Roofing on Rick B.'s home.",
   },
   {
     id: 4,
+    name: "Eric S.",
+    location: "Alabama",
+    rating: 5,
+    date: "July 15, 2024",
+    review:
+      "The team at Summit Roofing was fantastic. They handled everything with my insurance and delivered a high-quality roof. The process was smooth and professional from start to finish. Highly recommend!",
+    image: "/images/testimonials/eric-s.jpeg",
+    alt: "Customer Eric S. getting a new roof from Summit Roofing Professionals.",
+  },
+  {
+    id: 5,
+    name: "Davis, Owner",
+    location: "Alabama & Georgia",
+    rating: 5,
+    date: "August 1, 2025",
+    review:
+      "As the owner, I personally stand behind every roof we build. My commitment is to bring military precision, integrity, and top-tier craftsmanship to your home. We're not just building roofs; we're protecting families.",
+    image: "/images/owner-in-front-of-house-1.jpeg",
+    alt: "Davis, owner of Summit Roofing Professionals, in front of a completed residential roofing project.",
+  },
+  {
+    id: 6,
     name: "Brooklyn Lundy",
     location: "Georgia",
     rating: 5,
@@ -52,17 +74,7 @@ const testimonials = [
     alt: "Brooklyn Lundy customer review for Summit Roofing Professionals",
   },
   {
-    id: 5,
-    name: "Dustin Hudmon",
-    location: "Alabama",
-    rating: 5,
-    date: "April 29, 2024",
-    review: "Great company! Went above and beyond!",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8438.PNG-Ww03EAqESdy3u2rUvls9GyhEsOa7cE.jpeg",
-    alt: "Dustin Hudmon customer review for Summit Roofing Professionals",
-  },
-  {
-    id: 6,
+    id: 7,
     name: "Caitlin Foley",
     location: "Georgia",
     rating: 5,
@@ -71,28 +83,6 @@ const testimonials = [
       "Summit Roofing just replaced my roof, and I'm thrilled! They got my insurance to pay so it didn't cost me a dollar! The team was super professional, quick, and friendly. They finished on time and my roof looks amazing 😍. Highly recommend!",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8443.PNG-SOft8s856MTd8SjxEp1uvij3H9eGvZ.jpeg",
     alt: "Caitlin Foley customer review for Summit Roofing Professionals",
-  },
-  {
-    id: 7,
-    name: "Rachel Nolan",
-    location: "Alabama",
-    rating: 5,
-    date: "April 21, 2024",
-    review:
-      "I had a great experience with this company. They completed the work efficiently and ensured everything was thoroughly cleaned up afterward. The crew was polite, respectful, and maintained a high level of professionalism throughout the entire project. I highly recommend them for anyone in need of roofing services.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8439.PNG-lR8DxegipB0UoGy8WkXfYSFexwYmev.jpeg",
-    alt: "Rachel Nolan customer review for Summit Roofing Professionals",
-  },
-  {
-    id: 8,
-    name: "Rick Byrd",
-    location: "Georgia",
-    rating: 5,
-    date: "May 7, 2024",
-    review:
-      "High-quality company operated by a high-quality individual. Davis always did what he said he would do, when he said he would do it. I had been denied a roof claim 2 years ago, so I was reluctant to try again; however, Davis made it happen this time. His approach working with insurance companies is highly successful, because he knows what they look for and provides it. My roof approval was quick and painless.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8434.PNG-hCgY3NHkInlx0RpdwwU5UiRy3fajUl.jpeg",
-    alt: "Rick Byrd customer review for Summit Roofing Professionals",
   },
 ]
 
@@ -146,7 +136,7 @@ export default function RotatingTestimonials() {
                   src={currentTestimonial.image || "/placeholder.svg"}
                   alt={currentTestimonial.alt}
                   width={600}
-                  height={400}
+                  height={600}
                   className="w-full h-64 md:h-full object-cover"
                   priority
                 />

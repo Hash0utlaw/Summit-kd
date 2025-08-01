@@ -7,7 +7,7 @@ const featuredReviews = [
     location: "Alabama",
     review:
       "Davis got my whole roof replaced even after previously being denied by my insurance company. Every detail was handled with excellence and diligence.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8436.PNG-mXDJt2UhWchZl5nhPDzqsz1bOE8ltX.jpeg",
+    image: "/images/testimonials/rick-b.jpeg",
     rating: 5,
   },
   {
