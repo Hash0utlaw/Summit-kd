@@ -1,7 +1,9 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import ServicePageHero from "@/components/service-page-hero"
 import FaqSection from "@/components/faq-section"
 import CtaSection from "@/components/cta-section"
+import { Card, CardContent, CardFooter, CardTitle } from "@/components/ui/card"
 import { CheckCircle } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -19,7 +21,7 @@ const residentialFaqs = [
   {
     question: "What type of shingles should I choose?",
     answer:
-      "The best shingle type depends on your budget, desired aesthetic, and longevity goals. We offer a wide range of options, including asphalt, metal, and architectural shingles, and can help you choose the best fit for your home.",
+      "The best shingle type depends on your budget, desired aesthetic, and longevity goals. We offer a wide range of options, including architectural, slate, cedar, tile, and metal, and can help you choose the best fit for your home.",
   },
   {
     question: "How do I know if I need a roof replacement or just a repair?",
@@ -38,6 +40,45 @@ const ourProcess = [
   {
     name: "Final Walk-through & Cleanup",
     description: "We ensure your property is spotless and you are 100% satisfied with the work.",
+  },
+]
+
+const residentialServices = [
+  {
+    title: "Architectural Shingles",
+    description: "A popular choice, offering great value, durability, and a wide variety of colors and styles.",
+    href: "/services/residential-roofing#shingles",
+    imageUrl: "/images/architectural-shingles.png",
+  },
+  {
+    title: "Slate Roofing",
+    description: "Timeless beauty and unmatched durability with natural slate tiles.",
+    href: "/services/slate-roofing",
+    imageUrl: "/images/slate-roof-closeup.png",
+  },
+  {
+    title: "Cedar Shake Roofing",
+    description: "Rustic charm and excellent insulation from natural wood shakes.",
+    href: "/services/cedar-shake-roofing",
+    imageUrl: "/images/cedar-shake-closeup.png",
+  },
+  {
+    title: "Tile Roofing",
+    description: "Classic elegance and superior longevity with clay or concrete tiles.",
+    href: "/services/tile-roofing",
+    imageUrl: "/images/tile-roof-closeup.png",
+  },
+  {
+    title: "Metal Shingles",
+    description: "Modern, energy-efficient, and incredibly resilient metal roofing.",
+    href: "/services/metal-shingles",
+    imageUrl: "/images/metal-shingles-closeup.png",
+  },
+  {
+    title: "Roof Repairs",
+    description: "Fast and reliable repairs for leaks, storm damage, and general wear.",
+    href: "/services/roof-repairs",
+    imageUrl: "/images/roof-damage.png",
   },
 ]
 
@@ -81,6 +122,44 @@ export default function ResidentialRoofingPage() {
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="shingles" className="py-16 md:py-24 bg-gray-50 scroll-mt-20">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Our Residential Roofing Specialties</h2>
+            <p className="mt-4 text-lg text-gray-600">
+              From classic materials to modern solutions, we specialize in a range of high-quality residential roofing
+              systems to perfectly match your home's style and your performance needs.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {residentialServices.map((service) => (
+              <Card key={service.title} className="overflow-hidden flex flex-col">
+                <Link href={service.href} className="block group h-full flex flex-col">
+                  <div className="overflow-hidden">
+                    <img
+                      src={service.imageUrl || "/placeholder.svg"}
+                      alt={`A photo showcasing ${service.title}`}
+                      className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="flex flex-col flex-grow p-6">
+                    <CardTitle className="mb-2">{service.title}</CardTitle>
+                    <CardContent className="p-0 flex-grow">
+                      <p className="text-gray-600">{service.description}</p>
+                    </CardContent>
+                    <CardFooter className="p-0 pt-4 mt-auto">
+                      <span className="text-orange-500 font-semibold group-hover:text-orange-600 transition-colors">
+                        Learn More &rarr;
+                      </span>
+                    </CardFooter>
+                  </div>
+                </Link>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

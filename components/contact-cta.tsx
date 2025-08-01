@@ -17,14 +17,14 @@ export default function ContactCta() {
             <div className="mt-8 space-y-4">
               <div className="flex items-center gap-4">
                 <Phone className="h-6 w-6 text-orange-400" />
-                <a href="tel:1-800-555-ROOF" className="text-lg hover:text-orange-400">
-                  1-800-555-ROOF
+                <a href="tel:(704) 578-4758" className="text-lg hover:text-orange-400">
+                  (704) 578-4758
                 </a>
               </div>
               <div className="flex items-center gap-4">
                 <Mail className="h-6 w-6 text-orange-400" />
-                <a href="mailto:contact@summitroofing.com" className="text-lg hover:text-orange-400">
-                  contact@summitroofing.com
+                <a href="mailto:info@summitroofing.com" className="text-lg hover:text-orange-400">
+                  info@summitroofing.com
                 </a>
               </div>
               <div className="flex items-start gap-4">

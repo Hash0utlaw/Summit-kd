@@ -1,19 +1,17 @@
-import HeroSection from "@/components/hero-section"
-import InsuranceUspSection from "@/components/insurance-usp-section"
-import ServicesOverview from "@/components/services-overview"
-import ServiceAreas from "@/components/service-areas"
+import RotatingTestimonials from "@/components/rotating-testimonials"
+import ContactCTAHomepage from "@/components/contact-cta-homepage"
+import CompanyCredentials from "@/components/company-credentials"
 import SocialProof from "@/components/social-proof"
-import ContactCta from "@/components/contact-cta"
+import CertificationLogos from "@/components/certification-logos"
 
 export default function HomePage() {
   return (
     <>
-      <HeroSection />
-      <InsuranceUspSection />
-      <ServicesOverview />
-      <ServiceAreas />
+      <RotatingTestimonials />
+      <ContactCTAHomepage />
+      <CompanyCredentials />
       <SocialProof />
-      <ContactCta />
+      <CertificationLogos />
     </>
   )
 }

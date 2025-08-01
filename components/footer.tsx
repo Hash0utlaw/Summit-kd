@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Mountain, Facebook, Twitter, Linkedin } from "lucide-react"
+import Image from "next/image"
+import { Facebook, Twitter, Linkedin } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -7,9 +8,14 @@ export default function Footer() {
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid gap-8 md:grid-cols-4">
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2">
-              <Mountain className="h-8 w-8 text-orange-500" />
-              <span className="font-bold text-xl text-white">Summit Roofing</span>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/images/summit-roofing-logo.png"
+                alt="Summit Roofing Professionals Logo"
+                width={40}
+                height={40}
+                className="h-20 w-auto"
+              />
             </Link>
             <p className="text-sm">Your trusted roofing professionals in Alabama and Georgia.</p>
             <div className="flex gap-4">
@@ -77,15 +83,26 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Contact Us</h4>
             <ul className="space-y-2 text-sm">
-              <li>123 Main St, Birmingham, AL</li>
               <li>
-                <a href="tel:1-800-555-ROOF" className="hover:text-orange-500">
-                  1-800-555-ROOF
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=3707+2nd+Ave+suite+103+columbus+ga+31904"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-orange-500"
+                >
+                  3707 2nd Ave, Suite 103
+                  <br />
+                  Columbus, GA 31904
                 </a>
               </li>
               <li>
-                <a href="mailto:contact@summitroofing.com" className="hover:text-orange-500">
-                  contact@summitroofing.com
+                <a href="tel:(704) 578-4758" className="hover:text-orange-500">
+                  (704) 578-4758
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@summitroofing.com" className="hover:text-orange-500">
+                  info@summitroofing.com
                 </a>
               </li>
             </ul>

@@ -13,12 +13,12 @@ export const metadata: Metadata = {
 const serviceLocations = [
   { name: "Birmingham, AL", href: "/service-areas/birmingham-roofing", available: true },
   { name: "Atlanta, GA", href: "/service-areas/atlanta-roofing", available: true },
-  { name: "Huntsville, AL", href: "#", available: false },
-  { name: "Montgomery, AL", href: "#", available: false },
-  { name: "Columbus, GA", href: "#", available: false },
-  { name: "Mobile, AL", href: "#", available: false },
-  { name: "Augusta, GA", href: "#", available: false },
-  { name: "Tuscaloosa, AL", href: "#", available: false },
+  { name: "Huntsville, AL", href: "/service-areas/huntsville-roofing", available: true },
+  { name: "Montgomery, AL", href: "/service-areas/montgomery-roofing", available: true },
+  { name: "Mobile, AL", href: "/service-areas/mobile-roofing", available: true },
+  { name: "Tuscaloosa, AL", href: "/service-areas/tuscaloosa-roofing", available: true },
+  { name: "Columbus, GA", href: "/service-areas/columbus-roofing", available: true },
+  { name: "Augusta, GA", href: "/service-areas/augusta-roofing", available: true },
 ]
 
 export default function ServiceAreasHubPage() {
