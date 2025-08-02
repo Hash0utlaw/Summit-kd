@@ -225,6 +225,71 @@ const projects = [
     imageUrl: "/images/cedar/gallery-7.png",
     description: "Aged cedar shake roof on a rustic-modern home with dark siding and large windows.",
   },
+  {
+    id: 32,
+    category: "Commercial",
+    location: "Industrial TPO Roof",
+    imageUrl: "/images/commercial/tpo/gallery-1.png",
+    description: "A pristine, reflective white TPO roof on a large industrial building under a clear blue sky.",
+  },
+  {
+    id: 33,
+    category: "Commercial",
+    location: "Expansive TPO Installation",
+    imageUrl: "/images/commercial/tpo/gallery-2.jpeg",
+    description: "Wide-angle view of a massive white TPO roof, showcasing its clean look and durability.",
+  },
+  {
+    id: 34,
+    category: "Commercial",
+    location: "TPO Roof with Skylights",
+    imageUrl: "/images/commercial/tpo/gallery-3.png",
+    description: "A large white TPO roof featuring multiple skylights for natural lighting.",
+  },
+  {
+    id: 35,
+    category: "Commercial",
+    location: "Commercial Facility Roof",
+    imageUrl: "/images/commercial/tpo/gallery-4.jpeg",
+    description: "Aerial view of a completed TPO roof on a commercial facility with loading docks.",
+  },
+  {
+    id: 36,
+    category: "Commercial",
+    location: "TPO with Rooftop Units",
+    imageUrl: "/images/commercial/tpo/gallery-5.png",
+    description: "A clean TPO roof installation around various rooftop HVAC units and vents.",
+  },
+  {
+    id: 37,
+    category: "Commercial",
+    location: "Large-Scale Warehouse Roof",
+    imageUrl: "/images/commercial/tpo/gallery-6.jpeg",
+    description: "Complete TPO roofing system on a large-scale warehouse with multiple truck bays.",
+  },
+  {
+    id: 38,
+    category: "Commercial",
+    location: "School Building Restoration",
+    imageUrl: "/images/commercial/coatings/hero-unique-building.png",
+    description:
+      "Complete fluid-applied roof restoration on a large, uniquely shaped school building, providing a seamless, energy-efficient white roof.",
+  },
+  {
+    id: 39,
+    category: "Commercial",
+    location: "Metal Roof Coating",
+    imageUrl: "/images/commercial/coatings/metal-roof-coating.png",
+    description:
+      "A reflective silver coating applied to a commercial metal roof, extending its life and improving energy efficiency.",
+  },
+  {
+    id: 40,
+    category: "Commercial",
+    location: "Coating Application",
+    imageUrl: "/images/commercial/coatings/application-in-progress.png",
+    description: "A Summit Roofing professional expertly applying a white waterproof membrane to a commercial roof.",
+  },
 ]
 
 const filterCategories = ["All", "Residential", "Commercial", "Specialty"]

@@ -5,9 +5,9 @@ import CtaSection from "@/components/cta-section"
 import { Sun, Feather, ShieldCheck } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Single-Ply Roofing Services | Summit Roofing",
+  title: "Single-Ply TPO, EPDM, & PVC Roofing | Summit Roofing",
   description:
-    "Explore energy-efficient single-ply roofing solutions, including TPO, EPDM, and PVC. Summit Roofing Professionals provides expert installation and repair services. Contact us today!",
+    "Explore energy-efficient single-ply roofing solutions, including TPO, EPDM, and PVC. Summit Roofing provides expert installation and repair for commercial buildings. Contact us today!",
 }
 
 const singlePlyFaqs = [
@@ -52,7 +52,7 @@ export default function SinglePlyPage() {
       <ServicePageHero
         title="Single-Ply Roofing Systems"
         subtitle="Modern, energy-efficient, and durable solutions for your commercial roof."
-        imageUrl="/images/tpo-roof.png"
+        imageUrl="/images/commercial/tpo/hero.png"
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -63,14 +63,14 @@ export default function SinglePlyPage() {
               <p>
                 Single-ply roofing membranes are a leading choice for commercial and industrial buildings. These systems
                 consist of a single layer of flexible, synthetic material that provides a durable, waterproof, and
-                energy-efficient shield for your property. Summit Roofing Professionals is certified to install and
-                maintain all major single-ply systems, including TPO, EPDM, and PVC.
+                energy-efficient shield for your property. Summit Roofing is certified to install and maintain all major
+                single-ply systems, including TPO, EPDM, and PVC.
               </p>
             </div>
             <div>
               <img
-                src="/images/epdm-roof-rolls.png"
-                alt="Rolls of EPDM single-ply roofing material ready for installation"
+                src="/images/commercial/tpo/completed-project-aerial.jpeg"
+                alt="Aerial view of a completed white TPO roof on a large commercial facility"
                 className="rounded-lg shadow-lg"
               />
             </div>

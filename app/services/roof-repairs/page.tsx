@@ -1,8 +1,9 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import ServicePageHero from "@/components/service-page-hero"
 import FaqSection from "@/components/faq-section"
 import CtaSection from "@/components/cta-section"
-import { AlertTriangle, Wind, Droplets } from "lucide-react"
+import { AlertTriangle, Wind, Droplets, ShieldCheck } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Roof Repair Services in Alabama & Georgia | Summit Roofing",
@@ -52,7 +53,8 @@ export default function RoofRepairsPage() {
       <ServicePageHero
         title="Prompt & Reliable Roof Repairs"
         subtitle="Quickly addressing leaks, storm damage, and wear to protect your property."
-        imageUrl="/images/roof-damage.png"
+        imageUrl="/images/repairs/repair-in-progress.png"
+        imageAlt="Professional roofer carefully applying a patch to a flat roof."
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -72,6 +74,53 @@ export default function RoofRepairsPage() {
                 <p className="mt-2 text-gray-600">{problem.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Our Repair Process: Safe & Thorough</h2>
+              <p className="mt-4 text-lg text-gray-600">
+                We don't just fix the symptom; we find the source. Our repair process begins with a comprehensive
+                inspection to identify all underlying issues. We prioritize safety and quality in every step, ensuring a
+                durable, long-lasting solution.
+              </p>
+              <ul className="mt-6 space-y-4">
+                <li className="flex items-start">
+                  <ShieldCheck className="h-6 w-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                  <span>
+                    <span className="font-semibold">Detailed Inspection:</span> We use advanced techniques to accurately
+                    diagnose the problem.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <ShieldCheck className="h-6 w-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                  <span>
+                    <span className="font-semibold">Quality Materials:</span> We use only high-quality materials that
+                    match your existing roof for seamless repairs.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <ShieldCheck className="h-6 w-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                  <span>
+                    <span className="font-semibold">Expert Workmanship:</span> Our certified technicians ensure every
+                    repair is performed to the highest industry standards.
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div className="order-1 md:order-2">
+              <Image
+                src="/images/repairs/roofer-on-commercial-roof.png"
+                alt="Roofer in safety gear inspecting a large commercial roof under a stormy sky."
+                width={800}
+                height={600}
+                className="rounded-lg shadow-lg object-cover w-full h-full"
+              />
+            </div>
           </div>
         </div>
       </section>
