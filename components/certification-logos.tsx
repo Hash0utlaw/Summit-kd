@@ -2,9 +2,9 @@ import Image from "next/image"
 
 const certifications = [
   {
-    name: "GAF Master Elite",
-    logo: "/images/certifications/gaf-master-elite.png",
-    description: "Certified GAF Master Elite Contractor",
+    name: "GAF Certified",
+    logo: "/images/certifications/gaf-logo.png", // Using the GAF logo from the letter
+    description: "GAF Certified Roofing Contractor",
   },
   {
     name: "Owens Corning Preferred",
@@ -12,9 +12,14 @@ const certifications = [
     description: "Owens Corning Preferred Contractor",
   },
   {
-    name: "BBB Accredited",
-    logo: "/images/certifications/bbb-accredited.png",
-    description: "Better Business Bureau Accredited",
+    name: "IKO Premier Contractor",
+    logo: "/images/certifications/iko-premier-contractor.png",
+    description: "IKO Craftsman Premier Contractor",
+  },
+  {
+    name: "Uniflex Premier Contractor",
+    logo: "/images/uniflex-logo.png",
+    description: "Uniflex Authorized Premier Contractor",
   },
   {
     name: "NRCA Member",
@@ -22,14 +27,9 @@ const certifications = [
     description: "National Roofing Contractors Association Member",
   },
   {
-    name: "Alabama Licensed",
-    logo: "/images/certifications/alabama-license.png",
-    description: "Licensed in Alabama",
-  },
-  {
-    name: "Georgia Licensed",
-    logo: "/images/certifications/georgia-license.png",
-    description: "Licensed in Georgia",
+    name: "BBB Accredited",
+    logo: "/images/certifications/bbb-accredited.png",
+    description: "Better Business Bureau Accredited",
   },
 ]
 
@@ -50,7 +50,7 @@ export default function CertificationLogos() {
               key={index}
               className="group text-center p-4 rounded-lg hover:bg-white hover:shadow-lg transition-all duration-300"
             >
-              <div className="relative w-20 h-20 mx-auto mb-4 grayscale group-hover:grayscale-0 transition-all duration-300">
+              <div className="relative w-24 h-24 mx-auto mb-4 grayscale group-hover:grayscale-0 transition-all duration-300">
                 <Image src={cert.logo || "/placeholder.svg"} alt={cert.description} fill className="object-contain" />
               </div>
               <h3 className="text-sm font-medium text-gray-900 mb-1">{cert.name}</h3>

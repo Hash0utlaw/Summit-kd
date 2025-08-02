@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import ServicePageHero from "@/components/service-page-hero"
 import CtaSection from "@/components/cta-section"
+import CertificationGallery from "@/components/certification-gallery"
 import { Award, ShieldCheck, HeartHandshake, Lightbulb, Users } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -41,22 +42,18 @@ const ourValues = [
   },
 ]
 
-const alabamaCities = ["Auburn", "Phenix City", "Opelika", "Valley", "Smith Station", "Lannet"]
-const georgiaCities = [
-  "Columbus",
-  "Newnan",
-  "Sharpsburg",
-  "Peachtree City",
-  "Union City",
-  "LaGrange",
-  "Tyrone",
-  "Atlanta",
-  "Canton",
-  "WoodStock",
-  "Sandy Springs",
-  "Kennesaw",
-  "Johns Creek",
-  "Duluth",
+const certificates = [
+  { src: "/images/certifications/gaf-certified-letter.jpg", alt: "GAF Certified Contractor Reference Letter" },
+  {
+    src: "/images/certifications/uniflex-premier-contractor.jpg",
+    alt: "Uniflex Authorized Premier Contractor Certificate",
+  },
+  { src: "/images/certifications/iko-premier-contractor.png", alt: "IKO Craftsman Premier Contractor Badge" },
+  { src: "/images/certifications/nrca-member-cert.jpg", alt: "NRCA Member Certificate" },
+  {
+    src: "/images/certifications/uniflex-university-cert.jpg",
+    alt: "Uniflex University Training Certificate for Davis Meek",
+  },
 ]
 
 export default function AboutPage() {
@@ -117,71 +114,14 @@ export default function AboutPage() {
 
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Our Comprehensive Services</h2>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Our Certifications & Qualifications</h2>
             <p className="mt-4 text-lg text-gray-600">
-              Whether it's a small residential repair or a complex industrial project, we approach every job with the
-              same dedication, care, and attention to detail.
+              We are committed to ongoing training and adhere to the highest industry standards. Click on any
+              certificate to view the full document.
             </p>
           </div>
-          <div className="mt-12 max-w-4xl mx-auto grid sm:grid-cols-2 gap-8">
-            <ul className="space-y-2 list-disc list-inside text-lg">
-              <li>Residential Roofing (including insurance claim assistance)</li>
-              <li>Commercial Roofing</li>
-              <li>Industrial Roofing</li>
-            </ul>
-            <ul className="space-y-2 list-disc list-inside text-lg">
-              <li>Specialized Roofing Solutions</li>
-              <li>Fluid-Applied Roofing Systems</li>
-              <li>Roof Repairs and Maintenance</li>
-            </ul>
-          </div>
-          <div className="mt-12 text-center">
-            <Image
-              src="/images/uniflex-logo.png"
-              alt="Uniflex Certified Contractor"
-              width={200}
-              height={100}
-              className="mx-auto"
-            />
-            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-              We are proud to be Uniflex certified, ensuring that we provide top-quality fluid-applied roofing systems
-              with industry-leading warranties.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Proudly Serving Our Communities</h2>
-            <p className="mt-4 text-lg text-gray-600">
-              We offer our services across Alabama and Georgia, with dedicated local teams in numerous cities.
-            </p>
-          </div>
-          <div className="mt-12 grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            <div>
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-orange-500 pb-2">Alabama</h3>
-              <ul className="columns-2 space-y-2">
-                {alabamaCities.map((city) => (
-                  <li key={city}>{city}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-orange-500 pb-2">Georgia</h3>
-              <ul className="columns-2 space-y-2">
-                {georgiaCities.map((city) => (
-                  <li key={city}>{city}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <p className="text-center mt-8 text-gray-600">
-            For commercial, industrial, and specialized roofs, we offer our services statewide in both Alabama and
-            Georgia.
-          </p>
+          <CertificationGallery certificates={certificates} />
         </div>
       </section>
 
