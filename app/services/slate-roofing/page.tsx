@@ -3,6 +3,7 @@ import ServicePageHero from "@/components/service-page-hero"
 import FaqSection from "@/components/faq-section"
 import CtaSection from "@/components/cta-section"
 import { Gem, ShieldCheck, Sun } from "lucide-react"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Slate Roofing Services in Alabama & Georgia | Summit Roofing",
@@ -52,7 +53,7 @@ export default function SlateRoofingPage() {
       <ServicePageHero
         title="Elegant & Enduring Slate Roofing"
         subtitle="Experience the pinnacle of roofing with natural slate—unmatched in beauty, durability, and prestige."
-        imageUrl="/images/slate-roof.png"
+        imageUrl="/images/slate/slate-hero.png"
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -85,9 +86,11 @@ export default function SlateRoofingPage() {
               </ul>
             </div>
             <div>
-              <img
-                src="/images/slate-roof-closeup.png"
-                alt="Close-up of expertly installed slate roof tiles"
+              <Image
+                src="/images/slate/slate-house.png"
+                alt="Beautiful luxury home with a professionally installed dark slate roof"
+                width={600}
+                height={600}
                 className="rounded-lg shadow-lg"
               />
             </div>

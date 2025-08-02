@@ -64,6 +64,167 @@ const projects = [
     imageUrl: "/images/gallery-cedar-1.png",
     description: "A rustic and beautiful cedar shake roof that adds natural charm.",
   },
+  {
+    id: 9,
+    category: "Specialty",
+    location: "Luxury Residence",
+    imageUrl: "/images/slate/gallery-2.png",
+    description: "Multi-colored slate roof on a grand estate, showcasing a blend of grey, green, and red tiles.",
+  },
+  {
+    id: 10,
+    category: "Specialty",
+    location: "Lakeside Estate",
+    imageUrl: "/images/slate/gallery-3.png",
+    description: "Expansive slate roof on a beautiful estate surrounded by vibrant autumn foliage.",
+  },
+  {
+    id: 11,
+    category: "Residential",
+    location: "New Construction",
+    imageUrl: "/images/slate/gallery-4.png",
+    description: "Pristine grey slate roof installation on a new construction home with light brick exterior.",
+  },
+  {
+    id: 12,
+    category: "Specialty",
+    location: "Detail Work",
+    imageUrl: "/images/slate/gallery-5.png",
+    description: "Expertly installed slate roof featuring copper flashing and snow guards for superior protection.",
+  },
+  {
+    id: 13,
+    category: "Specialty",
+    location: "Historic Building",
+    imageUrl: "/images/slate/gallery-6.png",
+    description: "Durable slate roof with copper gutters and snow guards on a classic stone building.",
+  },
+  {
+    id: 14,
+    category: "Residential",
+    location: "New Build",
+    imageUrl: "/images/slate/gallery-1.png",
+    description: "Side-angle view of a new grey slate roof on a home under construction.",
+  },
+  {
+    id: 15,
+    category: "Residential",
+    location: "Sprawling Residential Roof",
+    imageUrl: "/images/shingles/shingle-gallery-2.png",
+    description: "Aerial view of a complete architectural shingle roof replacement on a large brick home.",
+  },
+  {
+    id: 16,
+    category: "Residential",
+    location: "Ranch Home Roof",
+    imageUrl: "/images/shingles/shingle-gallery-3.png",
+    description: "New multi-tonal architectural shingle roof on a classic American ranch-style house.",
+  },
+  {
+    id: 17,
+    category: "Residential",
+    location: "Complex Gable Roof",
+    imageUrl: "/images/shingles/shingle-gallery-4.png",
+    description: "Detailed view of architectural shingles on a home with complex gables and stone accents.",
+  },
+  {
+    id: 18,
+    category: "Specialty",
+    location: "Modern Farmhouse",
+    imageUrl: "/images/metal/metal-roof-2.png",
+    description: "Sleek dark standing seam metal roof on a modern white farmhouse.",
+  },
+  {
+    id: 19,
+    category: "Specialty",
+    location: "Complex Metal Roof",
+    imageUrl: "/images/metal/gallery-1.png",
+    description: "Aerial view of a dark standing seam metal roof with intricate hips and valleys.",
+  },
+  {
+    id: 20,
+    category: "Specialty",
+    location: "Residential Metal Roof",
+    imageUrl: "/images/metal/metal-roofing-1.png",
+    description: "Light-colored standing seam metal roof on a large residential property.",
+  },
+  {
+    id: 21,
+    category: "Specialty",
+    location: "Architectural Metal",
+    imageUrl: "/images/metal/gallery-4.png",
+    description: "Clean lines of a light-colored standing seam metal roof on a modern building.",
+  },
+  {
+    id: 22,
+    category: "Specialty",
+    location: "Teal Metal Shingles",
+    imageUrl: "/images/metal/metal-shingle-2.png",
+    description: "Unique and durable teal-colored metal shingle roof.",
+  },
+  {
+    id: 23,
+    category: "Specialty",
+    location: "Stone-Coated Metal Shingles",
+    imageUrl: "/images/metal/metal-shingle-3.png",
+    description: "Textured stone-coated metal shingles on a rustic log home.",
+  },
+  {
+    id: 24,
+    category: "Specialty",
+    location: "Standing Seam Detail",
+    imageUrl: "/images/metal/gallery-3.png",
+    description: "Close-up of a dark standing seam metal roof under a cloudy sky.",
+  },
+  {
+    id: 25,
+    category: "Specialty",
+    location: "Sunroom Metal Roof",
+    imageUrl: "/images/metal/metal-roof.png",
+    description: "Glossy standing seam metal roof reflecting the sun on a home extension.",
+  },
+  {
+    id: 26,
+    category: "Specialty",
+    location: "Luxury Estate Cedar Roof",
+    imageUrl: "/images/cedar/cedar-special.png",
+    description: "Aerial view of a stunning new cedar shake roof with copper flashing on a luxury estate.",
+  },
+  {
+    id: 27,
+    category: "Specialty",
+    location: "Classic Colonial Home",
+    imageUrl: "/images/cedar/gallery-2.png",
+    description: "New golden-brown cedar shake roof on a classic colonial home with brick chimneys.",
+  },
+  {
+    id: 28,
+    category: "Specialty",
+    location: "Holiday Decorated Home",
+    imageUrl: "/images/cedar/gallery-3.png",
+    description: "Weathered cedar shake roof on a white brick home elegantly decorated for the holidays.",
+  },
+  {
+    id: 29,
+    category: "Specialty",
+    location: "Stone and Cedar Home",
+    imageUrl: "/images/cedar/gallery-4.png",
+    description: "Textured cedar shake style roof complementing a beautiful stone-sided home.",
+  },
+  {
+    id: 30,
+    category: "Specialty",
+    location: "Poolside Cedar Roof",
+    imageUrl: "/images/cedar/gallery-6.png",
+    description: "A beautifully weathered cedar shake roof on a stone home overlooking a luxury pool and patio.",
+  },
+  {
+    id: 31,
+    category: "Specialty",
+    location: "Rustic Modern Design",
+    imageUrl: "/images/cedar/gallery-7.png",
+    description: "Aged cedar shake roof on a rustic-modern home with dark siding and large windows.",
+  },
 ]
 
 const filterCategories = ["All", "Residential", "Commercial", "Specialty"]
@@ -74,10 +235,11 @@ export default function GalleryClientPage() {
   const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null)
 
   useEffect(() => {
+    const sortedProjects = [...projects].sort((a, b) => a.id - b.id)
     if (activeFilter === "All") {
-      setFilteredProjects(projects)
+      setFilteredProjects(sortedProjects)
     } else {
-      setFilteredProjects(projects.filter((p) => p.category === activeFilter))
+      setFilteredProjects(sortedProjects.filter((p) => p.category === activeFilter))
     }
   }, [activeFilter])
 

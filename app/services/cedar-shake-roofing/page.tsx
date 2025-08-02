@@ -3,6 +3,7 @@ import ServicePageHero from "@/components/service-page-hero"
 import FaqSection from "@/components/faq-section"
 import CtaSection from "@/components/cta-section"
 import { Leaf, Thermometer, Wind } from "lucide-react"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Cedar Shake Roofing Services in Alabama & Georgia | Summit Roofing",
@@ -52,7 +53,7 @@ export default function CedarShakeRoofingPage() {
       <ServicePageHero
         title="Natural Beauty of Cedar Shake Roofing"
         subtitle="Bring a warm, rustic elegance to your home with authentic cedar shake roofing."
-        imageUrl="/images/cedar-shake-roof.png"
+        imageUrl="/images/cedar/cedar-special.png"
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -85,9 +86,11 @@ export default function CedarShakeRoofingPage() {
               </ul>
             </div>
             <div>
-              <img
-                src="/images/cedar-shake-closeup.png"
-                alt="Close-up of a beautiful cedar shake roof"
+              <Image
+                src="/images/cedar/gallery-7.png"
+                alt="Close-up of a rustic cedar shake roof on a modern home"
+                width={600}
+                height={600}
                 className="rounded-lg shadow-lg"
               />
             </div>

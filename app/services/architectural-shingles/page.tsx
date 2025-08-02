@@ -45,7 +45,7 @@ export default function ArchitecturalShinglesPage() {
       <ServicePageHero
         title="Architectural Shingle Roofing"
         subtitle="Dimensional Beauty, Lasting Performance"
-        imageUrl="/images/architectural-shingles.png"
+        imageUrl="/images/shingles/shingle-hero.png"
       />
 
       <section className="py-16 bg-white">
@@ -69,8 +69,8 @@ export default function ArchitecturalShinglesPage() {
             </div>
             <div>
               <Image
-                src="/images/slate-roof-closeup.png" // Using a relevant closeup shot
-                alt="Closeup of installed architectural shingles"
+                src="/images/shingles/shingle-gallery-4.png"
+                alt="Closeup of expertly installed architectural shingles on a luxury home with complex gables"
                 width={600}
                 height={400}
                 className="rounded-lg shadow-lg"

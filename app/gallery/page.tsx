@@ -25,16 +25,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  canonical: "/gallery",
+  alternates: {
+    canonical: "/gallery",
+  },
 }
 
 export default function GalleryPage() {
-  return (
-    <>
-      <head>
-        <link rel="canonical" href="/gallery" />
-      </head>
-      <GalleryClientPage />
-    </>
-  )
+  return <GalleryClientPage />
 }

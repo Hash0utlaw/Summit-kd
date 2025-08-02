@@ -47,20 +47,20 @@ const residentialServices = [
   {
     title: "Architectural Shingles",
     description: "A popular choice, offering great value, durability, and a wide variety of colors and styles.",
-    href: "/services/residential-roofing#shingles",
+    href: "/services/architectural-shingles",
     imageUrl: "/images/architectural-shingles.png",
   },
   {
     title: "Slate Roofing",
     description: "Timeless beauty and unmatched durability with natural slate tiles.",
     href: "/services/slate-roofing",
-    imageUrl: "/images/slate-roof-closeup.png",
+    imageUrl: "/images/slate/slate-main.png",
   },
   {
     title: "Cedar Shake Roofing",
     description: "Rustic charm and excellent insulation from natural wood shakes.",
     href: "/services/cedar-shake-roofing",
-    imageUrl: "/images/cedar-shake-closeup.png",
+    imageUrl: "/images/cedar/cedar-special.png",
   },
   {
     title: "Tile Roofing",
@@ -69,10 +69,10 @@ const residentialServices = [
     imageUrl: "/images/tile-roof-closeup.png",
   },
   {
-    title: "Metal Shingles",
+    title: "Metal Roofing",
     description: "Modern, energy-efficient, and incredibly resilient metal roofing.",
     href: "/services/metal-shingles",
-    imageUrl: "/images/metal-shingles-closeup.png",
+    imageUrl: "/images/metal/metal-roofing.png",
   },
   {
     title: "Roof Repairs",
@@ -88,7 +88,8 @@ export default function ResidentialRoofingPage() {
       <ServicePageHero
         title="Expert Residential Roofing"
         subtitle="Protecting your home and family with durable, high-quality roofing solutions."
-        imageUrl="/images/residential-roof.png"
+        imageUrl="/images/residential/hero.png"
+        altText="Beautiful new architectural shingle roof on a suburban home with vibrant pink flowers in the foreground."
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -104,7 +105,7 @@ export default function ResidentialRoofingPage() {
             <div>
               <img
                 src="/images/happy-family-home.png"
-                alt="Happy family in front of their home"
+                alt="Happy family in front of their home with a new Summit Roofing roof"
                 className="rounded-lg shadow-lg"
               />
             </div>
@@ -142,7 +143,7 @@ export default function ResidentialRoofingPage() {
                   <div className="overflow-hidden">
                     <img
                       src={service.imageUrl || "/placeholder.svg"}
-                      alt={`A photo showcasing ${service.title}`}
+                      alt={`A photo showcasing ${service.title} roofing by Summit Roofing`}
                       className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
