@@ -102,15 +102,15 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white shadow-sm">
-      <div className="container mx-auto flex h-28 items-center justify-between px-4 md:px-6">
+      <div className="container mx-auto flex h-32 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center">
-          <div className="relative">
+          <div className="relative leading-10">
             <Image
               src="/images/summit-roofing-logo.png"
               alt="Summit Roofing Professionals Logo"
               width={48}
               height={48}
-              className="h-24 w-auto"
+              className="h-28 w-auto"
               priority
             />
           </div>
@@ -206,7 +206,7 @@ export default function Header() {
                   alt="Summit Roofing Professionals Logo"
                   width={32}
                   height={32}
-                  className="h-20 w-auto"
+                  className="h-24 w-auto"
                 />
               </Link>
               <Link
