@@ -7,17 +7,6 @@ import { Button } from "@/components/ui/button"
 
 const testimonials = [
   {
-    id: 1,
-    name: "Will Wilson",
-    location: "Alabama",
-    rating: 5,
-    date: "April 28, 2024",
-    review:
-      "Truly the best experience I have ever had with a roofing company. Very personable and professional. Quick and painless. My problem was found and fixed within the hour. Can not recommend enough!",
-    image: "/images/residential/gallery/suburban-home-roof-replacement.jpeg",
-    alt: "Beautiful suburban home with a new shingle roof by Summit Roofing.",
-  },
-  {
     id: 2,
     name: "Bill P.",
     location: "Georgia",
@@ -29,17 +18,6 @@ const testimonials = [
     alt: "Customer Bill P. with a Summit Roofing representative in front of his new roof.",
   },
   {
-    id: 3,
-    name: "Rick B.",
-    location: "Alabama",
-    rating: 5,
-    date: "July 6, 2024",
-    review:
-      "Davis got my whole roof replaced even after previously being denied by my insurance company. It pays to know the process... Every detail of my job was handled with excellence and diligence, something the owner probably learned during his military service.",
-    image: "/images/testimonials/rick-b.jpeg",
-    alt: "A new roof installed by Summit Roofing on Rick B.'s home.",
-  },
-  {
     id: 4,
     name: "Eric S.",
     location: "Alabama",
@@ -49,6 +27,28 @@ const testimonials = [
       "The team at Summit Roofing was fantastic. They handled everything with my insurance and delivered a high-quality roof. The process was smooth and professional from start to finish. Highly recommend!",
     image: "/images/testimonials/eric-s.jpeg",
     alt: "Customer Eric S. getting a new roof from Summit Roofing Professionals.",
+  },
+  {
+    id: 1,
+    name: "Will Wilson",
+    location: "Alabama",
+    rating: 5,
+    date: "April 28, 2024",
+    review:
+      "Truly the best experience I have ever had with a roofing company. Very personable and professional. Quick and painless. My problem was found and fixed within the hour. Can not recommend enough!",
+    image: "/images/residential/gallery/suburban-home-roof-replacement.jpeg",
+    alt: "Beautiful suburban home with a new shingle roof by Summit Roofing.",
+  },
+  {
+    id: 3,
+    name: "Rick B.",
+    location: "Alabama",
+    rating: 5,
+    date: "July 6, 2024",
+    review:
+      "Davis got my whole roof replaced even after previously being denied by my insurance company. It pays to know the process... Every detail of my job was handled with excellence and diligence, something the owner probably learned during his military service.",
+    image: "/images/testimonials/rick-b.jpeg",
+    alt: "A new roof installed by Summit Roofing on Rick B.'s home.",
   },
   {
     id: 5,
