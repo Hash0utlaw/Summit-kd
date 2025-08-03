@@ -14,9 +14,8 @@ const testimonials = [
     date: "April 28, 2024",
     review:
       "Truly the best experience I have ever had with a roofing company. Very personable and professional. Quick and painless. My problem was found and fixed within the hour. Can not recommend enough!",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8442%20%281%29.PNG-2H4IOd158zW9xvc2THvoLOJeWSQv3o.jpeg",
-    alt: "Will Wilson customer review for Summit Roofing Professionals",
+    image: "/images/residential/gallery/suburban-home-roof-replacement.jpeg",
+    alt: "Beautiful suburban home with a new shingle roof by Summit Roofing.",
   },
   {
     id: 2,
@@ -70,8 +69,8 @@ const testimonials = [
     date: "March 18, 2024",
     review:
       "The guys at Summit Roofing made the hassle of getting a new roof stress-free! Their level of professionalism and efficiency is unmatched. They answered all my crazy questions and handled pretty much everything with insurance. I cannot thank them enough for all their help!",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8444.PNG-hdpDEnvZNzFIGXP2XhH3G1o6XmnUYw.jpeg",
-    alt: "Brooklyn Lundy customer review for Summit Roofing Professionals",
+    image: "/images/residential/gallery/architectural-shingle-estate.jpeg",
+    alt: "High-end estate with a new architectural shingle roof by Summit Roofing.",
   },
   {
     id: 7,
@@ -81,8 +80,8 @@ const testimonials = [
     date: "March 18, 2024",
     review:
       "Summit Roofing just replaced my roof, and I'm thrilled! They got my insurance to pay so it didn't cost me a dollar! The team was super professional, quick, and friendly. They finished on time and my roof looks amazing 😍. Highly recommend!",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8443.PNG-SOft8s856MTd8SjxEp1uvij3H9eGvZ.jpeg",
-    alt: "Caitlin Foley customer review for Summit Roofing Professionals",
+    image: "/images/residential/gallery/luxury-brick-home-roof.jpeg",
+    alt: "Luxury brick home with a new roof and a Summit Roofing truck in the driveway.",
   },
 ]
 
