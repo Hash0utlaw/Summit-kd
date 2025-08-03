@@ -290,6 +290,42 @@ const projects = [
     imageUrl: "/images/commercial/coatings/application-in-progress.png",
     description: "A Summit Roofing professional expertly applying a white waterproof membrane to a commercial roof.",
   },
+  {
+    id: 41,
+    category: "Residential",
+    location: "Atlanta, GA",
+    imageUrl: "/images/residential/gallery/atlanta-estate-roof.jpeg",
+    description: "A stunning architectural shingle roof on a grand brick and stone estate in Atlanta.",
+  },
+  {
+    id: 42,
+    category: "Residential",
+    location: "Luxury Home",
+    imageUrl: "/images/residential/gallery/luxury-brick-home-roof.jpeg",
+    description:
+      "New dark architectural shingle roof on a beautiful pink brick home with a circular driveway and fountain.",
+  },
+  {
+    id: 43,
+    category: "Residential",
+    location: "Atlanta, GA",
+    imageUrl: "/images/residential/gallery/architectural-shingle-estate.jpeg",
+    description: "A closer look at the expertly installed architectural shingles on a beautiful Atlanta estate.",
+  },
+  {
+    id: 44,
+    category: "Residential",
+    location: "Manor Home",
+    imageUrl: "/images/residential/gallery/landscaped-manor-roof.jpeg",
+    description: "A new roof perfectly complements the beautiful landscaping of this manor-style home.",
+  },
+  {
+    id: 45,
+    category: "Residential",
+    location: "Suburban Home",
+    imageUrl: "/images/residential/gallery/suburban-home-roof-replacement.jpeg",
+    description: "A complete roof replacement for a lovely suburban home, surrounded by mature trees.",
+  },
 ]
 
 const filterCategories = ["All", "Residential", "Commercial", "Specialty"]
