@@ -22,7 +22,7 @@ function SubmitButton() {
   )
 }
 
-export function ContactForm() {
+export default function ContactForm() {
   const [state, formAction] = useActionState(sendContactEmail, initialState)
   const [formKey, setFormKey] = useState(Date.now())
 

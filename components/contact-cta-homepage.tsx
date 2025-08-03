@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import { Phone, Mail, MapPin, Zap } from "lucide-react"
 
 export default function ContactCTAHomepage() {
   return (
@@ -83,8 +83,8 @@ export default function ContactCTAHomepage() {
               {/* Overlay Badge */}
               <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg">
                 <div className="flex items-center space-x-2">
-                  <Clock className="w-4 h-4 text-orange-600" />
-                  <span className="text-sm font-medium text-gray-900">24/7 Emergency Service</span>
+                  <Zap className="w-4 h-4 text-orange-600" />
+                  <span className="text-sm font-medium text-gray-900">Rapid Response</span>
                 </div>
               </div>
             </div>

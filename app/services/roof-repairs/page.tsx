@@ -8,7 +8,7 @@ import { AlertTriangle, Wind, Droplets, ShieldCheck } from "lucide-react"
 export const metadata: Metadata = {
   title: "Roof Repair Services in Alabama & Georgia | Summit Roofing",
   description:
-    "Fast and reliable roof repair services for leaks, storm damage, and missing shingles in Alabama and Georgia. 24/7 emergency response available.",
+    "Fast and reliable roof repair services for leaks, storm damage, and missing shingles in Alabama and Georgia. Rapid response available for urgent issues.",
 }
 
 const repairFaqs = [
@@ -23,9 +23,9 @@ const repairFaqs = [
       "Absolutely. Even a small leak can lead to significant problems over time, including mold growth, rotted framing, damaged insulation, and ceiling stains. It's crucial to address any leak as soon as it's discovered.",
   },
   {
-    question: "Do you offer emergency roof repair services?",
+    question: "Do you offer rapid response for urgent roof repairs?",
     answer:
-      "Yes, we offer 24/7 emergency services to address urgent roofing issues and prevent further damage to your property. If you have a roofing emergency, call us immediately.",
+      "Yes, we offer rapid response services to address urgent roofing issues and prevent further damage to your property. If you have a roofing emergency, call us immediately.",
   },
 ]
 
