@@ -1,11 +1,17 @@
 "use server"
 
+import { z } from "zod"
 import { Resend } from "resend"
 import { ContactFormEmail } from "@/components/emails/contact-form-email"
-import type * as React from "react"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 const toEmail = process.env.TO_EMAIL
+
+const contactSchema = z.object({
+  fullName: z.string().min(2, "Full name must be at least 2 characters."),
+  phone: z.string().min(10, "Please enter a valid phone number."),
+  address: z.string().min(5, "Please enter a valid address."),
+})
 
 export interface FormState {
   success: boolean
@@ -13,47 +19,53 @@ export interface FormState {
 }
 
 export async function sendContactEmail(prevState: FormState, formData: FormData): Promise<FormState> {
-  if (!toEmail) {
-    console.error("TO_EMAIL environment variable is not set.")
+  if (!process.env.RESEND_API_KEY || !toEmail) {
+    console.error("Missing RESEND_API_KEY or TO_EMAIL environment variables.")
     return {
       success: false,
-      message: "The server is not configured to send emails. Please contact support.",
+      message: "Server configuration error. Please contact support.",
     }
   }
 
-  const fromEmail = "contact@summitroofing.pro" // Must be a verified domain in Resend
+  const validatedFields = contactSchema.safeParse({
+    fullName: formData.get("fullName"),
+    phone: formData.get("phone"),
+    address: formData.get("address"),
+  })
 
-  const fullName = formData.get("fullName") as string
-  const phone = formData.get("phone") as string
-  const address = formData.get("address") as string
-
-  if (!fullName || !phone || !address) {
+  if (!validatedFields.success) {
+    const errorMessages = validatedFields.error.errors.map((e) => e.message).join(", ")
     return {
       success: false,
-      message: "Please fill out all required fields.",
+      message: `Invalid form data: ${errorMessages}`,
     }
   }
+
+  const { fullName, phone, address } = validatedFields.data
 
   try {
-    const data = await resend.emails.send({
-      from: `Summit Roofing <${fromEmail}>`,
-      to: [toEmail],
-      subject: `New Quote Request from ${fullName}`,
-      react: ContactFormEmail({
-        fullName,
-        phone,
-        address,
-      }) as React.ReactElement,
+    const { data, error } = await resend.emails.send({
+      from: "Summit Roofing Lead <onboarding@resend.dev>",
+      to: toEmail,
+      subject: `New Website Lead: ${fullName}`,
+      reply_to: "no-reply@resend.dev",
+      react: <ContactFormEmail fullName={fullName} phone={phone} address={address} />,
     })
 
-    if (data.error) {
-      console.error("Resend API Error:", data.error)
-      return { success: false, message: "Failed to send email. Please try again later." }
+    if (error) {
+      console.error("Resend API Error:", error)
+      return { success: false, message: "Failed to send email. Please try again." }
     }
 
-    return { success: true, message: "Thank you! Your request has been sent." }
+    return {
+      success: true,
+      message: "Your quote request has been sent successfully!",
+    }
   } catch (error) {
-    console.error("Error sending email:", error)
-    return { success: false, message: "An unexpected error occurred. Please try again." }
+    console.error("Caught an exception while sending email:", error)
+    return {
+      success: false,
+      message: "An unexpected error occurred. Please try again later.",
+    }
   }
 }
