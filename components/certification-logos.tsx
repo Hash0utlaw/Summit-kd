@@ -2,9 +2,9 @@ import Image from "next/image"
 
 const certifications = [
   {
-    name: "GAF Certified",
-    logo: "/images/certifications/gaf-logo.png", // Using the GAF logo from the letter
-    description: "GAF Certified Roofing Contractor",
+    name: "GAF Master Elite",
+    logo: "/images/certifications/gaf-master-elite.png",
+    description: "GAF Master Elite® Roofing Contractor",
   },
   {
     name: "Owens Corning Preferred",
@@ -18,7 +18,7 @@ const certifications = [
   },
   {
     name: "Uniflex Premier Contractor",
-    logo: "/images/uniflex-logo.png",
+    logo: "/images/certifications/uniflex-logo.png",
     description: "Uniflex Authorized Premier Contractor",
   },
   {
@@ -29,7 +29,17 @@ const certifications = [
   {
     name: "BBB Accredited",
     logo: "/images/certifications/bbb-accredited.png",
-    description: "Better Business Bureau Accredited",
+    description: "Better Business Bureau Accredited Business",
+  },
+  {
+    name: "Alabama Licensed",
+    logo: "/images/certifications/alabama-license.png",
+    description: "Licensed & Insured in Alabama",
+  },
+  {
+    name: "Georgia Licensed",
+    logo: "/images/certifications/georgia-license.png",
+    description: "Licensed & Insured in Georgia",
   },
 ]
 
@@ -40,11 +50,11 @@ export default function CertificationLogos() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Certified & Trusted</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Our certifications and partnerships ensure the highest quality workmanship and materials
+            Our certifications and partnerships ensure the highest quality workmanship and materials.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 items-center">
           {certifications.map((cert, index) => (
             <div
               key={index}
@@ -64,8 +74,8 @@ export default function CertificationLogos() {
         <div className="text-center mt-12">
           <p className="text-gray-600 max-w-3xl mx-auto">
             These certifications represent our commitment to excellence, ongoing education, and adherence to the highest
-            industry standards. When you choose Summit Roofing Professionals, you're choosing a team that's recognized
-            by the industry's leading organizations.
+            industry standards. When you choose Summit Roofing, you're choosing a team that's recognized by the
+            industry's leading organizations.
           </p>
         </div>
       </div>
