@@ -7,7 +7,7 @@ interface ContactFormEmailProps {
   address: string
 }
 
-export const ContactFormEmail: React.FC<Readonly<ContactFormEmailProps>> = ({ fullName, phone, address }) => (
+const ContactFormEmail: React.FC<Readonly<ContactFormEmailProps>> = ({ fullName, phone, address }) => (
   <Html>
     <Head />
     <Preview>New Free Quote Request from {fullName}</Preview>
@@ -40,3 +40,5 @@ export const ContactFormEmail: React.FC<Readonly<ContactFormEmailProps>> = ({ fu
     </Tailwind>
   </Html>
 )
+
+export default ContactFormEmail
