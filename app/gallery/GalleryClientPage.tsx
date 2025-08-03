@@ -326,6 +326,41 @@ const projects = [
     imageUrl: "/images/residential/gallery/suburban-home-roof-replacement.jpeg",
     description: "A complete roof replacement for a lovely suburban home, surrounded by mature trees.",
   },
+  {
+    id: 46,
+    category: "Specialty",
+    location: "Mediterranean Villa",
+    imageUrl: "/images/tile/gallery-1.png",
+    description: "Elegant terracotta barrel tiles on a beautiful Mediterranean-style villa.",
+  },
+  {
+    id: 47,
+    category: "Specialty",
+    location: "Classic Tile Roof",
+    imageUrl: "/images/tile/gallery-2.png",
+    description: "Vibrant red clay tiles providing a timeless look against a bright blue sky.",
+  },
+  {
+    id: 48,
+    category: "Specialty",
+    location: "Multi-Tonal Clay Tile",
+    imageUrl: "/images/tile/hero.png",
+    description: "A close-up of beautiful, multi-tonal clay tiles that add character and depth.",
+  },
+  {
+    id: 49,
+    category: "Specialty",
+    location: "Modern Concrete Tile",
+    imageUrl: "/images/tile/gallery-6.png",
+    description: "Sleek, flat profile concrete tiles in a modern grey finish.",
+  },
+  {
+    id: 50,
+    category: "Specialty",
+    location: "Complex Concrete Tile Roof",
+    imageUrl: "/images/tile/gallery-4.png",
+    description: "Expert installation of concrete tiles on a complex roof with multiple valleys and ridges.",
+  },
 ]
 
 const filterCategories = ["All", "Residential", "Commercial", "Specialty"]
@@ -336,7 +371,7 @@ export default function GalleryClientPage() {
   const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null)
 
   useEffect(() => {
-    const sortedProjects = [...projects].sort((a, b) => a.id - b.id)
+    const sortedProjects = [...projects].sort((a, b) => b.id - a.id)
     if (activeFilter === "All") {
       setFilteredProjects(sortedProjects)
     } else {

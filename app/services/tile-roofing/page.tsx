@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import ServicePageHero from "@/components/service-page-hero"
 import FaqSection from "@/components/faq-section"
 import CtaSection from "@/components/cta-section"
@@ -46,13 +47,20 @@ const benefits = [
   },
 ]
 
+const tileGalleryImages = [
+  { src: "/images/tile/gallery-1.png", alt: "Beautiful terracotta tile roof on a luxury home" },
+  { src: "/images/tile/gallery-2.png", alt: "Classic red tile roof against a clear blue sky" },
+  { src: "/images/tile/gallery-6.png", alt: "Modern flat profile concrete tile roof in a sleek grey color" },
+  { src: "/images/tile/gallery-4.png", alt: "Complex roof with expertly installed concrete tiles and copper flashing" },
+]
+
 export default function TileRoofingPage() {
   return (
     <>
       <ServicePageHero
         title="Durable & Stylish Tile Roofing"
         subtitle="Add timeless character and long-lasting protection to your home with clay or concrete tile."
-        imageUrl="/images/tile-roof.png"
+        imageUrl="/images/tile/hero.png"
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -86,10 +94,12 @@ export default function TileRoofingPage() {
               </ul>
             </div>
             <div>
-              <img
-                src="/images/tile-roof-closeup.png"
-                alt="Close-up of a Spanish-style tile roof"
-                className="rounded-lg shadow-lg"
+              <Image
+                src="/images/tile/gallery-1.png"
+                alt="Close-up of a Spanish-style tile roof on a luxury home"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-lg w-full h-auto"
               />
             </div>
           </div>
@@ -110,6 +120,28 @@ export default function TileRoofingPage() {
                 <div className="flex justify-center mb-4">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-800">{benefit.title}</h3>
                 <p className="mt-2 text-gray-600">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Explore Our Tile Work</h2>
+            <p className="mt-4 text-lg text-gray-600">See the quality and variety of our tile roofing projects.</p>
+          </div>
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {tileGalleryImages.map((image, index) => (
+              <div key={index} className="overflow-hidden rounded-lg shadow-lg">
+                <Image
+                  src={image.src || "/placeholder.svg"}
+                  alt={image.alt}
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
               </div>
             ))}
           </div>

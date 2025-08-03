@@ -3,6 +3,8 @@
 import { useState } from "react"
 import Image from "next/image"
 import { X } from "lucide-react"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
 
 interface CertificationGalleryProps {
   certificates: {
@@ -24,23 +26,42 @@ export default function CertificationGallery({ certificates }: CertificationGall
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {certificates.map((cert, index) => (
-          <div
-            key={index}
-            className="group cursor-pointer overflow-hidden rounded-lg shadow-lg border"
-            onClick={() => openLightbox(cert.src)}
-          >
-            <Image
-              src={cert.src || "/placeholder.svg"}
-              alt={cert.alt}
-              width={500}
-              height={600}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-            />
-          </div>
-        ))}
-      </div>
+      <Carousel
+        plugins={[
+          Autoplay({
+            delay: 5000,
+            stopOnInteraction: true,
+          }),
+        ]}
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        className="w-full max-w-5xl mx-auto"
+      >
+        <CarouselContent className="-ml-4">
+          {certificates.map((cert, index) => (
+            <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+              <div className="p-1">
+                <div
+                  className="group cursor-pointer overflow-hidden rounded-lg shadow-lg border aspect-[4/5]"
+                  onClick={() => openLightbox(cert.src)}
+                >
+                  <Image
+                    src={cert.src || "/placeholder.svg"}
+                    alt={cert.alt}
+                    width={400}
+                    height={500}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="ml-12" />
+        <CarouselNext className="mr-12" />
+      </Carousel>
 
       {selectedCert && (
         <div
