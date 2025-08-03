@@ -128,7 +128,7 @@ export default function RotatingTestimonials() {
 
         <div className="max-w-4xl mx-auto">
           <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
-            <div className="md:flex">
+            <div className="md:flex md:h-[550px]">
               {/* Image Section */}
               <div className="md:w-1/2 relative">
                 <Image
