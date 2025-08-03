@@ -83,11 +83,11 @@ export default function AboutPage() {
             </div>
             <div>
               <Image
-                src="/images/founder-portrait.png"
-                alt="Founder of Summit Roofing Professionals"
+                src="/images/founder-on-roof.jpg"
+                alt="Founder of Summit Roofing Professionals on a completed roofing project"
                 width={500}
                 height={500}
-                className="rounded-lg shadow-lg mx-auto"
+                className="rounded-lg shadow-lg mx-auto object-cover aspect-square"
               />
             </div>
           </div>
