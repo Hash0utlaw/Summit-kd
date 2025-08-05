@@ -23,7 +23,7 @@ export default function HeroSection() {
         </p>
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
           <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
-            <Link href="/contact">Get Free Inspection</Link>
+            <Link href="/contact">Get a Free Estimate</Link>
           </Button>
           <Button
             asChild
