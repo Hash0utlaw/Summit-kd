@@ -7,8 +7,8 @@ export default function HeroSection() {
     <section className="relative bg-gray-800 text-white">
       <div className="absolute inset-0">
         <img
-          src="/images/roofer-sunset.png"
-          alt="Roofer working on a roof at sunset"
+          src="/images/roofer-craftsmanship-sunset.png"
+          alt="Roofer demonstrating craftsmanship on a roof at sunset"
           className="h-full w-full object-cover opacity-40"
         />
       </div>
