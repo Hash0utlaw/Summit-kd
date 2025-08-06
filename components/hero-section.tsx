@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ShieldCheck, Award } from "lucide-react"
+import { ShieldCheck, Award, FileText } from 'lucide-react'
 
 export default function HeroSection() {
   return (
@@ -21,17 +21,12 @@ export default function HeroSection() {
         <p className="mt-4 max-w-3xl text-lg md:text-xl text-gray-200">
           Professional roofing services with unmatched quality and customer satisfaction.
         </p>
-        <div className="mt-8 flex flex-col sm:flex-row gap-4">
-          <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
-            <Link href="/contact">Get a Free Estimate</Link>
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="border-white text-white hover:bg-white hover:text-gray-800 bg-transparent"
-          >
-            <a href="tel:1-800-555-ROOF">Call Now: 1-800-555-ROOF</a>
+        <div className="mt-8">
+          <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 text-lg">
+            <Link href="/contact">
+              <FileText className="mr-2 h-5 w-5" />
+              Get a Free Estimate
+            </Link>
           </Button>
         </div>
         <div className="mt-12 flex flex-col sm:flex-row items-center gap-6 text-sm">
