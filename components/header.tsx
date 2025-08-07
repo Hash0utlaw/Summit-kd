@@ -16,7 +16,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Menu, Home, Building } from "lucide-react"
+import { Menu, Home, Building } from 'lucide-react'
 
 const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a">>(
   ({ className, title, children, ...props }, ref) => {
@@ -102,15 +102,15 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white shadow-sm">
-      <div className="container mx-auto flex h-32 items-center justify-between px-4 md:px-6">
+      <div className="container mx-auto flex h-40 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center">
-          <div className="relative leading-10">
+          <div className="relative">
             <Image
               src="/images/summit-roofing-logo.png"
               alt="Summit Roofing Professionals Logo"
-              width={48}
-              height={48}
-              className="h-28 w-auto"
+              width={150}
+              height={150}
+              className="h-36 w-auto"
               priority
             />
           </div>
@@ -204,9 +204,9 @@ export default function Header() {
                 <Image
                   src="/images/summit-roofing-logo.png"
                   alt="Summit Roofing Professionals Logo"
-                  width={32}
-                  height={32}
-                  className="h-24 w-auto"
+                  width={120}
+                  height={120}
+                  className="h-32 w-auto"
                 />
               </Link>
               <Link

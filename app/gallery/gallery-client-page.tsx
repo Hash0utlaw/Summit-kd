@@ -5,7 +5,7 @@ import Image from "next/image"
 import ServicePageHero from "@/components/service-page-hero"
 import CtaSection from "@/components/cta-section"
 import { Button } from "@/components/ui/button"
-import { X } from "lucide-react"
+import { X } from 'lucide-react'
 
 const projects = [
   {
@@ -360,6 +360,13 @@ const projects = [
     location: "Complex Concrete Tile Roof",
     imageUrl: "/images/tile/gallery-4.png",
     description: "Expert installation of concrete tiles on a complex roof with multiple valleys and ridges.",
+  },
+  {
+    id: 51,
+    category: "Residential",
+    location: "Auburn, AL",
+    imageUrl: "/images/residential/gallery/auburn-al-residential-roof.jpeg",
+    description: "A beautiful new shingle roof on a classic home with bay windows in Auburn, AL.",
   },
 ]
 
