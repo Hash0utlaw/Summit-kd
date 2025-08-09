@@ -59,17 +59,18 @@ export default function FluidAppliedPage() {
         title="Fluid-Applied Roof Coatings"
         subtitle="Seamless, waterproof, and restorative solutions to extend the life of your commercial roof."
         imageUrl="/images/commercial/coatings/hero-unique-building.png"
+        imageAlt="Commercial building restored with bright white fluid-applied roof coating"
       />
 
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="prose max-w-none lg:prose-lg">
-              <h2>Restore Your Roof, Don't Replace It</h2>
+              <h2>Restore Your Roof, Don&apos;t Replace It</h2>
               <p>
                 Fluid-applied roofing systems are an innovative and cost-effective solution for restoring and protecting
                 an existing commercial roof. These liquid coatings cure to form a durable, seamless membrane that stops
-                leaks, improves energy efficiency, and significantly extends the service life of your roof. It's a
+                leaks, improves energy efficiency, and significantly extends the service life of your roof. It&apos;s a
                 smarter way to manage your roofing assets.
               </p>
               <p>
@@ -80,9 +81,10 @@ export default function FluidAppliedPage() {
             <div>
               <Image
                 src="/images/commercial/coatings/application-in-progress.png"
-                alt="Roofer in a protective suit applying a white fluid-applied roof coating with a spray gun."
+                alt="Professional roofer in protective gear spraying white roof coating during application"
                 width={600}
                 height={450}
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="rounded-lg shadow-lg"
               />
             </div>
@@ -96,7 +98,9 @@ export default function FluidAppliedPage() {
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {benefits.map((benefit) => (
               <div key={benefit.title} className="p-6">
-                <div className="flex justify-center mb-4">{benefit.icon}</div>
+                <div className="flex justify-center mb-4" aria-hidden="true">
+                  {benefit.icon}
+                </div>
                 <h3 className="text-xl font-semibold text-gray-800">{benefit.title}</h3>
                 <p className="mt-2 text-gray-600">{benefit.description}</p>
               </div>
@@ -114,9 +118,10 @@ export default function FluidAppliedPage() {
             <div className="flex flex-col items-center text-center">
               <Image
                 src="/images/commercial/coatings/surface-preparation.png"
-                alt="Professional roofer preparing a commercial roof surface for a fluid-applied coating."
+                alt="Surface preparation on commercial roof before coating to improve adhesion"
                 width={400}
                 height={400}
+                sizes="(min-width: 1024px) 33vw, 100vw"
                 className="rounded-lg shadow-lg mb-4 object-cover"
               />
               <h3 className="text-xl font-semibold text-gray-800">Thorough Preparation</h3>
@@ -127,9 +132,10 @@ export default function FluidAppliedPage() {
             <div className="flex flex-col items-center text-center">
               <Image
                 src="/images/commercial/coatings/spray-application-closeup.png"
-                alt="Close-up of a spray gun applying a thick white waterproof coating to a commercial roof."
+                alt="Close-up of spray gun applying waterproof roof coating to create a seamless membrane"
                 width={400}
                 height={400}
+                sizes="(min-width: 1024px) 33vw, 100vw"
                 className="rounded-lg shadow-lg mb-4 object-cover"
               />
               <h3 className="text-xl font-semibold text-gray-800">Precise Application</h3>
@@ -140,9 +146,10 @@ export default function FluidAppliedPage() {
             <div className="flex flex-col items-center text-center">
               <Image
                 src="/images/commercial/coatings/metal-roof-coating.png"
-                alt="Clean, reflective silver coating on a commercial metal roof with turbine vents."
+                alt="Completed reflective silver coating on a commercial metal roof with turbine vents"
                 width={400}
                 height={400}
+                sizes="(min-width: 1024px) 33vw, 100vw"
                 className="rounded-lg shadow-lg mb-4 object-cover"
               />
               <h3 className="text-xl font-semibold text-gray-800">Metal Roof Restoration</h3>

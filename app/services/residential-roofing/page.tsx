@@ -66,7 +66,7 @@ const residentialServices = [
     title: "Tile Roofing",
     description: "Classic elegance and superior longevity with clay or concrete tiles.",
     href: "/services/tile-roofing",
-    imageUrl: "/images/tile-roof-closeup.png",
+    imageUrl: "/images/tile/gallery-2.png",
   },
   {
     title: "Metal Roofing",
@@ -78,7 +78,7 @@ const residentialServices = [
     title: "Roof Repairs",
     description: "Fast and reliable repairs for leaks, storm damage, and general wear.",
     href: "/services/roof-repairs",
-    imageUrl: "/images/roof-damage.png",
+    imageUrl: "/images/repairs/repair-in-progress.png",
   },
 ]
 

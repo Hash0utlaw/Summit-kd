@@ -28,6 +28,7 @@ export default function ServiceAreasHubPage() {
         title="Serving Communities Across the Southeast"
         subtitle="We are proud to be local roofing experts, providing reliable services to homeowners and businesses throughout Alabama and Georgia."
         imageUrl="/images/alabama-georgia-map.png"
+        imageAlt="Map graphic illustrating Summit Roofing Professionals service areas across Alabama and Georgia"
       />
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -44,11 +45,13 @@ export default function ServiceAreasHubPage() {
                 key={location.name}
                 className="p-6 border border-gray-200 rounded-lg text-center flex flex-col items-center justify-center"
               >
-                <MapPin className="h-8 w-8 text-blue-600 mb-3" />
+                <MapPin className="h-8 w-8 text-blue-600 mb-3" aria-hidden="true" />
                 <h3 className="text-xl font-semibold text-gray-800">{location.name}</h3>
                 {location.available ? (
                   <Button asChild variant="link" className="mt-2 text-orange-500 hover:text-orange-600">
-                    <Link href={location.href}>View Local Services &rarr;</Link>
+                    <Link href={location.href} aria-label={`View roofing services for ${location.name}`}>
+                      View Local Services &rarr;
+                    </Link>
                   </Button>
                 ) : (
                   <p className="mt-2 text-sm text-gray-500">Coming Soon</p>
