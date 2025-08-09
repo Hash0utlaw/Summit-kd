@@ -13,10 +13,10 @@ type ServicePageHeroProps = {
 }
 
 /**
- * Full-bleed hero with accessible, SEO-friendly image.
- * - Uses Next/Image for optimization
- * - Adds responsive sizes and priority for LCP
- * - Provides a descriptive alt fallback if not supplied
+ * Compact, accessible hero:
+ * - Uses Next/Image for optimization (priority for LCP)
+ * - Reduced vertical height for better balance
+ * - Keeps overlay for legibility and attention
  */
 export default function ServicePageHero({
   title,
@@ -45,10 +45,11 @@ export default function ServicePageHero({
         <div className={cn("absolute inset-0 bg-black/45", overlayClassName)} />
       </div>
 
-      <div className="relative container mx-auto flex h-[48vh] items-end px-4 py-12 sm:h-[60vh] md:h-[70vh] md:px-6 md:py-16">
+      {/* Reduced height across breakpoints for a smaller, balanced hero */}
+      <div className="relative container mx-auto flex h-[36vh] items-end px-4 py-10 sm:h-[42vh] sm:py-12 md:h-[50vh] md:px-6 md:py-14">
         <div className="max-w-3xl text-white">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">{title}</h1>
-          {subtitle ? <p className="mt-4 text-lg text-white/90">{subtitle}</p> : null}
+          {subtitle ? <p className="mt-3 text-base text-white/90 sm:mt-4 sm:text-lg">{subtitle}</p> : null}
         </div>
       </div>
     </section>
