@@ -62,7 +62,7 @@ export default function AboutPage() {
       <ServicePageHero
         title="About Summit Roofing Professionals"
         subtitle="Building trust one roof at a time across Alabama and Georgia."
-        imageUrl="/images/company-truck.png"
+        imageUrl="/images/about-us-hero-sunset.png"
       />
 
       <section className="py-16 md:py-24 bg-white">
