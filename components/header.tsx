@@ -16,7 +16,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Menu, Home, Building } from 'lucide-react'
+import { Menu, Home, Building } from "lucide-react"
 
 const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a">>(
   ({ className, title, children, ...props }, ref) => {
@@ -43,62 +43,6 @@ ListItem.displayName = "ListItem"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
-
-  const residentialServiceLinks = [
-    {
-      title: "Residential Roofing",
-      href: "/services/residential-roofing",
-      description: "High-quality roofing solutions for your home.",
-    },
-    {
-      title: "Architectural Shingles",
-      href: "/services/architectural-shingles",
-      description: "Premium asphalt shingles for lasting protection.",
-    },
-    {
-      title: "Slate Roofing",
-      href: "/services/slate-roofing",
-      description: "Elegant and enduring slate for a timeless look.",
-    },
-    {
-      title: "Cedar Shake Roofing",
-      href: "/services/cedar-shake-roofing",
-      description: "Natural beauty and excellent insulation.",
-    },
-    {
-      title: "Tile Roofing",
-      href: "/services/tile-roofing",
-      description: "Durable and stylish clay or concrete tiles.",
-    },
-    {
-      title: "Metal Shingles",
-      href: "/services/metal-shingles",
-      description: "Modern aesthetics with unmatched longevity.",
-    },
-  ]
-
-  const commercialServiceLinks = [
-    {
-      title: "Commercial Roofing Hub",
-      href: "/services/commercial-roofing",
-      description: "An overview of all our commercial services.",
-    },
-    {
-      title: "Modified Bitumen",
-      href: "/services/commercial/modified-bitumen",
-      description: "Time-tested, multi-layer protection for flat roofs.",
-    },
-    {
-      title: "Single-Ply (TPO/EPDM)",
-      href: "/services/commercial/single-ply",
-      description: "Modern, lightweight, and energy-efficient systems.",
-    },
-    {
-      title: "Fluid-Applied Roofing",
-      href: "/services/commercial/fluid-applied",
-      description: "Seamless, restorative coatings to extend roof life.",
-    },
-  ]
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white shadow-sm">
@@ -127,47 +71,31 @@ export default function Header() {
             <NavigationMenuItem>
               <NavigationMenuTrigger>Services</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] lg:w-[600px] lg:grid-cols-2 ">
-                  <li className="row-span-4">
-                    <NavigationMenuLink asChild>
-                      <a
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-orange-50 to-orange-100 p-6 no-underline outline-none focus:shadow-md"
-                        href="/services/residential-roofing"
+                <ul className="w-[260px] p-2">
+                  <li>
+                    <Link href="/services/residential-roofing" legacyBehavior passHref>
+                      <NavigationMenuLink
+                        className={cn(
+                          "flex items-center gap-3 rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                        )}
                       >
-                        <Home className="h-6 w-6 text-orange-500" />
-                        <div className="mb-2 mt-4 text-lg font-medium text-orange-800">Residential Services</div>
-                        <p className="text-sm leading-tight text-orange-700">
-                          Protecting your home with high-quality roofing solutions, from repairs to full replacements.
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
+                        <Home className="h-4 w-4 text-orange-500" aria-hidden="true" />
+                        <span className="font-medium">Residential</span>
+                      </NavigationMenuLink>
+                    </Link>
                   </li>
-                  {residentialServiceLinks.map((service) => (
-                    <ListItem key={service.title} href={service.href} title={service.title}>
-                      {service.description}
-                    </ListItem>
-                  ))}
-
-                  <li className="row-span-4">
-                    <NavigationMenuLink asChild>
-                      <a
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-blue-50 to-blue-100 p-6 no-underline outline-none focus:shadow-md"
-                        href="/services/commercial-roofing"
+                  <li>
+                    <Link href="/services/commercial-roofing" legacyBehavior passHref>
+                      <NavigationMenuLink
+                        className={cn(
+                          "mt-1 flex items-center gap-3 rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                        )}
                       >
-                        <Building className="h-6 w-6 text-blue-600" />
-                        <div className="mb-2 mt-4 text-lg font-medium text-blue-800">Commercial Services</div>
-                        <p className="text-sm leading-tight text-blue-700">
-                          Durable and efficient systems for businesses, industrial facilities, and multi-family
-                          properties.
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
+                        <Building className="h-4 w-4 text-blue-600" aria-hidden="true" />
+                        <span className="font-medium">Commercial</span>
+                      </NavigationMenuLink>
+                    </Link>
                   </li>
-                  {commercialServiceLinks.map((service) => (
-                    <ListItem key={service.title} href={service.href} title={service.title}>
-                      {service.description}
-                    </ListItem>
-                  ))}
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
@@ -227,21 +155,14 @@ export default function Header() {
                       className="block py-2 font-semibold text-gray-600 hover:text-orange-500"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      Residential Services
+                      Residential
                     </Link>
                     <Link
                       href="/services/commercial-roofing"
                       className="block py-2 font-semibold text-gray-600 hover:text-blue-600"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      Commercial Services
-                    </Link>
-                    <Link
-                      href="/services/roof-repairs"
-                      className="block py-2 font-semibold text-gray-600 hover:text-gray-900"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Roof Repairs
+                      Commercial
                     </Link>
                   </AccordionContent>
                 </AccordionItem>
