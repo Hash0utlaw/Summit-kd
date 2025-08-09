@@ -5,6 +5,8 @@ import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import CookieBanner from "@/components/cookie-banner"
+import { Analytics } from "@vercel/analytics/next"
+import { Suspense } from "react"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -69,7 +71,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -129,10 +131,13 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <CookieBanner />
+        <Suspense fallback={null}>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <CookieBanner />
+          <Analytics />
+        </Suspense>
       </body>
     </html>
   )
