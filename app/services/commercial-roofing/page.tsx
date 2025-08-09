@@ -61,7 +61,7 @@ export default function CommercialRoofingHubPage() {
       <ServicePageHero
         title="Professional Commercial Roofing"
         subtitle="Protecting Your Business Investment with Durable and Efficient Roofing Systems."
-        imageUrl="/images/commercial-building-roof.png"
+        imageUrl="/images/commercial/modern-commercial-roof.png"
       />
 
       <section className="py-16 md:py-24 bg-white">
