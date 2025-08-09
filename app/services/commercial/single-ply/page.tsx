@@ -3,6 +3,7 @@ import ServicePageHero from "@/components/service-page-hero"
 import FaqSection from "@/components/faq-section"
 import CtaSection from "@/components/cta-section"
 import { Sun, Feather, ShieldCheck } from "lucide-react"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Single-Ply TPO, EPDM, & PVC Roofing | Summit Roofing",
@@ -53,6 +54,7 @@ export default function SinglePlyPage() {
         title="Single-Ply Roofing Systems"
         subtitle="Modern, energy-efficient, and durable solutions for your commercial roof."
         imageUrl="/images/commercial/tpo/hero.png"
+        imageAlt="White TPO single-ply commercial roof providing reflective, energy-efficient protection"
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -68,9 +70,12 @@ export default function SinglePlyPage() {
               </p>
             </div>
             <div>
-              <img
+              <Image
                 src="/images/commercial/tpo/completed-project-aerial.jpeg"
-                alt="Aerial view of a completed white TPO roof on a large commercial facility"
+                alt="Aerial view of completed white TPO roof on a large commercial facility"
+                width={720}
+                height={480}
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="rounded-lg shadow-lg"
               />
             </div>
@@ -84,7 +89,9 @@ export default function SinglePlyPage() {
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {benefits.map((benefit) => (
               <div key={benefit.title} className="p-6">
-                <div className="flex justify-center mb-4">{benefit.icon}</div>
+                <div className="flex justify-center mb-4" aria-hidden="true">
+                  {benefit.icon}
+                </div>
                 <h3 className="text-xl font-semibold text-gray-800">{benefit.title}</h3>
                 <p className="mt-2 text-gray-600">{benefit.description}</p>
               </div>

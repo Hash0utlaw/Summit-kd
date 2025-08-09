@@ -62,6 +62,7 @@ export default function CommercialRoofingHubPage() {
         title="Professional Commercial Roofing"
         subtitle="Protecting Your Business Investment with Durable and Efficient Roofing Systems."
         imageUrl="/images/commercial/modern-commercial-roof.png"
+        imageAlt="Modern commercial roof with white reflective membrane showcasing energy-efficient roofing systems"
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -80,11 +81,13 @@ export default function CommercialRoofingHubPage() {
                 key={service.title}
                 className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow flex flex-col"
               >
-                <service.icon className="h-10 w-10 text-blue-600 mb-4" />
+                <service.icon className="h-10 w-10 text-blue-600 mb-4" aria-hidden="true" />
                 <h3 className="text-xl font-semibold text-gray-800">{service.title}</h3>
                 <p className="mt-2 text-gray-600 flex-grow">{service.description}</p>
                 <Button asChild variant="link" className="p-0 mt-4 text-orange-500 hover:text-orange-600 self-start">
-                  <Link href={service.href}>Learn More &rarr;</Link>
+                  <Link href={service.href} aria-label={`Learn more about ${service.title.toLowerCase()}`}>
+                    Learn More &rarr;
+                  </Link>
                 </Button>
               </div>
             ))}

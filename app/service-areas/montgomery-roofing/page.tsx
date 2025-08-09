@@ -16,6 +16,7 @@ export default function MontgomeryRoofingPage() {
         title="Trusted Roofing for Montgomery, AL"
         subtitle="From historic Cloverdale to growing East Montgomery, Summit Roofing delivers excellence and durability for every home and business."
         imageUrl="/images/montgomery-skyline.png"
+        imageAlt="Montgomery, Alabama skyline representing dependable roofing services by Summit Roofing Professionals"
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -26,12 +27,12 @@ export default function MontgomeryRoofingPage() {
               <p className="mt-4 text-lg text-gray-600">
                 As the capital of Alabama, Montgomery is a city of significance, and your property is a significant
                 investment. Summit Roofing provides comprehensive roofing services designed to protect and enhance that
-                investment, using top-tier materials and expert installation techniques suited for the River Region's
-                climate.
+                investment, using top-tier materials and expert installation techniques suited for the River
+                Region&apos;s climate.
               </p>
               <ul className="mt-6 space-y-4">
                 <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-6 w-6 text-orange-500 mr-3 mt-1 flex-shrink-0" aria-hidden="true" />
                   <span>
                     <strong className="font-semibold">Residential Services:</strong> We offer a full range of roofing
                     options, including architectural shingles and classic metal roofs, perfect for protecting your home
@@ -39,7 +40,7 @@ export default function MontgomeryRoofingPage() {
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-6 w-6 text-blue-600 mr-3 mt-1 flex-shrink-0" aria-hidden="true" />
                   <span>
                     <strong className="font-semibold">Commercial Solutions:</strong> Our team is equipped to handle
                     large-scale commercial projects, providing energy-efficient and low-maintenance roofing systems for
@@ -47,7 +48,7 @@ export default function MontgomeryRoofingPage() {
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-gray-500 mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-6 w-6 text-gray-500 mr-3 mt-1 flex-shrink-0" aria-hidden="true" />
                   <span>
                     <strong className="font-semibold">Insurance Claim Specialists:</strong> Navigating storm damage
                     claims can be complex. We work directly with your insurance company to ensure a smooth, fair, and
@@ -63,19 +64,19 @@ export default function MontgomeryRoofingPage() {
               </p>
               <ul className="mt-4 space-y-2 text-gray-700">
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" aria-hidden="true" />
                   <span>Deep Knowledge of Local Building Codes</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" aria-hidden="true" />
                   <span>Flexible Financing Options Available</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                  <span>5-Star Rated Customer Service & Communication</span>
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" aria-hidden="true" />
+                  <span>5-Star Rated Customer Service &amp; Communication</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" aria-hidden="true" />
                   <span>Proven Track Record in the River Region</span>
                 </li>
               </ul>

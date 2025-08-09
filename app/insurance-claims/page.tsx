@@ -106,6 +106,7 @@ export default function InsuranceClaimsPage() {
         title="Stress-Free Roof Insurance Claims"
         subtitle="Let our experts guide you through every step of the insurance process, from damage inspection to final payment."
         imageUrl="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hail-hero-7R8Fr4voZJwC68inlLpWqNCQaaitJD.png"
+        imageAlt="Wet asphalt shingles after a storm, symbolizing roof hail and wind damage for insurance claims in Alabama and Georgia"
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -164,7 +165,7 @@ export default function InsuranceClaimsPage() {
             <div>
               <img
                 src="/images/roofer-with-homeowner.png"
-                alt="Summit Roofing professional discussing a claim with a homeowner"
+                alt="Summit Roofing professional discussing roof insurance claim options with a homeowner"
                 className="rounded-lg shadow-lg"
               />
             </div>
