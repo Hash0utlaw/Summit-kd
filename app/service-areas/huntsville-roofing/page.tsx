@@ -16,7 +16,6 @@ export default function HuntsvilleRoofingPage() {
         title="Premier Roofing Services in Huntsville, AL"
         subtitle="Summit Roofing is proud to serve the Rocket City with unparalleled craftsmanship and reliable roofing solutions for homes and businesses."
         imageUrl="/images/huntsville-skyline.png"
-        imageAlt="Huntsville, Alabama skyline with blue sky, representing trusted roofing services by Summit Roofing Professionals"
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -32,7 +31,7 @@ export default function HuntsvilleRoofingPage() {
               </p>
               <ul className="mt-6 space-y-4">
                 <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-orange-500 mr-3 mt-1 flex-shrink-0" aria-hidden="true" />
+                  <CheckCircle className="h-6 w-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
                   <span>
                     <strong className="font-semibold">Residential Roofing:</strong> We provide durable, high-quality
                     roofing systems, including asphalt shingles, metal, and slate, to protect your family and enhance
@@ -40,16 +39,16 @@ export default function HuntsvilleRoofingPage() {
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-blue-600 mr-3 mt-1 flex-shrink-0" aria-hidden="true" />
+                  <CheckCircle className="h-6 w-6 text-blue-600 mr-3 mt-1 flex-shrink-0" />
                   <span>
                     <strong className="font-semibold">Commercial Roofing:</strong> Specialized solutions like TPO, EPDM,
                     and fluid-applied membranes to protect your business investment and ensure operational continuity.
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-gray-500 mr-3 mt-1 flex-shrink-0" aria-hidden="true" />
+                  <CheckCircle className="h-6 w-6 text-gray-500 mr-3 mt-1 flex-shrink-0" />
                   <span>
-                    <strong className="font-semibold">Storm Damage &amp; Repairs:</strong> Huntsville is no stranger to
+                    <strong className="font-semibold">Storm Damage & Repairs:</strong> Huntsville is no stranger to
                     severe weather. We offer rapid-response emergency repairs and expert insurance claim assistance to
                     restore your peace of mind.
                   </span>
@@ -63,20 +62,20 @@ export default function HuntsvilleRoofingPage() {
               </p>
               <ul className="mt-4 space-y-2 text-gray-700">
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" aria-hidden="true" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
                   <span>Certified and Insured Local Technicians</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" aria-hidden="true" />
-                  <span>Expertise with Alabama&apos;s Climate Challenges</span>
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                  <span>Expertise with Alabama's Climate Challenges</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" aria-hidden="true" />
-                  <span>Free, No-Obligation Inspections &amp; Estimates</span>
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                  <span>Free, No-Obligation Inspections & Estimates</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" aria-hidden="true" />
-                  <span>Industry-Leading Material &amp; Workmanship Warranties</span>
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                  <span>Industry-Leading Material & Workmanship Warranties</span>
                 </li>
               </ul>
             </div>

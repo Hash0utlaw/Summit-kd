@@ -1,205 +1,86 @@
 import type { MetadataRoute } from "next"
 
 /**
- * Generates an SEO-optimized sitemap for the Summit Roofing Professionals website.
- * This sitemap uses strategic priorities and change frequencies to help search engines
- * understand which pages are most important and how often they should be crawled.
+ * Generates the sitemap for the Summit Roofing Professionals website.
+ * A sitemap helps search engines like Google understand the structure of the site
+ * and discover all the important pages to crawl and index.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
+  // The base URL of the production website.
   const baseUrl = "https://summitroofingprofessionals.com"
-  const currentDate = new Date()
-  
-  // Homepage - highest priority, updated weekly with testimonials/projects
-  const homepage = {
-    url: baseUrl,
-    lastModified: currentDate,
-    changeFrequency: "weekly" as const,
-    priority: 1.0,
-  }
 
-  // Core business pages - high priority, moderate update frequency
-  const corePages = [
-    {
-      route: "/about",
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    {
-      route: "/contact", 
-      changeFrequency: "monthly" as const,
-      priority: 0.8, // Contact is crucial for conversions
-    },
-    {
-      route: "/gallery",
-      changeFrequency: "weekly" as const, // New projects added regularly
-      priority: 0.6,
-    },
-    {
-      route: "/financing",
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
-    },
-    {
-      route: "/insurance-claims",
-      changeFrequency: "monthly" as const,
-      priority: 0.7, // Important for storm damage leads
-    },
+  // An array of all static, top-level pages.
+  // These are core pages of the website.
+  const staticPages = [
+    "", // Homepage
+    "/about",
+    "/contact",
+    "/gallery",
+    "/financing",
+    "/insurance-claims",
   ]
 
-  // Primary service pages - highest business value
-  const primaryServicePages = [
-    {
-      route: "/services/residential-roofing",
-      changeFrequency: "monthly" as const,
-      priority: 0.95, // Core residential service
-    },
-    {
-      route: "/services/commercial-roofing", 
-      changeFrequency: "monthly" as const,
-      priority: 0.95, // Core commercial service
-    },
-    {
-      route: "/services/roof-repairs",
-      changeFrequency: "monthly" as const,
-      priority: 0.9, // High-frequency service
-    },
+  // An array of all primary and secondary service pages.
+  // These pages are crucial for business and have high priority.
+  const servicePages = [
+    "/services/residential-roofing",
+    "/services/commercial-roofing",
+    "/services/roof-repairs",
+    "/services/architectural-shingles",
+    "/services/slate-roofing",
+    "/services/cedar-shake-roofing",
+    "/services/tile-roofing",
+    "/services/metal-shingles",
+    "/services/commercial/modified-bitumen",
+    "/services/commercial/single-ply",
+    "/services/commercial/fluid-applied",
+    "/services/commercial/energy-efficient",
+    "/services/commercial/inspections-maintenance",
+    "/services/commercial/repair",
   ]
 
-  // Specific residential service pages - good search volume
-  const residentialServicePages = [
-    {
-      route: "/services/architectural-shingles",
-      changeFrequency: "monthly" as const,
-      priority: 0.8, // Most popular residential option
-    },
-    {
-      route: "/services/metal-shingles",
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    },
-    {
-      route: "/services/slate-roofing",
-      changeFrequency: "monthly" as const,
-      priority: 0.7, // Premium service, lower volume
-    },
-    {
-      route: "/services/cedar-shake-roofing",
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    {
-      route: "/services/tile-roofing",
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    },
+  // An array of all service area pages.
+  // These are important for local SEO.
+  const serviceAreaPages = [
+    "/service-areas",
+    "/service-areas/birmingham-roofing",
+    "/service-areas/atlanta-roofing",
+    "/service-areas/huntsville-roofing",
+    "/service-areas/montgomery-roofing",
+    "/service-areas/columbus-roofing",
+    "/service-areas/mobile-roofing",
+    "/service-areas/augusta-roofing",
+    "/service-areas/tuscaloosa-roofing",
   ]
 
-  // Commercial service sub-pages - B2B focused
-  const commercialServicePages = [
-    {
-      route: "/services/commercial/single-ply",
-      changeFrequency: "monthly" as const,
-      priority: 0.8, // Popular commercial service
-    },
-    {
-      route: "/services/commercial/modified-bitumen",
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    },
-    {
-      route: "/services/commercial/fluid-applied",
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    },
-    {
-      route: "/services/commercial/energy-efficient",
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    {
-      route: "/services/commercial/inspections-maintenance",
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    {
-      route: "/services/commercial/repair",
-      changeFrequency: "monthly" as const,
-      priority: 0.8, // Emergency repairs are high-value
-    },
-  ]
+  // Combine all page routes into a single array.
+  const allRoutes = [...staticPages, ...servicePages, ...serviceAreaPages]
 
-  // Service area hub page
-  const serviceAreaHub = {
-    route: "/service-areas",
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  }
+  // Map over all routes to generate the sitemap entries.
+  return allRoutes.map((route) => {
+    // Determine priority based on the page's importance.
+    // Homepage gets the highest priority (1.0).
+    // Core service and about pages get high priority (0.9).
+    // Local service area pages get slightly lower but still high priority (0.8).
+    const getPriority = () => {
+      if (route === "") return 1.0
+      if (route.startsWith("/service-areas")) return 0.8
+      return 0.9
+    }
 
-  // Major metropolitan service areas - highest local SEO value
-  const majorServiceAreas = [
-    {
-      route: "/service-areas/birmingham-roofing",
-      changeFrequency: "monthly" as const,
-      priority: 0.85, // Major market
-    },
-    {
-      route: "/service-areas/atlanta-roofing", 
-      changeFrequency: "monthly" as const,
-      priority: 0.9, // Largest market
-    },
-    {
-      route: "/service-areas/huntsville-roofing",
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    },
-    {
-      route: "/service-areas/montgomery-roofing",
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    },
-  ]
+    // Determine change frequency based on how often content is expected to update.
+    // The homepage might be updated more frequently with new testimonials or projects.
+    // Other pages are updated less often.
+    const getChangeFrequency = () => {
+      if (route === "") return "daily"
+      return "weekly"
+    }
 
-  // Secondary service areas - good local SEO value
-  const secondaryServiceAreas = [
-    {
-      route: "/service-areas/columbus-roofing",
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    },
-    {
-      route: "/service-areas/mobile-roofing",
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    },
-    {
-      route: "/service-areas/augusta-roofing",
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    },
-    {
-      route: "/service-areas/tuscaloosa-roofing",
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    },
-  ]
-
-  // Helper function to create sitemap entries
-  const createSitemapEntry = (page: { route: string; changeFrequency: any; priority: number }) => ({
-    url: `${baseUrl}${page.route}`,
-    lastModified: currentDate,
-    changeFrequency: page.changeFrequency,
-    priority: page.priority,
+    return {
+      url: `${baseUrl}${route}`,
+      lastModified: new Date(), // Use the build date as the last modified date.
+      changeFrequency: getChangeFrequency(),
+      priority: getPriority(),
+    }
   })
-
-  // Combine all pages into the sitemap
-  return [
-    homepage,
-    ...corePages.map(createSitemapEntry),
-    ...primaryServicePages.map(createSitemapEntry),
-    ...residentialServicePages.map(createSitemapEntry),
-    ...commercialServicePages.map(createSitemapEntry),
-    createSitemapEntry(serviceAreaHub),
-    ...majorServiceAreas.map(createSitemapEntry),
-    ...secondaryServiceAreas.map(createSitemapEntry),
-  ]
 }

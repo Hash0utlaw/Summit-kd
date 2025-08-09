@@ -393,7 +393,6 @@ export default function GalleryClientPage() {
         title="Our Work"
         subtitle="A Showcase of Quality Craftsmanship and Satisfied Customers"
         imageUrl="/images/gallery-hero.png"
-        imageAlt="Summit Roofing Professionals project gallery featuring residential, commercial, and specialty roofing"
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -426,10 +425,9 @@ export default function GalleryClientPage() {
                     alt={project.description}
                     width={600}
                     height={400}
-                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300" />
+                  <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300" />
                   <div className="absolute bottom-0 left-0 p-4">
                     <span className="text-white bg-orange-500 px-2 py-1 text-sm font-semibold rounded">
                       {project.category}
@@ -464,7 +462,6 @@ export default function GalleryClientPage() {
               alt={selectedProject.description}
               width={1200}
               height={800}
-              sizes="100vw"
               className="w-full h-auto object-contain"
             />
             <div className="p-6 bg-gray-50">

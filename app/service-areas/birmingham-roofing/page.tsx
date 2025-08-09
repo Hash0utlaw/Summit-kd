@@ -28,24 +28,23 @@ export default function BirminghamPage() {
         title="Your Trusted Roofing Experts in Birmingham, AL"
         subtitle="Providing top-quality roof replacements, repairs, and insurance claim assistance to the Greater Birmingham community."
         imageUrl="/images/birmingham-skyline.png"
-        imageAlt="Birmingham, Alabama skyline highlighting Summit Roofing Professionals local roofing services"
       />
 
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="prose max-w-none lg:prose-lg">
-              <h2>Local Expertise for Birmingham Homes &amp; Businesses</h2>
+              <h2>Local Expertise for Birmingham Homes & Businesses</h2>
               <p>
-                Welcome to Summit Roofing Professionals, Birmingham&apos;s premier choice for reliable roofing services.
-                We understand the unique challenges that Alabama weather presents—from intense summer heat and humidity
-                to the threat of severe thunderstorms and hail. Our team is equipped with the local knowledge and
+                Welcome to Summit Roofing Professionals, Birmingham's premier choice for reliable roofing services. We
+                understand the unique challenges that Alabama weather presents—from intense summer heat and humidity to
+                the threat of severe thunderstorms and hail. Our team is equipped with the local knowledge and
                 high-quality materials needed to ensure your roof can withstand the elements and protect your property
                 for years to come.
               </p>
               <p>
-                Whether you&apos;re in Homewood, Hoover, Vestavia Hills, or right in the heart of the city, we are
-                committed to delivering exceptional craftsmanship and unparalleled customer service to our neighbors.
+                Whether you're in Homewood, Hoover, Vestavia Hills, or right in the heart of the city, we are committed
+                to delivering exceptional craftsmanship and unparalleled customer service to our neighbors.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-6">
@@ -55,7 +54,7 @@ export default function BirminghamPage() {
                   href={service.href}
                   className="p-6 bg-gray-50 rounded-lg border hover:shadow-lg transition-shadow text-center"
                 >
-                  <service.icon className="h-10 w-10 text-orange-500 mx-auto mb-3" aria-hidden="true" />
+                  <service.icon className="h-10 w-10 text-orange-500 mx-auto mb-3" />
                   <h3 className="font-semibold text-gray-800">{service.title}</h3>
                 </Link>
               ))}

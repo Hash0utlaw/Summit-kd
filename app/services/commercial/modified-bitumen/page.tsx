@@ -3,7 +3,6 @@ import ServicePageHero from "@/components/service-page-hero"
 import FaqSection from "@/components/faq-section"
 import CtaSection from "@/components/cta-section"
 import { Layers, Wind, ShieldCheck } from "lucide-react"
-import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Modified Bitumen Roofing Services | Summit Roofing",
@@ -54,7 +53,6 @@ export default function ModifiedBitumenPage() {
         title="Modified Bitumen Roofing"
         subtitle="A time-tested, durable, and flexible solution for commercial flat roofs."
         imageUrl="/images/mod-bit-roof.png"
-        imageAlt="Modified Bitumen commercial flat roof with multi-layer protection installed by Summit Roofing Professionals"
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -70,12 +68,9 @@ export default function ModifiedBitumenPage() {
               </p>
             </div>
             <div>
-              <Image
+              <img
                 src="/images/mod-bit-application.png"
-                alt="Roofer applying torched modified bitumen cap sheet during commercial roof installation"
-                width={720}
-                height={480}
-                sizes="(min-width: 768px) 50vw, 100vw"
+                alt="Roofer applying modified bitumen roofing with a torch"
                 className="rounded-lg shadow-lg"
               />
             </div>
@@ -89,9 +84,7 @@ export default function ModifiedBitumenPage() {
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {benefits.map((benefit) => (
               <div key={benefit.title} className="p-6">
-                <div className="flex justify-center mb-4" aria-hidden="true">
-                  {benefit.icon}
-                </div>
+                <div className="flex justify-center mb-4">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-800">{benefit.title}</h3>
                 <p className="mt-2 text-gray-600">{benefit.description}</p>
               </div>

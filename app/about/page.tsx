@@ -43,25 +43,16 @@ const ourValues = [
 ]
 
 const certificates = [
-  {
-    src: "/images/certifications/gaf-certified-letter.jpg",
-    alt: "GAF Certified Contractor reference letter for Summit Roofing Professionals",
-  },
+  { src: "/images/certifications/gaf-certified-letter.jpg", alt: "GAF Certified Contractor Reference Letter" },
   {
     src: "/images/certifications/uniflex-premier-contractor.jpg",
-    alt: "Uniflex Authorized Premier Contractor certificate awarded to Summit Roofing Professionals",
+    alt: "Uniflex Authorized Premier Contractor Certificate",
   },
-  {
-    src: "/images/certifications/iko-premier-contractor.png",
-    alt: "IKO Craftsman Premier Contractor badge credential for Summit Roofing",
-  },
-  {
-    src: "/images/certifications/nrca-member-cert.jpg",
-    alt: "NRCA Member certificate verifying Summit Roofing Professionals membership",
-  },
+  { src: "/images/certifications/iko-premier-contractor.png", alt: "IKO Craftsman Premier Contractor Badge" },
+  { src: "/images/certifications/nrca-member-cert.jpg", alt: "NRCA Member Certificate" },
   {
     src: "/images/certifications/uniflex-university-cert.jpg",
-    alt: "Uniflex University training certificate for Davis Meek of Summit Roofing Professionals",
+    alt: "Uniflex University Training Certificate for Davis Meek",
   },
 ]
 
@@ -72,7 +63,6 @@ export default function AboutPage() {
         title="About Summit Roofing Professionals"
         subtitle="Building trust one roof at a time across Alabama and Georgia."
         imageUrl="/images/about-us-hero-sunset.png"
-        imageAlt="Shingle roof at sunset representing Summit Roofing Professionals’ quality roofing in Alabama and Georgia"
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -94,7 +84,7 @@ export default function AboutPage() {
             <div>
               <Image
                 src="/images/founder-on-roof.jpg"
-                alt="Founder of Summit Roofing Professionals standing on a finished residential roof project"
+                alt="Founder of Summit Roofing Professionals on a completed roofing project"
                 width={500}
                 height={500}
                 className="rounded-lg shadow-lg mx-auto object-cover aspect-square"
@@ -114,9 +104,7 @@ export default function AboutPage() {
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
             {ourValues.map((item) => (
               <div key={item.title} className="p-6">
-                <div className="flex justify-center mb-4" aria-hidden="true">
-                  {item.icon}
-                </div>
+                <div className="flex justify-center mb-4">{item.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-800">{item.title}</h3>
               </div>
             ))}

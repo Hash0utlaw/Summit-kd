@@ -87,7 +87,6 @@ export default function FinancingPage() {
         title="Affordable Financing For Your New Roof"
         subtitle="Don't let budget concerns delay your project. We offer flexible payment options to make your new roof a reality."
         imageUrl="/images/financing-hero.png"
-        imageAlt="Homeowner reviewing roof financing options to fund a new roof installation in Alabama and Georgia"
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -103,9 +102,7 @@ export default function FinancingPage() {
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {financingBenefits.map((benefit) => (
               <div key={benefit.title} className="text-center p-6">
-                <div className="flex justify-center mb-4" aria-hidden="true">
-                  {benefit.icon}
-                </div>
+                <div className="flex justify-center mb-4">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-800">{benefit.title}</h3>
                 <p className="mt-2 text-gray-600">{benefit.description}</p>
               </div>
@@ -150,15 +147,10 @@ export default function FinancingPage() {
               options.
             </p>
             <div className="mt-8 flex justify-center items-center gap-8 flex-wrap">
-              <Image
-                src="/images/hearth-logo.png"
-                alt="Hearth home improvement financing partner logo"
-                width={150}
-                height={50}
-              />
+              <Image src="/images/hearth-logo.png" alt="Hearth Financing Partner" width={150} height={50} />
               <Image
                 src="/images/service-finance-logo.png"
-                alt="Service Finance Company lending partner logo"
+                alt="Service Finance Company Partner"
                 width={180}
                 height={60}
               />

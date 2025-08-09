@@ -28,7 +28,6 @@ export default function AtlantaPage() {
         title="Atlanta's Premier Roofing Professionals"
         subtitle="Delivering exceptional roofing services for residential and commercial properties across the Atlanta Metro Area."
         imageUrl="/images/atlanta-skyline.png"
-        imageAlt="Atlanta skyline representing local roofing services by Summit Roofing Professionals"
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -40,7 +39,7 @@ export default function AtlantaPage() {
                 Summit Roofing Professionals is proud to serve the vibrant and dynamic city of Atlanta. We have
                 extensive experience working with the diverse architecture of the area, from historic homes in
                 Virginia-Highland to modern commercial buildings in Midtown. Our team understands the importance of a
-                durable, well-maintained roof to combat Georgia&apos;s pop-up thunderstorms and high humidity.
+                durable, well-maintained roof to combat Georgia's pop-up thunderstorms and high humidity.
               </p>
               <p>
                 We are experts in navigating local building codes and permitting processes, ensuring every project in
@@ -55,7 +54,7 @@ export default function AtlantaPage() {
                   href={service.href}
                   className="p-6 bg-gray-50 rounded-lg border hover:shadow-lg transition-shadow text-center"
                 >
-                  <service.icon className="h-10 w-10 text-orange-500 mx-auto mb-3" aria-hidden="true" />
+                  <service.icon className="h-10 w-10 text-orange-500 mx-auto mb-3" />
                   <h3 className="font-semibold text-gray-800">{service.title}</h3>
                 </Link>
               ))}

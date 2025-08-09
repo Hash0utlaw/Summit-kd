@@ -1,3 +1,5 @@
+// This page can be built out similarly to the others.
+// For brevity, I'll provide a condensed version.
 import type { Metadata } from "next"
 import ServicePageHero from "@/components/service-page-hero"
 import FaqSection from "@/components/faq-section"
@@ -28,7 +30,7 @@ export default function InspectionsMaintenancePage() {
       <ServicePageHero
         title="Roof Inspections & Maintenance"
         subtitle="Protect your investment with proactive inspections and preventative maintenance plans."
-        imageUrl="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/flat-roof-commerical-repair-hero-OvLUFzbpRsVmSkZO5aebzfYXI1F24b.png"
+        imageUrl="/images/roof-inspection.png"
       />
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6 text-center">

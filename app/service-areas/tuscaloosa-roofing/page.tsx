@@ -16,7 +16,6 @@ export default function TuscaloosaRoofingPage() {
         title="Championship Roofing for Tuscaloosa, AL"
         subtitle="Summit Roofing delivers winning performance and durability for homes and businesses in the City of Champions."
         imageUrl="/images/tuscaloosa-skyline.png"
-        imageAlt="Tuscaloosa, Alabama skyline representing professional roofing services by Summit Roofing Professionals"
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -31,7 +30,7 @@ export default function TuscaloosaRoofingPage() {
               </p>
               <ul className="mt-6 space-y-4">
                 <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-orange-500 mr-3 mt-1 flex-shrink-0" aria-hidden="true" />
+                  <CheckCircle className="h-6 w-6 text-orange-500 mr-3 mt-1 flex-shrink-0" />
                   <span>
                     <strong className="font-semibold">Residential Roofing:</strong> From homes near the University of
                     Alabama to properties on Lake Tuscaloosa, we provide beautiful and durable roofing systems to
@@ -39,17 +38,17 @@ export default function TuscaloosaRoofingPage() {
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-blue-600 mr-3 mt-1 flex-shrink-0" aria-hidden="true" />
+                  <CheckCircle className="h-6 w-6 text-blue-600 mr-3 mt-1 flex-shrink-0" />
                   <span>
-                    <strong className="font-semibold">Multi-Family &amp; Commercial:</strong> We are experts in roofing
-                    for apartment complexes, retail centers, and other commercial properties, ensuring minimal
-                    disruption to tenants and operations.
+                    <strong className="font-semibold">Multi-Family & Commercial:</strong> We are experts in roofing for
+                    apartment complexes, retail centers, and other commercial properties, ensuring minimal disruption to
+                    tenants and operations.
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-gray-500 mr-3 mt-1 flex-shrink-0" aria-hidden="true" />
+                  <CheckCircle className="h-6 w-6 text-gray-500 mr-3 mt-1 flex-shrink-0" />
                   <span>
-                    <strong className="font-semibold">Game Day Ready Repairs:</strong> Don&apos;t let a leak ruin your
+                    <strong className="font-semibold">Game Day Ready Repairs:</strong> Don't let a leak ruin your
                     weekend. We offer prompt and reliable repair services to handle any issue, big or small, so you can
                     focus on the Tide.
                   </span>
@@ -61,19 +60,19 @@ export default function TuscaloosaRoofingPage() {
               <p className="mt-4 text-center text-gray-600">We bring our A-game to every single project.</p>
               <ul className="mt-4 space-y-2 text-gray-700">
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" aria-hidden="true" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
                   <span>A+ Rating with the Better Business Bureau</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" aria-hidden="true" />
-                  <span>Experience with Alabama&apos;s Severe Weather</span>
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                  <span>Experience with Alabama's Severe Weather</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" aria-hidden="true" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
                   <span>Free Inspections for Hail and Wind Damage</span>
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" aria-hidden="true" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
                   <span>Strong Warranties for Your Peace of Mind</span>
                 </li>
               </ul>

@@ -46,7 +46,6 @@ export default function ArchitecturalShinglesPage() {
         title="Architectural Shingle Roofing"
         subtitle="Dimensional Beauty, Lasting Performance"
         imageUrl="/images/shingles/shingle-hero.png"
-        imageAlt="Close-up of dimensional architectural shingles on a residential roof"
       />
 
       <section className="py-16 bg-white">
@@ -71,10 +70,9 @@ export default function ArchitecturalShinglesPage() {
             <div>
               <Image
                 src="/images/shingles/shingle-gallery-4.png"
-                alt="Close-up of expertly installed architectural shingles on a luxury home with complex gables"
+                alt="Closeup of expertly installed architectural shingles on a luxury home with complex gables"
                 width={600}
                 height={400}
-                sizes="(min-width: 768px) 50vw, 100vw"
                 className="rounded-lg shadow-lg"
               />
             </div>
@@ -92,7 +90,7 @@ export default function ArchitecturalShinglesPage() {
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-orange-500 mt-1 flex-shrink-0" aria-hidden="true" />
+                    <CheckCircle className="h-6 w-6 text-orange-500 mt-1 flex-shrink-0" />
                     <p className="text-gray-700">{benefit}</p>
                   </div>
                 ))}
