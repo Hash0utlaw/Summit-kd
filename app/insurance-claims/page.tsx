@@ -105,7 +105,7 @@ export default function InsuranceClaimsPage() {
       <ServicePageHero
         title="Stress-Free Roof Insurance Claims"
         subtitle="Let our experts guide you through every step of the insurance process, from damage inspection to final payment."
-        imageUrl="/images/roof-damage-hail.png"
+        imageUrl="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hail-hero-7R8Fr4voZJwC68inlLpWqNCQaaitJD.png"
       />
 
       <section className="py-16 md:py-24 bg-white">
