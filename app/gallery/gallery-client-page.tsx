@@ -2,10 +2,9 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import ServicePageHero from "@/components/service-page-hero"
 import CtaSection from "@/components/cta-section"
 import { Button } from "@/components/ui/button"
-import { X } from 'lucide-react'
+import { X } from "lucide-react"
 
 const projects = [
   {
@@ -396,12 +395,6 @@ export default function GalleryClientPage() {
 
   return (
     <>
-      <ServicePageHero
-        title="Our Work"
-        subtitle="A Showcase of Quality Craftsmanship and Satisfied Customers"
-        imageUrl="/images/gallery-hero.png"
-      />
-
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex justify-center items-center gap-2 md:gap-4 mb-12 flex-wrap">
@@ -426,12 +419,11 @@ export default function GalleryClientPage() {
                 className="group cursor-pointer overflow-hidden rounded-lg shadow-lg"
                 onClick={() => openLightbox(project)}
               >
-                <div className="relative">
+                <div className="relative h-64">
                   <Image
                     src={project.imageUrl || "/placeholder.svg"}
                     alt={project.description}
-                    width={600}
-                    height={400}
+                    fill
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300" />
