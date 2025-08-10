@@ -116,6 +116,14 @@ export default function RotatingTestimonials() {
 
   const currentTestimonial = testimonials[currentIndex]
 
+  const aggregateRating = {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    worstRating: "1",
+    ratingCount: testimonials.length.toString(),
+  }
+
   return (
     <section className="py-16 bg-gradient-to-br from-blue-50 to-orange-50" aria-label="Customer Testimonials">
       <div className="container mx-auto px-4">
@@ -214,6 +222,7 @@ export default function RotatingTestimonials() {
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "Summit Roofing Professionals",
+            aggregateRating: aggregateRating,
             review: testimonials.map((testimonial) => ({
               "@type": "Review",
               author: {
@@ -222,8 +231,8 @@ export default function RotatingTestimonials() {
               },
               reviewRating: {
                 "@type": "Rating",
-                ratingValue: testimonial.rating,
-                bestRating: 5,
+                ratingValue: testimonial.rating.toString(),
+                bestRating: "5",
               },
               reviewBody: testimonial.review,
               datePublished: testimonial.date,
