@@ -146,6 +146,7 @@ export default function RotatingTestimonials() {
                   height={600}
                   className="w-full h-64 md:h-full object-cover"
                   priority
+                  quality={80} // Optimized image quality
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
@@ -161,7 +162,7 @@ export default function RotatingTestimonials() {
                 </div>
 
                 {/* Review Text */}
-                <blockquote className="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                <blockquote className="text-gray-800 text-lg leading-relaxed mb-6 italic">
                   "{currentTestimonial.review}"
                 </blockquote>
 
