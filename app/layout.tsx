@@ -11,7 +11,7 @@ import { Suspense } from "react"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://summitroofingprofessionals.com"),
+  metadataBase: new URL("https://www.summitroofingprofessionals.com"),
   title: {
     default: "Summit Roofing Professionals | Expert Roofing in Alabama & Georgia",
     template: "%s | Summit Roofing Professionals",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://summitroofingprofessionals.com",
+    url: "https://www.summitroofingprofessionals.com",
     title: "Summit Roofing Professionals | Expert Roofing in Alabama & Georgia",
     description:
       "Professional roofing services in Alabama and Georgia. Residential, commercial, and specialty roofing with insurance claims expertise.",
@@ -83,11 +83,11 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "RoofingContractor",
     name: "Summit Roofing Professionals",
-    image: "https://summitroofingprofessionals.com/og-image.png",
-    "@id": "https://summitroofingprofessionals.com",
-    url: "https://summitroofingprofessionals.com",
+    image: "https://www.summitroofingprofessionals.com/og-image.png",
+    "@id": "https://www.summitroofingprofessionals.com",
+    url: "https://www.summitroofingprofessionals.com",
     telephone: "(704) 578-4758",
-    email: "info@summitroofing.com",
+    email: "davis@summitroofingprofessionals.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "3707 2nd Ave, Suite 103",

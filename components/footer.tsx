@@ -101,8 +101,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@summitroofing.com" className="hover:text-orange-500">
-                  info@summitroofing.com
+                <a href="mailto:davis@summitroofingprofessionals.com" className="hover:text-orange-500">
+                  davis@summitroofingprofessionals.com
                 </a>
               </li>
             </ul>

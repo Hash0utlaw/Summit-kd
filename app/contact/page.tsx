@@ -20,7 +20,7 @@ const jsonLd = {
   "@id": "https://www.summitroofing.pro/",
   url: "https://www.summitroofing.pro/contact",
   telephone: "+1-704-578-4758",
-  email: "info@summitroofing.com",
+  email: "davis@summitroofingprofessionals.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "3707 2nd Ave, Suite 103",
@@ -90,10 +90,11 @@ export default function ContactPage() {
                   <CardTitle className="flex items-center gap-2">
                     <Mail className="h-5 w-5 text-orange-500" />
                     Email
-                  </CardTitle>
+                  </CardTitle>{" "}
+                  {/* Corrected JSX closing tag */}
                 </CardHeader>
                 <CardContent>
-                  <p className="text-lg font-medium text-gray-900 mb-2">info@summitroofing.com</p>
+                  <p className="text-lg font-medium text-gray-900 mb-2">davis@summitroofingprofessionals.com</p>
                   <p className="text-gray-600">Send us your questions or project details</p>
                 </CardContent>
               </Card>

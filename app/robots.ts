@@ -6,7 +6,7 @@ import type { MetadataRoute } from "next"
  * It's used to manage crawler traffic and prevent crawling of non-public or unimportant pages.
  */
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://summitroofingprofessionals.com"
+  const baseUrl = "https://www.summitroofingprofessionals.com"
 
   return {
     rules: [

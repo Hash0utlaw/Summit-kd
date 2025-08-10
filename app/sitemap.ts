@@ -6,9 +6,9 @@ import type { MetadataRoute } from "next"
  * understand which pages are most important and how often they should be crawled.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://summitroofingprofessionals.com"
+  const baseUrl = "https://www.summitroofingprofessionals.com"
   const currentDate = new Date()
-  
+
   // Homepage - highest priority, updated weekly with testimonials/projects
   const homepage = {
     url: baseUrl,
@@ -25,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      route: "/contact", 
+      route: "/contact",
       changeFrequency: "monthly" as const,
       priority: 0.8, // Contact is crucial for conversions
     },
@@ -54,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95, // Core residential service
     },
     {
-      route: "/services/commercial-roofing", 
+      route: "/services/commercial-roofing",
       changeFrequency: "monthly" as const,
       priority: 0.95, // Core commercial service
     },
@@ -143,7 +143,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85, // Major market
     },
     {
-      route: "/service-areas/atlanta-roofing", 
+      route: "/service-areas/atlanta-roofing",
       changeFrequency: "monthly" as const,
       priority: 0.9, // Largest market
     },
