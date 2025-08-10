@@ -146,7 +146,8 @@ export default function RotatingTestimonials() {
                   height={600}
                   className="w-full h-64 md:h-full object-cover"
                   priority
-                  quality={80} // Optimized image quality
+                  quality={75} // Optimized image quality
+                  sizes="(min-width: 768px) 50vw, 100vw" // Added sizes prop
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>

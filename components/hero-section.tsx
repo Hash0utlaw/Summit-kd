@@ -13,7 +13,7 @@ export default function HeroSection() {
         alt="Summit Roofing professional inspecting a roof at sunset, showcasing quality craftsmanship in Alabama and Georgia."
         fill
         priority // Prioritize loading for LCP
-        quality={85} // Slightly reduce quality for smaller file size
+        quality={75} // Further reduced quality for smaller file size
         sizes="100vw"
         className="object-cover object-center"
       />
