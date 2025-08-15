@@ -16,9 +16,9 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "RoofingContractor",
   name: "Summit Roofing",
-  image: "https://www.summitroofing.pro/images/summit-roofing-logo.png",
-  "@id": "https://www.summitroofing.pro/",
-  url: "https://www.summitroofing.pro/contact",
+  image: "https://www.summitroofingprofessionals.com/images/summit-roofing-logo.png",
+  "@id": "https://www.summitroofingprofessionals.com/",
+  url: "https://www.summitroofingprofessionals.com/contact",
   telephone: "+1-704-578-4758",
   email: "davis@summitroofingprofessionals.com",
   address: {
