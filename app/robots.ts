@@ -6,21 +6,20 @@ import type { MetadataRoute } from "next"
  * It's used to manage crawler traffic and prevent crawling of non-public or unimportant pages.
  */
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://www.summitroofingprofessionals.com"
-
   return {
     rules: [
       {
-        // This rule applies to all user-agents (search engine crawlers).
-        userAgent: "*",
-        // Allow crawlers to access all content by default.
+        userAgent: "Googlebot",
         allow: "/",
-        // Disallow crawlers from accessing specific directories that don't contain
-        // user-facing content, such as API routes or administrative areas.
+        crawlDelay: 0,
+      },
+      {
+        userAgent: "*",
+        allow: "/",
         disallow: ["/api/", "/admin/", "/_next/"],
       },
     ],
-    // Provide the URL to the sitemap, helping crawlers discover all pages.
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: "https://www.summitroofingprofessionals.com/sitemap.xml",
+    host: "https://www.summitroofingprofessionals.com",
   }
 }
