@@ -48,7 +48,7 @@ const residentialServices = [
     title: "Architectural Shingles",
     description: "A popular choice, offering great value, durability, and a wide variety of colors and styles.",
     href: "/services/architectural-shingles",
-    imageUrl: "/images/architectural-shingles.png",
+    imageUrl: "/images/projects/auburn-residential-2.jpeg",
   },
   {
     title: "Slate Roofing",
@@ -88,7 +88,7 @@ export default function ResidentialRoofingPage() {
       <ServicePageHero
         title="Expert Residential Roofing"
         subtitle="Protecting your home and family with durable, high-quality roofing solutions."
-        imageUrl="/images/residential/hero.png"
+        imageUrl="/images/projects/auburn-residential-1.jpeg"
         altText="Beautiful new architectural shingle roof on a suburban home with vibrant pink flowers in the foreground."
       />
 
@@ -104,7 +104,7 @@ export default function ResidentialRoofingPage() {
           <div className="mt-12 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="/images/happy-family-home.png"
+                src="/images/projects/auburn-residential-2.jpeg"
                 alt="Happy family in front of their home with a new Summit Roofing roof"
                 className="rounded-lg shadow-lg"
               />
