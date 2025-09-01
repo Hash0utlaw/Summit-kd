@@ -51,7 +51,7 @@ export const blogCategories: BlogCategory[] = [
     name: "Storm Damage",
     slug: "storm-damage",
     description: "Dealing with storm damage, insurance claims, and emergency repairs",
-    count: 0,
+    count: 1,
   },
   {
     id: "4",
@@ -70,6 +70,573 @@ export const blogCategories: BlogCategory[] = [
 ]
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: "4",
+    title: "Complete Guide to Storm Damage Assessment and Insurance Claims for Alabama and Georgia Homeowners",
+    slug: "storm-damage-assessment-insurance-claims-guide-alabama-georgia",
+    excerpt:
+      "Navigate storm damage assessment and insurance claims with confidence. Learn how to document damage, work with adjusters, and maximize your claim for roof repairs in Alabama and Georgia's challenging weather conditions.",
+    content: `
+Storm damage to your roof can be devastating, both financially and emotionally. In Alabama and Georgia, where severe weather is a regular occurrence, knowing how to properly assess storm damage and navigate the insurance claims process can mean the difference between a smooth recovery and months of frustration. This comprehensive guide will walk you through every step of the process, from initial damage assessment to final claim settlement.
+
+# Understanding Storm Damage in Alabama and Georgia
+
+## Common Weather Threats in Our Region
+
+### Alabama's Storm Patterns
+Alabama ranks among the top states for severe weather events, experiencing an average of 1,000+ severe thunderstorms annually. The state faces multiple storm-related challenges:
+
+- **Tornadoes**: Alabama averages 47 tornadoes per year, with peak season from March through May
+- **Hail storms**: Particularly severe in northern Alabama, with hailstones reaching golf ball size or larger
+- **Severe thunderstorms**: Producing damaging winds exceeding 70 mph
+- **Hurricane remnants**: Coastal and southern regions affected by tropical systems
+- **Ice storms**: Northern Alabama experiences occasional winter ice storms causing significant roof damage
+
+### Georgia's Weather Challenges
+Georgia's diverse geography creates varied storm risks across the state:
+
+- **Tornado Alley extension**: Northern Georgia sees increased tornado activity
+- **Hail corridors**: Central Georgia experiences frequent large hail events
+- **Hurricane impacts**: Coastal and southern regions face direct hurricane threats
+- **Severe thunderstorms**: Statewide risk with peak activity in spring and early summer
+- **Winter storms**: Northern mountains experience ice and snow damage
+
+## Types of Storm Damage to Roofs
+
+### Hail Damage
+Hail is one of the most common and destructive forces affecting roofs in our region. Understanding hail damage helps in proper assessment:
+
+**Asphalt Shingle Damage:**
+- **Granule loss**: Creating bare spots that expose the underlying mat
+- **Bruising**: Soft spots where hail impact compressed the shingle
+- **Cracking**: Linear breaks in shingles from severe impact
+- **Exposed mat**: Black substrate visible through granule loss
+
+**Metal Roofing Damage:**
+- **Denting**: Visible depressions from hail impact
+- **Paint damage**: Chipped or scratched protective coatings
+- **Fastener damage**: Loosened screws or damaged washers
+- **Seam separation**: Stress damage at panel connections
+
+**Tile and Slate Damage:**
+- **Cracking**: Hairline to complete breaks in individual tiles
+- **Chipping**: Edge damage from hail impact
+- **Displacement**: Tiles shifted or completely removed
+- **Underlayment exposure**: Protective layer visible through damaged tiles
+
+### Wind Damage
+High winds can cause immediate and progressive damage to roofing systems:
+
+**Direct Wind Damage:**
+- **Shingle blow-off**: Complete removal of roofing materials
+- **Uplift damage**: Partial lifting creating vulnerable areas
+- **Fastener failure**: Nails or screws pulled through materials
+- **Edge damage**: Particularly vulnerable eaves and rakes
+
+**Debris Impact Damage:**
+- **Tree limb impact**: Punctures, tears, or crushing damage
+- **Flying debris**: Damage from airborne objects during storms
+- **Gutter damage**: Dented or separated gutters from debris impact
+- **Penetration damage**: Holes created by wind-driven objects
+
+### Water Damage
+Often secondary to other storm damage, water infiltration can cause extensive problems:
+
+**Immediate Water Damage:**
+- **Active leaks**: Water entering through damaged areas
+- **Ponding**: Standing water on flat or low-slope areas
+- **Gutter overflow**: Inadequate drainage during heavy rainfall
+- **Flashing failure**: Water penetration around roof penetrations
+
+**Progressive Water Damage:**
+- **Decking deterioration**: Rot and structural weakening
+- **Insulation damage**: Reduced effectiveness and mold growth
+- **Interior damage**: Ceiling stains, wall damage, and flooring issues
+- **Mold development**: Health hazards from moisture retention
+
+# Immediate Post-Storm Actions
+
+## Safety First Protocol
+
+### Personal Safety Measures
+Never compromise safety for property assessment:
+
+- **Stay indoors** during active storms and for 30 minutes after passage
+- **Avoid downed power lines** and report them to utilities immediately
+- **Don't walk on damaged roofs** - structural integrity may be compromised
+- **Use proper ladder safety** if accessing gutters or lower roof areas
+- **Wear protective equipment** including non-slip shoes and safety glasses
+
+### Property Safety Assessment
+Before detailed damage assessment, ensure basic safety:
+
+- **Check for gas leaks** and shut off gas if suspected
+- **Assess electrical hazards** including damaged service connections
+- **Identify structural damage** that could pose collapse risks
+- **Secure the property** with temporary coverings if needed
+- **Document safety hazards** for insurance and contractor reference
+
+## Initial Damage Documentation
+
+### Photographic Evidence
+Proper documentation is crucial for successful insurance claims:
+
+**Exterior Photography:**
+- **Overall roof views** from multiple angles showing general condition
+- **Close-up damage shots** of specific problem areas
+- **Comparative photos** showing damaged vs. undamaged sections
+- **Ground-level debris** indicating the severity of the storm
+- **Surrounding property damage** for context and corroboration
+
+**Interior Documentation:**
+- **Water stains** on ceilings and walls
+- **Active leaks** with containers catching water
+- **Damaged personal property** affected by roof leaks
+- **Attic damage** if safely accessible
+- **Mold or moisture issues** developing from water intrusion
+
+### Written Documentation
+Supplement photos with detailed written records:
+
+- **Date and time** of storm and discovery of damage
+- **Weather conditions** during and after the storm
+- **Detailed damage descriptions** for each affected area
+- **Temporary measures taken** to prevent further damage
+- **Contact information** for witnesses or neighbors with similar damage
+
+# Professional Damage Assessment
+
+## When to Call Professionals
+
+### Immediate Professional Assessment Needed:
+- **Structural damage** including sagging or compromised support
+- **Extensive water infiltration** requiring emergency repairs
+- **Electrical hazards** near damaged roof areas
+- **Multiple damage types** requiring comprehensive evaluation
+- **Insurance requirements** for professional documentation
+
+### Choosing the Right Professional
+Select qualified professionals for accurate assessment:
+
+**Certified Roofing Contractors:**
+- **GAF Master Elite** or similar manufacturer certifications
+- **Local licensing** and proper insurance coverage
+- **Storm damage experience** in Alabama and Georgia
+- **Insurance claim experience** working with adjusters
+- **References** from recent storm damage projects
+
+**Public Adjusters:**
+Consider for complex or disputed claims:
+- **Licensed** in Alabama or Georgia
+- **Specialized** in storm damage claims
+- **Fee structure** clearly understood (typically 10-15% of settlement)
+- **Track record** of successful claim resolutions
+
+## Professional Assessment Process
+
+### Comprehensive Roof Inspection
+Professional assessments should include:
+
+**Structural Evaluation:**
+- **Decking condition** checking for soft spots or damage
+- **Rafter and truss inspection** for stress damage or displacement
+- **Support system assessment** including walls and foundations
+- **Load-bearing capacity** evaluation after damage
+
+**Material Assessment:**
+- **Shingle condition** including granule loss and impact damage
+- **Flashing integrity** around all penetrations and transitions
+- **Gutter and downspout damage** affecting water management
+- **Ventilation system** damage that could affect performance
+
+**Water Intrusion Evaluation:**
+- **Active leak identification** and source determination
+- **Moisture mapping** using specialized equipment
+- **Insulation assessment** for water damage and effectiveness
+- **Vapor barrier integrity** checking for compromised moisture control
+
+### Detailed Damage Report
+Professional assessments should provide:
+
+- **Comprehensive damage inventory** with locations and severity
+- **Repair vs. replacement recommendations** for each affected area
+- **Cost estimates** for necessary work
+- **Timeline projections** for completion of repairs
+- **Code compliance issues** that must be addressed during repairs
+
+# Insurance Claims Process
+
+## Understanding Your Policy
+
+### Coverage Types
+Most homeowner policies include several relevant coverage types:
+
+**Dwelling Coverage (Coverage A):**
+- **Roof structure** including decking, rafters, and trusses
+- **Attached structures** like porches or garages
+- **Built-in appliances** damaged by covered perils
+- **Replacement cost** vs. actual cash value considerations
+
+**Other Structures Coverage (Coverage B):**
+- **Detached garages** and storage buildings
+- **Fences and gates** damaged by storms
+- **Driveways and walkways** affected by debris
+- **Swimming pools** and outdoor structures
+
+**Personal Property Coverage (Coverage C):**
+- **Contents damaged** by roof leaks
+- **Temporary storage** costs during repairs
+- **Additional living expenses** if home is uninhabitable
+- **Business property** if you work from home
+
+**Additional Living Expenses (Coverage D):**
+- **Hotel costs** during major repairs
+- **Meal expenses** above normal costs
+- **Storage fees** for displaced belongings
+- **Pet boarding** if necessary during repairs
+
+### Policy Exclusions and Limitations
+Understanding exclusions prevents claim surprises:
+
+**Common Exclusions:**
+- **Flood damage** requiring separate flood insurance
+- **Earth movement** including landslides or sinkholes
+- **Wear and tear** or maintenance-related issues
+- **Code upgrades** unless specifically covered
+- **Cosmetic damage** that doesn't affect function
+
+**Deductible Considerations:**
+- **Standard deductibles** typically $500-$2,500
+- **Percentage deductibles** for wind/hail (1-5% of dwelling coverage)
+- **Separate deductibles** for different perils
+- **Deductible application** per occurrence vs. per year
+
+## Filing Your Claim
+
+### Initial Claim Reporting
+Contact your insurance company immediately after discovering damage:
+
+**Information to Provide:**
+- **Policy number** and contact information
+- **Date and time** of the storm event
+- **General description** of damage observed
+- **Immediate safety concerns** requiring urgent attention
+- **Temporary measures** taken to prevent further damage
+
+**Claim Number Assignment:**
+- **Record your claim number** for all future communications
+- **Adjuster assignment** and contact information
+- **Initial inspection scheduling** within 24-48 hours typically
+- **Emergency repair authorization** if needed for safety
+
+### Preparing for the Adjuster Visit
+
+**Documentation Preparation:**
+- **Organize all photos** chronologically with descriptions
+- **Compile written documentation** of damage and temporary repairs
+- **Gather receipts** for emergency repairs or temporary measures
+- **Prepare property information** including age, previous repairs, and improvements
+
+**Professional Representation:**
+Consider having your contractor present during the adjuster visit:
+- **Technical expertise** to identify all damage
+- **Repair cost knowledge** for accurate estimates
+- **Code requirement awareness** for necessary upgrades
+- **Documentation assistance** for complex damage patterns
+
+## Working with Insurance Adjusters
+
+### Types of Adjusters
+
+**Staff Adjusters:**
+- **Company employees** handling routine claims
+- **Salary-based compensation** not tied to claim amounts
+- **Company training** on policy interpretation
+- **Direct authority** for claim settlements within limits
+
+**Independent Adjusters:**
+- **Contracted professionals** handling overflow or specialized claims
+- **Fee-based compensation** from insurance companies
+- **Specialized expertise** in storm damage assessment
+- **Reporting requirements** to insurance company for approval
+
+**Public Adjusters:**
+- **Homeowner representatives** advocating for maximum settlements
+- **Percentage-based fees** from claim settlements
+- **Specialized knowledge** of policy coverage and claim processes
+- **Negotiation expertise** for disputed claims
+
+### Adjuster Meeting Best Practices
+
+**Preparation Strategies:**
+- **Be present** during the entire inspection process
+- **Provide complete documentation** including all photos and reports
+- **Point out all damage** including items that might be missed
+- **Ask questions** about coverage and settlement calculations
+- **Take notes** during the inspection and discussion
+
+**Professional Interaction:**
+- **Remain courteous** but advocate for complete damage recognition
+- **Provide factual information** without speculation or exaggeration
+- **Request explanations** for any coverage denials or limitations
+- **Get written estimates** and settlement calculations
+- **Understand the timeline** for claim resolution
+
+# Maximizing Your Insurance Settlement
+
+## Common Claim Mistakes to Avoid
+
+### Documentation Errors
+- **Incomplete damage inventory** missing secondary damage
+- **Poor quality photos** that don't clearly show damage
+- **Delayed reporting** allowing weather to cause additional damage
+- **Inadequate temporary repairs** leading to further damage claims
+
+### Settlement Mistakes
+- **Accepting initial offers** without proper evaluation
+- **Not understanding depreciation** and recoverable amounts
+- **Missing code upgrade coverage** available in your policy
+- **Settling too quickly** before all damage is discovered
+
+## Negotiation Strategies
+
+### Understanding Settlement Calculations
+Insurance settlements typically include:
+
+**Replacement Cost Value (RCV):**
+- **Full replacement cost** of damaged materials and labor
+- **Current market prices** for materials and installation
+- **Code upgrade costs** if covered by your policy
+- **Contractor overhead and profit** for significant damage
+
+**Actual Cash Value (ACV):**
+- **Replacement cost minus depreciation** based on age and condition
+- **Initial payment amount** with depreciation held in reserve
+- **Recoverable depreciation** paid upon completion of repairs
+- **Non-recoverable depreciation** for older roofing materials
+
+### Effective Negotiation Tactics
+
+**Professional Documentation:**
+- **Detailed contractor estimates** from licensed professionals
+- **Material specifications** matching or exceeding existing quality
+- **Labor cost justification** based on local market rates
+- **Code compliance requirements** that must be addressed
+
+**Supplemental Claims:**
+- **Additional damage discovery** during repair process
+- **Hidden damage** not visible during initial inspection
+- **Code upgrade requirements** discovered during permitting
+- **Matching issues** requiring additional work for uniform appearance
+
+# Working with Contractors
+
+## Selecting Storm Damage Contractors
+
+### Red Flags to Avoid
+Be cautious of contractors who:
+
+- **Door-to-door solicitation** immediately after storms
+- **Demand full payment upfront** before starting work
+- **Offer to waive deductibles** (insurance fraud)
+- **Lack proper licensing** or insurance coverage
+- **Pressure immediate signing** without time for consideration
+
+### Qualified Contractor Characteristics
+Look for contractors with:
+
+**Proper Credentials:**
+- **State licensing** in Alabama or Georgia
+- **Liability insurance** with adequate coverage limits
+- **Workers' compensation** insurance for employee protection
+- **Manufacturer certifications** for warranty coverage
+- **Better Business Bureau** accreditation and good ratings
+
+**Storm Experience:**
+- **Local presence** with established business history
+- **Storm damage specialization** with relevant experience
+- **Insurance claim experience** working with adjusters
+- **References** from recent storm damage projects
+- **Portfolio** of completed storm restoration work
+
+## Contractor-Insurance Coordination
+
+### Estimate Coordination
+Effective contractors will:
+
+- **Meet with adjusters** during property inspections
+- **Provide detailed estimates** matching insurance requirements
+- **Identify all damage** including items adjusters might miss
+- **Explain repair processes** and material requirements
+- **Document supplemental damage** discovered during work
+
+### Project Management
+Professional storm restoration includes:
+
+**Permit Management:**
+- **Obtain necessary permits** for all repair work
+- **Ensure code compliance** with current building standards
+- **Coordinate inspections** with local building departments
+- **Handle permit fees** as part of project costs
+
+**Material Procurement:**
+- **Order materials** matching insurance specifications
+- **Manage delivery schedules** to minimize project delays
+- **Handle material upgrades** if required by code
+- **Coordinate with suppliers** for availability and pricing
+
+**Quality Control:**
+- **Daily progress monitoring** with photo documentation
+- **Weather protection** during construction process
+- **Cleanup procedures** maintaining property appearance
+- **Final inspection** ensuring complete satisfaction
+
+# Special Considerations for Alabama and Georgia
+
+## State-Specific Regulations
+
+### Alabama Requirements
+- **Contractor licensing** through Alabama Licensing Board
+- **Lien law compliance** for payment protection
+- **Building code adoption** of International Building Code
+- **Permit requirements** varying by municipality
+- **Insurance regulations** governing claim handling practices
+
+### Georgia Requirements
+- **Contractor licensing** through Georgia Secretary of State
+- **Home improvement regulations** for consumer protection
+- **Building code enforcement** at local levels
+- **Permit procedures** specific to each jurisdiction
+- **Insurance department oversight** of claim practices
+
+## Regional Weather Considerations
+
+### Seasonal Timing
+Plan repairs considering regional weather patterns:
+
+**Spring Repairs (March-May):**
+- **Storm season preparation** before peak activity
+- **Material availability** before high demand periods
+- **Contractor scheduling** before busy season
+- **Weather windows** for exterior work completion
+
+**Summer Repairs (June-August):**
+- **Heat considerations** for worker safety and material handling
+- **Afternoon thunderstorms** requiring flexible scheduling
+- **High demand periods** potentially affecting costs and availability
+- **Ventilation importance** during hot weather installations
+
+**Fall Repairs (September-November):**
+- **Hurricane season** considerations for coastal areas
+- **Ideal weather conditions** for most repair work
+- **Winter preparation** ensuring completion before cold weather
+- **Material procurement** before winter supply constraints
+
+**Winter Repairs (December-February):**
+- **Emergency repairs only** due to weather limitations
+- **Interior work focus** when exterior work isn't possible
+- **Planning period** for spring project scheduling
+- **Insurance deadlines** for claim completion requirements
+
+# Preventing Future Storm Damage
+
+## Proactive Maintenance Strategies
+
+### Regular Inspection Schedule
+Implement comprehensive inspection routines:
+
+**Seasonal Inspections:**
+- **Spring assessment** after winter weather
+- **Pre-storm season** preparation in early spring
+- **Post-storm evaluation** after each significant weather event
+- **Fall preparation** for winter weather protection
+
+**Professional Inspections:**
+- **Annual professional assessment** by certified contractors
+- **Insurance inspections** for policy compliance
+- **Warranty inspections** maintaining manufacturer coverage
+- **Pre-sale inspections** for real estate transactions
+
+### Preventive Improvements
+
+**Structural Enhancements:**
+- **Impact-resistant shingles** rated for hail resistance
+- **Enhanced fastening** exceeding minimum code requirements
+- **Improved flashing** with premium materials and installation
+- **Reinforced decking** for better wind resistance
+
+**Drainage Improvements:**
+- **Gutter upgrades** with larger capacity systems
+- **Downspout extensions** directing water away from foundations
+- **Drainage solutions** for problem areas around the home
+- **Grading improvements** ensuring proper water flow
+
+## Insurance Considerations
+
+### Policy Review and Updates
+Regularly review your insurance coverage:
+
+**Coverage Adequacy:**
+- **Dwelling coverage limits** reflecting current replacement costs
+- **Deductible levels** balancing premium costs with out-of-pocket expenses
+- **Additional coverages** for code upgrades and ordinance compliance
+- **Inflation protection** maintaining adequate coverage levels
+
+**Discount Opportunities:**
+- **Impact-resistant materials** qualifying for premium reductions
+- **Security systems** providing additional discounts
+- **Claims-free periods** earning loyalty discounts
+- **Multiple policy discounts** bundling home and auto coverage
+
+# Conclusion
+
+Successfully navigating storm damage assessment and insurance claims requires preparation, documentation, and professional guidance. In Alabama and Georgia's challenging weather environment, understanding the process before you need it can save thousands of dollars and months of frustration.
+
+Remember that storm damage claims are time-sensitive, and proper documentation from the beginning is crucial for successful outcomes. Don't hesitate to seek professional help from qualified contractors and, if necessary, public adjusters who understand the complexities of storm damage claims in our region.
+
+The key to successful storm damage recovery is acting quickly, documenting thoroughly, and working with experienced professionals who understand both the technical aspects of storm damage and the insurance claim process. With proper preparation and professional guidance, you can navigate even the most challenging storm damage situations and restore your home to its pre-storm condition.
+
+**Experienced storm damage?** Contact Summit Roofing Professionals immediately for emergency assessment and insurance claim assistance. Our certified team has extensive experience working with insurance adjusters and can help ensure you receive the full settlement you deserve for complete storm damage restoration.
+
+Don't let storm damage compromise your family's safety and comfort. Professional assessment and proper insurance claim handling can make the difference between a successful recovery and ongoing problems. Trust the experts at Summit Roofing to guide you through every step of the storm damage recovery process.
+    `,
+    author: {
+      name: "Summit Roofing Team",
+      image: "/images/founder-portrait.png",
+      bio: "Our expert roofing team at Summit Roofing Professionals has over 15 years of combined experience serving Alabama and Georgia homeowners. We specialize in storm damage assessment and insurance claim assistance, helping homeowners navigate the complex recovery process.",
+    },
+    publishedAt: "2025-01-28",
+    category: "storm-damage",
+    tags: [
+      "storm damage",
+      "insurance claims",
+      "hail damage",
+      "wind damage",
+      "Alabama",
+      "Georgia",
+      "roof assessment",
+      "claim process",
+    ],
+    featuredImage: "/images/storm-damage-assessment.png",
+    seo: {
+      metaTitle: "Storm Damage Assessment & Insurance Claims Guide Alabama Georgia | Summit Roofing",
+      metaDescription:
+        "Complete guide to storm damage assessment and insurance claims for Alabama and Georgia homeowners. Learn to document damage, work with adjusters, and maximize your settlement.",
+      keywords: [
+        "storm damage assessment Alabama",
+        "Georgia storm damage claims",
+        "roof hail damage insurance",
+        "wind damage roof repair",
+        "insurance adjuster roof inspection",
+        "storm damage documentation",
+        "Alabama Georgia weather damage",
+        "roof insurance claim process",
+        "storm restoration contractors",
+        "hail damage roof replacement",
+      ],
+    },
+    readingTime: 15,
+  },
   {
     id: "3",
     title:
@@ -418,6 +985,8 @@ Alabama experiences a humid subtropical climate with hot, humid summers and mild
 
 - **Moss and algae growth** on shingles
 - **High humidity damage** to roofing materials  
+- **Thermal expansion and growth** on shingles
+- **High humidity damage** to roofing materials
 - **Thermal expansion and contraction** from temperature fluctuations
 - **Wind damage** from severe thunderstorms and occasional tornadoes
 
