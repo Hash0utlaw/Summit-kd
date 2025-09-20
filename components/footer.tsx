@@ -46,7 +46,7 @@ export default function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={label} // Added for accessibility
+                  aria-label={label}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   <Icon className="h-6 w-6" />
@@ -120,12 +120,12 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-start">
                 <span className="font-semibold text-gray-300 mr-2">A:</span>
-                <span>3707 2nd Ave, Suite 103, Columbus, GA 31904</span>
+                <span>3707 2nd Ave, STE 103, Columbus, GA 31904</span>
               </li>
               <li className="flex items-start">
                 <span className="font-semibold text-gray-300 mr-2">P:</span>
-                <a href="tel:+17045784758" className="hover:text-white transition-colors">
-                  (704) 578-4758
+                <a href="tel:+17045784756" className="hover:text-white transition-colors">
+                  (704) 578-4756
                 </a>
               </li>
               <li className="flex items-start">
@@ -143,6 +143,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
           <p>&copy; {new Date().getFullYear()} Summit Roofing Professionals. All Rights Reserved.</p>
+          <p className="mt-1 text-xs">Summit Roofing is a DBA of Meek Renovations LLC</p>
           <p className="mt-2">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">
               Privacy Policy

@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@hookform/resolvers':
         specifier: ^3.9.1
-        version: 3.9.1(react-hook-form@7.62.0(react@19.0.0))
+        version: 3.9.1(react-hook-form@7.63.0(react@19.0.0))
       '@radix-ui/react-accordion':
         specifier: latest
         version: 1.2.12(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -34,16 +34,10 @@ importers:
         version: 1.2.3(@types/react@19.0.0)(react@19.0.0)
       '@react-email/components':
         specifier: latest
-        version: 0.5.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 0.5.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@react-email/render':
         specifier: latest
-        version: 1.2.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@remix-run/react':
-        specifier: latest
-        version: 2.17.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.0.2)
-      '@sveltejs/kit':
-        specifier: latest
-        version: 2.36.1(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.1.3(@types/node@22.0.0)(jiti@1.21.7)(yaml@2.8.1)))(svelte@5.38.2)(vite@7.1.3(@types/node@22.0.0)(jiti@1.21.7)(yaml@2.8.1))
+        version: 1.2.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@vercel/analytics':
         specifier: latest
         version: 1.5.0(@remix-run/react@2.17.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.0.2))(@sveltejs/kit@2.36.1(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.1.3(@types/node@22.0.0)(jiti@1.21.7)(yaml@2.8.1)))(svelte@5.38.2)(vite@7.1.3(@types/node@22.0.0)(jiti@1.21.7)(yaml@2.8.1)))(next@15.2.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)(svelte@5.38.2)(vue-router@4.5.1(vue@3.5.18(typescript@5.0.2)))(vue@3.5.18(typescript@5.0.2))
@@ -79,28 +73,19 @@ importers:
         version: 19.0.0(react@19.0.0)
       react-hook-form:
         specifier: latest
-        version: 7.62.0(react@19.0.0)
+        version: 7.63.0(react@19.0.0)
       react-markdown:
         specifier: ^9.0.1
         version: 9.0.1(@types/react@19.0.0)(react@19.0.0)
       resend:
         specifier: latest
-        version: 6.0.1(@react-email/render@1.2.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0))
-      svelte:
-        specifier: latest
-        version: 5.38.2
+        version: 6.1.0(@react-email/render@1.2.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0))
       tailwind-merge:
         specifier: ^2.5.5
         version: 2.5.5
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.17)
-      vue:
-        specifier: latest
-        version: 3.5.18(typescript@5.0.2)
-      vue-router:
-        specifier: latest
-        version: 4.5.1(vue@3.5.18(typescript@5.0.2))
       zod:
         specifier: ^3.24.1
         version: 3.24.1
@@ -981,8 +966,8 @@ packages:
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
-  '@react-email/components@0.5.1':
-    resolution: {integrity: sha512-2BxfSZSqMZ6cyQearFIz7h4vZ8m+NiwtZ7PBVdTV7APmK9wxMRBx0rTBO63FV214DTipyPwBjGIcscLh5U+IZg==}
+  '@react-email/components@0.5.3':
+    resolution: {integrity: sha512-8G5vsoMehuGOT4cDqaYLdpagtqCYPl4vThXNylClxO6SrN2w9Mh1+i2RNGj/rdqh/woamHORjlXMYCA/kzDMew==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
@@ -1046,8 +1031,8 @@ packages:
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
 
-  '@react-email/render@1.2.1':
-    resolution: {integrity: sha512-7M4Xi8ITESZKS7pOPE0HWhKJWtS/JrAqPIyFPqIPJXZJHkjFMYXn2b/tAsHOufYW5/LTk4U1IkBMaVwE06kykw==}
+  '@react-email/render@1.2.3':
+    resolution: {integrity: sha512-qu3XYNkHGao3teJexVD5CrcgFkNLrzbZvpZN17a7EyQYUN3kHkTkE9saqY4VbvGx6QoNU3p8rsk/Xm++D/+pTw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
@@ -2845,8 +2830,8 @@ packages:
     peerDependencies:
       react: ^19.0.0
 
-  react-hook-form@7.62.0:
-    resolution: {integrity: sha512-7KWFejc98xqG/F4bAxpL41NB3o1nnvQO1RWZT3TqRZYL8RryQETGfEdVnJN2fy1crCiBLLjkRBVK05j24FxJGA==}
+  react-hook-form@7.63.0:
+    resolution: {integrity: sha512-ZwueDMvUeucovM2VjkCf7zIHcs1aAlDimZu2Hvel5C5907gUzMpm4xCrQXtRzCvsBqFjonB4m3x4LzCFI1ZKWA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
@@ -2931,8 +2916,8 @@ packages:
   remark-rehype@11.1.2:
     resolution: {integrity: sha512-Dh7l57ianaEoIpzbp0PC9UKAdCSVklD8E5Rpw7ETfbTl3FqcOOgq5q2LVDhgGCkaBv7p24JXikPdvhhmHvKMsw==}
 
-  resend@6.0.1:
-    resolution: {integrity: sha512-xNZ0gKAOqQcH83lXsqNOwBbpKROnsZpQr9mXRdG6hrHTF9G9Il2pkoTRtq7rJzXMvCZX+I79oahsbSeaYOWRFA==}
+  resend@6.1.0:
+    resolution: {integrity: sha512-H0cJI2pcLk5/dGwyvZUHu+O7X/q6arvc40EWm+pRPuy+PSWojH5utZtmDBUZ2L0+gVwYZiWs6y2lw6GQA1z1rg==}
     engines: {node: '>=18'}
     peerDependencies:
       '@react-email/render': ^1.1.0
@@ -3432,18 +3417,22 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@babel/helper-string-parser@7.27.1': {}
+  '@babel/helper-string-parser@7.27.1':
+    optional: true
 
-  '@babel/helper-validator-identifier@7.27.1': {}
+  '@babel/helper-validator-identifier@7.27.1':
+    optional: true
 
   '@babel/parser@7.28.3':
     dependencies:
       '@babel/types': 7.28.2
+    optional: true
 
   '@babel/types@7.28.2':
     dependencies:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
+    optional: true
 
   '@emnapi/core@1.4.5':
     dependencies:
@@ -3579,9 +3568,9 @@ snapshots:
 
   '@floating-ui/utils@0.2.10': {}
 
-  '@hookform/resolvers@3.9.1(react-hook-form@7.62.0(react@19.0.0))':
+  '@hookform/resolvers@3.9.1(react-hook-form@7.63.0(react@19.0.0))':
     dependencies:
-      react-hook-form: 7.62.0(react@19.0.0)
+      react-hook-form: 7.63.0(react@19.0.0)
 
   '@humanwhocodes/config-array@0.12.3':
     dependencies:
@@ -3688,6 +3677,7 @@ snapshots:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.13
       '@jridgewell/trace-mapping': 0.3.30
+    optional: true
 
   '@jridgewell/resolve-uri@3.1.2': {}
 
@@ -3752,7 +3742,8 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@polka/url@1.0.0-next.29': {}
+  '@polka/url@1.0.0-next.29':
+    optional: true
 
   '@radix-ui/primitive@1.1.3': {}
 
@@ -4136,7 +4127,7 @@ snapshots:
     dependencies:
       react: 19.0.0
 
-  '@react-email/components@0.5.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@react-email/components@0.5.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@react-email/body': 0.1.0(react@19.0.0)
       '@react-email/button': 0.2.0(react@19.0.0)
@@ -4153,7 +4144,7 @@ snapshots:
       '@react-email/link': 0.0.12(react@19.0.0)
       '@react-email/markdown': 0.0.15(react@19.0.0)
       '@react-email/preview': 0.0.13(react@19.0.0)
-      '@react-email/render': 1.2.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@react-email/render': 1.2.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@react-email/row': 0.0.12(react@19.0.0)
       '@react-email/section': 0.0.16(react@19.0.0)
       '@react-email/tailwind': 1.2.2(react@19.0.0)
@@ -4203,7 +4194,7 @@ snapshots:
     dependencies:
       react: 19.0.0
 
-  '@react-email/render@1.2.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@react-email/render@1.2.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       html-to-text: 9.0.5
       prettier: 3.6.2
@@ -4238,8 +4229,10 @@ snapshots:
       turbo-stream: 2.4.1
     optionalDependencies:
       typescript: 5.0.2
+    optional: true
 
-  '@remix-run/router@1.23.0': {}
+  '@remix-run/router@1.23.0':
+    optional: true
 
   '@remix-run/server-runtime@2.17.0(typescript@5.0.2)':
     dependencies:
@@ -4252,6 +4245,7 @@ snapshots:
       turbo-stream: 2.4.1
     optionalDependencies:
       typescript: 5.0.2
+    optional: true
 
   '@rollup/rollup-android-arm-eabi@4.46.4':
     optional: true
@@ -4322,11 +4316,13 @@ snapshots:
       domhandler: 5.0.3
       selderee: 0.11.0
 
-  '@standard-schema/spec@1.0.0': {}
+  '@standard-schema/spec@1.0.0':
+    optional: true
 
   '@sveltejs/acorn-typescript@1.0.5(acorn@8.15.0)':
     dependencies:
       acorn: 8.15.0
+    optional: true
 
   '@sveltejs/kit@2.36.1(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.1.3(@types/node@22.0.0)(jiti@1.21.7)(yaml@2.8.1)))(svelte@5.38.2)(vite@7.1.3(@types/node@22.0.0)(jiti@1.21.7)(yaml@2.8.1))':
     dependencies:
@@ -4346,6 +4342,7 @@ snapshots:
       sirv: 3.0.1
       svelte: 5.38.2
       vite: 7.1.3(@types/node@22.0.0)(jiti@1.21.7)(yaml@2.8.1)
+    optional: true
 
   '@sveltejs/vite-plugin-svelte-inspector@5.0.1(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.1.3(@types/node@22.0.0)(jiti@1.21.7)(yaml@2.8.1)))(svelte@5.38.2)(vite@7.1.3(@types/node@22.0.0)(jiti@1.21.7)(yaml@2.8.1))':
     dependencies:
@@ -4355,6 +4352,7 @@ snapshots:
       vite: 7.1.3(@types/node@22.0.0)(jiti@1.21.7)(yaml@2.8.1)
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.1.3(@types/node@22.0.0)(jiti@1.21.7)(yaml@2.8.1))':
     dependencies:
@@ -4368,6 +4366,7 @@ snapshots:
       vitefu: 1.1.1(vite@7.1.3(@types/node@22.0.0)(jiti@1.21.7)(yaml@2.8.1))
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@swc/counter@0.1.3': {}
 
@@ -4380,7 +4379,8 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@types/cookie@0.6.0': {}
+  '@types/cookie@0.6.0':
+    optional: true
 
   '@types/debug@4.1.12':
     dependencies:
@@ -4591,11 +4591,13 @@ snapshots:
       entities: 4.5.0
       estree-walker: 2.0.2
       source-map-js: 1.2.1
+    optional: true
 
   '@vue/compiler-dom@3.5.18':
     dependencies:
       '@vue/compiler-core': 3.5.18
       '@vue/shared': 3.5.18
+    optional: true
 
   '@vue/compiler-sfc@3.5.18':
     dependencies:
@@ -4608,22 +4610,27 @@ snapshots:
       magic-string: 0.30.17
       postcss: 8.5.6
       source-map-js: 1.2.1
+    optional: true
 
   '@vue/compiler-ssr@3.5.18':
     dependencies:
       '@vue/compiler-dom': 3.5.18
       '@vue/shared': 3.5.18
+    optional: true
 
-  '@vue/devtools-api@6.6.4': {}
+  '@vue/devtools-api@6.6.4':
+    optional: true
 
   '@vue/reactivity@3.5.18':
     dependencies:
       '@vue/shared': 3.5.18
+    optional: true
 
   '@vue/runtime-core@3.5.18':
     dependencies:
       '@vue/reactivity': 3.5.18
       '@vue/shared': 3.5.18
+    optional: true
 
   '@vue/runtime-dom@3.5.18':
     dependencies:
@@ -4631,16 +4638,20 @@ snapshots:
       '@vue/runtime-core': 3.5.18
       '@vue/shared': 3.5.18
       csstype: 3.1.3
+    optional: true
 
   '@vue/server-renderer@3.5.18(vue@3.5.18(typescript@5.0.2))':
     dependencies:
       '@vue/compiler-ssr': 3.5.18
       '@vue/shared': 3.5.18
       vue: 3.5.18(typescript@5.0.2)
+    optional: true
 
-  '@vue/shared@3.5.18': {}
+  '@vue/shared@3.5.18':
+    optional: true
 
-  '@web3-storage/multipart-parser@1.0.0': {}
+  '@web3-storage/multipart-parser@1.0.0':
+    optional: true
 
   acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
@@ -4883,9 +4894,11 @@ snapshots:
 
   concat-map@0.0.1: {}
 
-  cookie@0.6.0: {}
+  cookie@0.6.0:
+    optional: true
 
-  cookie@0.7.2: {}
+  cookie@0.7.2:
+    optional: true
 
   cross-spawn@7.0.6:
     dependencies:
@@ -4952,7 +4965,8 @@ snapshots:
 
   detect-node-es@1.1.0: {}
 
-  devalue@5.1.1: {}
+  devalue@5.1.1:
+    optional: true
 
   devlop@1.1.0:
     dependencies:
@@ -5145,6 +5159,7 @@ snapshots:
       '@esbuild/win32-arm64': 0.25.9
       '@esbuild/win32-ia32': 0.25.9
       '@esbuild/win32-x64': 0.25.9
+    optional: true
 
   escalade@3.2.0: {}
 
@@ -5326,7 +5341,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  esm-env@1.2.2: {}
+  esm-env@1.2.2:
+    optional: true
 
   espree@10.4.0:
     dependencies:
@@ -5341,6 +5357,7 @@ snapshots:
   esrap@2.1.0:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
+    optional: true
 
   esrecurse@4.3.0:
     dependencies:
@@ -5350,7 +5367,8 @@ snapshots:
 
   estree-util-is-identifier-name@3.0.0: {}
 
-  estree-walker@2.0.2: {}
+  estree-walker@2.0.2:
+    optional: true
 
   esutils@2.0.3: {}
 
@@ -5674,6 +5692,7 @@ snapshots:
   is-reference@3.0.3:
     dependencies:
       '@types/estree': 1.0.8
+    optional: true
 
   is-regex@1.2.1:
     dependencies:
@@ -5762,7 +5781,8 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
-  kleur@4.1.5: {}
+  kleur@4.1.5:
+    optional: true
 
   language-subtag-registry@0.3.23: {}
 
@@ -5781,7 +5801,8 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  locate-character@3.0.0: {}
+  locate-character@3.0.0:
+    optional: true
 
   locate-path@6.0.0:
     dependencies:
@@ -5804,6 +5825,7 @@ snapshots:
   magic-string@0.30.17:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
+    optional: true
 
   marked@7.0.4: {}
 
@@ -6055,9 +6077,11 @@ snapshots:
 
   minipass@7.1.2: {}
 
-  mri@1.2.0: {}
+  mri@1.2.0:
+    optional: true
 
-  mrmime@2.0.1: {}
+  mrmime@2.0.1:
+    optional: true
 
   ms@2.1.3: {}
 
@@ -6270,6 +6294,7 @@ snapshots:
       nanoid: 3.3.11
       picocolors: 1.1.1
       source-map-js: 1.2.1
+    optional: true
 
   prelude-ls@1.2.1: {}
 
@@ -6294,7 +6319,7 @@ snapshots:
       react: 19.0.0
       scheduler: 0.25.0
 
-  react-hook-form@7.62.0(react@19.0.0):
+  react-hook-form@7.63.0(react@19.0.0):
     dependencies:
       react: 19.0.0
 
@@ -6346,11 +6371,13 @@ snapshots:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
       react-router: 6.30.0(react@19.0.0)
+    optional: true
 
   react-router@6.30.0(react@19.0.0):
     dependencies:
       '@remix-run/router': 1.23.0
       react: 19.0.0
+    optional: true
 
   react-style-singleton@2.2.3(@types/react@19.0.0)(react@19.0.0):
     dependencies:
@@ -6407,9 +6434,9 @@ snapshots:
       unified: 11.0.5
       vfile: 6.0.3
 
-  resend@6.0.1(@react-email/render@1.2.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)):
+  resend@6.1.0(@react-email/render@1.2.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)):
     optionalDependencies:
-      '@react-email/render': 1.2.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@react-email/render': 1.2.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
 
   resolve-from@4.0.0: {}
 
@@ -6454,6 +6481,7 @@ snapshots:
       '@rollup/rollup-win32-ia32-msvc': 4.46.4
       '@rollup/rollup-win32-x64-msvc': 4.46.4
       fsevents: 2.3.3
+    optional: true
 
   run-parallel@1.2.0:
     dependencies:
@@ -6462,6 +6490,7 @@ snapshots:
   sade@1.8.1:
     dependencies:
       mri: 1.2.0
+    optional: true
 
   safe-array-concat@1.1.3:
     dependencies:
@@ -6492,7 +6521,8 @@ snapshots:
 
   semver@7.7.2: {}
 
-  set-cookie-parser@2.7.1: {}
+  set-cookie-parser@2.7.1:
+    optional: true
 
   set-function-length@1.2.2:
     dependencies:
@@ -6589,10 +6619,12 @@ snapshots:
       '@polka/url': 1.0.0-next.29
       mrmime: 2.0.1
       totalist: 3.0.1
+    optional: true
 
   source-map-js@1.2.1: {}
 
-  source-map@0.7.6: {}
+  source-map@0.7.6:
+    optional: true
 
   space-separated-tokens@2.0.2: {}
 
@@ -6729,6 +6761,7 @@ snapshots:
       locate-character: 3.0.0
       magic-string: 0.30.17
       zimmerframe: 1.1.2
+    optional: true
 
   tailwind-merge@2.5.5: {}
 
@@ -6782,7 +6815,8 @@ snapshots:
     dependencies:
       is-number: 7.0.0
 
-  totalist@3.0.1: {}
+  totalist@3.0.1:
+    optional: true
 
   trim-lines@3.0.1: {}
 
@@ -6803,7 +6837,8 @@ snapshots:
 
   tslib@2.8.1: {}
 
-  turbo-stream@2.4.1: {}
+  turbo-stream@2.4.1:
+    optional: true
 
   type-check@0.4.0:
     dependencies:
@@ -6964,15 +6999,18 @@ snapshots:
       fsevents: 2.3.3
       jiti: 1.21.7
       yaml: 2.8.1
+    optional: true
 
   vitefu@1.1.1(vite@7.1.3(@types/node@22.0.0)(jiti@1.21.7)(yaml@2.8.1)):
     optionalDependencies:
       vite: 7.1.3(@types/node@22.0.0)(jiti@1.21.7)(yaml@2.8.1)
+    optional: true
 
   vue-router@4.5.1(vue@3.5.18(typescript@5.0.2)):
     dependencies:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.18(typescript@5.0.2)
+    optional: true
 
   vue@3.5.18(typescript@5.0.2):
     dependencies:
@@ -6983,6 +7021,7 @@ snapshots:
       '@vue/shared': 3.5.18
     optionalDependencies:
       typescript: 5.0.2
+    optional: true
 
   which-boxed-primitive@1.1.1:
     dependencies:
@@ -7047,7 +7086,8 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zimmerframe@1.1.2: {}
+  zimmerframe@1.1.2:
+    optional: true
 
   zod@3.24.1: {}
 

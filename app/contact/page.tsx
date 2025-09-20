@@ -19,11 +19,11 @@ const jsonLd = {
   image: "https://www.summitroofingprofessionals.com/images/summit-roofing-logo.png",
   "@id": "https://www.summitroofingprofessionals.com/",
   url: "https://www.summitroofingprofessionals.com/contact",
-  telephone: "+1-704-578-4758",
+  telephone: "+1-704-578-4756",
   email: "davis@summitroofingprofessionals.com",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "3707 2nd Ave, Suite 103",
+    streetAddress: "3707 2nd Ave, STE 103",
     addressLocality: "Columbus",
     addressRegion: "GA",
     postalCode: "31904",
@@ -80,7 +80,7 @@ export default function ContactPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-lg font-medium text-gray-900 mb-2">(704) 578-4758</p>
+                  <p className="text-lg font-medium text-gray-900 mb-2">(704) 578-4756</p>
                   <p className="text-gray-600">Call us for immediate assistance or emergency repairs</p>
                 </CardContent>
               </Card>
@@ -109,12 +109,12 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=3707+2nd+Ave+suite+103+columbus+ga+31904"
+                    href="https://www.google.com/maps/search/?api=1&query=3707+2nd+Ave+STE+103+columbus+ga+31904"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-lg font-medium text-gray-900 hover:text-orange-500"
                   >
-                    3707 2nd Ave, Suite 103
+                    3707 2nd Ave, STE 103
                     <br />
                     Columbus, GA 31904
                   </a>
