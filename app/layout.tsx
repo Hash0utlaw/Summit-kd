@@ -86,11 +86,11 @@ export default function RootLayout({
     image: "https://www.summitroofingprofessionals.com/og-image.png",
     "@id": "https://www.summitroofingprofessionals.com",
     url: "https://www.summitroofingprofessionals.com",
-    telephone: "(704) 578-4758",
+    telephone: "(704) 578-4756",
     email: "davis@summitroofingprofessionals.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "3707 2nd Ave, Suite 103",
+      streetAddress: "3707 2nd Ave, STE 103",
       addressLocality: "Columbus",
       addressRegion: "GA",
       postalCode: "31904",
