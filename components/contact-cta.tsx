@@ -17,8 +17,8 @@ export default function ContactCta() {
             <div className="mt-8 space-y-4">
               <div className="flex items-center gap-4">
                 <Phone className="h-6 w-6 text-orange-400" />
-                <a href="tel:(704) 578-4758" className="text-lg hover:text-orange-400">
-                  (704) 578-4758
+                <a href="tel:(704) 578-4756" className="text-lg hover:text-orange-400">
+                  (704) 578-4756
                 </a>
               </div>
               <div className="flex items-center gap-4">
