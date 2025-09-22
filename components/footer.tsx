@@ -1,24 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Instagram, Linkedin } from "lucide-react"
-
-const socialLinks = [
-  {
-    href: "https://www.facebook.com/summitroofingprofessionals/",
-    icon: Facebook,
-    label: "Follow us on Facebook",
-  },
-  {
-    href: "https://www.instagram.com/summitroofingprofessionals/",
-    icon: Instagram,
-    label: "Follow us on Instagram",
-  },
-  {
-    href: "https://www.linkedin.com/company/summit-roofing-professionals/",
-    icon: Linkedin,
-    label: "Connect with us on LinkedIn",
-  },
-]
+import { Facebook } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -40,18 +22,15 @@ export default function Footer() {
               Licensed, Insured & Veteran-Owned. Serving Alabama and Georgia with integrity.
             </p>
             <div className="flex space-x-4 mt-6">
-              {socialLinks.map(({ href, icon: Icon, label }) => (
-                <a
-                  key={href}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  <Icon className="h-6 w-6" />
-                </a>
-              ))}
+              <a
+                href="https://www.facebook.com/profile.php?id=61572937707369"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow us on Facebook"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Facebook className="h-6 w-6" />
+              </a>
             </div>
           </div>
 

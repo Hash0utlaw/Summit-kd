@@ -82,15 +82,15 @@ export default function RootLayout({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "RoofingContractor",
+    "@id": "https://www.summitroofingprofessionals.com/#roofingcontractor",
     name: "Summit Roofing Professionals",
     image: "https://www.summitroofingprofessionals.com/og-image.png",
-    "@id": "https://www.summitroofingprofessionals.com",
     url: "https://www.summitroofingprofessionals.com",
-    telephone: "(704) 578-4756",
+    telephone: "+1-704-578-4756",
     email: "davis@summitroofingprofessionals.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "3707 2nd Ave, STE 103",
+      streetAddress: "3707 2nd Ave Ste 103",
       addressLocality: "Columbus",
       addressRegion: "GA",
       postalCode: "31904",
@@ -98,39 +98,35 @@ export default function RootLayout({
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 32.4854,
-      longitude: -84.9537,
+      latitude: 32.484654,
+      longitude: -84.96137,
     },
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "07:00",
-        closes: "18:00",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "06:00",
+        closes: "21:00",
       },
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Saturday",
-        opens: "08:00",
-        closes: "16:00",
+        dayOfWeek: "Sunday",
+        opens: "09:00",
+        closes: "17:00",
       },
     ],
-    areaServed: [
-      {
-        "@type": "State",
-        name: "Alabama",
-      },
-      {
-        "@type": "State",
-        name: "Georgia",
-      },
-    ],
+    sameAs: ["https://www.facebook.com/profile.php?id=61572937707369"],
   }
 
   return (
     <html lang="en">
-      <body>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      <body className={inter.className}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+          }}
+        />
         <Suspense fallback={null}>
           <Header />
           <main>{children}</main>
