@@ -23,7 +23,7 @@ const jsonLd = {
   email: "davis@summitroofingprofessionals.com",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "3707 2nd Ave, STE 103",
+    streetAddress: "3707 2nd Ave Ste 103",
     addressLocality: "Columbus",
     addressRegion: "GA",
     postalCode: "31904",
@@ -32,9 +32,15 @@ const jsonLd = {
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
       opens: "06:00",
-      closes: "18:00",
+      closes: "21:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: "09:00",
+      closes: "17:00",
     },
   ],
   areaServed: [
@@ -90,8 +96,7 @@ export default function ContactPage() {
                   <CardTitle className="flex items-center gap-2">
                     <Mail className="h-5 w-5 text-orange-500" />
                     Email
-                  </CardTitle>{" "}
-                  {/* Corrected JSX closing tag */}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-lg font-medium text-gray-900 mb-2">davis@summitroofingprofessionals.com</p>
@@ -109,12 +114,12 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=3707+2nd+Ave+STE+103+columbus+ga+31904"
+                    href="https://www.google.com/maps/search/?api=1&query=3707+2nd+Ave+Ste+103+columbus+ga+31904"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-lg font-medium text-gray-900 hover:text-orange-500"
                   >
-                    3707 2nd Ave, STE 103
+                    3707 2nd Ave Ste 103
                     <br />
                     Columbus, GA 31904
                   </a>
@@ -132,7 +137,10 @@ export default function ContactPage() {
                 <CardContent>
                   <div className="space-y-2 text-gray-600">
                     <p>
-                      <span className="font-medium">Monday - Sunday:</span> 6:00 AM - 6:00 PM
+                      <span className="font-medium">Monday - Saturday:</span> 6:00 AM - 9:00 PM
+                    </p>
+                    <p>
+                      <span className="font-medium">Sunday:</span> 9:00 AM - 5:00 PM
                     </p>
                     <p className="text-sm">We are available 7 days a week to answer your call.</p>
                   </div>

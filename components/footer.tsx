@@ -99,7 +99,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-start">
                 <span className="font-semibold text-gray-300 mr-2">A:</span>
-                <span>3707 2nd Ave, STE 103, Columbus, GA 31904</span>
+                <span>3707 2nd Ave Ste 103, Columbus, GA 31904</span>
               </li>
               <li className="flex items-start">
                 <span className="font-semibold text-gray-300 mr-2">P:</span>
