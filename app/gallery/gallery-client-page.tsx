@@ -5,13 +5,11 @@ import Image from "next/image"
 import CtaSection from "@/components/cta-section"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { X, ChevronLeft, ChevronRight, MapPin, Calendar, Eye } from "lucide-react"
 
 const projects = [
   {
     id: 1,
-    category: "Residential",
     location: "Auburn, AL",
     imageUrl: "/images/projects/auburn-residential-1.jpeg",
     description:
@@ -21,7 +19,6 @@ const projects = [
   },
   {
     id: 2,
-    category: "Residential",
     location: "Auburn, AL",
     imageUrl: "/images/projects/auburn-residential-2.jpeg",
     description:
@@ -31,7 +28,6 @@ const projects = [
   },
   {
     id: 3,
-    category: "Residential",
     location: "Birmingham, AL",
     imageUrl: "/images/gallery-residential-1.png",
     description: "A beautiful new architectural shingle roof for a suburban family home.",
@@ -39,7 +35,6 @@ const projects = [
   },
   {
     id: 4,
-    category: "Commercial",
     location: "Atlanta, GA",
     imageUrl: "/images/gallery-commercial-1.png",
     description: "A durable and energy-efficient TPO single-ply system for a large commercial facility.",
@@ -47,7 +42,6 @@ const projects = [
   },
   {
     id: 5,
-    category: "Specialty",
     location: "Peachtree City, GA",
     imageUrl: "/images/gallery-slate-1.png",
     description: "An elegant and timeless slate roof installation on a luxury estate.",
@@ -55,7 +49,6 @@ const projects = [
   },
   {
     id: 6,
-    category: "Specialty",
     location: "Huntsville, AL",
     imageUrl: "/images/gallery-metal-1.png",
     description: "A modern standing seam metal roof, providing longevity and a sleek aesthetic.",
@@ -63,7 +56,6 @@ const projects = [
   },
   {
     id: 7,
-    category: "Residential",
     location: "Columbus, GA",
     imageUrl: "/images/gallery-residential-2.png",
     description: "Complete roof replacement with high-definition shingles after storm damage.",
@@ -71,7 +63,6 @@ const projects = [
   },
   {
     id: 8,
-    category: "Specialty",
     location: "Auburn, AL",
     imageUrl: "/images/gallery-tile-1.png",
     description: "A classic Mediterranean-style clay tile roof, perfect for Southern architecture.",
@@ -79,7 +70,6 @@ const projects = [
   },
   {
     id: 9,
-    category: "Commercial",
     location: "Montgomery, AL",
     imageUrl: "/images/gallery-commercial-2.png",
     description: "Fluid-applied roof coating to restore and extend the life of an existing commercial roof.",
@@ -87,7 +77,6 @@ const projects = [
   },
   {
     id: 10,
-    category: "Specialty",
     location: "Sandy Springs, GA",
     imageUrl: "/images/gallery-cedar-1.png",
     description: "A rustic and beautiful cedar shake roof that adds natural charm.",
@@ -95,7 +84,6 @@ const projects = [
   },
   {
     id: 11,
-    category: "Specialty",
     location: "Luxury Residence",
     imageUrl: "/images/slate/gallery-2.png",
     description: "Multi-colored slate roof on a grand estate, showcasing a blend of grey, green, and red tiles.",
@@ -103,7 +91,6 @@ const projects = [
   },
   {
     id: 12,
-    category: "Specialty",
     location: "Lakeside Estate",
     imageUrl: "/images/slate/gallery-3.png",
     description: "Expansive slate roof on a beautiful estate surrounded by vibrant autumn foliage.",
@@ -111,7 +98,6 @@ const projects = [
   },
   {
     id: 13,
-    category: "Residential",
     location: "New Construction",
     imageUrl: "/images/slate/gallery-4.png",
     description: "Pristine grey slate roof installation on a new construction home with light brick exterior.",
@@ -119,7 +105,6 @@ const projects = [
   },
   {
     id: 14,
-    category: "Specialty",
     location: "Detail Work",
     imageUrl: "/images/slate/gallery-5.png",
     description: "Expertly installed slate roof featuring copper flashing and snow guards for superior protection.",
@@ -127,7 +112,6 @@ const projects = [
   },
   {
     id: 15,
-    category: "Specialty",
     location: "Historic Building",
     imageUrl: "/images/slate/gallery-6.png",
     description: "Durable slate roof with copper gutters and snow guards on a classic stone building.",
@@ -135,7 +119,6 @@ const projects = [
   },
   {
     id: 16,
-    category: "Residential",
     location: "New Build",
     imageUrl: "/images/slate/gallery-1.png",
     description: "Side-angle view of a new grey slate roof on a home under construction.",
@@ -143,7 +126,6 @@ const projects = [
   },
   {
     id: 17,
-    category: "Residential",
     location: "Sprawling Residential Roof",
     imageUrl: "/images/shingles/shingle-gallery-2.png",
     description: "Aerial view of a complete architectural shingle roof replacement on a large brick home.",
@@ -151,7 +133,6 @@ const projects = [
   },
   {
     id: 18,
-    category: "Residential",
     location: "Ranch Home Roof",
     imageUrl: "/images/shingles/shingle-gallery-3.png",
     description: "New multi-tonal architectural shingle roof on a classic American ranch-style house.",
@@ -159,7 +140,6 @@ const projects = [
   },
   {
     id: 19,
-    category: "Residential",
     location: "Complex Gable Roof",
     imageUrl: "/images/shingles/shingle-gallery-4.png",
     description: "Detailed view of architectural shingles on a home with complex gables and stone accents.",
@@ -167,7 +147,6 @@ const projects = [
   },
   {
     id: 20,
-    category: "Specialty",
     location: "Modern Farmhouse",
     imageUrl: "/images/metal/metal-roof-2.png",
     description: "Sleek dark standing seam metal roof on a modern white farmhouse.",
@@ -175,7 +154,6 @@ const projects = [
   },
   {
     id: 21,
-    category: "Specialty",
     location: "Complex Metal Roof",
     imageUrl: "/images/metal/gallery-1.png",
     description: "Aerial view of a dark standing seam metal roof with intricate hips and valleys.",
@@ -183,7 +161,6 @@ const projects = [
   },
   {
     id: 22,
-    category: "Specialty",
     location: "Residential Metal Roof",
     imageUrl: "/images/metal/metal-roofing-1.png",
     description: "Light-colored standing seam metal roof on a large residential property.",
@@ -191,7 +168,6 @@ const projects = [
   },
   {
     id: 23,
-    category: "Specialty",
     location: "Architectural Metal",
     imageUrl: "/images/metal/gallery-4.png",
     description: "Clean lines of a light-colored standing seam metal roof on a modern building.",
@@ -199,7 +175,6 @@ const projects = [
   },
   {
     id: 24,
-    category: "Specialty",
     location: "Teal Metal Shingles",
     imageUrl: "/images/metal/metal-shingle-2.png",
     description: "Unique and durable teal-colored metal shingle roof.",
@@ -207,42 +182,31 @@ const projects = [
   },
 ]
 
-const filterCategories = ["All", "Featured", "Residential", "Commercial", "Specialty"]
 const ITEMS_PER_PAGE = 12
 
 export default function GalleryClientPage() {
-  const [activeFilter, setActiveFilter] = useState("Featured")
   const [currentPage, setCurrentPage] = useState(1)
   const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null)
   const [imageLoadStates, setImageLoadStates] = useState<Record<number, boolean>>({})
   const [isLoading, setIsLoading] = useState(false)
 
-  // Memoized filtered projects
-  const filteredProjects = useMemo(() => {
-    let filtered = projects
-    if (activeFilter === "Featured") {
-      filtered = projects.filter((p) => p.featured)
-    } else if (activeFilter !== "All") {
-      filtered = projects.filter((p) => p.category === activeFilter)
-    }
-    return filtered.sort((a, b) => b.id - a.id)
-  }, [activeFilter])
+  const sortedProjects = useMemo(() => {
+    return projects.sort((a, b) => {
+      // Featured projects first
+      if (a.featured && !b.featured) return -1
+      if (!a.featured && b.featured) return 1
+      // Then by ID descending
+      return b.id - a.id
+    })
+  }, [])
 
   // Memoized paginated projects
   const paginatedProjects = useMemo(() => {
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE
-    return filteredProjects.slice(startIndex, startIndex + ITEMS_PER_PAGE)
-  }, [filteredProjects, currentPage])
+    return sortedProjects.slice(startIndex, startIndex + ITEMS_PER_PAGE)
+  }, [sortedProjects, currentPage])
 
-  const totalPages = Math.ceil(filteredProjects.length / ITEMS_PER_PAGE)
-
-  // Handle filter change
-  const handleFilterChange = useCallback((category: string) => {
-    setIsLoading(true)
-    setActiveFilter(category)
-    setCurrentPage(1)
-    setTimeout(() => setIsLoading(false), 300)
-  }, [])
+  const totalPages = Math.ceil(sortedProjects.length / ITEMS_PER_PAGE)
 
   // Handle page change
   const handlePageChange = useCallback((page: number) => {
@@ -260,18 +224,18 @@ export default function GalleryClientPage() {
     (direction: "prev" | "next") => {
       if (!selectedProject) return
 
-      const currentIndex = filteredProjects.findIndex((p) => p.id === selectedProject.id)
+      const currentIndex = sortedProjects.findIndex((p) => p.id === selectedProject.id)
       let newIndex
 
       if (direction === "prev") {
-        newIndex = currentIndex > 0 ? currentIndex - 1 : filteredProjects.length - 1
+        newIndex = currentIndex > 0 ? currentIndex - 1 : sortedProjects.length - 1
       } else {
-        newIndex = currentIndex < filteredProjects.length - 1 ? currentIndex + 1 : 0
+        newIndex = currentIndex < sortedProjects.length - 1 ? currentIndex + 1 : 0
       }
 
-      setSelectedProject(filteredProjects[newIndex])
+      setSelectedProject(sortedProjects[newIndex])
     },
-    [selectedProject, filteredProjects],
+    [selectedProject, sortedProjects],
   )
 
   // Keyboard navigation
@@ -298,7 +262,6 @@ export default function GalleryClientPage() {
 
   return (
     <>
-      {/* Enhanced Header Section */}
       <section className="py-12 md:py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-4xl mx-auto">
@@ -310,7 +273,7 @@ export default function GalleryClientPage() {
             <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <Eye className="h-4 w-4" />
-                <span>{filteredProjects.length} Projects</span>
+                <span>{sortedProjects.length} Projects</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
@@ -325,37 +288,6 @@ export default function GalleryClientPage() {
         </div>
       </section>
 
-      {/* Enhanced Filter Section */}
-      <section className="py-8 bg-white border-b">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex justify-center items-center">
-            <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-              {filterCategories.map((category) => (
-                <Button
-                  key={category}
-                  variant={activeFilter === category ? "default" : "outline"}
-                  onClick={() => handleFilterChange(category)}
-                  className={`transition-all duration-200 ${
-                    activeFilter === category
-                      ? "bg-blue-600 hover:bg-blue-700 text-white shadow-lg"
-                      : "border-gray-300 text-gray-700 hover:border-blue-300 hover:text-blue-600"
-                  }`}
-                  disabled={isLoading}
-                >
-                  {category}
-                  {category === "Featured" && (
-                    <Badge variant="secondary" className="ml-2 bg-orange-100 text-orange-800">
-                      New
-                    </Badge>
-                  )}
-                </Button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Enhanced Gallery Grid */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           {isLoading ? (
@@ -391,25 +323,13 @@ export default function GalleryClientPage() {
                       />
                       {!imageLoadStates[project.id] && <div className="absolute inset-0 bg-gray-200 animate-pulse" />}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      <div className="absolute top-3 left-3">
-                        <Badge
-                          variant="secondary"
-                          className={`${
-                            project.category === "Residential"
-                              ? "bg-green-100 text-green-800"
-                              : project.category === "Commercial"
-                                ? "bg-blue-100 text-blue-800"
-                                : "bg-purple-100 text-purple-800"
-                          }`}
-                        >
-                          {project.category}
-                        </Badge>
-                        {project.featured && (
-                          <Badge variant="secondary" className="ml-1 bg-orange-100 text-orange-800">
+                      {project.featured && (
+                        <div className="absolute top-3 left-3">
+                          <div className="bg-orange-500 text-white px-2 py-1 rounded-md text-xs font-semibold">
                             Featured
-                          </Badge>
-                        )}
-                      </div>
+                          </div>
+                        </div>
+                      )}
                       <div className="absolute bottom-3 left-3 right-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div className="flex items-center gap-1 text-sm mb-1">
                           <MapPin className="h-3 w-3" />
@@ -467,7 +387,6 @@ export default function GalleryClientPage() {
         </div>
       </section>
 
-      {/* Enhanced Lightbox Modal */}
       {selectedProject && (
         <div
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
@@ -481,25 +400,13 @@ export default function GalleryClientPage() {
             <div className="absolute top-0 left-0 right-0 bg-gradient-to-b from-black/50 to-transparent z-10 p-4">
               <div className="flex justify-between items-start">
                 <div className="text-white">
-                  <div className="flex items-center gap-2 mb-1">
-                    <Badge
-                      variant="secondary"
-                      className={`${
-                        selectedProject.category === "Residential"
-                          ? "bg-green-100 text-green-800"
-                          : selectedProject.category === "Commercial"
-                            ? "bg-blue-100 text-blue-800"
-                            : "bg-purple-100 text-purple-800"
-                      }`}
-                    >
-                      {selectedProject.category}
-                    </Badge>
-                    {selectedProject.featured && (
-                      <Badge variant="secondary" className="bg-orange-100 text-orange-800">
+                  {selectedProject.featured && (
+                    <div className="mb-2">
+                      <div className="bg-orange-500 text-white px-2 py-1 rounded-md text-sm font-semibold inline-block">
                         Featured
-                      </Badge>
-                    )}
-                  </div>
+                      </div>
+                    </div>
+                  )}
                   <h3 className="text-xl font-bold">{selectedProject.location}</h3>
                 </div>
                 <button
