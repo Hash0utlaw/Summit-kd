@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import ServicePageHero from "@/components/service-page-hero"
 import CtaSection from "@/components/cta-section"
-import CertificationGallery from "@/components/certification-gallery"
 import { Award, ShieldCheck, HeartHandshake, Lightbulb, Users } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -42,27 +41,19 @@ const ourValues = [
   },
 ]
 
-const certificates = [
-  {
-    src: "/images/certifications/gaf-certified-letter.jpg",
-    alt: "GAF Certified Contractor reference letter for Summit Roofing Professionals",
-  },
-  {
-    src: "/images/certifications/uniflex-premier-contractor.jpg",
-    alt: "Uniflex Authorized Premier Contractor certificate awarded to Summit Roofing Professionals",
-  },
-  {
-    src: "/images/certifications/iko-premier-contractor.png",
-    alt: "IKO Craftsman Premier Contractor badge credential for Summit Roofing",
-  },
-  {
-    src: "/images/certifications/nrca-member-cert.jpg",
-    alt: "NRCA Member certificate verifying Summit Roofing Professionals membership",
-  },
-  {
-    src: "/images/certifications/uniflex-university-cert.jpg",
-    alt: "Uniflex University training certificate for Davis Meek of Summit Roofing Professionals",
-  },
+const qualifications = [
+  { name: "GAF Master Elite", description: "GAF Master Elite® Roofing Contractor" },
+  { name: "Owens Corning Preferred", description: "Owens Corning Preferred Contractor" },
+  { name: "IKO Premier Contractor", description: "IKO Craftsman Premier Contractor" },
+  { name: "Uniflex Premier Contractor", description: "Uniflex Authorized Premier Contractor" },
+  { name: "NRCA Member", description: "National Roofing Contractors Association Member" },
+  { name: "BBB Accredited", description: "Better Business Bureau Accredited Business" },
+  { name: "Alabama Licensed", description: "Licensed & Insured in Alabama" },
+  { name: "Georgia Licensed", description: "Licensed & Insured in Georgia" },
+  { name: "Veteran Owned", description: "Proudly veteran-owned and operated" },
+  { name: "200+ Years Experience", description: "Combined team experience across all roofing systems" },
+  { name: "Insurance Claims Specialists", description: "Expert navigation of insurance processes" },
+  { name: "Residential & Commercial", description: "Complete roofing solutions for every need" },
 ]
 
 export default function AboutPage() {
@@ -72,7 +63,7 @@ export default function AboutPage() {
         title="About Summit Roofing Professionals"
         subtitle="Building trust one roof at a time across Alabama and Georgia."
         imageUrl="/images/about-us-hero-sunset.png"
-        imageAlt="Shingle roof at sunset representing Summit Roofing Professionals’ quality roofing in Alabama and Georgia"
+        imageAlt="Shingle roof at sunset representing Summit Roofing Professionals' quality roofing in Alabama and Georgia"
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -125,15 +116,56 @@ export default function AboutPage() {
       </section>
 
       <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 sm:mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Our Certifications & Qualifications</h2>
-            <p className="mt-4 text-lg text-gray-600">
-              We are committed to ongoing training and adhere to the highest industry standards. Click on any
-              certificate to view the full document.
+            <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+              Our credentials reflect a commitment to quality, safety, and professionalism in every project we
+              undertake.
             </p>
           </div>
-          <CertificationGallery certificates={certificates} />
+
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            {qualifications.map((qualification) => (
+              <li
+                key={qualification.name}
+                aria-label={
+                  qualification.description
+                    ? `${qualification.name} — ${qualification.description}`
+                    : qualification.name
+                }
+                className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="flex items-start gap-4">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-700 ring-1 ring-blue-100">
+                    <ShieldCheck className="h-5 w-5" aria-hidden="true" />
+                  </span>
+                  <div className="min-w-0">
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-900 leading-snug">
+                      {qualification.name}
+                    </h3>
+                    {qualification.description ? (
+                      <p className="mt-1 text-sm text-gray-600">{qualification.description}</p>
+                    ) : (
+                      <span className="sr-only">{qualification.name}</span>
+                    )}
+                  </div>
+                </div>
+
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent"
+                />
+              </li>
+            ))}
+          </ul>
+
+          <div className="text-center mt-10 sm:mt-12">
+            <p className="text-gray-600 max-w-3xl mx-auto text-sm sm:text-base">
+              These recognitions signify ongoing training, rigorous standards, and trusted manufacturer partnerships.
+              Choose Summit Roofing with confidence.
+            </p>
+          </div>
         </div>
       </section>
 
