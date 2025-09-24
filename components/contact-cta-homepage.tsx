@@ -44,7 +44,7 @@ export default function ContactCTAHomepage() {
                   <Phone className="w-5 h-5 text-orange-200" />
                   <div>
                     <div className="text-sm text-orange-200">Call Now</div>
-                    <div className="font-semibold">(704) 578-4758</div>
+                    <div className="font-semibold">(704) 578-4756</div>
                   </div>
                 </div>
               </div>
@@ -54,7 +54,7 @@ export default function ContactCTAHomepage() {
                   <Mail className="w-5 h-5 text-orange-200" />
                   <div>
                     <div className="text-sm text-orange-200">Email Us</div>
-                    <div className="font-semibold text-sm">info@summitroofing.com</div>
+                    <div className="font-semibold text-sm">davis@summitroofingprofessionals.com</div>
                   </div>
                 </div>
               </div>
