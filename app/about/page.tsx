@@ -51,7 +51,6 @@ const qualifications = [
   { name: "Alabama Licensed", description: "Licensed & Insured in Alabama" },
   { name: "Georgia Licensed", description: "Licensed & Insured in Georgia" },
   { name: "Veteran Owned", description: "Proudly veteran-owned and operated" },
-  { name: "200+ Years Experience", description: "Combined team experience across all roofing systems" },
   { name: "Insurance Claims Specialists", description: "Expert navigation of insurance processes" },
   { name: "Residential & Commercial", description: "Complete roofing solutions for every need" },
 ]
