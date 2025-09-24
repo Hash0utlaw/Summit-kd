@@ -72,14 +72,21 @@ export default function AboutPage() {
             <div className="prose max-w-none lg:prose-lg">
               <h2>Our Story</h2>
               <p>
-                As a veteran with a lifetime of roofing experience, both in and out of military service, I've built a
-                company rooted in principle, family, and service. Together with my dedicated team, we bring over 200
-                years of combined experience to every project, ensuring top-tier craftsmanship and unmatched expertise.
+                What started as a mission to serve continues today as a commitment to excellence. As a veteran who
+                learned the values of precision, integrity, and service in the military, I founded Summit Roofing
+                Professionals with a simple belief: every family deserves a roof they can trust to protect what matters
+                most.
               </p>
               <p>
-                We specialize in all types of roofing systems—residential, commercial, industrial, specialized, and
-                fluid-applied solutions. Our residential services are particularly focused on helping homeowners secure
-                full roof replacements through insurance approvals, saving our clients time, stress, and money.
+                From storm-damaged homes to dream renovations, we've seen firsthand how the right roof transforms not
+                just a house, but a family's sense of security. That's why we've assembled a team of craftsmen who share
+                our dedication—professionals with over 200 years of combined experience who treat every project as if it
+                were their own home.
+              </p>
+              <p>
+                Whether you're navigating insurance claims after unexpected damage or planning a complete home
+                transformation, we're here to guide you through every step. We don't just install roofs—we restore peace
+                of mind, one family at a time, across Alabama and Georgia.
               </p>
             </div>
             <div>
