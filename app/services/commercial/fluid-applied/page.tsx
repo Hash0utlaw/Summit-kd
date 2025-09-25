@@ -58,8 +58,8 @@ export default function FluidAppliedPage() {
       <ServicePageHero
         title="Fluid-Applied Roof Coatings"
         subtitle="Seamless, waterproof, and restorative solutions to extend the life of your commercial roof."
-        imageUrl="/images/commercial/coatings/hero-unique-building.png"
-        imageAlt="Commercial building restored with bright white fluid-applied roof coating"
+        imageUrl="/images/commercial/modern-commercial-roof.png"
+        imageAlt="Modern commercial building with bright white reflective roof coating"
       />
 
       <section className="py-16 md:py-24 bg-white">

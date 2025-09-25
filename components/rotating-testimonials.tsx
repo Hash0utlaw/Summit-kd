@@ -29,6 +29,17 @@ const testimonials = [
     alt: "Customer Eric S. getting a new roof from Summit Roofing Professionals.",
   },
   {
+    id: 1,
+    name: "Will Wilson",
+    location: "Alabama",
+    rating: 5,
+    date: "April 28, 2024",
+    review:
+      "Truly the best experience I have ever had with a roofing company. Very personable and professional. Quick and painless. My problem was found and fixed within the hour. Can not recommend enough!",
+    image: "/images/residential/gallery/suburban-home-roof-replacement.jpeg",
+    alt: "Beautiful suburban home with a new shingle roof by Summit Roofing.",
+  },
+  {
     id: 3,
     name: "Rick B.",
     location: "Alabama",

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "Summit Roofing Professionals",
     images: [
       {
-        url: "/images/residential/gallery/architectural-shingle-estate.jpeg",
+        url: "/images/shingles/shingle-hero.png",
         width: 1200,
         height: 630,
         alt: "Professional architectural shingle installation by Summit Roofing Professionals",
@@ -121,7 +121,7 @@ export default function ArchitecturalShinglesPage() {
       <ServicePageHero
         title="Architectural Shingles"
         subtitle="Premium dimensional shingles combining beauty, durability, and value for your home"
-        imageUrl="/images/residential/gallery/architectural-shingle-estate.jpeg"
+        imageUrl="/images/shingles/shingle-hero.png"
         altText="Professional architectural shingle installation showcasing dimensional design and superior craftsmanship"
       />
 

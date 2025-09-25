@@ -54,7 +54,7 @@ export default function SinglePlyPage() {
         title="Single-Ply Roofing Systems"
         subtitle="Modern, energy-efficient, and durable solutions for your commercial roof."
         imageUrl="/images/commercial/tpo/hero.png"
-        imageAlt="Professional installation of white TPO single-ply membrane on commercial building"
+        imageAlt="White TPO single-ply commercial roof providing reflective, energy-efficient protection"
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -71,8 +71,8 @@ export default function SinglePlyPage() {
             </div>
             <div>
               <Image
-                src="/images/commercial/clean-single-ply-roof.jpg"
-                alt="Clean white TPO single-ply membrane roof on modern commercial building"
+                src="/images/commercial/tpo/completed-project-aerial.jpeg"
+                alt="Aerial view of completed white TPO roof on a large commercial facility"
                 width={720}
                 height={480}
                 sizes="(min-width: 768px) 50vw, 100vw"
