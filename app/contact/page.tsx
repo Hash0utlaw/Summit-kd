@@ -148,6 +148,122 @@ export default function ContactPage() {
               </Card>
             </div>
           </div>
+
+          {/* Comprehensive content sections for SEO optimization */}
+          <div className="max-w-4xl mx-auto mt-16 space-y-12">
+            {/* Why Choose Summit Roofing Section */}
+            <section className="bg-white rounded-lg p-8 shadow-sm">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose Summit Roofing Professionals?</h2>
+              <div className="prose prose-lg max-w-none text-gray-600">
+                <p className="mb-4">
+                  When you contact Summit Roofing Professionals, you're reaching out to Alabama and Georgia's most
+                  trusted roofing contractor. With decades of combined experience, our team has built a reputation for
+                  excellence that spans across residential and commercial roofing projects throughout the Southeast.
+                </p>
+                <p className="mb-4">
+                  Our commitment to quality craftsmanship and customer satisfaction sets us apart from other roofing
+                  companies. We understand that your roof is one of your most important investments, protecting your
+                  family, employees, and valuable assets. That's why we approach every project with the same level of
+                  dedication and attention to detail, whether it's a simple repair or a complete roof replacement.
+                </p>
+                <p>
+                  From the moment you contact us, you'll experience the Summit Roofing difference. Our licensed and
+                  insured professionals provide transparent communication, detailed estimates, and superior workmanship
+                  that stands the test of time.
+                </p>
+              </div>
+            </section>
+
+            {/* Our Services Section */}
+            <section className="bg-white rounded-lg p-8 shadow-sm">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Comprehensive Roofing Services</h2>
+              <div className="prose prose-lg max-w-none text-gray-600">
+                <p className="mb-4">
+                  Summit Roofing Professionals offers a complete range of roofing services designed to meet all your
+                  residential and commercial needs. Our experienced team specializes in various roofing systems and
+                  materials, ensuring we can handle any project regardless of size or complexity.
+                </p>
+
+                <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Residential Roofing Services</h3>
+                <p className="mb-4">
+                  Our residential roofing services include architectural shingle installation, metal roofing systems,
+                  tile roofing, and emergency repair services. We work with leading manufacturers to provide
+                  high-quality materials that offer superior protection and enhance your home's curb appeal. Whether you
+                  need a complete roof replacement due to storm damage or want to upgrade to a more energy-efficient
+                  roofing system, our team has the expertise to deliver exceptional results.
+                </p>
+
+                <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Commercial Roofing Solutions</h3>
+                <p className="mb-4">
+                  For commercial properties, we offer specialized services including TPO and single-ply membrane
+                  installation, built-up roofing systems, modified bitumen, and comprehensive maintenance programs. Our
+                  commercial team understands the unique challenges of business roofing, including minimal disruption to
+                  operations, compliance with building codes, and long-term durability requirements.
+                </p>
+
+                <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Emergency Roofing Services</h3>
+                <p>
+                  Roofing emergencies don't wait for convenient times. That's why Summit Roofing Professionals offers
+                  24/7 emergency roofing services throughout Alabama and Georgia. Our rapid response team can quickly
+                  assess damage, provide temporary protection, and develop a comprehensive repair plan to restore your
+                  roof's integrity.
+                </p>
+              </div>
+            </section>
+
+            {/* Service Areas Section */}
+            <section className="bg-white rounded-lg p-8 shadow-sm">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Serving Alabama and Georgia</h2>
+              <div className="prose prose-lg max-w-none text-gray-600">
+                <p className="mb-4">
+                  Summit Roofing Professionals proudly serves communities throughout Alabama and Georgia, bringing
+                  professional roofing services directly to your location. Our extensive service area allows us to
+                  support both urban and rural communities with the same level of excellence and commitment.
+                </p>
+                <p className="mb-4">
+                  We understand the unique weather challenges that affect roofs in the Southeast, from intense summer
+                  heat and humidity to severe thunderstorms and occasional winter weather. Our team is experienced in
+                  selecting and installing roofing materials that can withstand these regional climate conditions while
+                  providing optimal energy efficiency.
+                </p>
+                <p>
+                  No matter where you're located within our service area, you can count on Summit Roofing Professionals
+                  for prompt, professional service. We maintain local relationships with suppliers and understand
+                  regional building codes, ensuring your project meets all requirements while supporting your local
+                  community.
+                </p>
+              </div>
+            </section>
+
+            {/* Getting Started Section */}
+            <section className="bg-white rounded-lg p-8 shadow-sm">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Getting Started is Easy</h2>
+              <div className="prose prose-lg max-w-none text-gray-600">
+                <p className="mb-4">
+                  Starting your roofing project with Summit Roofing Professionals is straightforward and stress-free.
+                  When you contact us, we'll schedule a convenient time for a comprehensive roof inspection and
+                  consultation. Our experienced professionals will assess your current roofing system, discuss your
+                  needs and preferences, and provide detailed recommendations.
+                </p>
+                <p className="mb-4">
+                  We believe in transparent pricing and detailed estimates. After our initial consultation, you'll
+                  receive a comprehensive proposal that outlines all work to be performed, materials to be used, project
+                  timeline, and total investment. We take time to explain every aspect of your project, ensuring you
+                  have all the information needed to make an informed decision.
+                </p>
+                <p className="mb-4">
+                  Our team handles all necessary permits and coordinates with your insurance company when applicable. We
+                  maintain open communication throughout your project, providing regular updates and addressing any
+                  questions or concerns promptly.
+                </p>
+                <p>
+                  Contact Summit Roofing Professionals today to schedule your free consultation and discover why we're
+                  the preferred choice for roofing services throughout Alabama and Georgia. Your satisfaction is our
+                  priority, and we're committed to exceeding your expectations on every project.
+                </p>
+              </div>
+            </section>
+          </div>
         </div>
       </main>
     </>
