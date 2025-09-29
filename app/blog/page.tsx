@@ -46,7 +46,7 @@ export default function BlogPage() {
     "@type": "Blog",
     name: "Summit Roofing Professionals Blog",
     description:
-      "Expert roofing tips, maintenance guides, and industry insights from Alabama and Georgia's trusted roofing professionals.",
+      "Expert roofing tips, maintenance guides, and industry insights from Alabama and Georgia's trusted roofing experts.",
     url: "https://summitroofingprofessionals.com/blog",
     publisher: {
       "@type": "Organization",
@@ -256,7 +256,7 @@ export default function BlogPage() {
                   Get Expert Consultation
                 </Link>
                 <Link
-                  href="/services"
+                  href="/services/residential-roofing"
                   className="inline-block border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200"
                 >
                   Explore Our Services
@@ -283,7 +283,7 @@ export default function BlogPage() {
                   Get Free Consultation
                 </Link>
                 <Link
-                  href="/services"
+                  href="/services/residential-roofing"
                   className="inline-block border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200"
                 >
                   View Our Services

@@ -226,7 +226,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                 Get Free Consultation
               </Link>
               <Link
-                href="/services"
+                href="/services/residential-roofing"
                 className="inline-block border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-200"
               >
                 View Our Services
