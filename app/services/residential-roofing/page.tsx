@@ -7,7 +7,7 @@ import { Card, CardContent, CardFooter, CardTitle } from "@/components/ui/card"
 import { CheckCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Residential Roofing Services in Alabama & Georgia | Summit Roofing",
+  title: "Residential Roofing in AL & GA | Summit Roofing",
   description:
     "Expert residential roofing services, including new roof installation, replacement, and high-quality shingle options for your home in Alabama and Georgia.",
 }

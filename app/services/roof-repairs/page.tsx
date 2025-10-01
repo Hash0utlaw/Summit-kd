@@ -6,7 +6,7 @@ import CtaSection from "@/components/cta-section"
 import { AlertTriangle, Wind, Droplets, ShieldCheck } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Roof Repair Services in Alabama & Georgia | Summit Roofing",
+  title: "Roof Repair Services in AL & GA | Summit Roofing",
   description:
     "Fast and reliable roof repair services for leaks, storm damage, and missing shingles in Alabama and Georgia. Rapid response available for urgent issues.",
 }

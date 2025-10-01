@@ -8,11 +8,11 @@ import { Card, CardContent, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Star, Shield, Zap, Home } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Architectural Shingles Installation | Premium Roofing in Alabama & Georgia",
+  title: "Architectural Shingles in AL & GA | Summit Roofing",
   description:
     "Professional architectural shingle installation in Alabama and Georgia. GAF Master Elite contractors offering premium shingles with superior warranties and craftsmanship.",
   openGraph: {
-    title: "Architectural Shingles Installation | Summit Roofing Professionals",
+    title: "Architectural Shingles in AL & GA | Summit Roofing",
     description:
       "Professional architectural shingle installation in Alabama and Georgia. GAF Master Elite contractors offering premium shingles with superior warranties and craftsmanship.",
     url: "/services/architectural-shingles",

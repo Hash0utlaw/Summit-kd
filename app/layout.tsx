@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.summitroofingprofessionals.com"),
   title: {
-    default: "Summit Roofing Professionals | Expert Roofing in Alabama & Georgia",
+    default: "Summit Roofing | Expert Roofing in Alabama & Georgia",
     template: "%s | Summit Roofing Professionals",
   },
   description:
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.summitroofingprofessionals.com",
-    title: "Summit Roofing Professionals | Expert Roofing in Alabama & Georgia",
+    title: "Summit Roofing | Expert Roofing in Alabama & Georgia",
     description:
       "Professional roofing services in Alabama and Georgia. Residential, commercial, and specialty roofing with insurance claims expertise.",
     siteName: "Summit Roofing Professionals",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Summit Roofing Professionals | Expert Roofing in Alabama & Georgia",
+    title: "Summit Roofing | Expert Roofing in Alabama & Georgia",
     description:
       "Professional roofing services in Alabama and Georgia. Residential, commercial, and specialty roofing with insurance claims expertise.",
     images: ["/og-image.png"],

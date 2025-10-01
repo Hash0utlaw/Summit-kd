@@ -6,7 +6,7 @@ import { Layers, Feather, Droplets, Sun, Search, Wrench, type LucideIcon } from 
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
-  title: "Commercial Roofing Contractors in Alabama & Georgia | Summit Roofing",
+  title: "Commercial Roofing in AL & GA | Summit Roofing",
   description:
     "Specialized commercial roofing services including TPO, EPDM, Modified Bitumen, and more for businesses in Alabama and Georgia. Durable, energy-efficient solutions.",
 }

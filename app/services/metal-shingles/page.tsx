@@ -5,7 +5,7 @@ import CtaSection from "@/components/cta-section"
 import { Feather, Zap, RefreshCw } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Metal Shingle & Standing Seam Roofing | Summit Roofing",
+  title: "Metal Roofing in AL & GA | Summit Roofing",
   description:
     "Explore modern metal roofing options, including durable metal shingles and sleek standing seam roofs. Summit Roofing provides expert installation in Alabama & Georgia. Get a free estimate!",
 }

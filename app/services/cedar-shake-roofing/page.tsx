@@ -6,7 +6,7 @@ import { Leaf, Thermometer, Wind } from "lucide-react"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "Cedar Shake Roofing Services in Alabama & Georgia | Summit Roofing",
+  title: "Cedar Shake Roofing in AL & GA | Summit Roofing",
   description:
     "Enhance your home with the natural beauty and insulation of cedar shake roofing. Summit Roofing Professionals provides expert installation and repair services in Alabama & Georgia. Contact us today!",
 }

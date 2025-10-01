@@ -6,7 +6,7 @@ import { Gem, ShieldCheck, Sun } from "lucide-react"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "Slate Roofing Services in Alabama & Georgia | Summit Roofing",
+  title: "Slate Roofing Services in AL & GA | Summit Roofing",
   description:
     "Discover the elegance and longevity of slate roofing. Summit Roofing Professionals offers expert installation and repair services for slate roofs in Alabama & Georgia. Get a free estimate!",
 }

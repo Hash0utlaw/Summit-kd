@@ -6,7 +6,7 @@ import CtaSection from "@/components/cta-section"
 import { ShieldCheck, Sun, Palette } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Tile Roofing Services in Alabama & Georgia | Summit Roofing",
+  title: "Tile Roofing Services in AL & GA | Summit Roofing",
   description:
     "Choose durable and aesthetically pleasing tile roofing for your home. Summit Roofing Professionals offers expert installation and repair for clay and concrete tile roofs in Alabama & Georgia. Get a free quote!",
 }
