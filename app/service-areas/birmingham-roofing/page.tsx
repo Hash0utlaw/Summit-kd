@@ -6,7 +6,7 @@ import SocialProof from "@/components/social-proof"
 import { Home, Building, Wrench, FileText } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Birmingham Roofing Contractors | Summit Roofing Professionals",
+  title: "Birmingham Roofing Contractors | Summit Roofing",
   description:
     "Expert roofing services in Birmingham, AL. We specialize in roof replacement, repairs, and insurance claims for Birmingham homeowners and businesses. Get your free inspection!",
   alternates: {

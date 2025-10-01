@@ -4,7 +4,7 @@ import ContactCta from "@/components/contact-cta"
 import { CheckCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Huntsville Roofing Contractor | Summit Roofing Professionals",
+  title: "Huntsville Roofing Contractor | Summit Roofing",
   description:
     "Your trusted local roofing experts in Huntsville, AL. We offer premier residential and commercial roofing services, from new installations to emergency repairs.",
 }

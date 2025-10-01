@@ -6,7 +6,7 @@ import SocialProof from "@/components/social-proof"
 import { FileText, Search, Users, Award } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Roof Insurance Claims Assistance | Summit Roofing Professionals",
+  title: "Roof Insurance Claims Assistance | Summit Roofing",
   description:
     "Don't navigate your roof insurance claim alone. Summit Roofing offers expert assistance with storm damage assessment, documentation, and working with adjusters in Alabama & Georgia. Get a free inspection today!",
   alternates: {

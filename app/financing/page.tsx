@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { CheckCircle, DollarSign, Rocket } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Roof Financing Options in Alabama & Georgia | Summit Roofing",
+  title: "Roof Financing Options in AL & GA | Summit Roofing",
   description:
     "Affordable roof financing options for your new roof. Summit Roofing Professionals offers flexible payment plans to make your project possible. Apply online today!",
   alternates: {

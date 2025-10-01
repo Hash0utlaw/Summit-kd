@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Clock, Calendar, ArrowRight, Search, BookOpen, TrendingUp } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Roofing Blog | Expert Tips & Insights | Summit Roofing Professionals",
+  title: "Roofing Blog | Expert Tips & Insights | Summit Roofing",
   description:
     "Stay informed with expert roofing tips, maintenance guides, and industry insights from Summit Roofing Professionals. Serving Alabama and Georgia homeowners.",
   keywords: [

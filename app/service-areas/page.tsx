@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { MapPin, Shield, Clock, Award } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Our Service Areas in Alabama & Georgia | Summit Roofing",
+  title: "Our Service Areas in AL & GA | Summit Roofing",
   description:
     "Summit Roofing Professionals proudly serves communities across Alabama and Georgia. Find your local roofing expert in Birmingham, Atlanta, and more.",
 }

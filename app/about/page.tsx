@@ -5,7 +5,7 @@ import CtaSection from "@/components/cta-section"
 import { Award, ShieldCheck, HeartHandshake, Lightbulb, Users } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "About Summit Roofing Professionals | Alabama & Georgia Roofing Experts",
+  title: "About Summit Roofing | AL & GA Roofing Experts",
   description:
     "Learn about Summit Roofing Professionals. As a veteran-owned company with over 200 years of combined experience, we are committed to quality, integrity, and serving our community.",
   alternates: {

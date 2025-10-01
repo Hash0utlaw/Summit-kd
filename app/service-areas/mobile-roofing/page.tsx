@@ -4,7 +4,7 @@ import ContactCta from "@/components/contact-cta"
 import { CheckCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Mobile, AL Roofing Contractor | Summit Roofing Professionals",
+  title: "Mobile, AL Roofing Contractor | Summit Roofing",
   description:
     "Expert roofing services for Mobile, AL. Specializing in hurricane-rated systems, roof repair, and commercial roofing for the Gulf Coast.",
 }

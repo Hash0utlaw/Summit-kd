@@ -4,7 +4,7 @@ import ContactCta from "@/components/contact-cta"
 import { CheckCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Columbus, GA Roofing Company | Summit Roofing Professionals",
+  title: "Columbus, GA Roofing Company | Summit Roofing",
   description:
     "Summit Roofing is the leading roofing contractor in Columbus, GA. We provide expert roof repair, replacement, and installation for homes and businesses.",
 }

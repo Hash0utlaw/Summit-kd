@@ -3,11 +3,11 @@ import GalleryClientPage from "./gallery-client-page"
 import ServicePageHero from "@/components/service-page-hero"
 
 export const metadata: Metadata = {
-  title: "Project Gallery | Summit Roofing Professionals",
+  title: "Project Gallery | Summit Roofing Pros",
   description:
     "View our portfolio of completed residential and commercial roofing projects in Alabama and Georgia. See the quality craftsmanship of Summit Roofing Professionals.",
   openGraph: {
-    title: "Project Gallery | Summit Roofing Professionals",
+    title: "Project Gallery | Summit Roofing Pros",
     description:
       "View our portfolio of completed residential and commercial roofing projects in Alabama and Georgia. See the quality craftsmanship of Summit Roofing Professionals.",
     url: "/gallery",

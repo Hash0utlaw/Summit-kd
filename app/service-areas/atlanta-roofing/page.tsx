@@ -6,7 +6,7 @@ import SocialProof from "@/components/social-proof"
 import { Home, Building, Wrench, FileText } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Atlanta Roofing Contractors | Summit Roofing Professionals",
+  title: "Atlanta Roofing Contractors | Summit Roofing",
   description:
     "Top-rated roofing services in Atlanta, GA. From commercial roofing in Buckhead to residential repairs in Decatur, we've got you covered. Request your free estimate!",
   alternates: {
