@@ -109,11 +109,6 @@ export default function Header() {
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>Gallery</NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="/roof-replacement" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>Roof Replacement</NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 
@@ -185,13 +180,6 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Gallery
-              </Link>
-              <Link
-                href="/roof-replacement"
-                className="text-lg font-medium text-gray-700 hover:text-orange-500 py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Roof Replacement
               </Link>
               <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white mt-4">
                 <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
