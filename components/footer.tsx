@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook } from "lucide-react"
+import { Facebook, Instagram } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -30,6 +30,15 @@ export default function Footer() {
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Facebook className="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.instagram.com/summitroofingprofessionals_?igsh=a3pnOG5nNjluM3l1"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow us on Instagram"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Instagram className="h-6 w-6" />
               </a>
             </div>
           </div>

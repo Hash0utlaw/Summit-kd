@@ -1,254 +1,151 @@
 import type { MetadataRoute } from "next"
 import { getBlogPosts, getBlogCategories } from "@/lib/blog"
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.summitroofingprofessionals.com"
+// Constants for better maintainability
+const BASE_URL = "https://www.summitroofingprofessionals.com"
+const LAST_MAJOR_UPDATE = new Date('2024-10-01')
 
-  // Get dynamic blog content
+// Priority levels for clarity
+const PRIORITIES = {
+  HOMEPAGE: 1.0,
+  PRIMARY_SERVICE: 0.95,
+  CONVERSION: 0.9,
+  IMPORTANT: 0.85,
+  HIGH: 0.8,
+  MEDIUM_HIGH: 0.75,
+  MEDIUM: 0.7,
+  MEDIUM_LOW: 0.65,
+  LOW: 0.6,
+  VERY_LOW: 0.3,
+} as const
+
+// Change frequencies
+const FREQUENCIES = {
+  DAILY: "daily",
+  WEEKLY: "weekly",
+  MONTHLY: "monthly",
+  YEARLY: "yearly",
+} as const
+
+// Page configuration
+const PAGE_CONFIGS = {
+  homepage: { priority: PRIORITIES.HOMEPAGE, frequency: FREQUENCIES.WEEKLY },
+  primaryService: { priority: PRIORITIES.PRIMARY_SERVICE, frequency: FREQUENCIES.MONTHLY },
+  conversion: { priority: PRIORITIES.CONVERSION, frequency: FREQUENCIES.MONTHLY },
+  important: { priority: PRIORITIES.IMPORTANT, frequency: FREQUENCIES.MONTHLY },
+  high: { priority: PRIORITIES.HIGH, frequency: FREQUENCIES.WEEKLY },
+  mediumHigh: { priority: PRIORITIES.MEDIUM_HIGH, frequency: FREQUENCIES.MONTHLY },
+  medium: { priority: PRIORITIES.MEDIUM, frequency: FREQUENCIES.MONTHLY },
+  mediumLow: { priority: PRIORITIES.MEDIUM_LOW, frequency: FREQUENCIES.MONTHLY },
+  low: { priority: PRIORITIES.LOW, frequency: FREQUENCIES.MONTHLY },
+  veryLow: { priority: PRIORITIES.VERY_LOW, frequency: FREQUENCIES.YEARLY },
+}
+
+type PageConfig = {
+  url: string
+  config: keyof typeof PAGE_CONFIGS
+  lastModified?: Date
+}
+
+export default function sitemap(): MetadataRoute.Sitemap {
   const blogPosts = getBlogPosts()
   const blogCategories = getBlogCategories()
 
-  // Static pages with optimized priorities and change frequencies
-  const staticPages = [
-    // Homepage - highest priority, updated frequently
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly" as const,
-      priority: 1.0,
-    },
-
-    // Primary service pages - highest business priority
-    {
-      url: `${baseUrl}/services/residential-roofing`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/services/commercial-roofing`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/services/roof-repairs`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.95,
-    },
-
-    // Contact and conversion pages - very high priority
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/insurance-claims`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-
-    // Important business pages - high priority
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/service-areas`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/gallery`,
-      lastModified: new Date(),
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    },
-
-    // Blog main page - high priority for content marketing
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    },
-
-    // Major service area pages - high local SEO priority
-    {
-      url: `${baseUrl}/service-areas/atlanta-roofing`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/service-areas/birmingham-roofing`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    },
-
-    // Other service area pages - medium-high priority
-    {
-      url: `${baseUrl}/service-areas/augusta-roofing`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/service-areas/columbus-roofing`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/service-areas/huntsville-roofing`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/service-areas/mobile-roofing`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/service-areas/montgomery-roofing`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/service-areas/tuscaloosa-roofing`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-
-    // Residential service pages - medium-high priority
-    {
-      url: `${baseUrl}/services/architectural-shingles`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/services/metal-shingles`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/cedar-shake-roofing`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.65,
-    },
-    {
-      url: `${baseUrl}/services/slate-roofing`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.65,
-    },
-    {
-      url: `${baseUrl}/services/tile-roofing`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.65,
-    },
-
-    // Commercial service sub-pages - medium priority
-    {
-      url: `${baseUrl}/services/commercial/single-ply`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.65,
-    },
-    {
-      url: `${baseUrl}/services/commercial/modified-bitumen`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.65,
-    },
-    {
-      url: `${baseUrl}/services/commercial/fluid-applied`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.65,
-    },
-    {
-      url: `${baseUrl}/services/commercial/repair`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/commercial/inspections-maintenance`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/commercial/energy-efficient`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.65,
-    },
-
-    // Secondary business pages - medium priority
-    {
-      url: `${baseUrl}/financing`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
-    },
-
-    // Legal pages - lowest priority
-    {
-      url: `${baseUrl}/privacy-policy`,
-      lastModified: new Date(),
-      changeFrequency: "yearly" as const,
-      priority: 0.3,
-    },
+  // Define pages with configurations
+  const pages: PageConfig[] = [
+    // Homepage & core pages
+    { url: '', config: 'homepage' },
+    { url: '/about', config: 'important' },
+    { url: '/contact', config: 'conversion' },
+    { url: '/gallery', config: 'high' },
+    
+    // Primary services (high conversion pages)
+    { url: '/services/residential-roofing', config: 'primaryService' },
+    { url: '/services/commercial-roofing', config: 'primaryService' },
+    { url: '/services/roof-repairs', config: 'primaryService' },
+    { url: '/roofing', config: 'primaryService' }, // SEO landing page
+    
+    // Conversion pages
+    { url: '/insurance-claims', config: 'conversion' },
+    { url: '/financing', config: 'low' },
+    
+    // Blog
+    { url: '/blog', config: 'high' },
+    
+    // Service areas hub
+    { url: '/service-areas', config: 'important' },
+    
+    // Major service areas (local SEO)
+    { url: '/service-areas/atlanta-roofing', config: 'mediumHigh' },
+    { url: '/service-areas/birmingham-roofing', config: 'mediumHigh' },
+    { url: '/service-areas/augusta-roofing', config: 'medium' },
+    { url: '/service-areas/columbus-roofing', config: 'medium' },
+    { url: '/service-areas/huntsville-roofing', config: 'medium' },
+    { url: '/service-areas/mobile-roofing', config: 'medium' },
+    { url: '/service-areas/montgomery-roofing', config: 'medium' },
+    { url: '/service-areas/tuscaloosa-roofing', config: 'medium' },
+    
+    // Residential services
+    { url: '/services/architectural-shingles', config: 'mediumHigh' },
+    { url: '/services/metal-shingles', config: 'medium' },
+    { url: '/services/cedar-shake-roofing', config: 'mediumLow' },
+    { url: '/services/slate-roofing', config: 'mediumLow' },
+    { url: '/services/tile-roofing', config: 'mediumLow' },
+    
+    // Commercial services
+    { url: '/services/commercial/single-ply', config: 'mediumLow' },
+    { url: '/services/commercial/modified-bitumen', config: 'mediumLow' },
+    { url: '/services/commercial/fluid-applied', config: 'mediumLow' },
+    { url: '/services/commercial/repair', config: 'medium' },
+    { url: '/services/commercial/inspections-maintenance', config: 'medium' },
+    { url: '/services/commercial/energy-efficient', config: 'mediumLow' },
+    
+    // Legal
+    { url: '/privacy-policy', config: 'veryLow' },
   ]
 
+  // Build static pages
+  const staticPages = pages.map(({ url, config, lastModified }) => {
+    const pageConfig = PAGE_CONFIGS[config]
+    return {
+      url: `${BASE_URL}${url}`,
+      lastModified: lastModified || LAST_MAJOR_UPDATE,
+      changeFrequency: pageConfig.frequency as const,
+      priority: pageConfig.priority,
+    }
+  })
+
+  // Build blog post pages with dynamic priority
   const blogPostPages = blogPosts.map((post) => {
     const publishDate = new Date(post.publishedAt)
-    const daysSincePublish = Math.floor((Date.now() - publishDate.getTime()) / (1000 * 60 * 60 * 24))
+    const daysSincePublish = Math.floor(
+      (Date.now() - publishDate.getTime()) / (1000 * 60 * 60 * 24)
+    )
 
-    // Higher priority for newer posts, lower for older ones
-    let priority = 0.7
-    if (daysSincePublish < 30)
-      priority = 0.8 // Recent posts
-    else if (daysSincePublish < 90)
-      priority = 0.75 // Moderately recent
-    else if (daysSincePublish < 365)
-      priority = 0.7 // Older posts
-    else priority = 0.6 // Very old posts
+    // Priority based on freshness
+    let priority = PRIORITIES.MEDIUM
+    if (daysSincePublish < 30) priority = PRIORITIES.HIGH
+    else if (daysSincePublish < 90) priority = PRIORITIES.MEDIUM_HIGH
+    else if (daysSincePublish < 365) priority = PRIORITIES.MEDIUM
+    else priority = PRIORITIES.LOW
 
     return {
-      url: `${baseUrl}/blog/${post.slug}`,
+      url: `${BASE_URL}/blog/${post.slug}`,
       lastModified: new Date(post.updatedAt || post.publishedAt),
-      changeFrequency: "monthly" as const,
+      changeFrequency: FREQUENCIES.MONTHLY as const,
       priority,
     }
   })
 
-  // Blog category pages - medium priority with weekly updates
+  // Build blog category pages
   const blogCategoryPages = blogCategories.map((category) => ({
-    url: `${baseUrl}/blog/category/${category.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly" as const,
-    priority: 0.65,
+    url: `${BASE_URL}/blog/category/${category.slug}`,
+    lastModified: LAST_MAJOR_UPDATE,
+    changeFrequency: FREQUENCIES.WEEKLY as const,
+    priority: PRIORITIES.MEDIUM_LOW,
   }))
 
+  // Combine and sort by priority
   const allPages = [...staticPages, ...blogPostPages, ...blogCategoryPages]
   return allPages.sort((a, b) => b.priority - a.priority)
 }
