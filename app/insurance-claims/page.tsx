@@ -164,7 +164,7 @@ export default function InsuranceClaimsPage() {
             </div>
             <div>
               <img
-                src="/images/roofer-with-homeowner.png"
+                src="/images/roofer-with-homeowner.jpg"
                 alt="Summit Roofing professional discussing roof insurance claim options with a homeowner"
                 className="rounded-lg shadow-lg"
               />
