@@ -200,6 +200,14 @@ export default function GalleryClientPage() {
                 <span>2024 Portfolio</span>
               </div>
             </div>
+            <div className="mt-6">
+              <a
+                href="/landing/storm-damage-insurance"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors text-sm font-medium"
+              >
+                Test: Storm Damage Insurance Landing Page
+              </a>
+            </div>
           </div>
         </div>
       </section>
