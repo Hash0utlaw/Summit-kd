@@ -37,7 +37,7 @@ export const blogCategories: BlogCategory[] = [
     name: "Roof Maintenance",
     slug: "roof-maintenance",
     description: "Essential tips and guides for maintaining your roof in optimal condition",
-    count: 2,
+    count: 3, // Updated count from 2 to 3 for new blog post
   },
   {
     id: "2",
@@ -70,6 +70,451 @@ export const blogCategories: BlogCategory[] = [
 ]
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: "4",
+    title: "Spring Roof Inspection Guide for Atlanta Homeowners: Prepare Your Roof for Georgia's Storm Season",
+    slug: "spring-roof-inspection-guide-atlanta-homeowners",
+    excerpt:
+      "Essential spring roof inspection checklist for Atlanta and metro area homeowners. Learn how to prepare your roof for Georgia's severe weather season and prevent costly damage with expert tips from local roofing professionals.",
+    content: `
+Spring in Atlanta and the surrounding metro area brings beautiful weather, blooming dogwoods, and unfortunately, severe storm season. As temperatures rise and storm systems become more active, your roof faces increased challenges from heavy rainfall, high winds, hail, and even occasional tornadoes. A comprehensive spring roof inspection is essential for protecting your home and avoiding costly emergency repairs during Georgia's most volatile weather months.
+
+This detailed guide provides Atlanta homeowners with everything you need to know about spring roof inspections, maintenance priorities, and professional services to keep your home protected throughout the year.
+
+# Understanding Atlanta's Spring Weather Challenges
+
+## Metro Atlanta's Unique Climate Patterns
+
+Atlanta and the surrounding communities—including Marietta, Roswell, Alpharetta, Decatur, Sandy Springs, Dunwoody, and Smyrna—experience a humid subtropical climate with distinct seasonal weather patterns that significantly impact roofing systems.
+
+### Spring Weather Statistics for Atlanta:
+- **Average rainfall:** 4-5 inches per month from March through May
+- **Severe thunderstorms:** Peak frequency from March through June
+- **Hail events:** Most common in April and May
+- **Tornado activity:** Increased risk during spring months
+- **Temperature fluctuations:** Rapid changes from 40°F to 80°F
+- **High humidity:** Averaging 65-75% throughout spring
+
+### Why Spring Inspections Are Critical:
+
+**Winter Damage Assessment:**
+After winter's freeze-thaw cycles and occasional ice storms, your roof may have sustained damage that isn't immediately visible. Spring inspections catch these problems before they worsen during severe weather season.
+
+**Storm Preparation:**
+Atlanta's spring and early summer bring the most severe weather of the year. Identifying and repairing vulnerabilities now prevents catastrophic damage during peak storm season.
+
+**Preventive Maintenance:**
+Small issues discovered in spring can be addressed affordably before they escalate into major problems requiring emergency repairs or premature replacement.
+
+# Comprehensive Spring Roof Inspection Checklist
+
+## Exterior Roof Assessment
+
+### 1. Shingle Condition Evaluation
+
+Your roof's shingles are the first line of defense against Atlanta's severe weather. A thorough shingle inspection should examine:
+
+**Critical Shingle Issues to Identify:**
+
+- **Missing shingles:** Winter winds and storms may have dislodged shingles, leaving your roof deck exposed to water infiltration
+- **Cracked or split shingles:** Temperature fluctuations cause thermal expansion and contraction, leading to cracks that allow water penetration
+- **Curling edges:** Indicates aging, poor ventilation, or moisture damage requiring immediate attention
+- **Granule loss:** Check gutters and downspouts for excessive granules, which signal advanced shingle deterioration
+- **Blistering or bubbling:** Trapped moisture or poor ventilation causing shingle failure
+- **Algae and moss growth:** Common in Atlanta's humid climate, these organisms retain moisture and accelerate shingle deterioration
+
+**Action Steps:**
+- Document all damaged shingles with photos for insurance purposes
+- Replace individual damaged shingles immediately to prevent water damage
+- Consider full replacement if more than 25% of shingles show significant wear
+- Address underlying ventilation issues causing premature shingle failure
+
+### 2. Flashing Inspection and Maintenance
+
+Flashing around roof penetrations is particularly vulnerable to Atlanta's temperature fluctuations and severe weather. These critical areas require careful examination:
+
+**Key Flashing Locations:**
+
+**Chimney Flashing:**
+- Check for separation between flashing and chimney masonry
+- Look for rust, corrosion, or deteriorating sealant
+- Ensure step flashing is properly integrated with shingles
+- Verify counter-flashing is securely embedded in mortar joints
+
+**Vent Pipe Flashing:**
+- Inspect rubber boots for cracks, tears, or deterioration
+- Check for proper seal around pipe penetrations
+- Look for rust on metal flashing components
+- Ensure adequate overlap with surrounding shingles
+
+**Valley Flashing:**
+- Examine for proper water channeling without debris accumulation
+- Check for rust, holes, or separation from roof deck
+- Verify adequate overlap and proper installation
+- Look for shingle damage along valley edges
+
+**Skylight Flashing:**
+- Inspect all four sides for proper seal and integration
+- Check for condensation or water stains inside
+- Verify flashing extends properly under shingles
+- Look for cracked or deteriorating sealant
+
+### 3. Gutter System Comprehensive Check
+
+Atlanta's heavy spring rainfall makes properly functioning gutters essential for protecting your roof, siding, and foundation.
+
+**Complete Gutter Maintenance:**
+
+**Cleaning and Debris Removal:**
+- Remove all leaves, pine needles, and debris from gutters
+- Clear downspouts completely to ensure proper drainage
+- Check for sediment buildup indicating shingle deterioration
+- Remove any vegetation growing in gutters
+
+**Structural Assessment:**
+- Verify proper slope toward downspouts (1/4 inch per 10 feet)
+- Check all gutter hangers and brackets for security
+- Look for sagging sections that could cause water pooling
+- Inspect for rust, holes, or separated seams
+
+**Downspout Evaluation:**
+- Ensure downspouts direct water at least 6 feet from foundation
+- Check for clogs or restrictions in downspout flow
+- Verify proper connection to underground drainage systems
+- Consider adding extensions if water pools near foundation
+
+**Gutter Guard Consideration:**
+- Evaluate whether gutter guards would reduce maintenance needs
+- Consider professional installation for long-term protection
+- Choose appropriate guard type for Atlanta's tree coverage
+
+### 4. Roof Ventilation System Assessment
+
+Proper attic ventilation is crucial in Atlanta's humid climate for preventing moisture damage, reducing energy costs, and extending roof lifespan.
+
+**Ventilation Components to Inspect:**
+
+**Intake Ventilation:**
+- Check soffit vents for blockage from insulation or debris
+- Ensure adequate intake area for balanced airflow
+- Verify vents are not painted over or obstructed
+- Consider adding intake vents if insufficient
+
+**Exhaust Ventilation:**
+- Inspect ridge vents for damage or blockage
+- Check roof vents for proper function and seal
+- Verify gable vents are unobstructed
+- Ensure powered attic fans operate correctly
+
+**Ventilation Balance:**
+- Calculate total intake and exhaust area
+- Ensure balanced system with equal intake and exhaust
+- Address any imbalance causing moisture problems
+- Consider upgrading ventilation if inadequate
+
+### 5. Tree and Vegetation Management
+
+Atlanta's abundant tree coverage provides beautiful shade but poses significant risks to roofing systems.
+
+**Tree Maintenance Priorities:**
+
+**Overhanging Branch Removal:**
+- Trim all branches within 10 feet of roof surface
+- Remove dead or diseased trees that could fall during storms
+- Cut back branches that scrape roof during wind events
+- Consider professional tree service for large trees
+
+**Debris Prevention:**
+- Remove accumulated leaves and pine needles from roof surface
+- Clear debris from valleys and behind chimneys
+- Prevent moss and algae growth by improving sunlight exposure
+- Establish regular cleaning schedule during fall and spring
+
+## Interior Roof Inspection
+
+### 1. Attic Examination
+
+Your attic provides valuable insights into roof condition and potential problems that aren't visible from outside.
+
+**Critical Attic Inspection Points:**
+
+**Water Damage Indicators:**
+- Look for water stains on rafters, decking, and insulation
+- Check for active leaks during or immediately after rainfall
+- Identify mold or mildew growth indicating moisture problems
+- Document all issues with photos for professional assessment
+
+**Structural Assessment:**
+- Examine rafters for sagging, cracking, or deterioration
+- Check roof decking for soft spots, rot, or damage
+- Look for daylight visible through roof boards
+- Verify adequate structural support throughout
+
+**Insulation Evaluation:**
+- Check insulation depth and coverage (R-38 to R-49 recommended for Atlanta)
+- Look for compressed, wet, or damaged insulation
+- Ensure insulation doesn't block soffit vents
+- Consider upgrading if energy bills are high
+
+**Ventilation Performance:**
+- Feel for temperature differences indicating poor ventilation
+- Look for condensation on roof decking or rafters
+- Check for ice dam evidence from winter months
+- Verify adequate airflow throughout attic space
+
+### 2. Interior Ceiling and Wall Inspection
+
+Interior signs of roof problems often appear before exterior damage becomes obvious.
+
+**Interior Warning Signs:**
+
+- **Water stains:** Brown or yellow discoloration on ceilings or walls
+- **Peeling paint:** Moisture causing paint to bubble or peel
+- **Sagging ceilings:** Indicating water accumulation in ceiling materials
+- **Musty odors:** Suggesting hidden mold or mildew growth
+- **Visible mold:** Black, green, or white growth on surfaces
+
+# Common Spring Roofing Problems in Atlanta
+
+## Storm Damage Recognition
+
+Atlanta's severe spring weather causes specific types of damage that homeowners should recognize immediately.
+
+### Hail Damage Identification
+
+**Shingle Hail Damage:**
+- Random pattern of dents or divots in shingles
+- Loss of granules creating bare spots
+- Cracked or split shingles from impact
+- Bruising visible as dark spots on shingles
+
+**Collateral Hail Damage:**
+- Dented gutters, downspouts, or flashing
+- Damaged roof vents or skylights
+- Dented air conditioning units or outdoor equipment
+- Damaged siding or window screens
+
+**Action Steps:**
+- Document all damage with detailed photos
+- Contact your insurance company promptly
+- Schedule professional inspection for complete assessment
+- Avoid contractors who pressure immediate decisions
+
+### Wind Damage Assessment
+
+**Wind Damage Indicators:**
+- Lifted or missing shingles exposing underlayment
+- Damaged or missing flashing around penetrations
+- Debris impact marks or punctures
+- Torn or separated roof edges
+
+### Heavy Rainfall Issues
+
+**Water Infiltration Problems:**
+- Leaks around chimneys, vents, or skylights
+- Water stains in attic or on ceilings
+- Saturated insulation reducing effectiveness
+- Mold or mildew growth from persistent moisture
+
+## Humidity and Moisture Challenges
+
+Atlanta's high humidity creates unique roofing challenges requiring proactive management.
+
+### Condensation Problems
+
+**Causes and Solutions:**
+- **Poor ventilation:** Upgrade attic ventilation system
+- **Inadequate insulation:** Add or replace insulation to proper R-value
+- **Air leaks:** Seal gaps between living space and attic
+- **HVAC issues:** Ensure proper ductwork sealing and insulation
+
+### Algae and Moss Growth
+
+**Prevention and Treatment:**
+- **Improve sunlight exposure:** Trim overhanging branches
+- **Install zinc or copper strips:** Natural algae prevention
+- **Professional cleaning:** Use appropriate cleaning solutions
+- **Preventive treatments:** Apply algae-resistant treatments
+
+# Professional vs. DIY Spring Inspection
+
+## Safe DIY Inspection Tasks
+
+Homeowners can safely perform these inspection activities:
+
+**Ground-Level Inspections:**
+- Visual examination using binoculars from ground
+- Gutter cleaning on single-story homes with proper safety equipment
+- Interior attic inspection for signs of problems
+- Documentation of visible damage for professional assessment
+
+**Safety Requirements:**
+- Use stable ladder with proper setup
+- Never walk on roof without professional training
+- Work with a partner for safety
+- Avoid roof work during wet or windy conditions
+
+## When to Call Professional Roofers
+
+Contact Summit Roofing Professionals for these critical services:
+
+**Professional Inspection Services:**
+- Comprehensive roof assessment with detailed report
+- Walking inspection of entire roof surface
+- Thermal imaging for hidden moisture detection
+- Drone inspection for hard-to-access areas
+
+**Professional Repair Services:**
+- Any work requiring walking on roof
+- Flashing repair or replacement
+- Structural repairs or modifications
+- Insurance claim documentation and support
+
+# Spring Maintenance Cost Considerations
+
+## Investment in Preventive Care
+
+Understanding maintenance costs helps homeowners budget appropriately and avoid expensive emergency repairs.
+
+### Professional Inspection Costs
+
+**Atlanta Metro Area Pricing:**
+- **Basic visual inspection:** $150-$300
+- **Comprehensive inspection with report:** $300-$500
+- **Thermal imaging inspection:** $400-$600
+- **Drone inspection:** $350-$550
+
+### Common Spring Repair Costs
+
+**Typical Repair Investments:**
+- **Shingle replacement (per square):** $150-$350
+- **Flashing repair:** $200-$500 per location
+- **Gutter cleaning:** $100-$300
+- **Minor leak repair:** $300-$800
+- **Ventilation improvements:** $500-$2,000
+
+### Cost of Neglecting Spring Maintenance
+
+**Potential Expenses from Delayed Maintenance:**
+- **Interior water damage:** $2,000-$10,000+
+- **Mold remediation:** $3,000-$8,000+
+- **Structural repairs:** $5,000-$15,000+
+- **Premature roof replacement:** $8,000-$25,000+
+- **Emergency repairs during storms:** 2-3x normal costs
+
+# Preparing for Atlanta's Storm Season
+
+## Emergency Preparedness Planning
+
+**Pre-Storm Preparation:**
+- Keep emergency tarps and supplies readily available
+- Document current roof condition with photos
+- Know your insurance policy coverage and deductible
+- Have Summit Roofing's emergency contact information saved
+- Identify safe interior spaces during severe weather
+
+## Insurance Claim Preparation
+
+**Documentation Best Practices:**
+- Photograph roof condition before storm season
+- Document all damage immediately after storms
+- Keep detailed records of maintenance and repairs
+- Understand your policy coverage and exclusions
+- Contact insurance company promptly after damage
+
+# Long-Term Roof Protection Strategy
+
+## Annual Maintenance Schedule
+
+**Spring (March-May):**
+- Comprehensive professional inspection
+- Address winter damage before storm season
+- Clean gutters and remove debris
+- Trim overhanging vegetation
+
+**Summer (June-August):**
+- Monitor for storm damage after severe weather
+- Check attic ventilation performance
+- Address any issues discovered promptly
+
+**Fall (September-November):**
+- Pre-winter inspection and maintenance
+- Clean gutters multiple times during leaf fall
+- Prepare for winter weather challenges
+
+**Winter (December-February):**
+- Monitor for ice dam formation
+- Check for adequate insulation and ventilation
+- Document any weather-related damage
+
+## Choosing the Right Roofing Professional
+
+**What to Look for in Atlanta Roofing Contractors:**
+
+**Credentials and Certifications:**
+- GAF Master Elite certification
+- Local business with established reputation
+- Proper licensing and insurance
+- NRCA membership
+- Manufacturer certifications
+
+**Service Quality Indicators:**
+- Detailed written estimates
+- Clear warranty information
+- Professional communication
+- Local references available
+- No pressure sales tactics
+
+# Conclusion
+
+Spring roof inspection is essential for Atlanta homeowners preparing for severe weather season. The combination of winter damage assessment, storm preparation, and preventive maintenance protects your home investment and provides peace of mind throughout the year.
+
+Don't wait until storm damage occurs to discover roof problems. A comprehensive spring inspection identifies issues while they're still minor and affordable to repair. With Atlanta's severe weather season approaching, now is the perfect time to ensure your roof is ready to protect your family and home.
+
+**Ready to schedule your spring roof inspection?** Contact Summit Roofing Professionals today for comprehensive inspection services throughout Atlanta and the metro area. Our certified team understands the unique challenges of Georgia's climate and provides honest assessments with detailed recommendations. We serve homeowners in Atlanta, Marietta, Roswell, Alpharetta, Decatur, Sandy Springs, Dunwoody, Smyrna, and surrounding communities.
+
+Protect your home investment with professional spring roof inspection and maintenance. Call Summit Roofing Professionals now to schedule your appointment before storm season arrives.
+    `,
+    author: {
+      name: "Summit Roofing Team",
+      image: "/images/founder-portrait.png",
+      bio: "Our expert roofing team at Summit Roofing Professionals has over 15 years of combined experience serving Atlanta and metro Georgia homeowners. We are certified GAF Master Elite contractors and NRCA members specializing in storm damage assessment and repair.",
+    },
+    publishedAt: "2025-02-03",
+    category: "roof-maintenance",
+    tags: [
+      "spring inspection",
+      "Atlanta roofing",
+      "storm preparation",
+      "roof maintenance",
+      "Georgia weather",
+      "preventive care",
+      "metro Atlanta",
+    ],
+    featuredImage: "/images/roofer-working-sunset.png",
+    seo: {
+      metaTitle: "Spring Roof Inspection Guide Atlanta GA | Storm Season Preparation | Summit Roofing",
+      metaDescription:
+        "Complete spring roof inspection checklist for Atlanta homeowners. Prepare your roof for Georgia's severe weather season with expert tips from local professionals. Serving Atlanta, Marietta, Roswell, Alpharetta & metro area.",
+      keywords: [
+        "spring roof inspection Atlanta",
+        "Atlanta roof maintenance",
+        "Georgia storm season preparation",
+        "roof inspection Marietta GA",
+        "Roswell roofing services",
+        "Alpharetta roof inspection",
+        "Atlanta metro roofing",
+        "spring roof checklist Georgia",
+        "Atlanta storm damage prevention",
+        "professional roof inspection Atlanta",
+        "Sandy Springs roofing",
+        "Decatur roof maintenance",
+        "Dunwoody roofing contractor",
+        "Smyrna roof inspection",
+      ],
+    },
+    readingTime: 14,
+  },
   {
     id: "3",
     title:
