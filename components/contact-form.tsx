@@ -8,6 +8,12 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 
+declare global {
+  interface Window {
+    gtag?: (command: string, action: string, params?: Record<string, any>) => void
+  }
+}
+
 const initialState = {
   success: false,
   message: "",
@@ -28,6 +34,12 @@ export default function ContactForm() {
 
   useEffect(() => {
     if (state.success) {
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("event", "conversion", {
+          send_to: "AW-16871498775/hjiyCKHZnqcbEJfI-uw-",
+        })
+      }
+
       // Reset the form by changing the key
       setFormKey(Date.now())
     }
