@@ -22,7 +22,7 @@ import {
 export const metadata: Metadata = {
   title: "Residential Roofing Contractors Near Me | Roof Repair & Installation",
   description:
-    "Expert residential roofing contractors for roof repair near me, emergency roof leak repair, new roof installation, hail damage repair & roof inspection services. Licensed & insured. Get your free roof replacement cost estimate today!",
+    "Expert residential roofing contractors for roof repair near me, emergency roof leak repair, new roof installation, hail damage repair & roof inspection services. Licensed & insured. Get your free roof replacement quote & cost estimate today!",
   keywords: [
     "residential roofing contractors",
     "new roof installation",
@@ -30,24 +30,22 @@ export const metadata: Metadata = {
     "emergency roof leak repair",
     "roof inspection services",
     "residential roof replacement",
-    "roof replacement company",
-    "hail damage roof repair",
-    "roof leak repair near me",
     "roof replacement contractors",
     "roof replacement cost estimate",
+    "roof replacement quote",
     "roof repair services",
     "roof installation contractors",
-    "flat roof replacement services",
-    "storm damage roof repair",
+    "hail damage roof repair",
+    "roof leak repair near me",
     "roof replacement near me",
     "new roof cost",
     "residential roof repair near me",
-    "reroof house cost",
+    "storm damage roof repair",
   ],
   openGraph: {
     title: "Residential Roofing Contractors Near Me | Summit Roofing",
     description:
-      "Expert roof repair near me, emergency leak repair, new roof installation & hail damage repair. Free roof replacement cost estimate. Licensed & insured.",
+      "Expert roof repair near me, emergency leak repair, new roof installation & hail damage repair. Free roof replacement quote & cost estimate. Licensed & insured.",
     type: "website",
   },
 }
@@ -79,7 +77,7 @@ export default function RoofReplacementPage() {
             <p className="text-xl md:text-2xl text-gray-200 text-balance mb-8 leading-relaxed">
               Professional residential roofing contractors for emergency roof leak repair, new roof installation, hail
               damage repair, and roof inspection services in Alabama & Georgia. Licensed, insured, and trusted by
-              homeowners.
+              homeowners. Get your free roof replacement quote today.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -90,7 +88,7 @@ export default function RoofReplacementPage() {
               >
                 <Link href="/contact">
                   <FileText className="mr-2 h-5 w-5" />
-                  Get Free Cost Estimate
+                  Get Free Quote & Estimate
                 </Link>
               </Button>
               <Button
@@ -250,8 +248,8 @@ export default function RoofReplacementPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-3">Roof Inspection Services</h3>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Professional roof inspection services with detailed assessment. Get your free roof replacement cost
-                  estimate and comprehensive inspection report.
+                  Professional roof inspection services with detailed assessment. Get your free roof replacement quote
+                  and cost estimate with comprehensive inspection report.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-start gap-2">
@@ -411,9 +409,10 @@ export default function RoofReplacementPage() {
                 <div className="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
                   2
                 </div>
-                <h3 className="text-xl font-bold mb-3">Detailed Cost Estimate</h3>
+                <h3 className="text-xl font-bold mb-3">Detailed Quote & Estimate</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Receive a comprehensive roof replacement cost estimate with transparent pricing and material options.
+                  Receive a comprehensive roof replacement quote and cost estimate with transparent pricing and material
+                  options.
                 </p>
               </div>
             </div>
@@ -526,11 +525,12 @@ export default function RoofReplacementPage() {
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready for Your New Roof? Get Your Free Cost Estimate Today!
+              Ready for Your New Roof? Get Your Free Quote & Cost Estimate Today!
             </h2>
             <p className="text-xl mb-8 text-orange-100">
               Join hundreds of satisfied homeowners who chose Summit Roofing Professionals as their residential roofing
-              contractors. Contact us now for your free roof inspection services and cost estimate.
+              contractors. Contact us now for your free roof inspection services, roof replacement quote, and detailed
+              cost estimate.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -541,7 +541,7 @@ export default function RoofReplacementPage() {
               >
                 <Link href="/contact">
                   <FileText className="mr-2 h-5 w-5" />
-                  Get Free Cost Estimate
+                  Get Free Quote & Estimate
                 </Link>
               </Button>
               <Button
@@ -593,10 +593,9 @@ export default function RoofReplacementPage() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3">How much does a new roof cost?</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  New roof cost and reroof house cost vary based on size, materials, and complexity. Most residential
-                  roof replacements range from $8,000 to $25,000. We offer free roof replacement cost estimates and
-                  financing options to make your new roof affordable. Contact us for a detailed quote tailored to your
-                  home.
+                  New roof cost varies based on size, materials, and complexity. Most residential roof replacements
+                  range from $8,000 to $25,000. We offer free roof replacement quotes and cost estimates with financing
+                  options to make your new roof affordable. Contact us for a detailed quote tailored to your home.
                 </p>
               </CardContent>
             </Card>
@@ -639,7 +638,7 @@ export default function RoofReplacementPage() {
                 <p className="text-gray-600 leading-relaxed">
                   Our comprehensive roof inspection services include a thorough assessment of your roof's condition,
                   identification of any damage or potential issues, detailed photo documentation, and a free roof
-                  replacement cost estimate. We provide a complete written report with our recommendations.
+                  replacement quote and cost estimate. We provide a complete written report with our recommendations.
                 </p>
               </CardContent>
             </Card>
