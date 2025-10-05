@@ -14,29 +14,40 @@ import {
   Home,
   Wrench,
   FileText,
-  DollarSign,
   MapPin,
+  AlertCircle,
+  CloudRain,
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Residential Roof Replacement Contractors Near Me | Free Estimate",
+  title: "Residential Roofing Contractors Near Me | Roof Repair & Installation",
   description:
-    "Expert residential roof replacement contractors in Alabama & Georgia. New roof installation, flat roof replacement, financing available. Licensed & insured. Get your free estimate today!",
+    "Expert residential roofing contractors for roof repair near me, emergency roof leak repair, new roof installation, hail damage repair & roof inspection services. Licensed & insured. Get your free roof replacement cost estimate today!",
   keywords: [
-    "roof replacement contractors near me",
-    "roof replacement companies near me",
-    "residential roof replacement",
-    "flat roof replacement near me",
+    "residential roofing contractors",
     "new roof installation",
-    "roof replacement estimate near me",
-    "roof replacement financing near me",
-    "residential roof leak repair",
-    "house roof leak repair",
+    "roof repair near me",
+    "emergency roof leak repair",
+    "roof inspection services",
+    "residential roof replacement",
+    "roof replacement company",
+    "hail damage roof repair",
+    "roof leak repair near me",
+    "roof replacement contractors",
+    "roof replacement cost estimate",
+    "roof repair services",
+    "roof installation contractors",
+    "flat roof replacement services",
+    "storm damage roof repair",
+    "roof replacement near me",
+    "new roof cost",
+    "residential roof repair near me",
+    "reroof house cost",
   ],
   openGraph: {
-    title: "Residential Roof Replacement Contractors Near Me | Summit Roofing",
+    title: "Residential Roofing Contractors Near Me | Summit Roofing",
     description:
-      "Expert residential roof replacement contractors in Alabama & Georgia. Free estimates, financing available, licensed & insured.",
+      "Expert roof repair near me, emergency leak repair, new roof installation & hail damage repair. Free roof replacement cost estimate. Licensed & insured.",
     type: "website",
   },
 }
@@ -49,7 +60,7 @@ export default function RoofReplacementPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/roofer-craftsmanship-sunset.png"
-            alt="Professional roof replacement contractors installing new residential roof"
+            alt="Professional residential roofing contractors installing new roof"
             fill
             priority
             quality={75}
@@ -60,14 +71,15 @@ export default function RoofReplacementPage() {
         <div className="relative container mx-auto px-4 md:px-6 py-20 md:py-28">
           <div className="max-w-4xl">
             <Badge className="mb-4 bg-orange-500 hover:bg-orange-600 text-white border-0">
-              Top-Rated Roof Replacement Contractors
+              Top-Rated Residential Roofing Contractors Near You
             </Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
-              Expert Residential Roof Replacement Near You
+              Expert Roof Repair & Installation Near Me
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 text-balance mb-8 leading-relaxed">
-              Professional new roof installation and flat roof replacement services in Alabama & Georgia. Licensed,
-              insured, and trusted by homeowners for over a decade.
+              Professional residential roofing contractors for emergency roof leak repair, new roof installation, hail
+              damage repair, and roof inspection services in Alabama & Georgia. Licensed, insured, and trusted by
+              homeowners.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -78,7 +90,7 @@ export default function RoofReplacementPage() {
               >
                 <Link href="/contact">
                   <FileText className="mr-2 h-5 w-5" />
-                  Get Free Estimate
+                  Get Free Cost Estimate
                 </Link>
               </Button>
               <Button
@@ -97,11 +109,11 @@ export default function RoofReplacementPage() {
             <div className="flex flex-wrap gap-6 text-sm">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-5 w-5 text-green-400" />
-                <span>Free Roof Inspection</span>
+                <span>Free Roof Inspection Services</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-5 w-5 text-green-400" />
-                <span>Financing Available</span>
+                <span>24/7 Emergency Roof Repair</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-5 w-5 text-green-400" />
@@ -140,14 +152,43 @@ export default function RoofReplacementPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Complete Residential Roof Replacement Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Complete Roof Repair Services & Installation Near Me
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From new roof installation to flat roof replacement and emergency leak repairs, we handle all your
-              residential roofing needs
+              From emergency roof leak repair to new roof installation, hail damage repair, and storm damage roof repair
+              - we handle all your residential roofing needs
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="border-2 hover:border-orange-500 transition-colors">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                  <AlertCircle className="h-6 w-6 text-red-600" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Emergency Roof Leak Repair</h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  24/7 emergency roof leak repair near me. Fast response to protect your home from water damage. Our
+                  residential roofing contractors are available around the clock for urgent repairs.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>24/7 emergency response</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Rapid leak detection</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Immediate water damage prevention</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
             <Card className="border-2 hover:border-orange-500 transition-colors">
               <CardContent className="p-6">
                 <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
@@ -155,8 +196,8 @@ export default function RoofReplacementPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-3">New Roof Installation</h3>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Complete new roof installation for residential properties. Quality materials, expert craftsmanship,
-                  and lifetime warranties on all new roofs.
+                  Complete new roof installation by expert roof installation contractors. Quality materials, superior
+                  craftsmanship, and lifetime warranties on all new roofs.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-start gap-2">
@@ -177,10 +218,91 @@ export default function RoofReplacementPage() {
 
             <Card className="border-2 hover:border-orange-500 transition-colors">
               <CardContent className="p-6">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <CloudRain className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Hail Damage Roof Repair</h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Expert hail damage roof repair and storm damage roof repair services. We work with your insurance
+                  company to restore your roof after severe weather.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Storm damage assessment</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Insurance claim assistance</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Complete restoration</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:border-orange-500 transition-colors">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                  <FileText className="h-6 w-6 text-orange-600" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Roof Inspection Services</h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Professional roof inspection services with detailed assessment. Get your free roof replacement cost
+                  estimate and comprehensive inspection report.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Thorough roof assessment</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Detailed cost estimate</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>No obligation quote</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:border-orange-500 transition-colors">
+              <CardContent className="p-6">
                 <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
                   <Wrench className="h-6 w-6 text-orange-600" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Flat Roof Replacement</h3>
+                <h3 className="text-xl font-bold mb-3">Residential Roof Repair Near Me</h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Local residential roof repair near me for all types of roofing issues. Expert roof repair services
+                  from trusted roof replacement contractors in your area.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>All roof types & materials</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Fast local service</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Guaranteed workmanship</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:border-orange-500 transition-colors">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                  <Shield className="h-6 w-6 text-orange-600" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Flat Roof Replacement Services</h3>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   Specialized flat roof replacement services for residential properties. Modern materials and proven
                   techniques for long-lasting protection.
@@ -201,114 +323,6 @@ export default function RoofReplacementPage() {
                 </ul>
               </CardContent>
             </Card>
-
-            <Card className="border-2 hover:border-orange-500 transition-colors">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="h-6 w-6 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Residential Roof Leak Repair</h3>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  Emergency house roof leak repair services. Fast response to protect your home from water damage and
-                  prevent costly repairs.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>24/7 emergency service</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Thorough leak detection</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Permanent solutions</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 hover:border-orange-500 transition-colors">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                  <FileText className="h-6 w-6 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Free Roof Inspection & Estimate</h3>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  Get your free roof replacement estimate near you. Comprehensive inspection and detailed quote with no
-                  obligation.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Detailed roof assessment</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Transparent pricing</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>No hidden fees</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 hover:border-orange-500 transition-colors">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                  <DollarSign className="h-6 w-6 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Roof Replacement Financing</h3>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  Flexible roof replacement financing options near you. Make your new roof affordable with our payment
-                  plans.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Flexible payment plans</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Quick approval process</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Competitive rates</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 hover:border-orange-500 transition-colors">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="h-6 w-6 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Insurance Claims Assistance</h3>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  Expert help with insurance claims for roof replacement. We work directly with your insurance company
-                  to maximize your coverage.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Claims documentation</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Insurance negotiation</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Stress-free process</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
@@ -317,11 +331,9 @@ export default function RoofReplacementPage() {
       <section className="py-16 bg-blue-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Choose Summit Roofing for Your Roof Replacement?
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Our Residential Roofing Contractors?</h2>
             <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-              As the leading roof replacement contractors near you, we deliver exceptional quality and service on every
+              As a leading roof replacement company near you, we deliver exceptional quality and service on every
               project
             </p>
           </div>
@@ -374,9 +386,9 @@ export default function RoofReplacementPage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Roof Replacement Process</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Residential Roof Replacement Process</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Simple, transparent, and stress-free residential roof replacement from start to finish
+              Simple, transparent, and stress-free roof repair and installation from start to finish
             </p>
           </div>
 
@@ -388,7 +400,7 @@ export default function RoofReplacementPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-3">Free Inspection</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Schedule your free roof inspection. We'll assess your roof's condition and provide expert
+                  Schedule your free roof inspection services. We'll assess your roof's condition and provide expert
                   recommendations.
                 </p>
               </div>
@@ -399,9 +411,9 @@ export default function RoofReplacementPage() {
                 <div className="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
                   2
                 </div>
-                <h3 className="text-xl font-bold mb-3">Detailed Estimate</h3>
+                <h3 className="text-xl font-bold mb-3">Detailed Cost Estimate</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Receive a comprehensive roof replacement estimate with transparent pricing and material options.
+                  Receive a comprehensive roof replacement cost estimate with transparent pricing and material options.
                 </p>
               </div>
             </div>
@@ -437,11 +449,10 @@ export default function RoofReplacementPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Roof Replacement Contractors Serving Alabama & Georgia
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Roof Repair Near Me - Serving Alabama & Georgia</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find trusted roof replacement companies near you. We proudly serve homeowners throughout the region.
+              Find trusted residential roofing contractors near you. We proudly serve homeowners throughout the region
+              with expert roof repair and installation services.
             </p>
           </div>
 
@@ -515,11 +526,11 @@ export default function RoofReplacementPage() {
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready for Your New Roof? Get Your Free Estimate Today!
+              Ready for Your New Roof? Get Your Free Cost Estimate Today!
             </h2>
             <p className="text-xl mb-8 text-orange-100">
-              Join hundreds of satisfied homeowners who chose Summit Roofing Professionals for their residential roof
-              replacement. Contact us now for your free inspection and estimate.
+              Join hundreds of satisfied homeowners who chose Summit Roofing Professionals as their residential roofing
+              contractors. Contact us now for your free roof inspection services and cost estimate.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -530,7 +541,7 @@ export default function RoofReplacementPage() {
               >
                 <Link href="/contact">
                   <FileText className="mr-2 h-5 w-5" />
-                  Get Free Estimate
+                  Get Free Cost Estimate
                 </Link>
               </Button>
               <Button
@@ -549,7 +560,7 @@ export default function RoofReplacementPage() {
             <div className="grid sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
                 <div className="text-3xl font-bold mb-1">24/7</div>
-                <div className="text-sm text-orange-200">Emergency Service</div>
+                <div className="text-sm text-orange-200">Emergency Roof Repair</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
                 <div className="text-3xl font-bold mb-1">500+</div>
@@ -568,20 +579,46 @@ export default function RoofReplacementPage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions About Roof Replacement</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Frequently Asked Questions About Roof Repair & Replacement
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get answers to common questions about residential roof replacement, costs, and our services
+              Get answers to common questions about residential roof replacement, new roof cost, and our roofing
+              services
             </p>
           </div>
 
           <div className="max-w-3xl mx-auto space-y-6">
             <Card>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">How much does residential roof replacement cost?</h3>
+                <h3 className="text-xl font-bold mb-3">How much does a new roof cost?</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Roof replacement costs vary based on size, materials, and complexity. We offer free estimates and
+                  New roof cost and reroof house cost vary based on size, materials, and complexity. Most residential
+                  roof replacements range from $8,000 to $25,000. We offer free roof replacement cost estimates and
                   financing options to make your new roof affordable. Contact us for a detailed quote tailored to your
                   home.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-3">Do you offer emergency roof leak repair near me?</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Yes! We provide 24/7 emergency roof leak repair services. Our residential roofing contractors respond
+                  quickly to protect your home from water damage. Call us anytime for immediate assistance with roof
+                  leaks.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-3">Do you repair hail damage and storm damage to roofs?</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Absolutely. We specialize in hail damage roof repair and storm damage roof repair. Our team will
+                  assess the damage, work with your insurance company, and restore your roof to perfect condition. We
+                  handle all aspects of the insurance claim process.
                 </p>
               </CardContent>
             </Card>
@@ -598,10 +635,11 @@ export default function RoofReplacementPage() {
 
             <Card>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Do you offer financing for roof replacement?</h3>
+                <h3 className="text-xl font-bold mb-3">What's included in your roof inspection services?</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Yes! We offer flexible roof replacement financing options with competitive rates and quick approval.
-                  Ask about our payment plans during your free estimate.
+                  Our comprehensive roof inspection services include a thorough assessment of your roof's condition,
+                  identification of any damage or potential issues, detailed photo documentation, and a free roof
+                  replacement cost estimate. We provide a complete written report with our recommendations.
                 </p>
               </CardContent>
             </Card>
@@ -610,18 +648,9 @@ export default function RoofReplacementPage() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3">What areas do you serve?</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  We're proud to serve homeowners throughout Alabama and Georgia, including Birmingham, Montgomery,
-                  Mobile, Columbus, Atlanta, and surrounding areas. Contact us to confirm service in your area.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Do you handle insurance claims for roof replacement?</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  We're experienced in working with insurance companies and can help you navigate the claims process for
-                  storm damage or other covered events. We'll document everything needed for your claim.
+                  We're proud to serve homeowners throughout Alabama and Georgia with local roof repair near me
+                  services, including Birmingham, Montgomery, Mobile, Columbus, Atlanta, and surrounding areas. Contact
+                  us to confirm service in your area.
                 </p>
               </CardContent>
             </Card>
