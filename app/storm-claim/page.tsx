@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "roof claim company",
   ],
   alternates: {
-    canonical: "/landing/storm-damage-insurance",
+    canonical: "/storm-claim", // Updated canonical URL to match new page location
   },
   robots: {
     index: true,
