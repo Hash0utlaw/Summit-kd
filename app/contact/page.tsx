@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import ContactForm from "@/components/contact-form"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import Script from "next/script"
 
 export const metadata: Metadata = {
   title: "Contact Summit Roofing | Free Quotes 7 Days a Week",
@@ -58,6 +59,16 @@ const jsonLd = {
 export default function ContactPage() {
   return (
     <>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=AW-16871498775" strategy="afterInteractive" />
+      <Script id="google-analytics-contact" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-16871498775');
+        `}
+      </Script>
+
       {/* Add JSON-LD to the page */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <main className="min-h-screen py-16 bg-gray-50">
