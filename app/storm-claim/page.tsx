@@ -359,6 +359,33 @@ export default function StormDamageInsuranceLandingPage() {
         buttonText="Schedule Free Inspection Now"
         buttonLink="/contact"
       />
+
+      {/* Sticky CTA button that follows user down the page */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-r from-orange-600 to-orange-700 shadow-2xl border-t-4 border-orange-800 md:hidden">
+        <div className="container mx-auto px-4 py-3">
+          <Button
+            asChild
+            size="lg"
+            className="w-full bg-white hover:bg-gray-100 text-orange-600 font-bold text-lg py-6"
+          >
+            <Link href="/contact">Get Your Free Inspection</Link>
+          </Button>
+        </div>
+      </div>
+
+      {/* Sticky CTA for desktop */}
+      <div className="hidden md:block fixed bottom-8 right-8 z-50">
+        <Button
+          asChild
+          size="lg"
+          className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-8 py-6 shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105"
+        >
+          <Link href="/contact">
+            <Phone className="mr-2 h-5 w-5" />
+            Schedule Free Inspection
+          </Link>
+        </Button>
+      </div>
     </>
   )
 }
