@@ -39,7 +39,10 @@ export default function ContactCTAHomepage() {
 
             {/* Quick Contact Options */}
             <div className="grid sm:grid-cols-2 gap-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+              <a
+                href="tel:7045784756"
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-colors"
+              >
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-orange-200" />
                   <div>
@@ -47,9 +50,12 @@ export default function ContactCTAHomepage() {
                     <div className="font-semibold">(704) 578-4756</div>
                   </div>
                 </div>
-              </div>
+              </a>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+              <a
+                href="mailto:davis@summitroofingprofessionals.com"
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-colors"
+              >
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-orange-200" />
                   <div>
@@ -57,7 +63,7 @@ export default function ContactCTAHomepage() {
                     <div className="font-semibold text-sm">davis@summitroofingprofessionals.com</div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
 
             {/* Service Areas */}

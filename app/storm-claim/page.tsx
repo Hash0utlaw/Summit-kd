@@ -4,7 +4,6 @@ import CtaSection from "@/components/cta-section"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Shield, FileCheck, Clock, Phone, CheckCircle2, AlertTriangle, DollarSign, Star } from "lucide-react"
-import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Storm Damage Roof Insurance Claims | Free Inspection",
@@ -157,10 +156,10 @@ export default function StormDamageInsuranceLandingPage() {
               size="lg"
               className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-6 text-lg whitespace-nowrap"
             >
-              <Link href="/contact">
+              <a href="tel:7045784756">
                 <Phone className="mr-2 h-5 w-5" />
                 (704) 578-4756
-              </Link>
+              </a>
             </Button>
           </div>
         </div>
@@ -368,7 +367,7 @@ export default function StormDamageInsuranceLandingPage() {
             size="lg"
             className="w-full bg-white hover:bg-gray-100 text-orange-600 font-bold text-lg py-6"
           >
-            <Link href="/contact">Get Your Free Inspection</Link>
+            <a href="tel:7045784756">Get Your Free Inspection</a>
           </Button>
         </div>
       </div>
@@ -380,10 +379,10 @@ export default function StormDamageInsuranceLandingPage() {
           size="lg"
           className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-8 py-6 shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105"
         >
-          <Link href="/contact">
+          <a href="tel:7045784756">
             <Phone className="mr-2 h-5 w-5" />
             Schedule Free Inspection
-          </Link>
+          </a>
         </Button>
       </div>
     </>
