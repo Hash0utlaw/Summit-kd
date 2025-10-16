@@ -71,7 +71,7 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
       to: toEmail,
       subject: `New Website Lead: ${fullName}`,
       reply_to: "no-reply@resend.dev",
-      react: ContactFormEmail({ fullName, phone, address }),
+      react: <ContactFormEmail fullName={fullName} phone={phone} address={address} />,
     })
 
     if (error) {
