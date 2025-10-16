@@ -11,6 +11,10 @@ const contactFormSchema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters."),
   phone: z.string().min(10, "Please enter a valid phone number."),
   address: z.string().min(5, "Please enter a valid address."),
+  street: z.string().min(1, "Street address is required."),
+  city: z.string().min(1, "City is required."),
+  state: z.string().min(2, "State is required."),
+  zip: z.string().regex(/^\d{5}(-\d{4})?$/, "Valid zip code is required."),
 })
 
 export async function sendContactEmail(prevState: any, formData: FormData) {
@@ -29,13 +33,25 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
     fullName: formData.get("fullName"),
     phone: formData.get("phone"),
     address: formData.get("address"),
+    street: formData.get("street"),
+    city: formData.get("city"),
+    state: formData.get("state"),
+    zip: formData.get("zip"),
   })
 
   if (!validatedFields.success) {
+    const errors = validatedFields.error.flatten().fieldErrors
+    if (errors.street || errors.city || errors.state || errors.zip) {
+      return {
+        success: false,
+        message: "Please select a complete address from the dropdown suggestions, including zip code.",
+        errors,
+      }
+    }
     return {
       success: false,
       message: "Invalid form data. Please check your entries.",
-      errors: validatedFields.error.flatten().fieldErrors,
+      errors,
     }
   }
 
