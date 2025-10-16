@@ -43,6 +43,33 @@ export default function ContactForm() {
     zip: "",
   })
   const [autocompleteAvailable, setAutocompleteAvailable] = useState(true)
+  const [phone, setPhone] = useState("")
+  const [phoneError, setPhoneError] = useState<string>("")
+
+  const formatPhoneNumber = (value: string) => {
+    const phoneNumber = value.replace(/\D/g, "")
+    const limitedNumber = phoneNumber.slice(0, 10)
+    if (limitedNumber.length <= 3) {
+      return limitedNumber
+    } else if (limitedNumber.length <= 6) {
+      return `(${limitedNumber.slice(0, 3)}) ${limitedNumber.slice(3)}`
+    } else {
+      return `(${limitedNumber.slice(0, 3)}) ${limitedNumber.slice(3, 6)}-${limitedNumber.slice(6)}`
+    }
+  }
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formatted = formatPhoneNumber(e.target.value)
+    setPhone(formatted)
+    if (phoneError) {
+      setPhoneError("")
+    }
+  }
+
+  const validatePhone = (phoneValue: string) => {
+    const digits = phoneValue.replace(/\D/g, "")
+    return digits.length === 10
+  }
 
   useEffect(() => {
     window.gm_authFailure = () => {
@@ -145,6 +172,8 @@ export default function ContactForm() {
 
       setAddressComponents({ street: "", city: "", state: "", zip: "" })
       setAddressError("")
+      setPhone("")
+      setPhoneError("")
       setFormKey(Date.now())
     }
   }, [state.success])
@@ -155,6 +184,12 @@ export default function ContactForm() {
   }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    if (!validatePhone(phone)) {
+      e.preventDefault()
+      setPhoneError("Please enter a valid 10-digit phone number")
+      return
+    }
+
     if (autocompleteAvailable) {
       if (!addressComponents.street || !addressComponents.city || !addressComponents.state || !addressComponents.zip) {
         e.preventDefault()
@@ -175,6 +210,7 @@ export default function ContactForm() {
     }
 
     setAddressError("")
+    setPhoneError("")
   }
 
   return (
@@ -186,7 +222,20 @@ export default function ContactForm() {
         </div>
         <div>
           <Label htmlFor="phone">Phone Number</Label>
-          <Input id="phone" name="phone" type="tel" required />
+          <Input
+            id="phone"
+            name="phone"
+            type="tel"
+            value={phone}
+            onChange={handlePhoneChange}
+            placeholder="(123) 456-7890"
+            required
+            className={phoneError ? "border-red-500" : ""}
+          />
+          {phoneError && <p className="text-sm text-red-600 mt-1">{phoneError}</p>}
+          {phone && !phoneError && validatePhone(phone) && (
+            <p className="text-xs text-green-600 mt-1">✓ Valid phone number</p>
+          )}
         </div>
         <div>
           <Label htmlFor="address">Property Address</Label>
