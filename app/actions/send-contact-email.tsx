@@ -100,16 +100,23 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
       }
     }
 
-    // Check score threshold (0.5 is recommended, lower = more likely bot)
-    if (recaptchaResult.score !== undefined && recaptchaResult.score < 0.5) {
-      console.error(`reCAPTCHA score too low: ${recaptchaResult.score}`)
+    if (recaptchaResult.score !== undefined && recaptchaResult.score < 0.3) {
+      // Log blocked submission details for analysis
+      console.log("[v0] 🚫 BLOCKED SUBMISSION - reCAPTCHA score too low")
+      console.log("[v0] Score:", recaptchaResult.score)
+      console.log("[v0] Name:", fullName)
+      console.log("[v0] Phone:", phone)
+      console.log("[v0] Address:", address)
+      console.log("[v0] Timestamp:", new Date().toISOString())
+
       return {
         success: false,
         message: "Security verification failed. Please try again later.",
       }
     }
 
-    console.log(`[v0] reCAPTCHA verification passed with score: ${recaptchaResult.score}`)
+    // Log successful verification with score
+    console.log(`[v0] ✅ PASSED - reCAPTCHA score: ${recaptchaResult.score}`)
   }
 
   if (!validateZipCode(address, zip)) {
