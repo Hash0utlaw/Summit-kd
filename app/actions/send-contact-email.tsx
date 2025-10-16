@@ -5,7 +5,6 @@ import { z } from "zod"
 
 const resendApiKey = process.env.RESEND_API_KEY
 const toEmail = process.env.TO_EMAIL
-const recaptchaSecretKey = process.env.RECAPTCHA_SECRET_KEY
 
 const contactFormSchema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters."),
@@ -15,7 +14,6 @@ const contactFormSchema = z.object({
   city: z.string().optional(),
   state: z.string().optional(),
   zip: z.string().optional(),
-  recaptchaToken: z.string().optional(),
 })
 
 const validateZipCode = (address: string, zip?: string): boolean => {
@@ -25,35 +23,6 @@ const validateZipCode = (address: string, zip?: string): boolean => {
 
   const zipMatch = address.match(/\b\d{5}(?:-\d{4})?\b/)
   return zipMatch !== null
-}
-
-async function verifyRecaptcha(token: string): Promise<{ success: boolean; score?: number; error?: string }> {
-  if (!recaptchaSecretKey) {
-    console.error("RECAPTCHA_SECRET_KEY environment variable is not set.")
-    return { success: false, error: "reCAPTCHA not configured" }
-  }
-
-  try {
-    const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: `secret=${recaptchaSecretKey}&response=${token}`,
-    })
-
-    const data = await response.json()
-
-    if (!data.success) {
-      console.error("reCAPTCHA verification failed:", data["error-codes"])
-      return { success: false, error: "reCAPTCHA verification failed" }
-    }
-
-    return { success: true, score: data.score }
-  } catch (error) {
-    console.error("reCAPTCHA verification error:", error)
-    return { success: false, error: "reCAPTCHA verification error" }
-  }
 }
 
 export async function sendContactEmail(prevState: any, formData: FormData) {
@@ -76,7 +45,6 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
     city: formData.get("city"),
     state: formData.get("state"),
     zip: formData.get("zip"),
-    recaptchaToken: formData.get("recaptchaToken"),
   })
 
   if (!validatedFields.success) {
@@ -87,37 +55,7 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
     }
   }
 
-  const { fullName, phone, address, zip, recaptchaToken } = validatedFields.data
-
-  if (recaptchaToken && recaptchaSecretKey) {
-    const recaptchaResult = await verifyRecaptcha(recaptchaToken)
-
-    if (!recaptchaResult.success) {
-      console.error("reCAPTCHA verification failed for submission")
-      return {
-        success: false,
-        message: "Security verification failed. Please try again.",
-      }
-    }
-
-    if (recaptchaResult.score !== undefined && recaptchaResult.score < 0.3) {
-      // Log blocked submission details for analysis
-      console.log("[v0] 🚫 BLOCKED SUBMISSION - reCAPTCHA score too low")
-      console.log("[v0] Score:", recaptchaResult.score)
-      console.log("[v0] Name:", fullName)
-      console.log("[v0] Phone:", phone)
-      console.log("[v0] Address:", address)
-      console.log("[v0] Timestamp:", new Date().toISOString())
-
-      return {
-        success: false,
-        message: "Security verification failed. Please try again later.",
-      }
-    }
-
-    // Log successful verification with score
-    console.log(`[v0] ✅ PASSED - reCAPTCHA score: ${recaptchaResult.score}`)
-  }
+  const { fullName, phone, address, zip } = validatedFields.data
 
   if (!validateZipCode(address, zip)) {
     return {

@@ -14,10 +14,6 @@ declare global {
     gtag?: (command: string, action: string, params?: Record<string, any>) => void
     google?: any
     gm_authFailure?: () => void
-    grecaptcha?: {
-      ready: (callback: () => void) => void
-      execute: (siteKey: string, options: { action: string }) => Promise<string>
-    }
   }
 }
 
@@ -49,7 +45,6 @@ export default function ContactForm() {
   const [autocompleteAvailable, setAutocompleteAvailable] = useState(true)
   const [phone, setPhone] = useState("")
   const [phoneError, setPhoneError] = useState<string>("")
-  const [recaptchaToken, setRecaptchaToken] = useState<string>("")
 
   const formatPhoneNumber = (value: string) => {
     const phoneNumber = value.replace(/\D/g, "")
@@ -179,7 +174,6 @@ export default function ContactForm() {
       setAddressError("")
       setPhone("")
       setPhoneError("")
-      setRecaptchaToken("")
       setFormKey(Date.now())
     }
   }, [state.success])
@@ -217,28 +211,8 @@ export default function ContactForm() {
     setAddressError("")
     setPhoneError("")
 
-    // Execute reCAPTCHA before submitting
-    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
-    if (siteKey && window.grecaptcha) {
-      try {
-        const token = await window.grecaptcha.execute(siteKey, { action: "submit_contact_form" })
-        setRecaptchaToken(token)
-
-        // Submit form after getting token
-        const formData = new FormData(e.currentTarget)
-        formData.append("recaptchaToken", token)
-        formAction(formData)
-      } catch (error) {
-        console.error("[v0] reCAPTCHA execution failed:", error)
-        // Still allow submission if reCAPTCHA fails (graceful degradation)
-        const formData = new FormData(e.currentTarget)
-        formAction(formData)
-      }
-    } else {
-      // No reCAPTCHA available, submit normally
-      const formData = new FormData(e.currentTarget)
-      formAction(formData)
-    }
+    const formData = new FormData(e.currentTarget)
+    formAction(formData)
   }
 
   return (
@@ -281,7 +255,6 @@ export default function ContactForm() {
           <input type="hidden" name="city" value={addressComponents.city} />
           <input type="hidden" name="state" value={addressComponents.state} />
           <input type="hidden" name="zip" value={addressComponents.zip} />
-          <input type="hidden" name="recaptchaToken" value={recaptchaToken} />
           {addressError && <p className="text-sm text-red-600 mt-1">{addressError}</p>}
           {!autocompleteAvailable && (
             <p className="text-xs text-muted-foreground mt-1">
@@ -294,17 +267,6 @@ export default function ContactForm() {
       {state.message && (
         <p className={`mt-4 text-sm ${state.success ? "text-green-600" : "text-red-600"}`}>{state.message}</p>
       )}
-      <p className="text-xs text-gray-500 mt-4">
-        This site is protected by reCAPTCHA and the Google{" "}
-        <a href="https://policies.google.com/privacy" className="underline" target="_blank" rel="noopener noreferrer">
-          Privacy Policy
-        </a>{" "}
-        and{" "}
-        <a href="https://policies.google.com/terms" className="underline" target="_blank" rel="noopener noreferrer">
-          Terms of Service
-        </a>{" "}
-        apply.
-      </p>
     </div>
   )
 }
