@@ -2,7 +2,6 @@
 
 import { Resend } from "resend"
 import { z } from "zod"
-import ContactFormEmail from "@/components/emails/contact-form-email"
 
 const resendApiKey = process.env.RESEND_API_KEY
 const toEmail = process.env.TO_EMAIL
@@ -71,7 +70,48 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
       to: toEmail,
       subject: `New Website Lead: ${fullName}`,
       reply_to: "no-reply@resend.dev",
-      react: <ContactFormEmail fullName={fullName} phone={phone} address={address} />,
+      html: `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="utf-8">
+            <style>
+              body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+              .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+              .header { background-color: #1e40af; color: white; padding: 20px; text-align: center; }
+              .content { background-color: #f9fafb; padding: 30px; border-radius: 8px; margin-top: 20px; }
+              .field { margin-bottom: 20px; }
+              .label { font-weight: bold; color: #1e40af; display: block; margin-bottom: 5px; }
+              .value { color: #333; }
+              .footer { text-align: center; margin-top: 30px; color: #6b7280; font-size: 14px; }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <div class="header">
+                <h1>New Website Lead</h1>
+              </div>
+              <div class="content">
+                <div class="field">
+                  <span class="label">Full Name:</span>
+                  <span class="value">${fullName}</span>
+                </div>
+                <div class="field">
+                  <span class="label">Phone:</span>
+                  <span class="value">${phone}</span>
+                </div>
+                <div class="field">
+                  <span class="label">Address:</span>
+                  <span class="value">${address}</span>
+                </div>
+              </div>
+              <div class="footer">
+                <p>This lead was submitted through your website contact form.</p>
+              </div>
+            </div>
+          </body>
+        </html>
+      `,
     })
 
     if (error) {
