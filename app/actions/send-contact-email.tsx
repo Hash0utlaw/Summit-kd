@@ -11,11 +11,20 @@ const contactFormSchema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters."),
   phone: z.string().min(10, "Please enter a valid phone number."),
   address: z.string().min(5, "Please enter a valid address."),
-  street: z.string().min(1, "Street address is required."),
-  city: z.string().min(1, "City is required."),
-  state: z.string().min(2, "State is required."),
-  zip: z.string().regex(/^\d{5}(-\d{4})?$/, "Valid zip code is required."),
+  street: z.string().optional(),
+  city: z.string().optional(),
+  state: z.string().optional(),
+  zip: z.string().optional(),
 })
+
+const validateZipCode = (address: string, zip?: string): boolean => {
+  if (zip && /^\d{5}(-\d{4})?$/.test(zip)) {
+    return true
+  }
+
+  const zipMatch = address.match(/\b\d{5}(?:-\d{4})?\b/)
+  return zipMatch !== null
+}
 
 export async function sendContactEmail(prevState: any, formData: FormData) {
   if (!resendApiKey) {
@@ -40,22 +49,21 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
   })
 
   if (!validatedFields.success) {
-    const errors = validatedFields.error.flatten().fieldErrors
-    if (errors.street || errors.city || errors.state || errors.zip) {
-      return {
-        success: false,
-        message: "Please select a complete address from the dropdown suggestions, including zip code.",
-        errors,
-      }
-    }
     return {
       success: false,
       message: "Invalid form data. Please check your entries.",
-      errors,
+      errors: validatedFields.error.flatten().fieldErrors,
     }
   }
 
-  const { fullName, phone, address } = validatedFields.data
+  const { fullName, phone, address, zip } = validatedFields.data
+
+  if (!validateZipCode(address, zip)) {
+    return {
+      success: false,
+      message: "Please include a valid zip code in your address.",
+    }
+  }
 
   try {
     const { data, error } = await resend.emails.send({
@@ -63,7 +71,7 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
       to: toEmail,
       subject: `New Website Lead: ${fullName}`,
       reply_to: "no-reply@resend.dev",
-      react: <ContactFormEmail fullName={fullName} phone={phone} address={address} />,
+      react: ContactFormEmail({ fullName, phone, address }),
     })
 
     if (error) {
