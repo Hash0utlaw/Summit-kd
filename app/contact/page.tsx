@@ -58,6 +58,7 @@ const jsonLd = {
 
 export default function ContactPage() {
   const googleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+  const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
 
   return (
     <>
@@ -74,6 +75,13 @@ export default function ContactPage() {
       {googleMapsApiKey && (
         <Script
           src={`https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&libraries=places`}
+          strategy="afterInteractive"
+        />
+      )}
+
+      {recaptchaSiteKey && (
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${recaptchaSiteKey}`}
           strategy="afterInteractive"
         />
       )}
