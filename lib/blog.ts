@@ -410,10 +410,11 @@ Ready to get started on your roofing project? Contact Summit Roofing Professiona
   },
   {
     id: "6",
-    title: "Navigating Roofing Insurance Claims After Storm Damage in Alabama and Georgia: A Complete Guide",
-    slug: "navigating-roofing-insurance-claims-storm-damage-alabama-georgia",
+    title:
+      "Roofing Insurance Claims Guide for Alabama and Georgia Homeowners: Storm and Hail Damage Coverage Explained",
+    slug: "roofing-insurance-claims-guide-alabama-georgia-storm-hail-damage",
     excerpt:
-      "Complete guide to filing roofing insurance claims after hail and storm damage in Alabama and Georgia. Learn the claims process, documentation requirements, and how to maximize your settlement for Birmingham, Atlanta, Montgomery, Mobile, Huntsville, Columbus, and Augusta homeowners.",
+      "Complete guide to filing roofing insurance claims after storm and hail damage in Alabama and Georgia. Learn the claims process, documentation requirements, and how to maximize your settlement from experienced roofing professionals serving Birmingham, Atlanta, Montgomery, Mobile, Huntsville, Columbus, and Augusta.",
     content: `
 When severe weather strikes Alabama and Georgia, your roof often bears the brunt of the damage. From devastating hail storms in Birmingham and Atlanta to powerful wind events in Montgomery and Mobile, storm damage to roofing systems is an unfortunate reality for homeowners across our region. Understanding how to navigate the insurance claims process can mean the difference between a fully restored roof and thousands of dollars in out-of-pocket expenses.
 
@@ -975,7 +976,7 @@ At Summit Roofing Professionals, we provide complimentary storm damage inspectio
 - **Know your policy:** Understand your coverage and rights
 - **Be persistent:** Don't accept first offer if inadequate
 - **Consider public adjuster:** Hire professional if needed
-- **Invoke appraisal:** Use policy's dispute resolution if necessary
+- **Invoke appraisal:** Use policy's dispute resolution process if necessary
 
 ## Step 7: Completing the Repairs
 
@@ -1117,7 +1118,7 @@ At Summit Roofing Professionals, we provide complimentary storm damage inspectio
 **Negotiation Approach:**
 - **Itemized comparison:** Compare insurance estimate to contractor estimates line by line
 - **Explain discrepancies:** Point out specific items missing or underpriced
-- **Provide documentation:** Submit supporting evidence for higher costs
+- **Provide documentation:** Support your position with evidence
 - **Request re-inspection:** Ask for adjuster to re-examine disputed items
 - **Escalate if needed:** Request supervisor review of settlement
 
@@ -1369,7 +1370,7 @@ We serve homeowners throughout Alabama and Georgia, including Birmingham, Montgo
       "roof replacement",
       "insurance process",
     ],
-    featuredImage: "/images/roofer-working-sunset.png",
+    featuredImage: "/images/repairs/roofer-on-commercial-roof.png",
     seo: {
       metaTitle: "Roofing Insurance Claims Guide Alabama Georgia | Storm & Hail Damage | Summit Roofing",
       metaDescription:
@@ -1641,7 +1642,6 @@ Interior signs of roof problems often appear before exterior damage becomes obvi
 - **Sagging ceilings:** Indicating water accumulation in ceiling materials
 - **Musty odors:** Suggesting hidden mold or mildew growth
 - **Visible mold:** Black, green, or white growth on surfaces
-- **Increased energy bills:** Suggesting insulation or ventilation problems
 
 # Fall-Specific Roofing Concerns for Columbus and Atlanta
 
@@ -1861,8 +1861,6 @@ Fall roof maintenance is essential for Columbus and Atlanta area homeowners prep
 
 By following this comprehensive fall maintenance guide, you can minimize the risk of winter roof damage, reduce energy costs, and ensure your family stays warm and dry throughout the season. Remember that some tasks are best left to professionals—when in doubt, contact the certified experts at Summit Roofing Professionals for assessment and repairs.
 
-Don't wait until the first winter storm or freeze to discover roof problems. Start your fall maintenance now, and enjoy peace of mind knowing your roof is ready to handle whatever weather comes your way.
-
 **Ready to prepare your roof for winter?** Contact Summit Roofing Professionals today for comprehensive fall roof inspection and professional maintenance services. Our experienced team understands the unique challenges of Columbus and Atlanta's climate and can help ensure your roof provides reliable protection all season long. We proudly serve homeowners throughout Columbus, Atlanta, Marietta, Roswell, Alpharetta, Decatur, Sandy Springs, Dunwoody, Smyrna, and surrounding Georgia and Alabama communities.
 
 Protect your home investment with professional fall roof maintenance. Call Summit Roofing Professionals now to schedule your appointment before winter weather arrives.
@@ -1883,7 +1881,7 @@ Protect your home investment with professional fall roof maintenance. Call Summi
       "Georgia weather",
       "preventive care",
     ],
-    featuredImage: "/images/roofer-working-sunset.png",
+    featuredImage: "/images/cedar/gallery-2.png",
     seo: {
       metaTitle: "Fall Roof Maintenance Guide Columbus & Atlanta GA | Winter Prep | Summit Roofing",
       metaDescription:
@@ -2326,7 +2324,7 @@ Protect your home investment with professional spring roof inspection and mainte
       "preventive care",
       "metro Atlanta",
     ],
-    featuredImage: "/images/roofer-working-sunset.png",
+    featuredImage: "/images/shingles/shingle-gallery-2.png",
     seo: {
       metaTitle: "Spring Roof Inspection Guide Atlanta GA | Storm Season Preparation | Summit Roofing",
       metaDescription:
@@ -2663,7 +2661,7 @@ Don't wait until the first winter storm to discover roof problems. Start your wi
     publishedAt: "2025-01-27",
     category: "roof-maintenance",
     tags: ["winter preparation", "roof maintenance", "Alabama", "Georgia", "ice dams", "energy efficiency"],
-    featuredImage: "/images/roofer-working-sunset.png",
+    featuredImage: "/images/slate/gallery-2.png",
     seo: {
       metaTitle: "Winter Roof Preparation Guide Alabama Georgia | Summit Roofing Professionals",
       metaDescription:
@@ -2681,194 +2679,6 @@ Don't wait until the first winter storm to discover roof problems. Start your wi
       ],
     },
     readingTime: 12,
-  },
-  {
-    id: "1",
-    title: "Complete Guide to Roof Maintenance in Alabama and Georgia",
-    slug: "complete-guide-roof-maintenance-alabama-georgia",
-    excerpt:
-      "Learn essential roof maintenance tips specifically tailored for the unique climate challenges of Alabama and Georgia. From seasonal inspections to preventive care strategies.",
-    content: `
-Living in Alabama and Georgia means dealing with unique weather challenges that can take a toll on your roof. From intense summer heat and humidity to severe thunderstorms and occasional ice storms, your roof faces year-round stress. Proper maintenance is crucial for protecting your investment and ensuring your family's safety.
-
-# Understanding Your Climate Challenges
-
-## Alabama's Weather Patterns
-Alabama experiences a humid subtropical climate with hot, humid summers and mild winters. The state sees an average of 56 inches of rainfall annually, with peak storm season occurring from March through May and again in fall. These conditions create perfect environments for:
-
-- **Moss and algae growth** on shingles
-- **High humidity damage** to roofing materials  
-- **Thermal expansion and contraction** from temperature fluctuations
-- **Wind damage** from severe thunderstorms and occasional tornadoes
-
-## Georgia's Roofing Challenges
-Georgia's climate varies from the mountains in the north to the coastal plains in the south, but most areas experience similar challenges:
-
-- **Heavy rainfall** averaging 50+ inches annually
-- **Hail storms** particularly in northern regions
-- **Hurricane remnants** affecting coastal and southern areas
-- **Ice storms** in northern Georgia during winter months
-
-# Seasonal Maintenance Schedule
-
-## Spring Maintenance (March - May)
-Spring is the most critical time for roof maintenance in our region. After winter weather and before summer heat, this is when you should:
-
-### Exterior Inspection:
-- Check for loose, damaged, or missing shingles
-- Inspect flashing around chimneys, vents, and skylights
-- Clean gutters and downspouts thoroughly
-- Trim overhanging tree branches
-- Look for signs of pest damage or nesting
-
-### Interior Inspection:
-- Check attic for water stains or leaks
-- Inspect insulation for moisture damage
-- Ensure proper ventilation is working
-- Look for daylight coming through roof boards
-
-## Summer Maintenance (June - August)
-Summer's intense heat and frequent storms require vigilant monitoring:
-
-### Heat-Related Checks:
-- Monitor for thermal damage to shingles
-- Ensure adequate attic ventilation
-- Check for warped or curled shingles
-- Inspect sealants around roof penetrations
-
-### Storm Preparedness:
-- Keep gutters clear of debris
-- Secure loose items that could become projectiles
-- Have emergency tarps and materials ready
-- Know your insurance claim process
-
-## Fall Maintenance (September - November)
-Fall preparation is essential for winter readiness:
-
-### Debris Management:
-- Clean gutters and downspouts multiple times
-- Remove leaves and debris from roof surface
-- Check for clogged drains on flat roofs
-- Inspect and clean roof valleys
-
-### Winter Preparation:
-- Check heating system vents and flashing
-- Ensure proper insulation levels
-- Inspect weatherstripping and seals
-- Schedule professional inspection if needed
-
-## Winter Maintenance (December - February)
-While winters are mild, they still present challenges:
-
-### Ice and Freeze Protection:
-- Monitor for ice dam formation
-- Keep gutters clear of debris
-- Check for icicle formation indicating poor ventilation
-- Inspect for freeze-thaw damage to materials
-
-# Common Problems in Our Region
-
-## Moss and Algae Growth
-The humid climate in Alabama and Georgia creates ideal conditions for moss and algae growth. These organisms can:
-
-- Retain moisture against roofing materials
-- Cause premature deterioration of shingles
-- Create slip hazards during maintenance
-- Reduce your home's curb appeal
-
-### Prevention and Treatment:
-- Install zinc or copper strips near the ridge
-- Improve attic ventilation to reduce humidity
-- Trim trees to increase sunlight exposure
-- Use appropriate cleaning solutions (never pressure wash)
-
-## Storm Damage Recognition
-Knowing what to look for after storms can save thousands in repair costs:
-
-### Hail Damage Signs:
-- Granule loss creating bare spots
-- Cracked or split shingles
-- Dented gutters or flashing
-- Damaged roof vents or skylights
-
-### Wind Damage Indicators:
-- Lifted or missing shingles
-- Exposed nail heads
-- Damaged flashing
-- Debris impact marks
-
-## Humidity-Related Issues
-High humidity can cause:
-
-- **Condensation problems** in poorly ventilated attics
-- **Mold and mildew growth** on roofing materials
-- **Accelerated deterioration** of organic materials
-- **Insulation degradation** reducing energy efficiency
-
-# Professional vs. DIY Maintenance
-
-## What Homeowners Can Do Safely
-- Visual inspections from the ground using binoculars
-- Cleaning gutters (with proper safety equipment)
-- Removing debris from roof surface
-- Checking attic for signs of problems
-- Documenting damage for insurance purposes
-
-## When to Call Professionals
-- Any work requiring walking on the roof
-- Electrical work around roof penetrations
-- Structural repairs or modifications
-- Insurance claim inspections
-- Complex leak diagnosis
-
-# Maintenance Cost Considerations
-
-## Annual Maintenance Budget
-Plan to spend 1-3% of your home's value annually on maintenance, including:
-
-- **Professional inspections:** $200-$400
-- **Gutter cleaning:** $100-$300
-- **Minor repairs:** $300-$800
-- **Preventive treatments:** $200-$500
-
-## Cost of Neglect
-Delaying maintenance can lead to:
-
-- **Interior damage:** $2,000-$10,000+
-- **Structural repairs:** $5,000-$15,000+
-- **Full roof replacement:** $8,000-$25,000+
-- **Mold remediation:** $3,000-$8,000+
-
-# Conclusion
-
-Proper roof maintenance in Alabama and Georgia requires understanding our unique climate challenges and staying proactive. Regular inspections, seasonal maintenance, and prompt repairs can extend your roof's life significantly while protecting your home and family.
-
-Remember, your roof is your home's first line of defense against the elements. Investing in proper maintenance today can save thousands in repairs tomorrow and ensure your roof performs well for decades to come.
-
-For professional roof maintenance and inspection services in Alabama and Georgia, contact Summit Roofing Professionals. Our experienced team understands the unique challenges of our regional climate and can help keep your roof in optimal condition year-round.
-    `,
-    author: {
-      name: "Summit Roofing Team",
-      image: "/images/founder-portrait.png",
-      bio: "Our expert roofing team at Summit Roofing Professionals has over 15 years of combined experience serving Alabama and Georgia homeowners. We are certified GAF Master Elite contractors and NRCA members.",
-    },
-    publishedAt: "2025-10-17",
-    category: "roof-maintenance",
-    tags: ["maintenance", "alabama", "georgia", "seasonal-care", "prevention"],
-    featuredImage: "/images/repairs/repair-in-progress.png",
-    seo: {
-      metaTitle: "Complete Roof Maintenance Guide for Alabama & Georgia Homes | Summit Roofing",
-      metaDescription:
-        "Expert roof maintenance tips for Alabama and Georgia homeowners. Learn seasonal care, storm preparation, and cost-saving maintenance strategies from local roofing professionals.",
-      keywords: [
-        "roof maintenance Alabama",
-        "Georgia roof care",
-        "seasonal roof maintenance",
-        "storm damage prevention",
-        "roof inspection tips",
-      ],
-    },
-    readingTime: 8,
   },
   {
     id: "2",
@@ -3064,6 +2874,194 @@ Contact us today for a comprehensive roof evaluation and personalized recommenda
       ],
     },
     readingTime: 9,
+  },
+  {
+    id: "1",
+    title: "Complete Guide to Roof Maintenance in Alabama and Georgia",
+    slug: "complete-guide-roof-maintenance-alabama-georgia",
+    excerpt:
+      "Learn essential roof maintenance tips specifically tailored for the unique climate challenges of Alabama and Georgia. From seasonal inspections to preventive care strategies.",
+    content: `
+Living in Alabama and Georgia means dealing with unique weather challenges that can take a toll on your roof. From intense summer heat and humidity to severe thunderstorms and occasional ice storms, your roof faces year-round stress. Proper maintenance is crucial for protecting your investment and ensuring your family's safety.
+
+# Understanding Your Climate Challenges
+
+## Alabama's Weather Patterns
+Alabama experiences a humid subtropical climate with hot, humid summers and mild winters. The state sees an average of 56 inches of rainfall annually, with peak storm season occurring from March through May and again in fall. These conditions create perfect environments for:
+
+- **Moss and algae growth** on shingles
+- **High humidity damage** to roofing materials  
+- **Thermal expansion and contraction** from temperature fluctuations
+- **Wind damage** from severe thunderstorms and occasional tornadoes
+
+## Georgia's Roofing Challenges
+Georgia's climate varies from the mountains in the north to the coastal plains in the south, but most areas experience similar challenges:
+
+- **Heavy rainfall** averaging 50+ inches annually
+- **Hail storms** particularly in northern regions
+- **Hurricane remnants** affecting coastal and southern areas
+- **Ice storms** in northern Georgia during winter months
+
+# Seasonal Maintenance Schedule
+
+## Spring Maintenance (March - May)
+Spring is the most critical time for roof maintenance in our region. After winter weather and before summer heat, this is when you should:
+
+### Exterior Inspection:
+- Check for loose, damaged, or missing shingles
+- Inspect flashing around chimneys, vents, and skylights
+- Clean gutters and downspouts thoroughly
+- Trim overhanging tree branches
+- Look for signs of pest damage or nesting
+
+### Interior Inspection:
+- Check attic for water stains or leaks
+- Inspect insulation for moisture damage
+- Ensure proper ventilation is working
+- Look for daylight coming through roof boards
+
+## Summer Maintenance (June - August)
+Summer's intense heat and frequent storms require vigilant monitoring:
+
+### Heat-Related Checks:
+- Monitor for thermal damage to shingles
+- Ensure adequate attic ventilation
+- Check for warped or curled shingles
+- Inspect sealants around roof penetrations
+
+### Storm Preparedness:
+- Keep gutters clear of debris
+- Secure loose items that could become projectiles
+- Have emergency tarps and materials ready
+- Know your insurance claim process
+
+## Fall Maintenance (September - November)
+Fall preparation is essential for winter readiness:
+
+### Debris Management:
+- Clean gutters and downspouts multiple times
+- Remove leaves and debris from roof surface
+- Check for clogged drains on flat roofs
+- Inspect and clean roof valleys
+
+### Winter Preparation:
+- Check heating system vents and flashing
+- Ensure proper insulation levels
+- Inspect weatherstripping and seals
+- Schedule professional inspection if needed
+
+## Winter Maintenance (December - February)
+While winters are mild, they still present challenges:
+
+### Ice and Freeze Protection:
+- Monitor for ice dam formation
+- Keep gutters clear of debris
+- Check for icicle formation indicating poor ventilation
+- Inspect for freeze-thaw damage to materials
+
+# Common Problems in Our Region
+
+## Moss and Algae Growth
+The humid climate in Alabama and Georgia creates ideal conditions for moss and algae growth. These organisms can:
+
+- Retain moisture against roofing materials
+- Cause premature deterioration of shingles
+- Create slip hazards during maintenance
+- Reduce your home's curb appeal
+
+### Prevention and Treatment:
+- Install zinc or copper strips near the ridge
+- Improve attic ventilation to reduce humidity
+- Trim trees to increase sunlight exposure
+- Use appropriate cleaning solutions (never pressure wash)
+
+## Storm Damage Recognition
+Knowing what to look for after storms can save thousands in repair costs:
+
+### Hail Damage Signs:
+- Granule loss creating bare spots
+- Cracked or split shingles
+- Dented gutters or flashing
+- Damaged roof vents or skylights
+
+### Wind Damage Indicators:
+- Lifted or missing shingles
+- Exposed nail heads
+- Damaged flashing
+- Debris impact marks
+
+## Humidity-Related Issues
+High humidity can cause:
+
+- **Condensation problems** in poorly ventilated attics
+- **Mold and mildew growth** on roofing materials
+- **Accelerated deterioration** of organic materials
+- **Insulation degradation** reducing energy efficiency
+
+# Professional vs. DIY Maintenance
+
+## What Homeowners Can Do Safely
+- Visual inspections from the ground using binoculars
+- Cleaning gutters (with proper safety equipment)
+- Removing debris from roof surface
+- Checking attic for signs of problems
+- Documenting damage for insurance purposes
+
+## When to Call Professionals
+- Any work requiring walking on the roof
+- Electrical work around roof penetrations
+- Structural repairs or modifications
+- Insurance claim inspections
+- Complex leak diagnosis
+
+# Maintenance Cost Considerations
+
+## Annual Maintenance Budget
+Plan to spend 1-3% of your home's value annually on maintenance, including:
+
+- **Professional inspections:** $200-$400
+- **Gutter cleaning:** $100-$300
+- **Minor repairs:** $300-$800
+- **Preventive treatments:** $200-$500
+
+## Cost of Neglect
+Delaying maintenance can lead to:
+
+- **Interior damage:** $2,000-$10,000+
+- **Structural repairs:** $5,000-$15,000+
+- **Full roof replacement:** $8,000-$25,000+
+- **Mold remediation:** $3,000-$8,000+
+
+# Conclusion
+
+Proper roof maintenance in Alabama and Georgia requires understanding our unique climate challenges and staying proactive. Regular inspections, seasonal maintenance, and prompt repairs can extend your roof's life significantly while protecting your home and family.
+
+Remember, your roof is your home's first line of defense against the elements. Investing in proper maintenance today can save thousands in repairs tomorrow and ensure your roof performs well for decades to come.
+
+For professional roof maintenance and inspection services in Alabama and Georgia, contact Summit Roofing Professionals. Our experienced team understands the unique challenges of our regional climate and can help keep your roof in optimal condition year-round.
+    `,
+    author: {
+      name: "Summit Roofing Team",
+      image: "/images/founder-portrait.png",
+      bio: "Our expert roofing team at Summit Roofing Professionals has over 15 years of combined experience serving Alabama and Georgia homeowners. We are certified GAF Master Elite contractors and NRCA members.",
+    },
+    publishedAt: "2025-10-17",
+    category: "roof-maintenance",
+    tags: ["maintenance", "alabama", "georgia", "seasonal-care", "prevention"],
+    featuredImage: "/images/repairs/repair-in-progress.png",
+    seo: {
+      metaTitle: "Complete Roof Maintenance Guide for Alabama & Georgia Homes | Summit Roofing",
+      metaDescription:
+        "Expert roof maintenance tips for Alabama and Georgia homeowners. Learn seasonal care, storm preparation, and cost-saving maintenance strategies from local roofing professionals.",
+      keywords: [
+        "roof maintenance Alabama",
+        "Georgia roof care",
+        "seasonal roof maintenance",
+        "storm damage prevention",
+        "roof inspection tips",
+      ],
+    },
+    readingTime: 8,
   },
 ]
 
