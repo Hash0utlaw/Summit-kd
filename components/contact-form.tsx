@@ -8,7 +8,6 @@ import { sendContactEmail } from "@/app/actions/send-contact-email"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Alert, AlertDescription } from "@/components/ui/alert"
 import { MapPin, Phone } from "lucide-react"
 
 declare global {
@@ -242,12 +241,17 @@ export default function ContactForm() {
 
   return (
     <div className="w-full max-w-md mx-auto">
-      <Alert className="mb-6 border-blue-200 bg-blue-50">
-        <MapPin className="h-4 w-4 text-blue-600" />
-        <AlertDescription className="text-sm text-blue-900">
-          <strong>Service Areas:</strong> Georgia & Alabama
-        </AlertDescription>
-      </Alert>
+      <div className="mb-6 p-4 md:p-5 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border-2 border-blue-300 shadow-sm">
+        <div className="flex items-center gap-3">
+          <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded-full flex items-center justify-center">
+            <MapPin className="h-4 w-4 md:h-5 md:w-5 text-white" />
+          </div>
+          <div className="flex-1">
+            <p className="text-sm md:text-base font-bold text-blue-900 leading-tight">Service Areas</p>
+            <p className="text-base md:text-lg font-semibold text-blue-700 leading-tight">Georgia & Alabama</p>
+          </div>
+        </div>
+      </div>
 
       <form key={formKey} onSubmit={handleSubmit} className="space-y-4">
         <div>
