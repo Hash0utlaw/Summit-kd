@@ -12,7 +12,14 @@ const contactFormSchema = z.object({
   address: z.string().min(5, "Please enter a valid address."),
   street: z.string().optional(),
   city: z.string().optional(),
-  state: z.string().optional(),
+  state: z
+    .string()
+    .optional()
+    .refine((val) => {
+      if (!val) return true
+      const normalized = val.toUpperCase().trim()
+      return ["GA", "AL", "GEORGIA", "ALABAMA"].includes(normalized)
+    }, "We currently only service properties in Georgia and Alabama."),
   zip: z.string().optional(),
 })
 
@@ -55,7 +62,17 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
     }
   }
 
-  const { fullName, phone, address, zip } = validatedFields.data
+  const { fullName, phone, address, zip, state } = validatedFields.data
+
+  if (state) {
+    const normalizedState = state.toUpperCase().trim()
+    if (!["GA", "AL", "GEORGIA", "ALABAMA"].includes(normalizedState)) {
+      return {
+        success: false,
+        message: "We currently only service properties in Georgia and Alabama.",
+      }
+    }
+  }
 
   if (!validateZipCode(address, zip)) {
     return {
@@ -103,6 +120,10 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
                 <div class="field">
                   <span class="label">Address:</span>
                   <span class="value">${address}</span>
+                </div>
+                <div class="field">
+                  <span class="label">State:</span>
+                  <span class="value">${state}</span>
                 </div>
               </div>
               <div class="footer">

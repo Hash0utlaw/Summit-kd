@@ -2,12 +2,14 @@
 
 import type React from "react"
 
-import { useActionState, useEffect, useState, useRef } from "react"
+import { useActionState, useEffect, useState, useRef, useTransition } from "react"
 import { useFormStatus } from "react-dom"
 import { sendContactEmail } from "@/app/actions/send-contact-email"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Alert, AlertDescription } from "@/components/ui/alert"
+import { MapPin, Phone } from "lucide-react"
 
 declare global {
   interface Window {
@@ -33,6 +35,7 @@ function SubmitButton() {
 
 export default function ContactForm() {
   const [state, formAction] = useActionState(sendContactEmail, initialState)
+  const [isPending, startTransition] = useTransition()
   const [formKey, setFormKey] = useState(Date.now())
   const addressInputRef = useRef<HTMLInputElement>(null)
   const [addressError, setAddressError] = useState<string>("")
@@ -130,6 +133,16 @@ export default function ContactForm() {
                 addressInputRef.current.value = place.formatted_address
               }
 
+              const normalizedState = state.toUpperCase().trim()
+              const validStates = ["GA", "AL", "GEORGIA", "ALABAMA"]
+              if (state && !validStates.includes(normalizedState)) {
+                setAddressError(
+                  "We currently only service properties in Georgia and Alabama. Please enter a valid GA or AL address.",
+                )
+                setAddressComponents({ street: "", city: "", state: "", zip: "" })
+                return
+              }
+
               setAddressError("")
             }
           })
@@ -196,6 +209,15 @@ export default function ContactForm() {
         setAddressError("Please select a complete address from the dropdown suggestions, including zip code.")
         return
       }
+
+      const normalizedState = addressComponents.state.toUpperCase().trim()
+      const validStates = ["GA", "AL", "GEORGIA", "ALABAMA"]
+      if (!validStates.includes(normalizedState)) {
+        setAddressError(
+          "We currently only service properties in Georgia and Alabama. Please enter a valid GA or AL address.",
+        )
+        return
+      }
     } else {
       const addressValue = addressInputRef.current?.value || ""
       const zip = parseManualAddress(addressValue)
@@ -212,11 +234,21 @@ export default function ContactForm() {
     setPhoneError("")
 
     const formData = new FormData(e.currentTarget)
-    formAction(formData)
+
+    startTransition(() => {
+      formAction(formData)
+    })
   }
 
   return (
     <div className="w-full max-w-md mx-auto">
+      <Alert className="mb-6 border-blue-200 bg-blue-50">
+        <MapPin className="h-4 w-4 text-blue-600" />
+        <AlertDescription className="text-sm text-blue-900">
+          <strong>Service Areas:</strong> Georgia & Alabama
+        </AlertDescription>
+      </Alert>
+
       <form key={formKey} onSubmit={handleSubmit} className="space-y-4">
         <div>
           <Label htmlFor="fullName">Full Name</Label>
@@ -267,6 +299,28 @@ export default function ContactForm() {
       {state.message && (
         <p className={`mt-4 text-sm ${state.success ? "text-green-600" : "text-red-600"}`}>{state.message}</p>
       )}
+
+      <div className="mt-6 p-5 bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl border-2 border-orange-300 shadow-md">
+        <div className="flex items-start gap-3 mb-4">
+          <div className="flex-shrink-0 w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
+            <Phone className="h-5 w-5 text-white" />
+          </div>
+          <div>
+            <p className="text-base font-bold text-orange-900 mb-1">Outside our service area?</p>
+            <p className="text-sm text-orange-800">Contact us directly for special requests or inquiries.</p>
+          </div>
+        </div>
+        <a href="tel:+17045784756" className="block">
+          <Button
+            variant="default"
+            className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold shadow-sm"
+            type="button"
+          >
+            <Phone className="h-4 w-4 mr-2" />
+            Call (704) 578-4756
+          </Button>
+        </a>
+      </div>
     </div>
   )
 }
