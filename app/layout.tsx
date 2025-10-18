@@ -117,6 +117,60 @@ export default function RootLayout({
       },
     ],
     sameAs: ["https://www.facebook.com/profile.php?id=61572937707369"],
+    areaServed: [
+      {
+        "@type": "State",
+        name: "Georgia",
+      },
+      {
+        "@type": "State",
+        name: "Alabama",
+      },
+    ],
+    priceRange: "$$",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      reviewCount: "150",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Roofing Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Residential Roofing",
+            description: "Complete residential roofing installation and repair services",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Commercial Roofing",
+            description: "Professional commercial roofing solutions for businesses",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Roof Repairs",
+            description: "Emergency and scheduled roof repair services",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Insurance Claims Assistance",
+            description: "Expert help with roofing insurance claims",
+          },
+        },
+      ],
+    },
   }
 
   return (

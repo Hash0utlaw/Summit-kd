@@ -3,7 +3,7 @@ import { getBlogPosts, getBlogCategories } from "@/lib/blog"
 
 // Constants for better maintainability
 const BASE_URL = "https://www.summitroofingprofessionals.com"
-const LAST_MAJOR_UPDATE = new Date('2024-10-01')
+const LAST_MAJOR_UPDATE = new Date("2025-10-17")
 
 // Priority levels for clarity
 const PRIORITIES = {
@@ -54,54 +54,54 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Define pages with configurations
   const pages: PageConfig[] = [
     // Homepage & core pages
-    { url: '', config: 'homepage' },
-    { url: '/about', config: 'important' },
-    { url: '/contact', config: 'conversion' },
-    { url: '/gallery', config: 'high' },
-    
+    { url: "", config: "homepage" },
+    { url: "/about", config: "important" },
+    { url: "/contact", config: "conversion" },
+    { url: "/gallery", config: "high" },
+
     // Primary services (high conversion pages)
-    { url: '/services/residential-roofing', config: 'primaryService' },
-    { url: '/services/commercial-roofing', config: 'primaryService' },
-    { url: '/services/roof-repairs', config: 'primaryService' },
-    { url: '/roofing', config: 'primaryService' }, // SEO landing page
-    
+    { url: "/services/residential-roofing", config: "primaryService" },
+    { url: "/services/commercial-roofing", config: "primaryService" },
+    { url: "/services/roof-repairs", config: "primaryService" },
+    { url: "/roofing", config: "primaryService" }, // SEO landing page
+
     // Conversion pages
-    { url: '/insurance-claims', config: 'conversion' },
-    { url: '/financing', config: 'low' },
-    
+    { url: "/insurance-claims", config: "conversion" },
+    { url: "/financing", config: "low" },
+
     // Blog
-    { url: '/blog', config: 'high' },
-    
+    { url: "/blog", config: "high" },
+
     // Service areas hub
-    { url: '/service-areas', config: 'important' },
-    
+    { url: "/service-areas", config: "important" },
+
     // Major service areas (local SEO)
-    { url: '/service-areas/atlanta-roofing', config: 'mediumHigh' },
-    { url: '/service-areas/birmingham-roofing', config: 'mediumHigh' },
-    { url: '/service-areas/augusta-roofing', config: 'medium' },
-    { url: '/service-areas/columbus-roofing', config: 'medium' },
-    { url: '/service-areas/huntsville-roofing', config: 'medium' },
-    { url: '/service-areas/mobile-roofing', config: 'medium' },
-    { url: '/service-areas/montgomery-roofing', config: 'medium' },
-    { url: '/service-areas/tuscaloosa-roofing', config: 'medium' },
-    
+    { url: "/service-areas/atlanta-roofing", config: "mediumHigh" },
+    { url: "/service-areas/birmingham-roofing", config: "mediumHigh" },
+    { url: "/service-areas/augusta-roofing", config: "medium" },
+    { url: "/service-areas/columbus-roofing", config: "medium" },
+    { url: "/service-areas/huntsville-roofing", config: "medium" },
+    { url: "/service-areas/mobile-roofing", config: "medium" },
+    { url: "/service-areas/montgomery-roofing", config: "medium" },
+    { url: "/service-areas/tuscaloosa-roofing", config: "medium" },
+
     // Residential services
-    { url: '/services/architectural-shingles', config: 'mediumHigh' },
-    { url: '/services/metal-shingles', config: 'medium' },
-    { url: '/services/cedar-shake-roofing', config: 'mediumLow' },
-    { url: '/services/slate-roofing', config: 'mediumLow' },
-    { url: '/services/tile-roofing', config: 'mediumLow' },
-    
+    { url: "/services/architectural-shingles", config: "mediumHigh" },
+    { url: "/services/metal-shingles", config: "medium" },
+    { url: "/services/cedar-shake-roofing", config: "mediumLow" },
+    { url: "/services/slate-roofing", config: "mediumLow" },
+    { url: "/services/tile-roofing", config: "mediumLow" },
+
     // Commercial services
-    { url: '/services/commercial/single-ply', config: 'mediumLow' },
-    { url: '/services/commercial/modified-bitumen', config: 'mediumLow' },
-    { url: '/services/commercial/fluid-applied', config: 'mediumLow' },
-    { url: '/services/commercial/repair', config: 'medium' },
-    { url: '/services/commercial/inspections-maintenance', config: 'medium' },
-    { url: '/services/commercial/energy-efficient', config: 'mediumLow' },
-    
+    { url: "/services/commercial/single-ply", config: "mediumLow" },
+    { url: "/services/commercial/modified-bitumen", config: "mediumLow" },
+    { url: "/services/commercial/fluid-applied", config: "mediumLow" },
+    { url: "/services/commercial/repair", config: "medium" },
+    { url: "/services/commercial/inspections-maintenance", config: "medium" },
+    { url: "/services/commercial/energy-efficient", config: "mediumLow" },
+
     // Legal
-    { url: '/privacy-policy', config: 'veryLow' },
+    { url: "/privacy-policy", config: "veryLow" },
   ]
 
   // Build static pages
@@ -118,9 +118,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Build blog post pages with dynamic priority
   const blogPostPages = blogPosts.map((post) => {
     const publishDate = new Date(post.publishedAt)
-    const daysSincePublish = Math.floor(
-      (Date.now() - publishDate.getTime()) / (1000 * 60 * 60 * 24)
-    )
+    const daysSincePublish = Math.floor((Date.now() - publishDate.getTime()) / (1000 * 60 * 60 * 24))
 
     // Priority based on freshness
     let priority = PRIORITIES.MEDIUM
