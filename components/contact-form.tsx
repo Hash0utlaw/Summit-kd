@@ -8,7 +8,7 @@ import { sendContactEmail } from "@/app/actions/send-contact-email"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { MapPin, Phone } from "lucide-react"
+import { MapPin, Phone, CheckCircle2, XCircle } from "lucide-react"
 
 declare global {
   interface Window {
@@ -32,6 +32,80 @@ function SubmitButton() {
   )
 }
 
+const isValidServiceAreaZip = (zip: string): boolean => {
+  const zipNum = Number.parseInt(zip.substring(0, 5))
+
+  const isGeorgia = (zipNum >= 30000 && zipNum <= 31999) || (zipNum >= 39800 && zipNum <= 39901)
+
+  const isAlabama = zipNum >= 35000 && zipNum <= 36925
+
+  return isGeorgia || isAlabama
+}
+
+const extractStateFromAddress = (address: string): string => {
+  const upperAddress = address.toUpperCase()
+
+  if (upperAddress.includes(" GA ") || upperAddress.endsWith(" GA") || upperAddress.includes("GA ")) {
+    return "GA"
+  }
+  if (upperAddress.includes(" AL ") || upperAddress.endsWith(" AL") || upperAddress.includes("AL ")) {
+    return "AL"
+  }
+
+  if (upperAddress.includes("GEORGIA")) {
+    return "GA"
+  }
+  if (upperAddress.includes("ALABAMA")) {
+    return "AL"
+  }
+
+  return ""
+}
+
+const validateCompleteAddress = (
+  address: string,
+  zip: string,
+  state: string,
+): { valid: boolean; error?: string; validatedState?: string } => {
+  const detectedState = state || extractStateFromAddress(address)
+
+  const normalizedState = detectedState.toUpperCase().trim()
+  const validStates = ["GA", "AL"]
+
+  if (!normalizedState) {
+    return {
+      valid: false,
+      error: "Please include the state (GA or AL) in your address",
+    }
+  }
+
+  if (!validStates.includes(normalizedState)) {
+    return {
+      valid: false,
+      error: `We only service Georgia and Alabama properties. ${normalizedState} is outside our service area.`,
+    }
+  }
+
+  if (!zip || zip.length < 5) {
+    return {
+      valid: false,
+      error: "Please include a valid 5-digit zip code in your address",
+    }
+  }
+
+  if (!isValidServiceAreaZip(zip)) {
+    return {
+      valid: false,
+      error: `Zip code ${zip} is outside our service area. We serve GA (30000-31999, 39800-39901) and AL (35000-36925).`,
+    }
+  }
+
+  return {
+    valid: true,
+    validatedState: normalizedState,
+  }
+}
+
 export default function ContactForm() {
   const [state, formAction] = useActionState(sendContactEmail, initialState)
   const [isPending, startTransition] = useTransition()
@@ -47,6 +121,12 @@ export default function ContactForm() {
   const [autocompleteAvailable, setAutocompleteAvailable] = useState(true)
   const [phone, setPhone] = useState("")
   const [phoneError, setPhoneError] = useState<string>("")
+  const [validatedState, setValidatedState] = useState<string>("")
+  const [validatedZip, setValidatedZip] = useState<string>("")
+  const [serviceAreaValid, setServiceAreaValid] = useState<boolean>(false)
+  const [validationError, setValidationError] = useState<string>("")
+  const [addressValue, setAddressValue] = useState<string>("")
+  const validationTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   const formatPhoneNumber = (value: string) => {
     const phoneNumber = value.replace(/\D/g, "")
@@ -71,6 +151,66 @@ export default function ContactForm() {
   const validatePhone = (phoneValue: string) => {
     const digits = phoneValue.replace(/\D/g, "")
     return digits.length === 10
+  }
+
+  const performValidation = (address: string, zip: string, state: string) => {
+    const result = validateCompleteAddress(address, zip, state)
+
+    if (result.valid) {
+      setServiceAreaValid(true)
+      setValidationError("")
+      setAddressError("")
+      setValidatedState(result.validatedState || state)
+      setValidatedZip(zip)
+    } else {
+      setServiceAreaValid(false)
+      setValidationError(result.error || "")
+      setAddressError(result.error || "")
+      setValidatedState("")
+      setValidatedZip("")
+    }
+  }
+
+  useEffect(() => {
+    if (validationTimeoutRef.current) {
+      clearTimeout(validationTimeoutRef.current)
+    }
+
+    if (addressValue && !autocompleteAvailable) {
+      validationTimeoutRef.current = setTimeout(() => {
+        const zipMatch = addressValue.match(/\b\d{5}(?:-\d{4})?\b/)
+        const zip = zipMatch ? zipMatch[0].substring(0, 5) : ""
+        const detectedState = extractStateFromAddress(addressValue)
+
+        performValidation(addressValue, zip, detectedState)
+      }, 750)
+    }
+
+    return () => {
+      if (validationTimeoutRef.current) {
+        clearTimeout(validationTimeoutRef.current)
+      }
+    }
+  }, [addressValue, autocompleteAvailable])
+
+  const handleAddressChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    setAddressValue(value)
+
+    if (validationError) {
+      setValidationError("")
+      setAddressError("")
+    }
+  }
+
+  const handleAddressBlur = () => {
+    if (addressValue && !autocompleteAvailable) {
+      const zipMatch = addressValue.match(/\b\d{5}(?:-\d{4})?\b/)
+      const zip = zipMatch ? zipMatch[0].substring(0, 5) : ""
+      const detectedState = extractStateFromAddress(addressValue)
+
+      performValidation(addressValue, zip, detectedState)
+    }
   }
 
   useEffect(() => {
@@ -130,19 +270,26 @@ export default function ContactForm() {
 
               if (place.formatted_address) {
                 addressInputRef.current.value = place.formatted_address
+                setAddressValue(place.formatted_address)
               }
 
-              const normalizedState = state.toUpperCase().trim()
-              const validStates = ["GA", "AL", "GEORGIA", "ALABAMA"]
-              if (state && !validStates.includes(normalizedState)) {
-                setAddressError(
-                  "We currently only service properties in Georgia and Alabama. Please enter a valid GA or AL address.",
-                )
+              const result = validateCompleteAddress(place.formatted_address || "", zip, state)
+
+              if (!result.valid) {
+                setAddressError(result.error || "")
+                setValidationError(result.error || "")
+                setServiceAreaValid(false)
+                setValidatedState("")
+                setValidatedZip("")
                 setAddressComponents({ street: "", city: "", state: "", zip: "" })
                 return
               }
 
+              setServiceAreaValid(true)
+              setValidatedState(result.validatedState || state)
+              setValidatedZip(zip)
               setAddressError("")
+              setValidationError("")
             }
           })
 
@@ -186,13 +333,18 @@ export default function ContactForm() {
       setAddressError("")
       setPhone("")
       setPhoneError("")
+      setValidatedState("")
+      setValidatedZip("")
+      setServiceAreaValid(false)
+      setValidationError("")
+      setAddressValue("")
       setFormKey(Date.now())
     }
   }, [state.success])
 
   const parseManualAddress = (address: string) => {
     const zipMatch = address.match(/\b\d{5}(?:-\d{4})?\b/)
-    return zipMatch ? zipMatch[0] : ""
+    return zipMatch ? zipMatch[0].substring(0, 5) : ""
   }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -209,28 +361,47 @@ export default function ContactForm() {
         return
       }
 
-      const normalizedState = addressComponents.state.toUpperCase().trim()
-      const validStates = ["GA", "AL", "GEORGIA", "ALABAMA"]
-      if (!validStates.includes(normalizedState)) {
-        setAddressError(
-          "We currently only service properties in Georgia and Alabama. Please enter a valid GA or AL address.",
-        )
+      const result = validateCompleteAddress(
+        addressInputRef.current?.value || "",
+        addressComponents.zip,
+        addressComponents.state,
+      )
+
+      if (!result.valid) {
+        setAddressError(result.error || "Invalid address")
+        setValidationError(result.error || "Invalid address")
         return
       }
+
+      setValidatedState(result.validatedState || addressComponents.state)
+      setValidatedZip(addressComponents.zip)
+      setServiceAreaValid(true)
     } else {
       const addressValue = addressInputRef.current?.value || ""
       const zip = parseManualAddress(addressValue)
+      const detectedState = extractStateFromAddress(addressValue)
 
-      if (!zip) {
-        setAddressError("Please include a zip code in your address (e.g., 123 Main St, Atlanta, GA 30301)")
+      const result = validateCompleteAddress(addressValue, zip, detectedState)
+
+      if (!result.valid) {
+        setAddressError(result.error || "Invalid address")
+        setValidationError(result.error || "Invalid address")
         return
       }
 
-      setAddressComponents((prev) => ({ ...prev, zip }))
+      setValidatedState(result.validatedState || detectedState)
+      setValidatedZip(zip)
+      setServiceAreaValid(true)
+      setAddressComponents((prev) => ({
+        ...prev,
+        zip,
+        state: result.validatedState || detectedState,
+      }))
     }
 
     setAddressError("")
     setPhoneError("")
+    setValidationError("")
 
     const formData = new FormData(e.currentTarget)
 
@@ -272,7 +443,9 @@ export default function ContactForm() {
           />
           {phoneError && <p className="text-sm text-red-600 mt-1">{phoneError}</p>}
           {phone && !phoneError && validatePhone(phone) && (
-            <p className="text-xs text-green-600 mt-1">✓ Valid phone number</p>
+            <p className="text-xs text-green-600 mt-1 flex items-center gap-1">
+              <CheckCircle2 className="h-3 w-3" /> Valid phone number
+            </p>
           )}
         </div>
         <div>
@@ -285,14 +458,31 @@ export default function ContactForm() {
             placeholder={
               autocompleteAvailable ? "Start typing your address..." : "Enter your full address with zip code"
             }
-            className={addressError ? "border-red-500" : ""}
+            className={addressError ? "border-red-500" : serviceAreaValid ? "border-green-500" : ""}
+            onChange={handleAddressChange}
+            onBlur={handleAddressBlur}
           />
           <input type="hidden" name="street" value={addressComponents.street} />
           <input type="hidden" name="city" value={addressComponents.city} />
           <input type="hidden" name="state" value={addressComponents.state} />
           <input type="hidden" name="zip" value={addressComponents.zip} />
-          {addressError && <p className="text-sm text-red-600 mt-1">{addressError}</p>}
-          {!autocompleteAvailable && (
+          <input type="hidden" name="validatedState" value={validatedState} />
+          <input type="hidden" name="validatedZip" value={validatedZip} />
+          <input type="hidden" name="serviceAreaValid" value={serviceAreaValid.toString()} />
+
+          {addressError && (
+            <p className="text-sm text-red-600 mt-1 flex items-start gap-1">
+              <XCircle className="h-4 w-4 flex-shrink-0 mt-0.5" />
+              <span>{addressError}</span>
+            </p>
+          )}
+          {serviceAreaValid && !addressError && validatedState && (
+            <p className="text-sm text-green-600 mt-1 flex items-center gap-1">
+              <CheckCircle2 className="h-4 w-4" />
+              <span>Service area confirmed: {validatedState === "GA" ? "Georgia" : "Alabama"}</span>
+            </p>
+          )}
+          {!autocompleteAvailable && !addressError && !serviceAreaValid && (
             <p className="text-xs text-muted-foreground mt-1">
               Please enter your complete address including street, city, state, and zip code
             </p>
