@@ -162,11 +162,13 @@ export default function InsuranceClaimsPage() {
                 ))}
               </div>
             </div>
-            <div>
+            <div className="relative">
               <img
-                src="/images/roofer-with-homeowner.jpg"
-                alt="Summit Roofing professional discussing roof insurance claim options with a homeowner"
-                className="rounded-lg shadow-lg"
+                src="/images/insurance-claims-work-in-progress.jpg"
+                alt="Aerial view of Summit Roofing crew actively replacing storm-damaged roof with new shingles during insurance claim work"
+                width={1920}
+                height={1080}
+                className="rounded-lg shadow-lg w-full h-auto object-cover"
               />
             </div>
           </div>
