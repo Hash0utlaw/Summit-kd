@@ -128,6 +128,9 @@ export default function ContactForm() {
   const [addressValue, setAddressValue] = useState<string>("")
   const validationTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
+  const [isAddressValidated, setIsAddressValidated] = useState(false)
+  const [lastValidatedAddress, setLastValidatedAddress] = useState("")
+
   const formatPhoneNumber = (value: string) => {
     const phoneNumber = value.replace(/\D/g, "")
     const limitedNumber = phoneNumber.slice(0, 10)
@@ -162,12 +165,16 @@ export default function ContactForm() {
       setAddressError("")
       setValidatedState(result.validatedState || state)
       setValidatedZip(zip)
+      setIsAddressValidated(true)
+      setLastValidatedAddress(address)
     } else {
       setServiceAreaValid(false)
       setValidationError(result.error || "")
       setAddressError(result.error || "")
       setValidatedState("")
       setValidatedZip("")
+      setIsAddressValidated(false)
+      setLastValidatedAddress("")
     }
   }
 
@@ -193,15 +200,51 @@ export default function ContactForm() {
     }
   }, [addressValue, autocompleteAvailable])
 
-  const handleAddressChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleAddressInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
     setAddressValue(value)
+
+    // Clear validation state when user modifies the address
+    if (isAddressValidated && value !== lastValidatedAddress) {
+      setIsAddressValidated(false)
+      setServiceAreaValid(false)
+      setValidatedState("")
+      setValidatedZip("")
+      setAddressComponents({ street: "", city: "", state: "", zip: "" })
+      setAddressError("")
+      setValidationError("")
+    }
 
     if (validationError) {
       setValidationError("")
       setAddressError("")
     }
   }
+
+  useEffect(() => {
+    const addressInput = addressInputRef.current
+    if (!addressInput) return
+
+    const handleInput = () => {
+      const currentValue = addressInput.value
+
+      // If address was validated but current value differs, clear validation
+      if (isAddressValidated && currentValue !== lastValidatedAddress) {
+        setIsAddressValidated(false)
+        setServiceAreaValid(false)
+        setValidatedState("")
+        setValidatedZip("")
+        setAddressComponents({ street: "", city: "", state: "", zip: "" })
+        setValidationError("Address changed. Please select from dropdown or complete your entry.")
+      }
+    }
+
+    addressInput.addEventListener("input", handleInput)
+
+    return () => {
+      addressInput.removeEventListener("input", handleInput)
+    }
+  }, [isAddressValidated, lastValidatedAddress])
 
   const handleAddressBlur = () => {
     if (addressValue && !autocompleteAvailable) {
@@ -282,6 +325,8 @@ export default function ContactForm() {
                 setValidatedState("")
                 setValidatedZip("")
                 setAddressComponents({ street: "", city: "", state: "", zip: "" })
+                setIsAddressValidated(false)
+                setLastValidatedAddress("")
                 return
               }
 
@@ -290,6 +335,8 @@ export default function ContactForm() {
               setValidatedZip(zip)
               setAddressError("")
               setValidationError("")
+              setIsAddressValidated(true)
+              setLastValidatedAddress(place.formatted_address || "")
             }
           })
 
@@ -338,6 +385,8 @@ export default function ContactForm() {
       setServiceAreaValid(false)
       setValidationError("")
       setAddressValue("")
+      setIsAddressValidated(false)
+      setLastValidatedAddress("")
       setFormKey(Date.now())
     }
   }, [state.success])
@@ -355,21 +404,26 @@ export default function ContactForm() {
       return
     }
 
+    const currentAddress = addressInputRef.current?.value || ""
+
+    if (!isAddressValidated || currentAddress !== lastValidatedAddress) {
+      setAddressError("Please select a valid address from the dropdown or complete your address entry.")
+      setValidationError("Address validation required before submission.")
+      return
+    }
+
     if (autocompleteAvailable) {
       if (!addressComponents.street || !addressComponents.city || !addressComponents.state || !addressComponents.zip) {
         setAddressError("Please select a complete address from the dropdown suggestions, including zip code.")
         return
       }
 
-      const result = validateCompleteAddress(
-        addressInputRef.current?.value || "",
-        addressComponents.zip,
-        addressComponents.state,
-      )
+      const result = validateCompleteAddress(currentAddress, addressComponents.zip, addressComponents.state)
 
       if (!result.valid) {
         setAddressError(result.error || "Invalid address")
         setValidationError(result.error || "Invalid address")
+        setIsAddressValidated(false)
         return
       }
 
@@ -377,7 +431,7 @@ export default function ContactForm() {
       setValidatedZip(addressComponents.zip)
       setServiceAreaValid(true)
     } else {
-      const addressValue = addressInputRef.current?.value || ""
+      const addressValue = currentAddress
       const zip = parseManualAddress(addressValue)
       const detectedState = extractStateFromAddress(addressValue)
 
@@ -386,12 +440,15 @@ export default function ContactForm() {
       if (!result.valid) {
         setAddressError(result.error || "Invalid address")
         setValidationError(result.error || "Invalid address")
+        setIsAddressValidated(false)
         return
       }
 
       setValidatedState(result.validatedState || detectedState)
       setValidatedZip(zip)
       setServiceAreaValid(true)
+      setIsAddressValidated(true)
+      setLastValidatedAddress(addressValue)
       setAddressComponents((prev) => ({
         ...prev,
         zip,
@@ -459,7 +516,7 @@ export default function ContactForm() {
               autocompleteAvailable ? "Start typing your address..." : "Enter your full address with zip code"
             }
             className={addressError ? "border-red-500" : serviceAreaValid ? "border-green-500" : ""}
-            onChange={handleAddressChange}
+            onChange={handleAddressInputChange}
             onBlur={handleAddressBlur}
           />
           <input type="hidden" name="street" value={addressComponents.street} />
