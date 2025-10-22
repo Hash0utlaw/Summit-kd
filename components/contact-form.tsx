@@ -399,22 +399,30 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
+    console.log("[v0] Form submission started")
+
     if (!validatePhone(phone)) {
       setPhoneError("Please enter a valid 10-digit phone number")
+      console.log("[v0] Phone validation failed")
       return
     }
 
     const currentAddress = addressInputRef.current?.value || ""
+    console.log("[v0] Current address:", currentAddress)
+    console.log("[v0] Last validated address:", lastValidatedAddress)
+    console.log("[v0] Is address validated:", isAddressValidated)
 
     if (!isAddressValidated || currentAddress !== lastValidatedAddress) {
       setAddressError("Please select a valid address from the dropdown or complete your address entry.")
       setValidationError("Address validation required before submission.")
+      console.log("[v0] Address validation failed - not validated or address changed")
       return
     }
 
     if (autocompleteAvailable) {
       if (!addressComponents.street || !addressComponents.city || !addressComponents.state || !addressComponents.zip) {
         setAddressError("Please select a complete address from the dropdown suggestions, including zip code.")
+        console.log("[v0] Address components incomplete:", addressComponents)
         return
       }
 
@@ -424,6 +432,7 @@ export default function ContactForm() {
         setAddressError(result.error || "Invalid address")
         setValidationError(result.error || "Invalid address")
         setIsAddressValidated(false)
+        console.log("[v0] Address validation failed:", result.error)
         return
       }
 
@@ -441,6 +450,7 @@ export default function ContactForm() {
         setAddressError(result.error || "Invalid address")
         setValidationError(result.error || "Invalid address")
         setIsAddressValidated(false)
+        console.log("[v0] Manual address validation failed:", result.error)
         return
       }
 
@@ -462,7 +472,19 @@ export default function ContactForm() {
 
     const formData = new FormData(e.currentTarget)
 
+    console.log("[v0] Form data prepared, calling server action...")
+    console.log("[v0] Form data contents:", {
+      fullName: formData.get("fullName"),
+      phone: formData.get("phone"),
+      address: formData.get("address"),
+      state: formData.get("state"),
+      zip: formData.get("zip"),
+      validatedState: formData.get("validatedState"),
+      validatedZip: formData.get("validatedZip"),
+    })
+
     startTransition(() => {
+      console.log("[v0] Calling formAction (sendContactEmail)...")
       formAction(formData)
     })
   }

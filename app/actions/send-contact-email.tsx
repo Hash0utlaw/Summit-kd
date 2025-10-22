@@ -33,14 +33,25 @@ const validateZipCode = (address: string, zip?: string): boolean => {
 }
 
 export async function sendContactEmail(prevState: any, formData: FormData) {
+  console.log("[v0] sendContactEmail server action called")
+  console.log("[v0] Form data received:", {
+    fullName: formData.get("fullName"),
+    phone: formData.get("phone"),
+    address: formData.get("address"),
+    state: formData.get("state"),
+    zip: formData.get("zip"),
+  })
+
   if (!resendApiKey) {
-    console.error("RESEND_API_KEY environment variable is not set.")
+    console.error("[v0] RESEND_API_KEY environment variable is not set.")
     return { success: false, message: "Server configuration error. Please try again later." }
   }
   if (!toEmail) {
-    console.error("TO_EMAIL environment variable is not set.")
+    console.error("[v0] TO_EMAIL environment variable is not set.")
     return { success: false, message: "Server configuration error. Please try again later." }
   }
+
+  console.log("[v0] Environment variables verified - RESEND_API_KEY and TO_EMAIL are set")
 
   const resend = new Resend(resendApiKey)
 
@@ -55,6 +66,7 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
   })
 
   if (!validatedFields.success) {
+    console.error("[v0] Form validation failed:", validatedFields.error.flatten().fieldErrors)
     return {
       success: false,
       message: "Invalid form data. Please check your entries.",
@@ -62,11 +74,14 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
     }
   }
 
+  console.log("[v0] Form validation passed")
+
   const { fullName, phone, address, zip, state } = validatedFields.data
 
   if (state) {
     const normalizedState = state.toUpperCase().trim()
     if (!["GA", "AL", "GEORGIA", "ALABAMA"].includes(normalizedState)) {
+      console.error("[v0] State validation failed:", normalizedState)
       return {
         success: false,
         message: "We currently only service properties in Georgia and Alabama.",
@@ -75,11 +90,14 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
   }
 
   if (!validateZipCode(address, zip)) {
+    console.error("[v0] Zip code validation failed")
     return {
       success: false,
       message: "Please include a valid zip code in your address.",
     }
   }
+
+  console.log("[v0] All validations passed, attempting to send email via Resend...")
 
   try {
     const { data, error } = await resend.emails.send({
@@ -136,13 +154,16 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
     })
 
     if (error) {
-      console.error("Resend API Error:", error)
+      console.error("[v0] Resend API Error:", error)
       return { success: false, message: "Failed to send email. Please try again." }
     }
 
+    console.log("[v0] Email sent successfully via Resend!")
+    console.log("[v0] Resend response data:", data)
+
     return { success: true, message: "Thank you! Your quote request has been sent." }
   } catch (error) {
-    console.error("Unexpected error:", error)
+    console.error("[v0] Unexpected error during email send:", error)
     return { success: false, message: "An unexpected error occurred. Please try again." }
   }
 }
