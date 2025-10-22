@@ -21,6 +21,9 @@ const contactFormSchema = z.object({
       return ["GA", "AL", "GEORGIA", "ALABAMA"].includes(normalized)
     }, "We currently only service properties in Georgia and Alabama."),
   zip: z.string().optional(),
+  phoneValidated: z.string().optional(),
+  phoneActivityScore: z.string().optional(),
+  phoneValidationStatus: z.string().optional(),
 })
 
 const validateZipCode = (address: string, zip?: string): boolean => {
@@ -34,12 +37,20 @@ const validateZipCode = (address: string, zip?: string): boolean => {
 
 export async function sendContactEmail(prevState: any, formData: FormData) {
   console.log("[v0] sendContactEmail server action called")
+
+  const phoneValidated = formData.get("phoneValidated")
+  const phoneActivityScore = formData.get("phoneActivityScore")
+  const phoneValidationStatus = formData.get("phoneValidationStatus")
+
   console.log("[v0] Form data received:", {
     fullName: formData.get("fullName"),
     phone: formData.get("phone"),
     address: formData.get("address"),
     state: formData.get("state"),
     zip: formData.get("zip"),
+    phoneValidated,
+    phoneActivityScore,
+    phoneValidationStatus,
   })
 
   if (!resendApiKey) {
@@ -63,6 +74,9 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
     city: formData.get("city"),
     state: formData.get("state"),
     zip: formData.get("zip"),
+    phoneValidated: formData.get("phoneValidated"),
+    phoneActivityScore: formData.get("phoneActivityScore"),
+    phoneValidationStatus: formData.get("phoneValidationStatus"),
   })
 
   if (!validatedFields.success) {
@@ -99,11 +113,37 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
 
   console.log("[v0] All validations passed, attempting to send email via Resend...")
 
+  let phoneWarning = ""
+  const activityScore = phoneActivityScore ? Number.parseInt(phoneActivityScore) : null
+
+  if (activityScore !== null && activityScore < 70) {
+    phoneWarning = `
+      <div class="field" style="background-color: #fee2e2; padding: 15px; border-left: 4px solid #dc2626; border-radius: 4px;">
+        <span class="label" style="color: #dc2626;">⚠️ SUSPICIOUS PHONE NUMBER</span>
+        <span class="value" style="color: #991b1b;">Activity Score: ${activityScore}/100 - This number may be disconnected or invalid. Verify before calling.</span>
+      </div>
+    `
+  } else if (activityScore !== null && activityScore < 85) {
+    phoneWarning = `
+      <div class="field" style="background-color: #fef3c7; padding: 15px; border-left: 4px solid #f59e0b; border-radius: 4px;">
+        <span class="label" style="color: #f59e0b;">⚠️ MODERATE ACTIVITY PHONE</span>
+        <span class="value" style="color: #92400e;">Activity Score: ${activityScore}/100 - Moderate activity. May want to verify.</span>
+      </div>
+    `
+  } else if (activityScore !== null && activityScore >= 85) {
+    phoneWarning = `
+      <div class="field" style="background-color: #d1fae5; padding: 15px; border-left: 4px solid #10b981; border-radius: 4px;">
+        <span class="label" style="color: #10b981;">✓ VERIFIED PHONE</span>
+        <span class="value" style="color: #065f46;">Activity Score: ${activityScore}/100 - Highly active number</span>
+      </div>
+    `
+  }
+
   try {
     const { data, error } = await resend.emails.send({
       from: "onboarding@resend.dev",
       to: toEmail,
-      subject: `New Website Lead: ${fullName}`,
+      subject: `New Website Lead: ${fullName}${activityScore !== null && activityScore < 70 ? " ⚠️ SUSPICIOUS PHONE" : ""}`,
       reply_to: "no-reply@resend.dev",
       html: `
         <!DOCTYPE html>
@@ -127,6 +167,7 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
                 <h1>New Website Lead</h1>
               </div>
               <div class="content">
+                ${phoneWarning}
                 <div class="field">
                   <span class="label">Full Name:</span>
                   <span class="value">${fullName}</span>

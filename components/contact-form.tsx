@@ -131,6 +131,14 @@ export default function ContactForm() {
   const [isAddressValidated, setIsAddressValidated] = useState(false)
   const [lastValidatedAddress, setLastValidatedAddress] = useState("")
 
+  const [phoneValidationStatus, setPhoneValidationStatus] = useState<
+    "idle" | "validating" | "valid" | "warning" | "suspicious"
+  >("idle")
+  const [phoneActivityScore, setPhoneActivityScore] = useState<number | null>(null)
+  const [phoneValidationMessage, setPhoneValidationMessage] = useState<string>("")
+  const [isPhoneValidated, setIsPhoneValidated] = useState(false)
+  const phoneValidationTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+
   const formatPhoneNumber = (value: string) => {
     const phoneNumber = value.replace(/\D/g, "")
     const limitedNumber = phoneNumber.slice(0, 10)
@@ -143,39 +151,86 @@ export default function ContactForm() {
     }
   }
 
+  const validatePhoneWithTrestle = async (phoneNumber: string) => {
+    const digits = phoneNumber.replace(/\D/g, "")
+
+    if (digits.length !== 10) {
+      return { valid: false, error: "Phone must be 10 digits" }
+    }
+
+    try {
+      console.log("[v0] Calling Trestle API for phone:", digits)
+
+      const response = await fetch("/api/validate-phone", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ phone: digits }),
+      })
+
+      const data = await response.json()
+      console.log("[v0] Trestle API response:", data)
+
+      if (!response.ok) {
+        console.log("[v0] Trestle API error, falling back to basic validation")
+        setIsPhoneValidated(true)
+        setPhoneActivityScore(null)
+        return { valid: true, fallback: true }
+      }
+
+      setPhoneActivityScore(data.activityScore)
+      setIsPhoneValidated(true)
+
+      if (data.activityScore < 70) {
+        setPhoneValidationStatus("suspicious")
+        return { valid: true, suspicious: true, score: data.activityScore }
+      } else if (data.activityScore < 85) {
+        setPhoneValidationStatus("warning")
+        return { valid: true, warning: true, score: data.activityScore }
+      } else {
+        setPhoneValidationStatus("valid")
+        return { valid: true, score: data.activityScore }
+      }
+    } catch (error) {
+      console.log("[v0] Phone validation error:", error)
+      setIsPhoneValidated(true)
+      setPhoneActivityScore(null)
+      return { valid: true, fallback: true }
+    }
+  }
+
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const formatted = formatPhoneNumber(e.target.value)
     setPhone(formatted)
     if (phoneError) {
       setPhoneError("")
     }
+
+    setPhoneValidationStatus("idle")
+    setIsPhoneValidated(false)
+    setPhoneActivityScore(null)
+
+    if (phoneValidationTimeoutRef.current) {
+      clearTimeout(phoneValidationTimeoutRef.current)
+    }
+
+    const digits = formatted.replace(/\D/g, "")
+    if (digits.length === 10) {
+      phoneValidationTimeoutRef.current = setTimeout(() => {
+        validatePhoneWithTrestle(formatted)
+      }, 1000)
+    }
+  }
+
+  const handlePhoneBlur = () => {
+    const digits = phone.replace(/\D/g, "")
+    if (digits.length === 10 && !isPhoneValidated) {
+      validatePhoneWithTrestle(phone)
+    }
   }
 
   const validatePhone = (phoneValue: string) => {
     const digits = phoneValue.replace(/\D/g, "")
     return digits.length === 10
-  }
-
-  const performValidation = (address: string, zip: string, state: string) => {
-    const result = validateCompleteAddress(address, zip, state)
-
-    if (result.valid) {
-      setServiceAreaValid(true)
-      setValidationError("")
-      setAddressError("")
-      setValidatedState(result.validatedState || state)
-      setValidatedZip(zip)
-      setIsAddressValidated(true)
-      setLastValidatedAddress(address)
-    } else {
-      setServiceAreaValid(false)
-      setValidationError(result.error || "")
-      setAddressError(result.error || "")
-      setValidatedState("")
-      setValidatedZip("")
-      setIsAddressValidated(false)
-      setLastValidatedAddress("")
-    }
   }
 
   useEffect(() => {
@@ -204,7 +259,6 @@ export default function ContactForm() {
     const value = e.target.value
     setAddressValue(value)
 
-    // Clear validation state when user modifies the address
     if (isAddressValidated && value !== lastValidatedAddress) {
       setIsAddressValidated(false)
       setServiceAreaValid(false)
@@ -228,7 +282,6 @@ export default function ContactForm() {
     const handleInput = () => {
       const currentValue = addressInput.value
 
-      // If address was validated but current value differs, clear validation
       if (isAddressValidated && currentValue !== lastValidatedAddress) {
         setIsAddressValidated(false)
         setServiceAreaValid(false)
@@ -387,13 +440,34 @@ export default function ContactForm() {
       setAddressValue("")
       setIsAddressValidated(false)
       setLastValidatedAddress("")
+      setPhoneValidationStatus("idle")
+      setPhoneValidationMessage("")
+      setIsPhoneValidated(false)
+      setPhoneActivityScore(null)
       setFormKey(Date.now())
     }
   }, [state.success])
 
-  const parseManualAddress = (address: string) => {
-    const zipMatch = address.match(/\b\d{5}(?:-\d{4})?\b/)
-    return zipMatch ? zipMatch[0].substring(0, 5) : ""
+  const performValidation = (address: string, zip: string, state: string) => {
+    const result = validateCompleteAddress(address, zip, state)
+
+    if (result.valid) {
+      setServiceAreaValid(true)
+      setValidationError("")
+      setAddressError("")
+      setValidatedState(result.validatedState || state)
+      setValidatedZip(zip)
+      setIsAddressValidated(true)
+      setLastValidatedAddress(address)
+    } else {
+      setServiceAreaValid(false)
+      setValidationError(result.error || "")
+      setAddressError(result.error || "")
+      setValidatedState("")
+      setValidatedZip("")
+      setIsAddressValidated(false)
+      setLastValidatedAddress("")
+    }
   }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -405,6 +479,11 @@ export default function ContactForm() {
       setPhoneError("Please enter a valid 10-digit phone number")
       console.log("[v0] Phone validation failed")
       return
+    }
+
+    if (!isPhoneValidated) {
+      console.log("[v0] Phone not validated yet, validating now...")
+      await validatePhoneWithTrestle(phone)
     }
 
     const currentAddress = addressInputRef.current?.value || ""
@@ -472,10 +551,17 @@ export default function ContactForm() {
 
     const formData = new FormData(e.currentTarget)
 
+    formData.set("phoneValidated", isPhoneValidated.toString())
+    formData.set("phoneActivityScore", phoneActivityScore?.toString() || "")
+    formData.set("phoneValidationStatus", phoneValidationStatus)
+
     console.log("[v0] Form data prepared, calling server action...")
     console.log("[v0] Form data contents:", {
       fullName: formData.get("fullName"),
       phone: formData.get("phone"),
+      phoneValidated: formData.get("phoneValidated"),
+      phoneActivityScore: formData.get("phoneActivityScore"),
+      phoneValidationStatus: formData.get("phoneValidationStatus"),
       address: formData.get("address"),
       state: formData.get("state"),
       zip: formData.get("zip"),
@@ -487,6 +573,11 @@ export default function ContactForm() {
       console.log("[v0] Calling formAction (sendContactEmail)...")
       formAction(formData)
     })
+  }
+
+  const parseManualAddress = (address: string) => {
+    const zipMatch = address.match(/\b\d{5}(?:-\d{4})?\b/)
+    return zipMatch ? zipMatch[0].substring(0, 5) : ""
   }
 
   return (
@@ -516,16 +607,14 @@ export default function ContactForm() {
             type="tel"
             value={phone}
             onChange={handlePhoneChange}
+            onBlur={handlePhoneBlur}
             placeholder="(123) 456-7890"
             required
-            className={phoneError ? "border-red-500" : ""}
           />
           {phoneError && <p className="text-sm text-red-600 mt-1">{phoneError}</p>}
-          {phone && !phoneError && validatePhone(phone) && (
-            <p className="text-xs text-green-600 mt-1 flex items-center gap-1">
-              <CheckCircle2 className="h-3 w-3" /> Valid phone number
-            </p>
-          )}
+          <input type="hidden" name="phoneValidated" value={isPhoneValidated.toString()} />
+          <input type="hidden" name="phoneActivityScore" value={phoneActivityScore?.toString() || ""} />
+          <input type="hidden" name="phoneValidationStatus" value={phoneValidationStatus} />
         </div>
         <div>
           <Label htmlFor="address">Property Address</Label>
