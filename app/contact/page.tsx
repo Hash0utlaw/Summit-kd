@@ -81,56 +81,83 @@ export default function ContactPage() {
 
       {/* Add JSON-LD to the page */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <main className="min-h-screen py-16 bg-gray-50">
+
+      <main className="min-h-screen py-12 md:py-20 bg-gradient-to-b from-amber-50/30 via-white to-slate-50/50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Contact Us for a Free Quote</h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Have questions or ready for a free, no-obligation quote? Contact us today! We're available 7 days a week
-              to assist you.
+          <div className="text-center mb-12 md:mb-16">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 md:mb-6 leading-tight">
+              Get Your Free Quote
+            </h1>
+            <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+              Ready to protect your home? We're here to help 7 days a week with expert roofing solutions.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto">
             {/* Contact Form */}
-            <div>
-              <ContactForm />
+            <div className="order-1 lg:order-1">
+              <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-slate-200/50">
+                <div className="mb-6">
+                  <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Request Your Quote</h2>
+                  <p className="text-slate-600 leading-relaxed">
+                    Fill out the form below and we'll get back to you within 24 hours.
+                  </p>
+                </div>
+                <ContactForm />
+              </div>
             </div>
 
             {/* Contact Information */}
-            <div className="space-y-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Phone className="h-5 w-5 text-orange-500" />
-                    Phone
+            <div className="space-y-5 order-2 lg:order-2">
+              <Card className="border-slate-200/50 shadow-md hover:shadow-lg transition-shadow duration-300 rounded-xl">
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center gap-3 text-slate-900">
+                    <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center">
+                      <Phone className="h-5 w-5 text-orange-600" />
+                    </div>
+                    <span>Phone</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-lg font-medium text-gray-900 mb-2">(704) 578-4756</p>
-                  <p className="text-gray-600">Call us for immediate assistance or emergency repairs</p>
+                  <a
+                    href="tel:+17045784756"
+                    className="text-xl font-semibold text-slate-900 hover:text-orange-600 transition-colors block mb-2"
+                  >
+                    (704) 578-4756
+                  </a>
+                  <p className="text-slate-600 leading-relaxed">
+                    Call us for immediate assistance or emergency repairs
+                  </p>
                 </CardContent>
               </Card>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Mail className="h-5 w-5 text-orange-500" />
-                    Email
+              <Card className="border-slate-200/50 shadow-md hover:shadow-lg transition-shadow duration-300 rounded-xl">
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center gap-3 text-slate-900">
+                    <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                      <Mail className="h-5 w-5 text-blue-600" />
+                    </div>
+                    <span>Email</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-lg font-medium text-gray-900 mb-2">davis@summitroofingprofessionals.com</p>
-                  <p className="text-gray-600">Send us your questions or project details</p>
+                  <a
+                    href="mailto:davis@summitroofingprofessionals.com"
+                    className="text-lg font-medium text-slate-900 hover:text-blue-600 transition-colors block mb-2 break-all"
+                  >
+                    davis@summitroofingprofessionals.com
+                  </a>
+                  <p className="text-slate-600 leading-relaxed">Send us your questions or project details</p>
                 </CardContent>
               </Card>
 
-              {/* Our Office */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <MapPin className="h-5 w-5 text-orange-500" />
-                    Our Office
+              <Card className="border-slate-200/50 shadow-md hover:shadow-lg transition-shadow duration-300 rounded-xl">
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center gap-3 text-slate-900">
+                    <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+                      <MapPin className="h-5 w-5 text-green-600" />
+                    </div>
+                    <span>Our Office</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -138,46 +165,49 @@ export default function ContactPage() {
                     href="https://www.google.com/maps/search/?api=1&query=3707+2nd+Ave+Ste+103+columbus+ga+31904"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-lg font-medium text-gray-900 hover:text-orange-500"
+                    className="text-lg font-medium text-slate-900 hover:text-green-600 transition-colors block mb-2"
                   >
                     3707 2nd Ave Ste 103
                     <br />
                     Columbus, GA 31904
                   </a>
-                  <p className="text-gray-600 mt-2">Visit us or send mail to our office location.</p>
+                  <p className="text-slate-600 leading-relaxed">Visit us or send mail to our office location</p>
                 </CardContent>
               </Card>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Clock className="h-5 w-5 text-orange-500" />
-                    Business Hours
+              <Card className="border-slate-200/50 shadow-md hover:shadow-lg transition-shadow duration-300 rounded-xl">
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center gap-3 text-slate-900">
+                    <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center">
+                      <Clock className="h-5 w-5 text-purple-600" />
+                    </div>
+                    <span>Business Hours</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-2 text-gray-600">
-                    <p>
-                      <span className="font-medium">Monday - Saturday:</span> 6:00 AM - 9:00 PM
+                  <div className="space-y-2 text-slate-600">
+                    <p className="leading-relaxed">
+                      <span className="font-semibold text-slate-900">Monday - Saturday:</span> 6:00 AM - 9:00 PM
                     </p>
-                    <p>
-                      <span className="font-medium">Sunday:</span> 9:00 AM - 5:00 PM
+                    <p className="leading-relaxed">
+                      <span className="font-semibold text-slate-900">Sunday:</span> 9:00 AM - 5:00 PM
                     </p>
-                    <p className="text-sm">We are available 7 days a week to answer your call.</p>
+                    <p className="text-sm mt-3 leading-relaxed">Available 7 days a week to answer your call</p>
                   </div>
                 </CardContent>
               </Card>
             </div>
           </div>
 
-          {/* Comprehensive content sections for SEO optimization */}
-          <div className="max-w-4xl mx-auto mt-16">
-            <div className="bg-white rounded-lg p-6 md:p-8 shadow-sm">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Learn More About Summit Roofing</h2>
+          <div className="max-w-4xl mx-auto mt-16 md:mt-24">
+            <div className="bg-white rounded-2xl p-6 md:p-10 shadow-lg border border-slate-200/50">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">
+                Learn More About Summit Roofing
+              </h2>
               <Accordion type="multiple" className="w-full">
                 {/* Why Choose Summit Roofing Section */}
                 <AccordionItem value="why-choose" className="border-b">
-                  <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-gray-900 hover:text-orange-500 py-4">
+                  <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-slate-900 hover:text-orange-500 py-4">
                     Why Choose Summit Roofing Professionals?
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-600 space-y-4 pb-6">
@@ -204,7 +234,7 @@ export default function ContactPage() {
 
                 {/* Our Services Section */}
                 <AccordionItem value="services" className="border-b">
-                  <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-gray-900 hover:text-orange-500 py-4">
+                  <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-slate-900 hover:text-orange-500 py-4">
                     Comprehensive Roofing Services
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-600 space-y-4 pb-6">
@@ -250,7 +280,7 @@ export default function ContactPage() {
 
                 {/* Service Areas Section */}
                 <AccordionItem value="service-areas" className="border-b">
-                  <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-gray-900 hover:text-orange-500 py-4">
+                  <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-slate-900 hover:text-orange-500 py-4">
                     Serving Alabama and Georgia
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-600 space-y-4 pb-6">
@@ -276,7 +306,7 @@ export default function ContactPage() {
 
                 {/* Getting Started Section */}
                 <AccordionItem value="getting-started">
-                  <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-gray-900 hover:text-orange-500 py-4">
+                  <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-slate-900 hover:text-orange-500 py-4">
                     Getting Started is Easy
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-600 space-y-4 pb-6">

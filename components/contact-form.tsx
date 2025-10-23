@@ -8,7 +8,7 @@ import { sendContactEmail } from "@/app/actions/send-contact-email"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { MapPin, Phone, CheckCircle2, XCircle } from "lucide-react"
+import { CheckCircle2, XCircle } from "lucide-react"
 
 declare global {
   interface Window {
@@ -26,7 +26,11 @@ const initialState = {
 function SubmitButton() {
   const { pending } = useFormStatus()
   return (
-    <Button type="submit" disabled={pending} className="w-full">
+    <Button
+      type="submit"
+      disabled={pending}
+      className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-sm rounded-lg h-12"
+    >
       {pending ? "Submitting..." : "Get My Free Quote"}
     </Button>
   )
@@ -121,6 +125,8 @@ export default function ContactForm() {
   const [autocompleteAvailable, setAutocompleteAvailable] = useState(true)
   const [phone, setPhone] = useState("")
   const [phoneError, setPhoneError] = useState<string>("")
+  const [email, setEmail] = useState("")
+  const [emailError, setEmailError] = useState<string>("")
   const [validatedState, setValidatedState] = useState<string>("")
   const [validatedZip, setValidatedZip] = useState<string>("")
   const [serviceAreaValid, setServiceAreaValid] = useState<boolean>(false)
@@ -228,6 +234,25 @@ export default function ContactForm() {
     }
   }
 
+  const validateEmail = (emailValue: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(emailValue)
+  }
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    setEmail(value)
+    if (emailError) {
+      setEmailError("")
+    }
+  }
+
+  const handleEmailBlur = () => {
+    if (email && !validateEmail(email)) {
+      setEmailError("Please enter a valid email address")
+    }
+  }
+
   const validatePhone = (phoneValue: string) => {
     const digits = phoneValue.replace(/\D/g, "")
     return digits.length === 10
@@ -265,7 +290,6 @@ export default function ContactForm() {
       setValidatedState("")
       setValidatedZip("")
       setAddressComponents({ street: "", city: "", state: "", zip: "" })
-      setAddressError("")
       setValidationError("")
     }
 
@@ -433,6 +457,8 @@ export default function ContactForm() {
       setAddressError("")
       setPhone("")
       setPhoneError("")
+      setEmail("")
+      setEmailError("")
       setValidatedState("")
       setValidatedZip("")
       setServiceAreaValid(false)
@@ -478,6 +504,12 @@ export default function ContactForm() {
     if (!validatePhone(phone)) {
       setPhoneError("Please enter a valid 10-digit phone number")
       console.log("[v0] Phone validation failed")
+      return
+    }
+
+    if (!email || !validateEmail(email)) {
+      setEmailError("Please enter a valid email address")
+      console.log("[v0] Email validation failed")
       return
     }
 
@@ -547,6 +579,7 @@ export default function ContactForm() {
 
     setAddressError("")
     setPhoneError("")
+    setEmailError("")
     setValidationError("")
 
     const formData = new FormData(e.currentTarget)
@@ -554,6 +587,7 @@ export default function ContactForm() {
     formData.set("phoneValidated", isPhoneValidated.toString())
     formData.set("phoneActivityScore", phoneActivityScore?.toString() || "")
     formData.set("phoneValidationStatus", phoneValidationStatus)
+    formData.set("email", email)
 
     console.log("[v0] Form data prepared, calling server action...")
     console.log("[v0] Form data contents:", {
@@ -567,6 +601,7 @@ export default function ContactForm() {
       zip: formData.get("zip"),
       validatedState: formData.get("validatedState"),
       validatedZip: formData.get("validatedZip"),
+      email: formData.get("email"),
     })
 
     startTransition(() => {
@@ -581,26 +616,25 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="w-full max-w-md mx-auto">
-      <div className="mb-6 p-4 md:p-5 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border-2 border-blue-300 shadow-sm">
-        <div className="flex items-center gap-3">
-          <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded-full flex items-center justify-center">
-            <MapPin className="h-4 w-4 md:h-5 md:w-5 text-white" />
-          </div>
-          <div className="flex-1">
-            <p className="text-sm md:text-base font-bold text-blue-900 leading-tight">Service Areas</p>
-            <p className="text-base md:text-lg font-semibold text-blue-700 leading-tight">Georgia & Alabama</p>
-          </div>
-        </div>
+    <div className="w-full">
+      <div className="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+        <p className="text-sm text-blue-900 text-center">
+          <span className="font-semibold">Service Area:</span> Georgia & Alabama
+        </p>
       </div>
 
-      <form key={formKey} onSubmit={handleSubmit} className="space-y-4">
+      <form key={formKey} onSubmit={handleSubmit} className="space-y-5">
         <div>
-          <Label htmlFor="fullName">Full Name</Label>
-          <Input id="fullName" name="fullName" required />
+          <Label htmlFor="fullName" className="text-sm font-medium text-slate-700">
+            Full Name
+          </Label>
+          <Input id="fullName" name="fullName" required className="mt-1.5 h-11 rounded-md" placeholder="John Smith" />
         </div>
+
         <div>
-          <Label htmlFor="phone">Phone Number</Label>
+          <Label htmlFor="phone" className="text-sm font-medium text-slate-700">
+            Phone Number
+          </Label>
           <Input
             id="phone"
             name="phone"
@@ -610,14 +644,46 @@ export default function ContactForm() {
             onBlur={handlePhoneBlur}
             placeholder="(123) 456-7890"
             required
+            className="mt-1.5 h-11 rounded-md"
           />
-          {phoneError && <p className="text-sm text-red-600 mt-1">{phoneError}</p>}
+          {phoneError && (
+            <p className="text-sm text-red-600 mt-1.5 flex items-center gap-1">
+              <XCircle className="h-4 w-4" />
+              {phoneError}
+            </p>
+          )}
           <input type="hidden" name="phoneValidated" value={isPhoneValidated.toString()} />
           <input type="hidden" name="phoneActivityScore" value={phoneActivityScore?.toString() || ""} />
           <input type="hidden" name="phoneValidationStatus" value={phoneValidationStatus} />
         </div>
+
         <div>
-          <Label htmlFor="address">Property Address</Label>
+          <Label htmlFor="email" className="text-sm font-medium text-slate-700">
+            Email Address
+          </Label>
+          <Input
+            id="email"
+            name="email"
+            type="email"
+            value={email}
+            onChange={handleEmailChange}
+            onBlur={handleEmailBlur}
+            placeholder="john@example.com"
+            required
+            className="mt-1.5 h-11 rounded-md"
+          />
+          {emailError && (
+            <p className="text-sm text-red-600 mt-1.5 flex items-center gap-1">
+              <XCircle className="h-4 w-4" />
+              {emailError}
+            </p>
+          )}
+        </div>
+
+        <div>
+          <Label htmlFor="address" className="text-sm font-medium text-slate-700">
+            Property Address
+          </Label>
           <Input
             id="address"
             name="address"
@@ -626,10 +692,17 @@ export default function ContactForm() {
             placeholder={
               autocompleteAvailable ? "Start typing your address..." : "Enter your full address with zip code"
             }
-            className={addressError ? "border-red-500" : serviceAreaValid ? "border-green-500" : ""}
+            className={`mt-1.5 h-11 rounded-md ${
+              addressError
+                ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                : serviceAreaValid
+                  ? "border-green-500 focus:border-green-500 focus:ring-green-500"
+                  : ""
+            }`}
             onChange={handleAddressInputChange}
             onBlur={handleAddressBlur}
           />
+
           <input type="hidden" name="street" value={addressComponents.street} />
           <input type="hidden" name="city" value={addressComponents.city} />
           <input type="hidden" name="state" value={addressComponents.state} />
@@ -639,46 +712,38 @@ export default function ContactForm() {
           <input type="hidden" name="serviceAreaValid" value={serviceAreaValid.toString()} />
 
           {addressError && (
-            <p className="text-sm text-red-600 mt-1 flex items-start gap-1">
+            <p className="text-sm text-red-600 mt-2 flex items-start gap-1.5">
               <XCircle className="h-4 w-4 flex-shrink-0 mt-0.5" />
               <span>{addressError}</span>
             </p>
           )}
           {serviceAreaValid && !addressError && validatedState && (
-            <p className="text-sm text-green-600 mt-1 flex items-center gap-1">
+            <p className="text-sm text-green-700 mt-2 flex items-center gap-1.5">
               <CheckCircle2 className="h-4 w-4" />
-              <span>Service area confirmed: {validatedState === "GA" ? "Georgia" : "Alabama"}</span>
-            </p>
-          )}
-          {!autocompleteAvailable && !addressError && !serviceAreaValid && (
-            <p className="text-xs text-muted-foreground mt-1">
-              Please enter your complete address including street, city, state, and zip code
+              <span>Service area confirmed</span>
             </p>
           )}
         </div>
-        <SubmitButton />
+
+        <div className="pt-2">
+          <SubmitButton />
+        </div>
       </form>
+
       {state.message && (
-        <p className={`mt-4 text-sm ${state.success ? "text-green-600" : "text-red-600"}`}>{state.message}</p>
+        <div
+          className={`mt-6 p-4 rounded-lg border ${
+            state.success ? "bg-green-50 border-green-200 text-green-800" : "bg-red-50 border-red-200 text-red-800"
+          }`}
+        >
+          <p className="text-sm font-medium">{state.message}</p>
+        </div>
       )}
 
-      <div className="mt-6 p-5 bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl border-2 border-orange-300 shadow-md">
-        <div className="flex items-start gap-3 mb-4">
-          <div className="flex-shrink-0 w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
-            <Phone className="h-5 w-5 text-white" />
-          </div>
-          <div>
-            <p className="text-base font-bold text-orange-900 mb-1">Outside our service area?</p>
-            <p className="text-sm text-orange-800">Contact us directly for special requests or inquiries.</p>
-          </div>
-        </div>
-        <a href="tel:+17045784756" className="block">
-          <Button
-            variant="default"
-            className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold shadow-sm"
-            type="button"
-          >
-            <Phone className="h-4 w-4 mr-2" />
+      <div className="mt-8 p-5 bg-slate-50 rounded-lg border border-slate-200 text-center">
+        <p className="text-sm text-slate-600 mb-3">Prefer to speak with us directly?</p>
+        <a href="tel:+17045784756" className="inline-block">
+          <Button variant="outline" className="h-11 px-6 font-semibold bg-transparent" type="button">
             Call (704) 578-4756
           </Button>
         </a>
