@@ -4,12 +4,12 @@ import ServicePageHero from "@/components/service-page-hero"
 import CtaSection from "@/components/cta-section"
 import FaqSection from "@/components/faq-section"
 import { Button } from "@/components/ui/button"
-import { CheckCircle, DollarSign, Rocket, Clock, Shield, CreditCard } from "lucide-react"
+import { CheckCircle, DollarSign, Rocket } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Roof Financing Options in AL & GA | Summit Roofing",
   description:
-    "Affordable roof financing options for your new roof. Summit Roofing Professionals offers flexible payment plans through Alabama Power and Acorn Finance. Apply online today!",
+    "Affordable roof financing options for your new roof. Summit Roofing Professionals offers flexible payment plans to make your project possible. Apply online today!",
   alternates: {
     canonical: "/financing",
   },
@@ -17,17 +17,17 @@ export const metadata: Metadata = {
 
 const financingBenefits = [
   {
-    icon: <Rocket className="h-8 w-8 text-primary" />,
+    icon: <Rocket className="h-8 w-8 text-blue-600" />,
     title: "Start Your Project Now",
     description: "Don't wait for a small issue to become a costly disaster. Get the roof you need today.",
   },
   {
-    icon: <DollarSign className="h-8 w-8 text-primary" />,
+    icon: <DollarSign className="h-8 w-8 text-blue-600" />,
     title: "Flexible Monthly Payments",
     description: "Choose a payment plan that fits comfortably within your monthly budget.",
   },
   {
-    icon: <CheckCircle className="h-8 w-8 text-primary" />,
+    icon: <CheckCircle className="h-8 w-8 text-blue-600" />,
     title: "Preserve Your Savings",
     description: "Keep your cash on hand for other investments, expenses, or emergencies.",
   },
@@ -66,22 +66,17 @@ const financingFaqs = [
   {
     question: "What are the typical interest rates and terms?",
     answer:
-      "Interest rates and terms vary based on your credit history and the loan amount. Alabama Power offers rates from 9.9% to 19.9% with terms up to 120 months. Acorn Finance offers APRs as low as 6.99% with terms up to 12 years.",
+      "Interest rates and terms vary based on your credit history, the loan amount, and the specific lender. We work with partners who offer competitive rates and a variety of term lengths to fit your needs.",
   },
   {
     question: "How long does the approval process take?",
     answer:
-      "In many cases, you can receive a decision on your application within minutes. With Acorn Finance, funds can be available the same or next day upon approval.",
+      "In many cases, you can receive a decision on your application within minutes. The entire process is designed to be as fast and efficient as possible.",
   },
   {
     question: "Can I finance only a portion of my roofing project?",
     answer:
       "Yes, you can often finance the entire project cost or just a portion of it. This gives you the flexibility to use financing in a way that makes the most sense for your financial situation.",
-  },
-  {
-    question: "Do I need to be an Alabama Power customer to use their financing?",
-    answer:
-      "No, any single-family homeowner in Alabama can apply for Alabama Power Smart Financing, regardless of whether you're an Alabama Power customer.",
   },
 ]
 
@@ -89,17 +84,17 @@ export default function FinancingPage() {
   return (
     <>
       <ServicePageHero
-        title="Flexible Financing Options"
-        subtitle="Make your roofing project affordable with our trusted financing partners."
-        imageUrl="/images/projects/auburn-residential-1.jpeg"
-        imageAlt="Beautiful residential home with new roofing"
+        title="Affordable Financing For Your New Roof"
+        subtitle="Don't let budget concerns delay your project. We offer flexible payment options to make your new roof a reality."
+        imageUrl="/images/financing-hero.png"
+        imageAlt="Homeowner reviewing roof financing options to fund a new roof installation in Alabama and Georgia"
       />
 
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">A Quality Roof is Within Reach</h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">A Quality Roof is Within Reach</h2>
+            <p className="mt-4 text-lg text-gray-600">
               We believe every homeowner deserves a safe and reliable roof without financial strain. That's why we've
               partnered with leading finance companies to offer flexible, affordable payment plans tailored to your
               needs.
@@ -111,211 +106,61 @@ export default function FinancingPage() {
                 <div className="flex justify-center mb-4" aria-hidden="true">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">{benefit.title}</h3>
-                <p className="mt-2 text-muted-foreground">{benefit.description}</p>
+                <h3 className="text-xl font-semibold text-gray-800">{benefit.title}</h3>
+                <p className="mt-2 text-gray-600">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-secondary/30">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our Trusted Financing Partners</h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              We work with reputable lenders who specialize in home improvement financing to bring you the best possible
-              options.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* Alabama Power Smart Financing */}
-            <div className="bg-card rounded-lg shadow-lg p-8 border border-border">
-              <div className="flex items-center justify-center mb-6">
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-foreground">Alabama Power</h3>
-                  <p className="text-sm text-muted-foreground">Smart Financing</p>
-                </div>
-              </div>
-
-              <div className="space-y-4 mb-6">
-                <div className="flex items-start gap-3">
-                  <DollarSign className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">$2,000 - $25,000</p>
-                    <p className="text-sm text-muted-foreground">Financing amounts available</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CreditCard className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">9.9% - 19.9% APR</p>
-                    <p className="text-sm text-muted-foreground">Competitive interest rates</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Clock className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">Up to 120 Months</p>
-                    <p className="text-sm text-muted-foreground">Flexible repayment terms</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Shield className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">Trusted Since 1906</p>
-                    <p className="text-sm text-muted-foreground">Backed by Alabama Power's reputation</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-secondary/50 rounded-md p-4 mb-6">
-                <p className="text-sm text-muted-foreground">
-                  <strong className="text-foreground">Special Feature:</strong> Combine your loan payment with your
-                  power bill for added convenience. Available to all Alabama homeowners.
-                </p>
-              </div>
-
-              <Button className="w-full" size="lg">
-                Apply with Alabama Power
-              </Button>
-            </div>
-
-            {/* Acorn Finance */}
-            <div className="bg-card rounded-lg shadow-lg p-8 border border-border">
-              <div className="flex items-center justify-center mb-6">
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-foreground">Acorn Finance</h3>
-                  <p className="text-sm text-muted-foreground">Home Improvement Loans</p>
-                </div>
-              </div>
-
-              <div className="space-y-4 mb-6">
-                <div className="flex items-start gap-3">
-                  <DollarSign className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">Up to $100,000</p>
-                    <p className="text-sm text-muted-foreground">Higher financing limits available</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CreditCard className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">As Low as 6.99% APR</p>
-                    <p className="text-sm text-muted-foreground">Competitive rates for qualified borrowers</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Clock className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">Up to 12 Years</p>
-                    <p className="text-sm text-muted-foreground">Extended repayment options</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Shield className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">No Credit Impact</p>
-                    <p className="text-sm text-muted-foreground">Check rates without affecting your score</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-secondary/50 rounded-md p-4 mb-6">
-                <p className="text-sm text-muted-foreground">
-                  <strong className="text-foreground">Special Feature:</strong> Compare multiple lender offers with one
-                  application. Same or next-day funding available upon approval.
-                </p>
-              </div>
-
-              <Button className="w-full" size="lg">
-                Apply with Acorn Finance
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our Simple 4-Step Process</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Our Simple 4-Step Process</h2>
           </div>
           <div className="max-w-4xl mx-auto grid gap-8">
             {howItWorksSteps.map((item) => (
               <div key={item.step} className="flex items-start gap-6">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-accent-foreground font-bold text-xl flex-shrink-0">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-white font-bold text-xl flex-shrink-0">
                   {item.step}
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
-                  <p className="mt-1 text-muted-foreground">{item.description}</p>
+                  <h3 className="text-xl font-semibold text-gray-800">{item.title}</h3>
+                  <p className="mt-1 text-gray-600">{item.description}</p>
                 </div>
               </div>
             ))}
           </div>
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white">
               Check Your Financing Options Now
             </Button>
-            <p className="text-sm text-muted-foreground mt-2">(Checking options will not affect your credit score)</p>
+            <p className="text-sm text-gray-500 mt-2">(Checking options will not affect your credit score)</p>
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-secondary/30">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Why Choose Financing for Your Roof?
-              </h2>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h3 className="font-semibold text-foreground">Protect Your Home Now</h3>
-                    <p className="text-muted-foreground">
-                      Don't wait for minor damage to become a major problem. Address roofing issues immediately.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h3 className="font-semibold text-foreground">Manageable Monthly Payments</h3>
-                    <p className="text-muted-foreground">
-                      Spread the cost over time with payments that fit your budget.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h3 className="font-semibold text-foreground">Increase Home Value</h3>
-                    <p className="text-muted-foreground">
-                      A new roof is one of the best investments you can make in your property.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h3 className="font-semibold text-foreground">Energy Savings</h3>
-                    <p className="text-muted-foreground">
-                      Modern roofing materials can reduce your energy bills and pay for themselves over time.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Our Trusted Financing Partners</h2>
+            <p className="mt-4 text-lg text-gray-600">
+              We work with reputable lenders who specialize in home improvement financing to bring you the best possible
+              options.
+            </p>
+            <div className="mt-8 flex justify-center items-center gap-8 flex-wrap">
               <Image
-                src="/images/completed-home-project.jpg"
-                alt="Beautiful completed roofing project financed through Summit Roofing's financing partners"
-                fill
-                className="object-cover"
+                src="/images/hearth-logo.png"
+                alt="Hearth home improvement financing partner logo"
+                width={150}
+                height={50}
+              />
+              <Image
+                src="/images/service-finance-logo.png"
+                alt="Service Finance Company lending partner logo"
+                width={180}
+                height={60}
               />
             </div>
           </div>
