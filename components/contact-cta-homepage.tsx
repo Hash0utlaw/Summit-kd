@@ -82,7 +82,8 @@ export default function ContactCTAHomepage() {
                 width={600}
                 height={400}
                 className="w-full h-auto object-cover"
-                priority
+                loading="lazy"
+                sizes="(min-width: 1024px) 50vw, 100vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
 

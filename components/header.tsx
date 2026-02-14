@@ -56,6 +56,7 @@ export default function Header() {
               height={200}
               className="h-40 w-auto"
               priority
+              sizes="200px"
             />
           </div>
         </Link>
@@ -137,6 +138,8 @@ export default function Header() {
                   width={120}
                   height={120}
                   className="h-32 w-auto"
+                  loading="lazy"
+                  sizes="120px"
                 />
               </Link>
               <Link
