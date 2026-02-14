@@ -9,9 +9,7 @@ import { Suspense } from "react"
 import Script from "next/script"
 import dynamic from "next/dynamic"
 
-const CookieBanner = dynamic(() => import("@/components/cookie-banner"), {
-  ssr: false,
-})
+const CookieBanner = dynamic(() => import("@/components/cookie-banner"))
 
 const inter = Inter({ subsets: ["latin"] })
 
