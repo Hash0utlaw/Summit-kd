@@ -56,6 +56,7 @@ export default function Header() {
               height={200}
               className="h-40 w-auto"
               priority
+              sizes="200px"
             />
           </div>
         </Link>
@@ -64,50 +65,52 @@ export default function Header() {
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link href="/" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>Home</NavigationMenuLink>
-              </Link>
+              <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                <Link href="/">Home</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Services</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="w-[260px] p-2">
                   <li>
-                    <Link href="/services/residential-roofing" legacyBehavior passHref>
-                      <NavigationMenuLink
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="/services/residential-roofing"
                         className={cn(
                           "flex items-center gap-3 rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
                         )}
                       >
                         <Home className="h-4 w-4 text-orange-500" aria-hidden="true" />
                         <span className="font-medium">Residential</span>
-                      </NavigationMenuLink>
-                    </Link>
+                      </Link>
+                    </NavigationMenuLink>
                   </li>
                   <li>
-                    <Link href="/services/commercial-roofing" legacyBehavior passHref>
-                      <NavigationMenuLink
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="/services/commercial-roofing"
                         className={cn(
                           "mt-1 flex items-center gap-3 rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
                         )}
                       >
                         <Building className="h-4 w-4 text-blue-600" aria-hidden="true" />
                         <span className="font-medium">Commercial</span>
-                      </NavigationMenuLink>
-                    </Link>
+                      </Link>
+                    </NavigationMenuLink>
                   </li>
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/about" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>About Us</NavigationMenuLink>
-              </Link>
+              <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                <Link href="/about">About Us</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/gallery" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>Gallery</NavigationMenuLink>
-              </Link>
+              <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                <Link href="/gallery">Gallery</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
@@ -135,6 +138,8 @@ export default function Header() {
                   width={120}
                   height={120}
                   className="h-32 w-auto"
+                  loading="lazy"
+                  sizes="120px"
                 />
               </Link>
               <Link
