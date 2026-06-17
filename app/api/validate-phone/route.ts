@@ -4,8 +4,6 @@ export async function POST(request: NextRequest) {
   try {
     const { phone } = await request.json()
 
-    console.log("[v0] Phone validation requested for:", phone)
-
     // Validate input
     if (!phone || typeof phone !== "string") {
       return NextResponse.json({ error: "Phone number is required" }, { status: 400 })
@@ -31,7 +29,6 @@ export async function POST(request: NextRequest) {
     const apiKey = process.env.TRESTLE_API_KEY
 
     if (!apiKey) {
-      console.error("[v0] TRESTLE_API_KEY not found in environment variables")
       // Fallback: Accept with warning
       return NextResponse.json({
         valid: true,
@@ -41,8 +38,6 @@ export async function POST(request: NextRequest) {
         phone: digits,
       })
     }
-
-    console.log("[v0] Calling Trestle API for phone:", digits)
 
     const trestleResponse = await fetch(
       `https://api.trestleiq.com/3.0/phone_intel?phone=${digits}&phone.country_hint=US`,
@@ -55,9 +50,6 @@ export async function POST(request: NextRequest) {
     )
 
     if (!trestleResponse.ok) {
-      const errorText = await trestleResponse.text()
-      console.error("[v0] Trestle API error:", trestleResponse.status, errorText)
-
       // Fallback: Accept with warning
       return NextResponse.json({
         valid: true,
@@ -69,7 +61,6 @@ export async function POST(request: NextRequest) {
     }
 
     const trestleData = await trestleResponse.json()
-    console.log("[v0] Trestle API response:", trestleData)
 
     // Extract relevant data
     const activityScore = trestleData.activity_score || 0
@@ -99,7 +90,7 @@ export async function POST(request: NextRequest) {
       carrier,
     })
   } catch (error) {
-    console.error("[v0] Phone validation error:", error)
+    console.error("Phone validation error:", error)
 
     // Fallback: Accept with warning
     return NextResponse.json({

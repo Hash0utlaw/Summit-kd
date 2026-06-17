@@ -3,7 +3,7 @@ import { getBlogPosts, getBlogCategories } from "@/lib/blog"
 
 // Constants for better maintainability
 const BASE_URL = "https://www.summitroofingprofessionals.com"
-const LAST_MAJOR_UPDATE = new Date("2025-10-17")
+const LAST_MAJOR_UPDATE = new Date("2026-06-17")
 
 // Priority levels for clarity
 const PRIORITIES = {
@@ -67,6 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Conversion pages
     { url: "/insurance-claims", config: "conversion" },
+    { url: "/storm-claim", config: "conversion" },
     { url: "/financing", config: "low" },
 
     // Blog

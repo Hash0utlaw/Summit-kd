@@ -44,7 +44,7 @@ export default function EnergyEfficientPage() {
       <ServicePageHero
         title="Energy-Efficient Roofing Systems"
         subtitle="Lower your energy bills and improve your building's comfort with our cool roofing solutions."
-        imageUrl="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/flat-roof-commerical-repair-hero-OvLUFzbpRsVmSkZO5aebzfYXI1F24b.png"
+        imageUrl="/images/commercial/flat-roof-repair-hero.png"
       />
 
       <section className="py-16 md:py-24 bg-white">

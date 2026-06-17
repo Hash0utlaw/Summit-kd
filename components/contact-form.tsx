@@ -165,8 +165,6 @@ export default function ContactForm() {
     }
 
     try {
-      console.log("[v0] Calling Trestle API for phone:", digits)
-
       const response = await fetch("/api/validate-phone", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -174,10 +172,8 @@ export default function ContactForm() {
       })
 
       const data = await response.json()
-      console.log("[v0] Trestle API response:", data)
 
       if (!response.ok) {
-        console.log("[v0] Trestle API error, falling back to basic validation")
         setIsPhoneValidated(true)
         setPhoneActivityScore(null)
         return { valid: true, fallback: true }
@@ -197,7 +193,6 @@ export default function ContactForm() {
         return { valid: true, score: data.activityScore }
       }
     } catch (error) {
-      console.log("[v0] Phone validation error:", error)
       setIsPhoneValidated(true)
       setPhoneActivityScore(null)
       return { valid: true, fallback: true }
@@ -335,9 +330,6 @@ export default function ContactForm() {
 
   useEffect(() => {
     window.gm_authFailure = () => {
-      console.log(
-        "[v0] Google Maps API key restricted for this domain. Address autocomplete disabled, manual entry enabled.",
-      )
       setAutocompleteAvailable(false)
     }
   }, [])
@@ -419,7 +411,6 @@ export default function ContactForm() {
 
           setAutocompleteAvailable(true)
         } catch (error) {
-          console.log("[v0] Google Maps autocomplete initialization failed. Manual entry enabled.")
           setAutocompleteAvailable(false)
         }
       }
@@ -438,7 +429,6 @@ export default function ContactForm() {
       setTimeout(() => {
         clearInterval(checkGoogleMaps)
         if (!window.google?.maps?.places) {
-          console.log("[v0] Google Maps API not loaded. Manual address entry enabled.")
           setAutocompleteAvailable(false)
         }
       }, 5000)
@@ -499,41 +489,31 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    console.log("[v0] Form submission started")
-
     if (!validatePhone(phone)) {
       setPhoneError("Please enter a valid 10-digit phone number")
-      console.log("[v0] Phone validation failed")
       return
     }
 
     if (!email || !validateEmail(email)) {
       setEmailError("Please enter a valid email address")
-      console.log("[v0] Email validation failed")
       return
     }
 
     if (!isPhoneValidated) {
-      console.log("[v0] Phone not validated yet, validating now...")
       await validatePhoneWithTrestle(phone)
     }
 
     const currentAddress = addressInputRef.current?.value || ""
-    console.log("[v0] Current address:", currentAddress)
-    console.log("[v0] Last validated address:", lastValidatedAddress)
-    console.log("[v0] Is address validated:", isAddressValidated)
 
     if (!isAddressValidated || currentAddress !== lastValidatedAddress) {
       setAddressError("Please select a valid address from the dropdown or complete your address entry.")
       setValidationError("Address validation required before submission.")
-      console.log("[v0] Address validation failed - not validated or address changed")
       return
     }
 
     if (autocompleteAvailable) {
       if (!addressComponents.street || !addressComponents.city || !addressComponents.state || !addressComponents.zip) {
         setAddressError("Please select a complete address from the dropdown suggestions, including zip code.")
-        console.log("[v0] Address components incomplete:", addressComponents)
         return
       }
 
@@ -543,7 +523,6 @@ export default function ContactForm() {
         setAddressError(result.error || "Invalid address")
         setValidationError(result.error || "Invalid address")
         setIsAddressValidated(false)
-        console.log("[v0] Address validation failed:", result.error)
         return
       }
 
@@ -561,7 +540,6 @@ export default function ContactForm() {
         setAddressError(result.error || "Invalid address")
         setValidationError(result.error || "Invalid address")
         setIsAddressValidated(false)
-        console.log("[v0] Manual address validation failed:", result.error)
         return
       }
 
@@ -589,23 +567,7 @@ export default function ContactForm() {
     formData.set("phoneValidationStatus", phoneValidationStatus)
     formData.set("email", email)
 
-    console.log("[v0] Form data prepared, calling server action...")
-    console.log("[v0] Form data contents:", {
-      fullName: formData.get("fullName"),
-      phone: formData.get("phone"),
-      phoneValidated: formData.get("phoneValidated"),
-      phoneActivityScore: formData.get("phoneActivityScore"),
-      phoneValidationStatus: formData.get("phoneValidationStatus"),
-      address: formData.get("address"),
-      state: formData.get("state"),
-      zip: formData.get("zip"),
-      validatedState: formData.get("validatedState"),
-      validatedZip: formData.get("validatedZip"),
-      email: formData.get("email"),
-    })
-
     startTransition(() => {
-      console.log("[v0] Calling formAction (sendContactEmail)...")
       formAction(formData)
     })
   }
