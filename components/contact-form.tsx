@@ -112,7 +112,7 @@ const validateCompleteAddress = (
 
 export default function ContactForm() {
   const [state, formAction] = useActionState(sendContactEmail, initialState)
-  const [isPending, startTransition] = useTransition()
+  const [, startTransition] = useTransition()
   const [formKey, setFormKey] = useState(Date.now())
   const addressInputRef = useRef<HTMLInputElement>(null)
   const [addressError, setAddressError] = useState<string>("")
