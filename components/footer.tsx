@@ -101,6 +101,11 @@ export default function Footer() {
                   Insurance Claims
                 </Link>
               </li>
+              <li>
+                <Link href="/storm-claim" className="hover:text-white transition-colors">
+                  Storm Damage Claim
+                </Link>
+              </li>
             </ul>
           </div>
 

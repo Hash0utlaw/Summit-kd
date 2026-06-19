@@ -134,7 +134,7 @@ export default function StormDamageInsuranceLandingPage() {
       <ServicePageHero
         title="Storm Damaged Your Roof? We'll Handle Your Insurance Claim"
         subtitle="Free inspection • Expert claim assistance • Fast approval • Quality roof replacement"
-        imageUrl="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hail-hero-7R8Fr4voZJwC68inlLpWqNCQaaitJD.png"
+        imageUrl="/images/hail-hero.png"
         imageAlt="Storm damaged roof with hail damage requiring insurance claim assistance in Alabama and Georgia"
       />
 

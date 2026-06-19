@@ -44,7 +44,7 @@ export default function InspectionsMaintenancePage() {
       <ServicePageHero
         title="Roof Inspections & Maintenance"
         subtitle="Protect your investment with proactive inspections and preventative maintenance plans."
-        imageUrl="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/flat-roof-commerical-repair-hero-OvLUFzbpRsVmSkZO5aebzfYXI1F24b.png"
+        imageUrl="/images/commercial/flat-roof-repair-hero.png"
       />
 
       <section className="py-16 md:py-24 bg-white">

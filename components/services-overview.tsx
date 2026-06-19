@@ -25,7 +25,7 @@ const services = [
     title: "Roof Repairs & Insurance Claims",
     description:
       "From storm damage to leaks, we offer fast, reliable repairs and expert assistance with insurance claims.",
-    imageUrl: "/images/roof-damage-hail.png",
+    imageUrl: "/images/hail-hero.png",
     imageAlt: "Close-up of hail damage on a shingle roof, a common reason for roof repairs and insurance claims.",
     href: "/services/roof-repairs",
   },

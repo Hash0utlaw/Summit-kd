@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Script from "next/script"
 
+
 export const metadata: Metadata = {
   title: "Contact Summit Roofing | Free Quotes 7 Days a Week",
   description:
@@ -62,16 +63,6 @@ export default function ContactPage() {
 
   return (
     <>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=AW-16871498775" strategy="afterInteractive" />
-      <Script id="google-analytics-contact" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-16871498775');
-        `}
-      </Script>
-
       {googleMapsApiKey && (
         <Script
           src={`https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&libraries=places`}

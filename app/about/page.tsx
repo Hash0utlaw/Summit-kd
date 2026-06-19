@@ -115,6 +115,7 @@ export default function AboutPage() {
                   {item.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800">{item.title}</h3>
+                <p className="mt-2 text-sm text-gray-600 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>

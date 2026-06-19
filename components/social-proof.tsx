@@ -14,7 +14,7 @@ const featuredReviews = [
     name: "Bill P.",
     location: "Georgia",
     review: "This team is highly professional, hard-working, conscientious, and so very courteous! You get an A+.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8435.PNG-kHcxPRiMJUmvv5ALmv0d3Ieh2Sy3Ph.jpeg",
+    image: "/images/testimonials/bill-p-review.jpeg",
     rating: 5,
   },
   {
@@ -22,7 +22,7 @@ const featuredReviews = [
     location: "Georgia",
     review:
       "They got my insurance to pay so it didn't cost me a dollar! The team was super professional, quick, and friendly.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8443.PNG-SOft8s856MTd8SjxEp1uvij3H9eGvZ.jpeg",
+    image: "/images/testimonials/caitlin-foley.jpeg",
     rating: 5,
   },
 ]
