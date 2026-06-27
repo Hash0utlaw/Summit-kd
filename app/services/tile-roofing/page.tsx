@@ -8,7 +8,46 @@ import { ShieldCheck, Sun, Palette } from "lucide-react"
 export const metadata: Metadata = {
   title: "Tile Roofing Services in AL & GA | Summit Roofing",
   description:
-    "Choose durable and aesthetically pleasing tile roofing for your home. Summit Roofing Professionals offers expert installation and repair for clay and concrete tile roofs in Alabama & Georgia. Get a free quote!",
+    "Durable clay and concrete tile roofing for homes in Alabama & Georgia. Classic elegance with superior longevity — expert installation and repair. Get a free quote today.",
+  keywords: [
+    "tile roofing Alabama",
+    "tile roofing Georgia",
+    "clay tile roof installation",
+    "concrete tile roof",
+    "tile roof repair AL GA",
+    "tile roof contractor",
+    "terracotta roof Alabama Georgia",
+    "tile roof cost estimate",
+  ],
+  openGraph: {
+    title: "Tile Roofing Services in AL & GA | Summit Roofing",
+    description:
+      "Durable clay and concrete tile roofing for homes in Alabama & Georgia. Classic elegance with superior longevity — expert installation and repair.",
+    url: "/services/tile-roofing",
+    siteName: "Summit Roofing Professionals",
+    images: [
+      {
+        url: "/images/tile/gallery-2.png",
+        width: 1200,
+        height: 630,
+        alt: "Tile roofing installed by Summit Roofing Professionals in Alabama and Georgia",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tile Roofing Services in AL & GA | Summit Roofing",
+    description:
+      "Durable clay and concrete tile roofing for homes in Alabama & Georgia. Expert installation and repair. Free quote available.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/services/tile-roofing",
+  },
 }
 
 const tileFaqs = [

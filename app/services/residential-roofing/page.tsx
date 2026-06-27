@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import ServicePageHero from "@/components/service-page-hero"
 import FaqSection from "@/components/faq-section"
 import CtaSection from "@/components/cta-section"
@@ -10,6 +11,47 @@ export const metadata: Metadata = {
   title: "Residential Roofing in AL & GA | Summit Roofing",
   description:
     "Expert residential roofing services, including new roof installation, replacement, and high-quality shingle options for your home in Alabama and Georgia.",
+  keywords: [
+    "residential roofing Alabama",
+    "residential roofing Georgia",
+    "new roof installation AL GA",
+    "roof replacement Alabama",
+    "roof replacement Georgia",
+    "residential roofing contractor",
+    "asphalt shingles",
+    "architectural shingles",
+    "roof repair Alabama",
+    "roof repair Georgia",
+  ],
+  openGraph: {
+    title: "Residential Roofing in AL & GA | Summit Roofing",
+    description:
+      "Expert residential roofing services, including new roof installation, replacement, and high-quality shingle options for your home in Alabama and Georgia.",
+    url: "/services/residential-roofing",
+    siteName: "Summit Roofing Professionals",
+    images: [
+      {
+        url: "/images/projects/auburn-residential-1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "New residential roof installation by Summit Roofing Professionals in Alabama",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Residential Roofing in AL & GA | Summit Roofing",
+    description:
+      "Expert residential roofing services, including new roof installation, replacement, and high-quality shingle options for your home in Alabama and Georgia.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/services/residential-roofing",
+  },
 }
 
 const residentialFaqs = [
@@ -89,7 +131,7 @@ export default function ResidentialRoofingPage() {
         title="Expert Residential Roofing"
         subtitle="Protecting your home and family with durable, high-quality roofing solutions."
         imageUrl="/images/projects/auburn-residential-1.jpeg"
-        altText="Beautiful new architectural shingle roof on a suburban home with vibrant pink flowers in the foreground."
+        imageAlt="Beautiful new architectural shingle roof on a suburban home with vibrant pink flowers in the foreground."
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -103,9 +145,11 @@ export default function ResidentialRoofingPage() {
           </div>
           <div className="mt-12 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <img
+              <Image
                 src="/images/projects/auburn-residential-2.jpeg"
                 alt="Happy family in front of their home with a new Summit Roofing roof"
+                width={600}
+                height={450}
                 className="rounded-lg shadow-lg"
               />
             </div>
@@ -141,9 +185,11 @@ export default function ResidentialRoofingPage() {
               <Card key={service.title} className="overflow-hidden flex flex-col">
                 <Link href={service.href} className="block group h-full flex flex-col">
                   <div className="overflow-hidden">
-                    <img
+                    <Image
                       src={service.imageUrl || "/placeholder.svg"}
                       alt={`A photo showcasing ${service.title} roofing by Summit Roofing`}
+                      width={400}
+                      height={192}
                       className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>

@@ -7,7 +7,26 @@ import { Leaf, DollarSign, Thermometer, Shield, CheckCircle, TrendingDown } from
 export const metadata: Metadata = {
   title: "Energy-Efficient Roofing Systems | Summit Roofing",
   description:
-    "Reduce your cooling costs with energy-efficient roofing solutions. Summit Roofing Professionals offers expert installation of cool roofs and reflective coatings. Get a free estimate!",
+    "Reduce cooling costs with energy-efficient cool roofs and reflective coatings for commercial properties in Alabama & Georgia. Expert installation. Free estimate.",
+  keywords: [
+    "energy efficient roofing Alabama Georgia",
+    "cool roof commercial",
+    "reflective roof coating",
+    "green roofing commercial",
+    "reduce cooling costs roofing",
+    "ENERGY STAR roofing contractor",
+  ],
+  openGraph: {
+    title: "Energy-Efficient Roofing Systems | Summit Roofing",
+    description: "Reduce cooling costs with cool roofs and reflective coatings for commercial properties in Alabama & Georgia. Expert installation.",
+    url: "/services/commercial/energy-efficient",
+    siteName: "Summit Roofing Professionals",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Energy-efficient roofing systems by Summit Roofing Professionals" }],
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title: "Energy-Efficient Roofing Systems | Summit Roofing", description: "Cool roofs and reflective coatings that cut commercial cooling costs in Alabama & Georgia." },
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/services/commercial/energy-efficient" },
 }
 
 const energyFaqs = [

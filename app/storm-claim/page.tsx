@@ -8,7 +8,7 @@ import { Shield, FileCheck, Clock, Phone, CheckCircle2, AlertTriangle, DollarSig
 export const metadata: Metadata = {
   title: "Storm Damage Roof Insurance Claims | Free Inspection",
   description:
-    "Hail or storm damage to your roof? Get a free inspection and expert help with your insurance claim. We handle everything from documentation to working with adjusters. Serving Alabama & Georgia.",
+    "Hail or storm damage to your roof? Get a free inspection and expert help filing your insurance claim. We handle documentation and adjuster meetings in Alabama & Georgia.",
   keywords: [
     "hail damage roof insurance claim",
     "roof damage insurance claim",
@@ -18,13 +18,34 @@ export const metadata: Metadata = {
     "roof claim",
     "insurance roofing",
     "roof replacement",
-    "new roof",
-    "roof replacement services",
     "making an insurance claim on your roof",
-    "roof claim company",
+    "roof claim company Alabama",
+    "roof claim company Georgia",
   ],
+  openGraph: {
+    title: "Storm Damage Roof Insurance Claims | Free Inspection",
+    description:
+      "Hail or storm damage? Get a free inspection and expert help filing your insurance claim. We handle documentation and adjuster meetings in Alabama & Georgia.",
+    url: "/storm-claim",
+    siteName: "Summit Roofing Professionals",
+    images: [
+      {
+        url: "/images/hail-hero.png",
+        width: 1200,
+        height: 630,
+        alt: "Storm-damaged roof shingles — Summit Roofing Professionals handles insurance claims in Alabama and Georgia",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Storm Damage Roof Insurance Claims | Free Inspection",
+    description:
+      "Hail or storm damage? Get a free inspection and expert help filing your insurance claim in Alabama & Georgia.",
+  },
   alternates: {
-    canonical: "/storm-claim", // Updated canonical URL to match new page location
+    canonical: "/storm-claim",
   },
   robots: {
     index: true,

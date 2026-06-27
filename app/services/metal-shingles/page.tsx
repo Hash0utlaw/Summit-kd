@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import ServicePageHero from "@/components/service-page-hero"
 import FaqSection from "@/components/faq-section"
 import CtaSection from "@/components/cta-section"
@@ -7,7 +8,47 @@ import { Feather, Zap, RefreshCw } from "lucide-react"
 export const metadata: Metadata = {
   title: "Metal Roofing in AL & GA | Summit Roofing",
   description:
-    "Explore modern metal roofing options, including durable metal shingles and sleek standing seam roofs. Summit Roofing provides expert installation in Alabama & Georgia. Get a free estimate!",
+    "Durable metal shingles and standing seam systems installed by experts in Alabama & Georgia. 40–70 year lifespan, energy savings, and superior storm resistance. Free estimate.",
+  keywords: [
+    "metal roofing Alabama",
+    "metal roofing Georgia",
+    "metal shingles",
+    "standing seam metal roof",
+    "metal roof installation",
+    "energy efficient roofing",
+    "metal roofing contractor AL GA",
+    "durable metal roof",
+    "metal roof replacement",
+  ],
+  openGraph: {
+    title: "Metal Roofing in AL & GA | Summit Roofing",
+    description:
+      "Durable metal shingles and standing seam systems installed by experts in Alabama & Georgia. 40–70 year lifespan, energy savings, and superior storm resistance.",
+    url: "/services/metal-shingles",
+    siteName: "Summit Roofing Professionals",
+    images: [
+      {
+        url: "/images/metal/metal-hero.png",
+        width: 1200,
+        height: 630,
+        alt: "Metal roofing installation by Summit Roofing Professionals in Alabama and Georgia",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Metal Roofing in AL & GA | Summit Roofing",
+    description:
+      "Durable metal shingles and standing seam systems installed by experts in Alabama & Georgia. 40–70 year lifespan, energy savings, and superior storm resistance.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/services/metal-shingles",
+  },
 }
 
 const metalFaqs = [
@@ -87,9 +128,11 @@ export default function MetalShinglesPage() {
               </ul>
             </div>
             <div>
-              <img
+              <Image
                 src="/images/metal/metal-roofing.png"
                 alt="Modern home with a sleek standing seam metal roof and skylights"
+                width={600}
+                height={450}
                 className="rounded-lg shadow-lg"
               />
             </div>

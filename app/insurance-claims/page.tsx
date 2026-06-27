@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import ServicePageHero from "@/components/service-page-hero"
 import CtaSection from "@/components/cta-section"
 import FaqSection from "@/components/faq-section"
@@ -8,7 +9,43 @@ import { FileText, Search, Users, Award } from "lucide-react"
 export const metadata: Metadata = {
   title: "Roof Insurance Claims Assistance | Summit Roofing",
   description:
-    "Don't navigate your roof insurance claim alone. Summit Roofing offers expert assistance with storm damage assessment, documentation, and working with adjusters in Alabama & Georgia. Get a free inspection today!",
+    "Don't navigate your roof insurance claim alone. Expert storm damage assessment, documentation, and adjuster representation in Alabama & Georgia. Get a free inspection today.",
+  keywords: [
+    "roof insurance claims Alabama",
+    "roof insurance claims Georgia",
+    "storm damage roof claim",
+    "hail damage roof insurance",
+    "insurance adjuster roofing",
+    "roof claim assistance",
+    "free roof inspection insurance",
+    "roof damage documentation",
+  ],
+  openGraph: {
+    title: "Roof Insurance Claims Assistance | Summit Roofing",
+    description:
+      "Expert storm damage assessment, documentation, and adjuster representation for roof insurance claims in Alabama & Georgia. Free inspection available.",
+    url: "/insurance-claims",
+    siteName: "Summit Roofing Professionals",
+    images: [
+      {
+        url: "/images/hail-hero.png",
+        width: 1200,
+        height: 630,
+        alt: "Hail-damaged roof shingles — Summit Roofing handles insurance claims in Alabama and Georgia",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Roof Insurance Claims Assistance | Summit Roofing",
+    description:
+      "Expert storm damage assessment and adjuster representation for roof insurance claims in Alabama & Georgia.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   alternates: {
     canonical: "/insurance-claims",
   },
@@ -163,11 +200,11 @@ export default function InsuranceClaimsPage() {
               </div>
             </div>
             <div className="relative">
-              <img
+              <Image
                 src="/images/insurance-claims-work-in-progress.jpg"
                 alt="Aerial view of Summit Roofing crew actively replacing storm-damaged roof with new shingles during insurance claim work"
-                width={1920}
-                height={1080}
+                width={960}
+                height={540}
                 className="rounded-lg shadow-lg w-full h-auto object-cover"
               />
             </div>

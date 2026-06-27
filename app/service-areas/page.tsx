@@ -7,7 +7,35 @@ import { MapPin, Shield, Clock, Award } from "lucide-react"
 export const metadata: Metadata = {
   title: "Our Service Areas in AL & GA | Summit Roofing",
   description:
-    "Summit Roofing Professionals proudly serves communities across Alabama and Georgia. Find your local roofing expert in Birmingham, Atlanta, and more.",
+    "Summit Roofing Professionals serves communities across Alabama and Georgia — Birmingham, Atlanta, Huntsville, Mobile, Montgomery, Augusta, Columbus, and Tuscaloosa.",
+  keywords: [
+    "roofing service areas Alabama Georgia",
+    "Birmingham roofing",
+    "Atlanta roofing",
+    "Huntsville roofing",
+    "Mobile roofing",
+    "Montgomery roofing",
+    "Columbus GA roofing",
+    "Augusta roofing",
+    "Tuscaloosa roofing",
+    "local roofing contractor AL GA",
+  ],
+  openGraph: {
+    title: "Our Service Areas in AL & GA | Summit Roofing",
+    description:
+      "Summit Roofing Professionals serves Birmingham, Atlanta, Huntsville, Mobile, Montgomery, Augusta, Columbus, and Tuscaloosa — and surrounding communities.",
+    url: "/service-areas",
+    siteName: "Summit Roofing Professionals",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Summit Roofing service areas across Alabama and Georgia" }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Service Areas in AL & GA | Summit Roofing",
+    description: "Summit Roofing serves Birmingham, Atlanta, Huntsville, Mobile, Montgomery, Augusta, Columbus, Tuscaloosa, and surrounding areas.",
+  },
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/service-areas" },
 }
 
 const serviceLocations = [

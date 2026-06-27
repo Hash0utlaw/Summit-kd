@@ -8,7 +8,46 @@ import Image from "next/image"
 export const metadata: Metadata = {
   title: "Slate Roofing Services in AL & GA | Summit Roofing",
   description:
-    "Discover the elegance and longevity of slate roofing. Summit Roofing Professionals offers expert installation and repair services for slate roofs in Alabama & Georgia. Get a free estimate!",
+    "Elegant, century-lasting slate roofing installed and repaired by experts in Alabama & Georgia. Natural slate adds timeless beauty and unmatched durability. Free estimate.",
+  keywords: [
+    "slate roofing Alabama",
+    "slate roofing Georgia",
+    "natural slate roof installation",
+    "slate roof repair",
+    "slate roof contractor AL GA",
+    "slate roof cost estimate",
+    "100 year roof AL GA",
+    "luxury roofing Alabama Georgia",
+  ],
+  openGraph: {
+    title: "Slate Roofing Services in AL & GA | Summit Roofing",
+    description:
+      "Elegant, century-lasting slate roofing installed and repaired by experts in Alabama & Georgia. Timeless beauty with unmatched durability.",
+    url: "/services/slate-roofing",
+    siteName: "Summit Roofing Professionals",
+    images: [
+      {
+        url: "/images/slate/slate-main.png",
+        width: 1200,
+        height: 630,
+        alt: "Natural slate roofing installed by Summit Roofing Professionals in Alabama and Georgia",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Slate Roofing Services in AL & GA | Summit Roofing",
+    description:
+      "Elegant, century-lasting slate roofing installed and repaired in Alabama & Georgia. Free estimate available.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/services/slate-roofing",
+  },
 }
 
 const slateFaqs = [

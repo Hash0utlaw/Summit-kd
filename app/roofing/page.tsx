@@ -20,9 +20,9 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Residential Roofing Contractors Near Me | Roof Repair & Installation",
+  title: "Roofing Contractors Near Me | Summit Roofing",
   description:
-    "Expert residential roofing contractors for roof repair near me, emergency roof leak repair, new roof installation, hail damage repair & roof inspection services. Licensed & insured. Get your free roof replacement quote & cost estimate today!",
+    "Expert roofing contractors offering roof repair, new installation, hail damage repair, and emergency services in Alabama & Georgia. Free inspections & cost estimates.",
   keywords: [
     "residential roofing contractors",
     "new roof installation",
@@ -32,21 +32,42 @@ export const metadata: Metadata = {
     "residential roof replacement",
     "roof replacement contractors",
     "roof replacement cost estimate",
-    "roof replacement quote",
-    "roof repair services",
-    "roof installation contractors",
     "hail damage roof repair",
+    "storm damage roof repair",
     "roof leak repair near me",
     "roof replacement near me",
     "new roof cost",
-    "residential roof repair near me",
-    "storm damage roof repair",
+    "Alabama roofing contractor",
+    "Georgia roofing contractor",
   ],
   openGraph: {
-    title: "Residential Roofing Contractors Near Me | Summit Roofing",
+    title: "Roofing Contractors Near Me | Summit Roofing",
     description:
-      "Expert roof repair near me, emergency leak repair, new roof installation & hail damage repair. Free roof replacement quote & cost estimate. Licensed & insured.",
+      "Expert roofing contractors offering roof repair, new installation, hail damage repair, and emergency services in Alabama & Georgia. Free inspections & estimates.",
     type: "website",
+    url: "/roofing",
+    siteName: "Summit Roofing Professionals",
+    images: [
+      {
+        url: "/images/roofer-craftsmanship-sunset.png",
+        width: 1200,
+        height: 630,
+        alt: "Professional roofing contractors at work — Summit Roofing Professionals",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Roofing Contractors Near Me | Summit Roofing",
+    description:
+      "Expert roofing contractors offering roof repair, new installation, hail damage repair, and emergency services in Alabama & Georgia. Free inspections & estimates.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/roofing",
   },
 }
 

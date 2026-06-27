@@ -11,6 +11,17 @@ export const metadata: Metadata = {
   title: "Architectural Shingles in AL & GA | Summit Roofing",
   description:
     "Professional architectural shingle installation in Alabama and Georgia. GAF Master Elite contractors offering premium shingles with superior warranties and craftsmanship.",
+  keywords: [
+    "architectural shingles Alabama",
+    "architectural shingles Georgia",
+    "dimensional shingles",
+    "GAF Master Elite contractor",
+    "architectural shingle installation",
+    "asphalt shingle roof replacement",
+    "best roofing shingles AL GA",
+    "shingle roof cost estimate",
+    "50 year shingle warranty",
+  ],
   openGraph: {
     title: "Architectural Shingles in AL & GA | Summit Roofing",
     description:
@@ -122,7 +133,7 @@ export default function ArchitecturalShinglesPage() {
         title="Architectural Shingles"
         subtitle="Premium dimensional shingles combining beauty, durability, and value for your home"
         imageUrl="/images/residential/gallery/architectural-shingle-estate.jpeg"
-        altText="Professional architectural shingle installation showcasing dimensional design and superior craftsmanship"
+        imageAlt="Professional architectural shingle installation showcasing dimensional design and superior craftsmanship"
       />
 
       {/* Introduction Section */}

@@ -3,7 +3,7 @@ import { getBlogPosts, getBlogCategories } from "@/lib/blog"
 
 // Constants for better maintainability
 const BASE_URL = "https://www.summitroofingprofessionals.com"
-const LAST_MAJOR_UPDATE = new Date("2026-06-17")
+const LAST_MAJOR_UPDATE = new Date("2026-06-26")
 
 // Priority levels for clarity
 const PRIORITIES = {

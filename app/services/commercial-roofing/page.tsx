@@ -9,6 +9,46 @@ export const metadata: Metadata = {
   title: "Commercial Roofing in AL & GA | Summit Roofing",
   description:
     "Specialized commercial roofing services including TPO, EPDM, Modified Bitumen, and more for businesses in Alabama and Georgia. Durable, energy-efficient solutions.",
+  keywords: [
+    "commercial roofing Alabama",
+    "commercial roofing Georgia",
+    "TPO roofing",
+    "EPDM roofing",
+    "modified bitumen roofing",
+    "flat roof contractor AL GA",
+    "commercial roof replacement",
+    "commercial roof repair",
+    "energy efficient commercial roofing",
+  ],
+  openGraph: {
+    title: "Commercial Roofing in AL & GA | Summit Roofing",
+    description:
+      "Specialized commercial roofing services including TPO, EPDM, Modified Bitumen, and more for businesses in Alabama and Georgia. Durable, energy-efficient solutions.",
+    url: "/services/commercial-roofing",
+    siteName: "Summit Roofing Professionals",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Commercial roofing services by Summit Roofing Professionals in Alabama and Georgia",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Commercial Roofing in AL & GA | Summit Roofing",
+    description:
+      "TPO, EPDM, Modified Bitumen, and more for businesses in Alabama and Georgia. Durable, energy-efficient commercial roofing.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/services/commercial-roofing",
+  },
 }
 
 const commercialServices: {

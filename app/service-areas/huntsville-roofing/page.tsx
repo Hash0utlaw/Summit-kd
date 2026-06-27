@@ -6,12 +6,45 @@ import { CheckCircle } from "lucide-react"
 export const metadata: Metadata = {
   title: "Huntsville Roofing Contractor | Summit Roofing",
   description:
-    "Your trusted local roofing experts in Huntsville, AL. We offer premier residential and commercial roofing services, from new installations to emergency repairs.",
+    "Trusted roofing experts in Huntsville, AL — premier residential and commercial roofing, new installations, and emergency repairs. Free inspection available.",
+  keywords: [
+    "Huntsville roofing contractor",
+    "Huntsville AL roofing",
+    "roofing company Huntsville",
+    "roof repair Huntsville",
+    "roof replacement Huntsville AL",
+    "Huntsville roofer",
+    "Madison AL roofing",
+    "Decatur AL roofing",
+  ],
+  openGraph: {
+    title: "Huntsville Roofing Contractor | Summit Roofing",
+    description: "Trusted residential and commercial roofing experts in Huntsville, AL — new installations and emergency repairs. Free inspection.",
+    url: "/service-areas/huntsville-roofing",
+    siteName: "Summit Roofing Professionals",
+    images: [{ url: "/images/huntsville-skyline.png", width: 1200, height: 630, alt: "Summit Roofing Professionals serving Huntsville, Alabama" }],
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title: "Huntsville Roofing Contractor | Summit Roofing", description: "Residential and commercial roofing in Huntsville, AL. New installations and emergency repairs. Free inspection." },
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/service-areas/huntsville-roofing" },
+}
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  name: "Summit Roofing Professionals",
+  url: "https://www.summitroofingprofessionals.com/service-areas/huntsville-roofing",
+  telephone: "+1-704-578-4756",
+  address: { "@type": "PostalAddress", addressLocality: "Huntsville", addressRegion: "AL", addressCountry: "US" },
+  geo: { "@type": "GeoCoordinates", latitude: 34.730, longitude: -86.586 },
+  areaServed: { "@type": "City", name: "Huntsville" },
 }
 
 export default function HuntsvilleRoofingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
       <ServicePageHero
         title="Premier Roofing Services in Huntsville, AL"
         subtitle="Summit Roofing is proud to serve the Rocket City with unparalleled craftsmanship and reliable roofing solutions for homes and businesses."

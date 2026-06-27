@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Learn how Summit Roofing Professionals collects, uses, and protects your personal information. Read our privacy practices and your choices.",
   alternates: { canonical: "/privacy-policy" },
+  robots: { index: false, follow: false },
   openGraph: {
     title: "Privacy Policy | Summit Roofing Professionals",
     description:

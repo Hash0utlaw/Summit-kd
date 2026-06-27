@@ -5,11 +5,20 @@ import ServicePageHero from "@/components/service-page-hero"
 export const metadata: Metadata = {
   title: "Project Gallery | Summit Roofing Pros",
   description:
-    "View our portfolio of completed residential and commercial roofing projects in Alabama and Georgia. See the quality craftsmanship of Summit Roofing Professionals.",
+    "Browse completed residential and commercial roofing projects across Alabama and Georgia. See real results — shingle, metal, slate, and tile roofs by Summit Roofing Professionals.",
+  keywords: [
+    "roofing project gallery",
+    "completed roofing projects Alabama",
+    "completed roofing projects Georgia",
+    "roof replacement photos",
+    "roofing portfolio",
+    "before after roofing",
+    "Summit Roofing projects",
+  ],
   openGraph: {
     title: "Project Gallery | Summit Roofing Pros",
     description:
-      "View our portfolio of completed residential and commercial roofing projects in Alabama and Georgia. See the quality craftsmanship of Summit Roofing Professionals.",
+      "Browse completed residential and commercial roofing projects across Alabama and Georgia. Shingle, metal, slate, and tile roofs by Summit Roofing Professionals.",
     url: "/gallery",
     siteName: "Summit Roofing Professionals",
     images: [
@@ -21,6 +30,12 @@ export const metadata: Metadata = {
       },
     ],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Project Gallery | Summit Roofing Pros",
+    description:
+      "Browse completed residential and commercial roofing projects across Alabama and Georgia by Summit Roofing Professionals.",
   },
   robots: {
     index: true,

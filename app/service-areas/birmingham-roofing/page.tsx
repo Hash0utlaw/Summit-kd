@@ -8,10 +8,30 @@ import { Home, Building, Wrench, FileText } from "lucide-react"
 export const metadata: Metadata = {
   title: "Birmingham Roofing Contractors | Summit Roofing",
   description:
-    "Expert roofing services in Birmingham, AL. We specialize in roof replacement, repairs, and insurance claims for Birmingham homeowners and businesses. Get your free inspection!",
-  alternates: {
-    canonical: "/service-areas/birmingham-roofing",
+    "Expert roofing services in Birmingham, AL. Roof replacement, repairs, and insurance claims for Birmingham homeowners and businesses. Get your free inspection today.",
+  keywords: [
+    "Birmingham roofing contractors",
+    "Birmingham AL roofing",
+    "roofing company Birmingham",
+    "roof repair Birmingham",
+    "roof replacement Birmingham AL",
+    "commercial roofing Birmingham",
+    "Birmingham roofer",
+    "Hoover roofing",
+    "Vestavia Hills roofing",
+  ],
+  openGraph: {
+    title: "Birmingham Roofing Contractors | Summit Roofing",
+    description:
+      "Expert roofing services in Birmingham, AL — roof replacement, repairs, and insurance claims for homeowners and businesses.",
+    url: "/service-areas/birmingham-roofing",
+    siteName: "Summit Roofing Professionals",
+    images: [{ url: "/images/birmingham-skyline.png", width: 1200, height: 630, alt: "Summit Roofing Professionals serving Birmingham, Alabama" }],
+    type: "website",
   },
+  twitter: { card: "summary_large_image", title: "Birmingham Roofing Contractors | Summit Roofing", description: "Expert roofing in Birmingham, AL — replacement, repairs, and insurance claims. Free inspection." },
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/service-areas/birmingham-roofing" },
 }
 
 const birminghamServices = [
@@ -21,9 +41,21 @@ const birminghamServices = [
   { icon: FileText, title: "Insurance Claims", href: "/insurance-claims" },
 ]
 
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  name: "Summit Roofing Professionals",
+  url: "https://www.summitroofingprofessionals.com/service-areas/birmingham-roofing",
+  telephone: "+1-704-578-4756",
+  address: { "@type": "PostalAddress", addressLocality: "Birmingham", addressRegion: "AL", addressCountry: "US" },
+  geo: { "@type": "GeoCoordinates", latitude: 33.519, longitude: -86.809 },
+  areaServed: { "@type": "City", name: "Birmingham" },
+}
+
 export default function BirminghamPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
       <ServicePageHero
         title="Your Trusted Roofing Experts in Birmingham, AL"
         subtitle="Providing top-quality roof replacements, repairs, and insurance claim assistance to the Greater Birmingham community."

@@ -36,10 +36,10 @@ export default function ContactCta() {
           <div className="bg-white p-8 rounded-lg shadow-2xl text-gray-800">
             <h3 className="text-2xl font-bold mb-6">Request a Free Estimate</h3>
             <form className="space-y-4">
-              <Input placeholder="Your Name" />
-              <Input type="tel" placeholder="Phone Number" />
-              <Input type="email" placeholder="Email Address" />
-              <Textarea placeholder="How can we help you?" />
+              <Input placeholder="Your Name" aria-label="Your name" />
+              <Input type="tel" placeholder="Phone Number" aria-label="Your phone number" />
+              <Input type="email" placeholder="Email Address" aria-label="Your email address" />
+              <Textarea placeholder="How can we help you?" aria-label="How can we help you?" />
               <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 text-white" size="lg">
                 Submit Request
               </Button>

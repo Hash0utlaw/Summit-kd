@@ -7,7 +7,26 @@ import { Search, Calendar, Shield, Wrench, CheckCircle, AlertTriangle, FileText,
 export const metadata: Metadata = {
   title: "Roof Inspections & Maintenance Services | Summit Roofing",
   description:
-    "Ensure the longevity of your roof with comprehensive roof inspections and preventive maintenance. Summit Roofing Professionals offers expert services. Contact us today!",
+    "Comprehensive commercial roof inspections and preventive maintenance plans in Alabama & Georgia. Catch issues early and extend your roof's lifespan. Contact us today.",
+  keywords: [
+    "commercial roof inspection Alabama Georgia",
+    "commercial roof maintenance",
+    "roof preventive maintenance",
+    "flat roof inspection AL GA",
+    "roof maintenance plan",
+    "commercial roofing inspection company",
+  ],
+  openGraph: {
+    title: "Roof Inspections & Maintenance Services | Summit Roofing",
+    description: "Comprehensive commercial roof inspections and preventive maintenance in Alabama & Georgia. Catch issues early and extend your roof's lifespan.",
+    url: "/services/commercial/inspections-maintenance",
+    siteName: "Summit Roofing Professionals",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Commercial roof inspection by Summit Roofing Professionals" }],
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title: "Roof Inspections & Maintenance Services | Summit Roofing", description: "Commercial roof inspections and maintenance plans in Alabama & Georgia. Contact us today." },
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/services/commercial/inspections-maintenance" },
 }
 
 const inspectionFaqs = [

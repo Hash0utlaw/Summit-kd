@@ -8,7 +8,27 @@ import Image from "next/image"
 export const metadata: Metadata = {
   title: "Single-Ply TPO, EPDM, & PVC Roofing | Summit Roofing",
   description:
-    "Explore energy-efficient single-ply roofing solutions, including TPO, EPDM, and PVC. Summit Roofing provides expert installation and repair for commercial buildings. Contact us today!",
+    "Energy-efficient single-ply roofing in TPO, EPDM, and PVC for commercial buildings in Alabama & Georgia. Expert installation and repair by Summit Roofing. Free estimate.",
+  keywords: [
+    "TPO roofing Alabama Georgia",
+    "EPDM roofing",
+    "PVC roofing commercial",
+    "single-ply roofing contractor",
+    "flat roof TPO installation",
+    "commercial single-ply roofing",
+  ],
+  openGraph: {
+    title: "Single-Ply TPO, EPDM, & PVC Roofing | Summit Roofing",
+    description:
+      "Energy-efficient single-ply roofing in TPO, EPDM, and PVC for commercial buildings in Alabama & Georgia. Expert installation and repair.",
+    url: "/services/commercial/single-ply",
+    siteName: "Summit Roofing Professionals",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Single-ply TPO roofing by Summit Roofing Professionals" }],
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title: "Single-Ply TPO, EPDM, & PVC Roofing | Summit Roofing", description: "Energy-efficient single-ply commercial roofing in Alabama & Georgia. Free estimate." },
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/services/commercial/single-ply" },
 }
 
 const singlePlyFaqs = [

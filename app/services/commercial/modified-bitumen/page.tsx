@@ -8,7 +8,25 @@ import Image from "next/image"
 export const metadata: Metadata = {
   title: "Modified Bitumen Roofing Services | Summit Roofing",
   description:
-    "Discover the durability and flexibility of modified bitumen roofing for your commercial property. Summit Roofing Professionals offers expert installation and repair services. Get a free estimate!",
+    "Durable and flexible modified bitumen roofing for commercial properties in Alabama & Georgia. Expert installation and repair by Summit Roofing Professionals. Free estimate.",
+  keywords: [
+    "modified bitumen roofing Alabama Georgia",
+    "mod bit roofing",
+    "commercial bitumen roof",
+    "modified bitumen roof installation",
+    "commercial roofing contractor AL GA",
+  ],
+  openGraph: {
+    title: "Modified Bitumen Roofing Services | Summit Roofing",
+    description: "Durable modified bitumen roofing for commercial properties in Alabama & Georgia. Expert installation and repair. Free estimate.",
+    url: "/services/commercial/modified-bitumen",
+    siteName: "Summit Roofing Professionals",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Modified bitumen roofing by Summit Roofing Professionals" }],
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title: "Modified Bitumen Roofing Services | Summit Roofing", description: "Durable commercial modified bitumen roofing in Alabama & Georgia. Free estimate." },
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/services/commercial/modified-bitumen" },
 }
 
 const modBitFaqs = [

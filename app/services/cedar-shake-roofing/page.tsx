@@ -8,7 +8,45 @@ import Image from "next/image"
 export const metadata: Metadata = {
   title: "Cedar Shake Roofing in AL & GA | Summit Roofing",
   description:
-    "Enhance your home with the natural beauty and insulation of cedar shake roofing. Summit Roofing Professionals provides expert installation and repair services in Alabama & Georgia. Contact us today!",
+    "Enhance your home with the natural beauty and insulation of cedar shake roofing. Expert installation and repair in Alabama & Georgia. Get a free estimate today.",
+  keywords: [
+    "cedar shake roofing Alabama",
+    "cedar shake roofing Georgia",
+    "wood shake roof installation",
+    "cedar roof repair",
+    "natural wood roofing AL GA",
+    "cedar shake roof cost",
+    "cedar shake contractor",
+  ],
+  openGraph: {
+    title: "Cedar Shake Roofing in AL & GA | Summit Roofing",
+    description:
+      "Natural beauty and excellent insulation from cedar shake roofing. Expert installation and repair in Alabama & Georgia. Free estimate available.",
+    url: "/services/cedar-shake-roofing",
+    siteName: "Summit Roofing Professionals",
+    images: [
+      {
+        url: "/images/cedar/cedar-special.png",
+        width: 1200,
+        height: 630,
+        alt: "Cedar shake roofing installed by Summit Roofing Professionals in Alabama and Georgia",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cedar Shake Roofing in AL & GA | Summit Roofing",
+    description:
+      "Natural cedar shake roofing with expert installation and repair in Alabama & Georgia. Free estimate available.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/services/cedar-shake-roofing",
+  },
 }
 
 const cedarFaqs = [

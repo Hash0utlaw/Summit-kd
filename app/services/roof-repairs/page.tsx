@@ -9,6 +9,46 @@ export const metadata: Metadata = {
   title: "Roof Repair Services in AL & GA | Summit Roofing",
   description:
     "Fast and reliable roof repair services for leaks, storm damage, and missing shingles in Alabama and Georgia. Rapid response available for urgent issues.",
+  keywords: [
+    "roof repair Alabama",
+    "roof repair Georgia",
+    "roof leak repair",
+    "storm damage roof repair",
+    "emergency roof repair",
+    "missing shingles repair",
+    "roof repair contractor AL GA",
+    "roof repair near me",
+    "fast roof repair",
+  ],
+  openGraph: {
+    title: "Roof Repair Services in AL & GA | Summit Roofing",
+    description:
+      "Fast and reliable roof repair for leaks, storm damage, and missing shingles in Alabama and Georgia. Rapid response available for urgent issues.",
+    url: "/services/roof-repairs",
+    siteName: "Summit Roofing Professionals",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Roof repair services by Summit Roofing Professionals in Alabama and Georgia",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Roof Repair Services in AL & GA | Summit Roofing",
+    description:
+      "Fast and reliable roof repair for leaks, storm damage, and missing shingles in Alabama and Georgia. Rapid response available.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/services/roof-repairs",
+  },
 }
 
 const repairFaqs = [

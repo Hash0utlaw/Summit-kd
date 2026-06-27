@@ -6,12 +6,45 @@ import { CheckCircle } from "lucide-react"
 export const metadata: Metadata = {
   title: "Mobile, AL Roofing Contractor | Summit Roofing",
   description:
-    "Expert roofing services for Mobile, AL. Specializing in hurricane-rated systems, roof repair, and commercial roofing for the Gulf Coast.",
+    "Expert Gulf Coast roofing for Mobile, AL — hurricane-rated systems, residential and commercial roof repair, and replacements. Free inspection available today.",
+  keywords: [
+    "Mobile AL roofing contractor",
+    "Mobile Alabama roofing",
+    "roofing company Mobile AL",
+    "hurricane rated roofing Mobile",
+    "Gulf Coast roofing contractor",
+    "roof repair Mobile AL",
+    "commercial roofing Mobile",
+    "Daphne roofing",
+  ],
+  openGraph: {
+    title: "Mobile, AL Roofing Contractor | Summit Roofing",
+    description: "Hurricane-rated roofing systems and expert repairs for Mobile, AL and the Gulf Coast. Residential and commercial. Free inspection.",
+    url: "/service-areas/mobile-roofing",
+    siteName: "Summit Roofing Professionals",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Summit Roofing Professionals serving Mobile, Alabama and the Gulf Coast" }],
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title: "Mobile, AL Roofing Contractor | Summit Roofing", description: "Hurricane-rated roofing for Mobile, AL and the Gulf Coast. Residential and commercial. Free inspection." },
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/service-areas/mobile-roofing" },
+}
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  name: "Summit Roofing Professionals",
+  url: "https://www.summitroofingprofessionals.com/service-areas/mobile-roofing",
+  telephone: "+1-704-578-4756",
+  address: { "@type": "PostalAddress", addressLocality: "Mobile", addressRegion: "AL", addressCountry: "US" },
+  geo: { "@type": "GeoCoordinates", latitude: 30.695, longitude: -88.040 },
+  areaServed: { "@type": "City", name: "Mobile" },
 }
 
 export default function MobileRoofingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
       <ServicePageHero
         title="Resilient Roofing for Mobile, AL"
         subtitle="Protecting your Gulf Coast property with hurricane-rated roofing systems and expert craftsmanship you can trust."

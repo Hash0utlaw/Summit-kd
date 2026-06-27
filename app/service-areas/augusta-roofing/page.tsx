@@ -6,12 +6,45 @@ import { CheckCircle } from "lucide-react"
 export const metadata: Metadata = {
   title: "Augusta, GA Roofing Contractor | Summit Roofing",
   description:
-    "Your local roofing expert in Augusta, GA. Offering high-quality residential and commercial roof repair, replacement, and installation services.",
+    "Local roofing experts in Augusta, GA — high-quality residential and commercial roof repair, replacement, and installation. Licensed, insured, free estimate available.",
+  keywords: [
+    "Augusta GA roofing contractor",
+    "Augusta Georgia roofing",
+    "roofing company Augusta GA",
+    "roof repair Augusta GA",
+    "roof replacement Augusta Georgia",
+    "Augusta GA roofer",
+    "Evans GA roofing",
+    "Martinez GA roofing",
+  ],
+  openGraph: {
+    title: "Augusta, GA Roofing Contractor | Summit Roofing",
+    description: "Local roofing experts in Augusta, GA — residential and commercial roof repair, replacement, and installation. Free estimate.",
+    url: "/service-areas/augusta-roofing",
+    siteName: "Summit Roofing Professionals",
+    images: [{ url: "/images/augusta-skyline.png", width: 1200, height: 630, alt: "Summit Roofing Professionals serving Augusta, Georgia" }],
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title: "Augusta, GA Roofing Contractor | Summit Roofing", description: "Expert roofing in Augusta, GA — repair, replacement, and installation. Free estimate available." },
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/service-areas/augusta-roofing" },
+}
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  name: "Summit Roofing Professionals",
+  url: "https://www.summitroofingprofessionals.com/service-areas/augusta-roofing",
+  telephone: "+1-704-578-4756",
+  address: { "@type": "PostalAddress", addressLocality: "Augusta", addressRegion: "GA", addressCountry: "US" },
+  geo: { "@type": "GeoCoordinates", latitude: 33.470, longitude: -82.010 },
+  areaServed: { "@type": "City", name: "Augusta" },
 }
 
 export default function AugustaRoofingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
       <ServicePageHero
         title="Championship-Level Roofing in Augusta, GA"
         subtitle="Summit Roofing brings precision and excellence to every project, protecting homes and businesses throughout the Garden City."

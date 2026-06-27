@@ -14,10 +14,10 @@ interface CertificationGalleryProps {
 }
 
 export default function CertificationGallery({ certificates }: CertificationGalleryProps) {
-  const [selectedCert, setSelectedCert] = useState<string | null>(null)
+  const [selectedCert, setSelectedCert] = useState<{ src: string; alt: string } | null>(null)
 
-  const openLightbox = (src: string) => {
-    setSelectedCert(src)
+  const openLightbox = (src: string, alt: string) => {
+    setSelectedCert({ src, alt })
   }
 
   const closeLightbox = () => {
@@ -45,7 +45,7 @@ export default function CertificationGallery({ certificates }: CertificationGall
               <div className="p-1">
                 <div
                   className="group cursor-pointer overflow-hidden rounded-lg shadow-lg border aspect-[4/5]"
-                  onClick={() => openLightbox(cert.src)}
+                  onClick={() => openLightbox(cert.src, cert.alt)}
                 >
                   <Image
                     src={cert.src || "/placeholder.svg"}
@@ -80,8 +80,8 @@ export default function CertificationGallery({ certificates }: CertificationGall
               <X className="h-6 w-6" />
             </button>
             <Image
-              src={selectedCert || "/placeholder.svg"}
-              alt="Full size certificate"
+              src={selectedCert.src || "/placeholder.svg"}
+              alt={selectedCert.alt}
               width={800}
               height={1000}
               className="w-full h-auto object-contain"

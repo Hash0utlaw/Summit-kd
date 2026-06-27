@@ -8,6 +8,7 @@ const featuredReviews = [
     review:
       "Davis got my whole roof replaced even after previously being denied by my insurance company. Every detail was handled with excellence and diligence.",
     image: "/images/testimonials/rick-b.jpeg",
+    photoAlt: "Rick B., satisfied Summit Roofing customer from Alabama who received a successful insurance claim",
     rating: 5,
   },
   {
@@ -15,6 +16,7 @@ const featuredReviews = [
     location: "Georgia",
     review: "This team is highly professional, hard-working, conscientious, and so very courteous! You get an A+.",
     image: "/images/testimonials/bill-p-review.jpeg",
+    photoAlt: "Bill P., satisfied Summit Roofing customer from Georgia praising the team's professionalism",
     rating: 5,
   },
   {
@@ -23,6 +25,7 @@ const featuredReviews = [
     review:
       "They got my insurance to pay so it didn't cost me a dollar! The team was super professional, quick, and friendly.",
     image: "/images/testimonials/caitlin-foley.jpeg",
+    photoAlt: "Caitlin Foley, Summit Roofing customer from Georgia who received a full insurance-covered roof replacement",
     rating: 5,
   },
 ]
@@ -82,7 +85,7 @@ export default function SocialProof() {
               <div className="flex items-center">
                 <Image
                   src={review.image || "/placeholder.svg"}
-                  alt={`${review.name} customer review`}
+                  alt={review.photoAlt}
                   width={48}
                   height={48}
                   className="w-12 h-12 rounded-full object-cover mr-4"

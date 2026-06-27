@@ -7,7 +7,27 @@ import { Zap, Shield, Clock, Wrench, CheckCircle, AlertTriangle, Phone, FileText
 export const metadata: Metadata = {
   title: "Commercial Roof Repair Services | Summit Roofing",
   description:
-    "Get expert repairs for all types of commercial roofing systems. Summit Roofing Professionals provides fast and reliable repair services. Get a free estimate!",
+    "Expert repairs for all commercial roofing systems in Alabama & Georgia. Fast, reliable service for leaks, storm damage, and membrane failures. Free estimate available.",
+  keywords: [
+    "commercial roof repair Alabama Georgia",
+    "flat roof repair AL GA",
+    "commercial roof leak repair",
+    "TPO repair",
+    "EPDM repair",
+    "commercial roofing contractor repair",
+    "emergency commercial roof repair",
+  ],
+  openGraph: {
+    title: "Commercial Roof Repair Services | Summit Roofing",
+    description: "Fast, reliable commercial roof repair for leaks, storm damage, and membrane failures in Alabama & Georgia. Free estimate available.",
+    url: "/services/commercial/repair",
+    siteName: "Summit Roofing Professionals",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Commercial roof repair by Summit Roofing Professionals" }],
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title: "Commercial Roof Repair Services | Summit Roofing", description: "Fast commercial roof repair in Alabama & Georgia. Leaks, storm damage, and membrane failures. Free estimate." },
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/services/commercial/repair" },
 }
 
 const repairFaqs = [

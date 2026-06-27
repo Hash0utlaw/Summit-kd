@@ -19,21 +19,37 @@ export const metadata: Metadata = {
     "Georgia roofing",
     "roof repair guides",
     "roofing experts",
+    "roofing advice",
+    "storm damage tips",
   ],
   openGraph: {
     title: "Expert Roofing Blog | Summit Roofing Professionals",
     description:
       "Get expert roofing advice, maintenance tips, and industry insights from Alabama and Georgia's trusted roofing professionals.",
     type: "website",
-    url: "https://summitroofingprofessionals.com/blog",
+    url: "/blog",
+    siteName: "Summit Roofing Professionals",
     images: [
       {
         url: "/images/blog/roof-maintenance-guide.png",
         width: 1200,
         height: 630,
-        alt: "Summit Roofing Blog",
+        alt: "Summit Roofing Blog — Expert tips and insights for Alabama and Georgia homeowners",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Roofing Blog | Expert Tips & Insights | Summit Roofing",
+    description:
+      "Stay informed with expert roofing tips, maintenance guides, and industry insights from Summit Roofing Professionals.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/blog",
   },
 }
 

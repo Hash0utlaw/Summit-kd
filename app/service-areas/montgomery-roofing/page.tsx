@@ -6,12 +6,45 @@ import { CheckCircle } from "lucide-react"
 export const metadata: Metadata = {
   title: "Montgomery Roofing Services | Summit Roofing",
   description:
-    "Top-rated roofing contractor serving Montgomery, AL. We specialize in residential and commercial roof replacement, repair, and insurance claims.",
+    "Top-rated roofing contractor in Montgomery, AL — residential and commercial roof replacement, repair, and insurance claim assistance. Free inspection available.",
+  keywords: [
+    "Montgomery roofing contractor",
+    "Montgomery AL roofing",
+    "roofing company Montgomery",
+    "roof repair Montgomery",
+    "roof replacement Montgomery AL",
+    "Montgomery roofer",
+    "Prattville roofing",
+    "insurance claims roofing Montgomery",
+  ],
+  openGraph: {
+    title: "Montgomery Roofing Services | Summit Roofing",
+    description: "Top-rated residential and commercial roofing in Montgomery, AL — roof replacement, repair, and insurance claims. Free inspection.",
+    url: "/service-areas/montgomery-roofing",
+    siteName: "Summit Roofing Professionals",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Summit Roofing Professionals serving Montgomery, Alabama" }],
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title: "Montgomery Roofing Services | Summit Roofing", description: "Residential and commercial roofing in Montgomery, AL. Replacement, repair, and insurance claims." },
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/service-areas/montgomery-roofing" },
+}
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  name: "Summit Roofing Professionals",
+  url: "https://www.summitroofingprofessionals.com/service-areas/montgomery-roofing",
+  telephone: "+1-704-578-4756",
+  address: { "@type": "PostalAddress", addressLocality: "Montgomery", addressRegion: "AL", addressCountry: "US" },
+  geo: { "@type": "GeoCoordinates", latitude: 32.361, longitude: -86.279 },
+  areaServed: { "@type": "City", name: "Montgomery" },
 }
 
 export default function MontgomeryRoofingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
       <ServicePageHero
         title="Trusted Roofing for Montgomery, AL"
         subtitle="From historic Cloverdale to growing East Montgomery, Summit Roofing delivers excellence and durability for every home and business."

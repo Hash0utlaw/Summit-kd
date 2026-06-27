@@ -9,7 +9,43 @@ import { CheckCircle, DollarSign, Rocket } from "lucide-react"
 export const metadata: Metadata = {
   title: "Roof Financing Options in AL & GA | Summit Roofing",
   description:
-    "Affordable roof financing options for your new roof. Summit Roofing Professionals offers flexible payment plans to make your project possible. Apply online today!",
+    "Affordable roof financing options for your new roof. Summit Roofing Professionals offers flexible payment plans through Hearth and Service Finance. Apply online today!",
+  keywords: [
+    "roof financing Alabama",
+    "roof financing Georgia",
+    "roof payment plans",
+    "affordable roofing",
+    "Hearth financing roofing",
+    "Service Finance roofing",
+    "new roof financing",
+    "roof replacement financing",
+  ],
+  openGraph: {
+    title: "Roof Financing Options in AL & GA | Summit Roofing",
+    description:
+      "Affordable roof financing through Hearth and Service Finance. Flexible payment plans to make your new roof possible in Alabama & Georgia.",
+    url: "/financing",
+    siteName: "Summit Roofing Professionals",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Roof financing options available through Summit Roofing Professionals",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Roof Financing Options in AL & GA | Summit Roofing",
+    description:
+      "Flexible payment plans through Hearth and Service Finance to make your new roof in Alabama & Georgia affordable.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   alternates: {
     canonical: "/financing",
   },

@@ -8,7 +8,25 @@ import Image from "next/image"
 export const metadata: Metadata = {
   title: "Fluid-Applied Roofing & Coatings | Summit Roofing",
   description:
-    "Restore and protect your commercial roof with a seamless, waterproof fluid-applied membrane. Summit Roofing offers expert application services for all roof types. Get a free quote!",
+    "Restore and protect your commercial roof with a seamless, waterproof fluid-applied membrane in Alabama & Georgia. Expert application for all roof types. Free quote.",
+  keywords: [
+    "fluid applied roofing Alabama Georgia",
+    "roof coating commercial",
+    "seamless roof membrane",
+    "roof restoration coating",
+    "waterproof roof coating AL GA",
+  ],
+  openGraph: {
+    title: "Fluid-Applied Roofing & Coatings | Summit Roofing",
+    description: "Seamless waterproof fluid-applied roof membrane for commercial properties in Alabama & Georgia. Expert application for all roof types.",
+    url: "/services/commercial/fluid-applied",
+    siteName: "Summit Roofing Professionals",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Fluid-applied roofing coatings by Summit Roofing Professionals" }],
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title: "Fluid-Applied Roofing & Coatings | Summit Roofing", description: "Seamless waterproof commercial roof coatings in Alabama & Georgia. Free quote." },
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/services/commercial/fluid-applied" },
 }
 
 const fluidAppliedFaqs = [

@@ -7,7 +7,42 @@ import { Award, ShieldCheck, HeartHandshake, Lightbulb, Users } from "lucide-rea
 export const metadata: Metadata = {
   title: "About Summit Roofing | AL & GA Roofing Experts",
   description:
-    "Learn about Summit Roofing Professionals. As a veteran-owned company with over 200 years of combined experience, we are committed to quality, integrity, and serving our community.",
+    "Veteran-owned Summit Roofing Professionals brings 200+ years of combined experience to every project. Committed to quality, integrity, and homeowners across Alabama & Georgia.",
+  keywords: [
+    "about Summit Roofing",
+    "veteran owned roofing company",
+    "Alabama roofing company",
+    "Georgia roofing company",
+    "GAF Master Elite contractor",
+    "licensed roofing contractor AL GA",
+    "roofing company history",
+  ],
+  openGraph: {
+    title: "About Summit Roofing | AL & GA Roofing Experts",
+    description:
+      "Veteran-owned Summit Roofing Professionals brings 200+ years of combined experience to every project. Committed to quality, integrity, and homeowners across Alabama & Georgia.",
+    url: "/about",
+    siteName: "Summit Roofing Professionals",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Summit Roofing Professionals team — veteran-owned roofing company in Alabama and Georgia",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Summit Roofing | AL & GA Roofing Experts",
+    description:
+      "Veteran-owned Summit Roofing Professionals brings 200+ years of combined experience. Serving Alabama & Georgia with integrity.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   alternates: {
     canonical: "/about",
   },

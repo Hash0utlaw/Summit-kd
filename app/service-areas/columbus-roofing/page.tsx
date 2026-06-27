@@ -6,12 +6,45 @@ import { CheckCircle } from "lucide-react"
 export const metadata: Metadata = {
   title: "Columbus, GA Roofing Company | Summit Roofing",
   description:
-    "Summit Roofing is the leading roofing contractor in Columbus, GA. We provide expert roof repair, replacement, and installation for homes and businesses.",
+    "Leading roofing contractor in Columbus, GA — expert roof repair, replacement, and installation for homes and businesses. Licensed, insured, free inspection available.",
+  keywords: [
+    "Columbus GA roofing company",
+    "Columbus Georgia roofing",
+    "roofing contractor Columbus GA",
+    "roof repair Columbus GA",
+    "roof replacement Columbus Georgia",
+    "Columbus GA roofer",
+    "Phenix City roofing",
+    "commercial roofing Columbus GA",
+  ],
+  openGraph: {
+    title: "Columbus, GA Roofing Company | Summit Roofing",
+    description: "Leading roofing contractor in Columbus, GA — expert repair, replacement, and installation for homes and businesses. Free inspection.",
+    url: "/service-areas/columbus-roofing",
+    siteName: "Summit Roofing Professionals",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Summit Roofing Professionals serving Columbus, Georgia" }],
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title: "Columbus, GA Roofing Company | Summit Roofing", description: "Expert roofing in Columbus, GA — repair, replacement, and installation. Free inspection available." },
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/service-areas/columbus-roofing" },
+}
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  name: "Summit Roofing Professionals",
+  url: "https://www.summitroofingprofessionals.com/service-areas/columbus-roofing",
+  telephone: "+1-704-578-4756",
+  address: { "@type": "PostalAddress", addressLocality: "Columbus", addressRegion: "GA", addressCountry: "US" },
+  geo: { "@type": "GeoCoordinates", latitude: 32.461, longitude: -84.987 },
+  areaServed: { "@type": "City", name: "Columbus" },
 }
 
 export default function ColumbusRoofingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
       <ServicePageHero
         title="Expert Roofing Services in Columbus, GA"
         subtitle="Serving the Fountain City with integrity, quality, and a commitment to protecting your most valuable assets."

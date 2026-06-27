@@ -9,9 +9,47 @@ import Script from "next/script"
 export const metadata: Metadata = {
   title: "Contact Summit Roofing | Free Quotes 7 Days a Week",
   description:
-    "Contact Summit Roofing for a free, no-obligation quote. We're available 7 days a week, from 6 a.m. to 6 p.m., for all your roofing needs in Alabama and Georgia.",
-  keywords:
-    "contact summit roofing, free roofing quote, roofer near me, Alabama roofer, Georgia roofer, emergency roofing",
+    "Contact Summit Roofing for a free, no-obligation quote. Available 7 days a week for all your roofing needs in Alabama and Georgia. Call or fill out the form to get started.",
+  keywords: [
+    "contact summit roofing",
+    "free roofing quote",
+    "roofer near me",
+    "Alabama roofer",
+    "Georgia roofer",
+    "emergency roofing",
+    "free roof estimate",
+    "roof inspection Alabama",
+    "roof inspection Georgia",
+  ],
+  openGraph: {
+    title: "Contact Summit Roofing | Free Quotes 7 Days a Week",
+    description:
+      "Contact Summit Roofing for a free, no-obligation quote. Available 7 days a week for all your roofing needs in Alabama and Georgia.",
+    url: "/contact",
+    siteName: "Summit Roofing Professionals",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact Summit Roofing Professionals — Free quotes available 7 days a week",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Summit Roofing | Free Quotes 7 Days a Week",
+    description:
+      "Contact Summit Roofing for a free, no-obligation quote. Available 7 days a week in Alabama and Georgia.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/contact",
+  },
 }
 
 // JSON-LD Structured Data for SEO

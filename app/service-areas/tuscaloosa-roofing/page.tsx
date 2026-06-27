@@ -6,12 +6,45 @@ import { CheckCircle } from "lucide-react"
 export const metadata: Metadata = {
   title: "Tuscaloosa Roofing Contractor | Summit Roofing",
   description:
-    "The premier roofing company in Tuscaloosa, AL. We are experts in residential and commercial roofing, storm damage repair, and new roof installation.",
+    "Premier roofing company in Tuscaloosa, AL — residential and commercial roofing, storm damage repair, and new roof installation. Free inspection available.",
+  keywords: [
+    "Tuscaloosa roofing contractor",
+    "Tuscaloosa AL roofing",
+    "roofing company Tuscaloosa",
+    "roof repair Tuscaloosa",
+    "roof replacement Tuscaloosa AL",
+    "Tuscaloosa roofer",
+    "Northport roofing",
+    "storm damage roofing Tuscaloosa",
+  ],
+  openGraph: {
+    title: "Tuscaloosa Roofing Contractor | Summit Roofing",
+    description: "Premier residential and commercial roofing in Tuscaloosa, AL — storm damage repair and new roof installation. Free inspection.",
+    url: "/service-areas/tuscaloosa-roofing",
+    siteName: "Summit Roofing Professionals",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Summit Roofing Professionals serving Tuscaloosa, Alabama" }],
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title: "Tuscaloosa Roofing Contractor | Summit Roofing", description: "Premier roofing in Tuscaloosa, AL — residential, commercial, storm damage repair. Free inspection." },
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/service-areas/tuscaloosa-roofing" },
+}
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  name: "Summit Roofing Professionals",
+  url: "https://www.summitroofingprofessionals.com/service-areas/tuscaloosa-roofing",
+  telephone: "+1-704-578-4756",
+  address: { "@type": "PostalAddress", addressLocality: "Tuscaloosa", addressRegion: "AL", addressCountry: "US" },
+  geo: { "@type": "GeoCoordinates", latitude: 33.209, longitude: -87.567 },
+  areaServed: { "@type": "City", name: "Tuscaloosa" },
 }
 
 export default function TuscaloosaRoofingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
       <ServicePageHero
         title="Championship Roofing for Tuscaloosa, AL"
         subtitle="Summit Roofing delivers winning performance and durability for homes and businesses in the City of Champions."
