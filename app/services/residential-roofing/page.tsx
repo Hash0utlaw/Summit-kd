@@ -124,9 +124,33 @@ const residentialServices = [
   },
 ]
 
+const BASE = "https://www.summitroofingprofessionals.com"
+
 export default function ResidentialRoofingPage() {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+      { "@type": "ListItem", position: 2, name: "Roofing Services", item: `${BASE}/roofing` },
+      { "@type": "ListItem", position: 3, name: "Residential Roofing", item: `${BASE}/services/residential-roofing` },
+    ],
+  }
+  const service = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Residential Roofing",
+    description:
+      "Expert residential roofing services including new roof installation, replacement, and high-quality shingle options for homes in Alabama and Georgia.",
+    provider: { "@type": "RoofingContractor", name: "Summit Roofing Professionals", url: BASE },
+    areaServed: ["Alabama", "Georgia"],
+    serviceType: "Residential Roofing",
+    url: `${BASE}/services/residential-roofing`,
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
       <ServicePageHero
         title="Expert Residential Roofing"
         subtitle="Protecting your home and family with durable, high-quality roofing solutions."

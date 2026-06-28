@@ -61,6 +61,13 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       description: post.excerpt,
       images: [post.featuredImage],
     },
+    alternates: {
+      canonical: `https://www.summitroofingprofessionals.com/blog/${params.slug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   }
 }
 

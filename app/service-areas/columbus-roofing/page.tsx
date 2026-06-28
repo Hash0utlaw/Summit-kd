@@ -41,9 +41,20 @@ const localBusinessJsonLd = {
   areaServed: { "@type": "City", name: "Columbus" },
 }
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.summitroofingprofessionals.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://www.summitroofingprofessionals.com/service-areas" },
+    { "@type": "ListItem", position: 3, name: "Columbus Roofing", item: "https://www.summitroofingprofessionals.com/service-areas/columbus-roofing" },
+  ],
+}
+
 export default function ColumbusRoofingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
       <ServicePageHero
         title="Expert Roofing Services in Columbus, GA"

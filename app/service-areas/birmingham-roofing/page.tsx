@@ -52,9 +52,20 @@ const localBusinessJsonLd = {
   areaServed: { "@type": "City", name: "Birmingham" },
 }
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.summitroofingprofessionals.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://www.summitroofingprofessionals.com/service-areas" },
+    { "@type": "ListItem", position: 3, name: "Birmingham Roofing", item: "https://www.summitroofingprofessionals.com/service-areas/birmingham-roofing" },
+  ],
+}
+
 export default function BirminghamPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
       <ServicePageHero
         title="Your Trusted Roofing Experts in Birmingham, AL"

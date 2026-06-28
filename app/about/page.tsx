@@ -90,9 +90,20 @@ const qualifications = [
   { name: "Residential & Commercial", description: "Complete roofing solutions for every need" },
 ]
 
+const BASE = "https://www.summitroofingprofessionals.com"
+
 export default function AboutPage() {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+      { "@type": "ListItem", position: 2, name: "About Us", item: `${BASE}/about` },
+    ],
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <ServicePageHero
         title="About Summit Roofing Professionals"
         subtitle="Building trust one roof at a time across Alabama and Georgia."

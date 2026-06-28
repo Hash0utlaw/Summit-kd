@@ -38,6 +38,13 @@ export const metadata: Metadata = {
     ],
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Architectural Shingles in AL & GA | Summit Roofing",
+    description:
+      "Professional architectural shingle installation in Alabama and Georgia. GAF Master Elite contractors offering premium shingles with superior warranties and craftsmanship.",
+    images: ["/images/residential/gallery/architectural-shingle-estate.jpeg"],
+  },
   robots: {
     index: true,
     follow: true,
@@ -126,9 +133,33 @@ const galleryImages = [
   },
 ]
 
+const BASE = "https://www.summitroofingprofessionals.com"
+
 export default function ArchitecturalShinglesPage() {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+      { "@type": "ListItem", position: 2, name: "Roofing Services", item: `${BASE}/roofing` },
+      { "@type": "ListItem", position: 3, name: "Architectural Shingles", item: `${BASE}/services/architectural-shingles` },
+    ],
+  }
+  const product = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Architectural Shingles",
+    description:
+      "Premium dimensional architectural shingles combining beauty, durability, and value. GAF Master Elite installation with superior warranties for Alabama and Georgia homes.",
+    category: "Roofing Material",
+    brand: { "@type": "Brand", name: "GAF" },
+    manufacturer: { "@type": "Organization", name: "Summit Roofing Professionals", url: BASE },
+    url: `${BASE}/services/architectural-shingles`,
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(product) }} />
       <ServicePageHero
         title="Architectural Shingles"
         subtitle="Premium dimensional shingles combining beauty, durability, and value for your home"

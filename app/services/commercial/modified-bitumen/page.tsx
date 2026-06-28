@@ -65,9 +65,33 @@ const benefits = [
   },
 ]
 
+const BASE = "https://www.summitroofingprofessionals.com"
+
 export default function ModifiedBitumenPage() {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+      { "@type": "ListItem", position: 2, name: "Commercial Roofing", item: `${BASE}/services/commercial-roofing` },
+      { "@type": "ListItem", position: 3, name: "Modified Bitumen Roofing", item: `${BASE}/services/commercial/modified-bitumen` },
+    ],
+  }
+  const service = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Modified Bitumen Commercial Roofing",
+    description:
+      "Time-tested, durable, and flexible modified bitumen roofing solutions for commercial flat roofs in Alabama and Georgia.",
+    provider: { "@type": "RoofingContractor", name: "Summit Roofing Professionals", url: BASE },
+    areaServed: ["Alabama", "Georgia"],
+    serviceType: "Commercial Roofing",
+    url: `${BASE}/services/commercial/modified-bitumen`,
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
       <ServicePageHero
         title="Modified Bitumen Roofing"
         subtitle="A time-tested, durable, and flexible solution for commercial flat roofs."

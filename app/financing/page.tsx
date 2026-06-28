@@ -116,9 +116,20 @@ const financingFaqs = [
   },
 ]
 
+const BASE = "https://www.summitroofingprofessionals.com"
+
 export default function FinancingPage() {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+      { "@type": "ListItem", position: 2, name: "Financing", item: `${BASE}/financing` },
+    ],
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <ServicePageHero
         title="Affordable Financing For Your New Roof"
         subtitle="Don't let budget concerns delay your project. We offer flexible payment options to make your new roof a reality."

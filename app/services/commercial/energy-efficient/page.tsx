@@ -57,9 +57,33 @@ const energyFaqs = [
   },
 ]
 
+const BASE = "https://www.summitroofingprofessionals.com"
+
 export default function EnergyEfficientPage() {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+      { "@type": "ListItem", position: 2, name: "Commercial Roofing", item: `${BASE}/services/commercial-roofing` },
+      { "@type": "ListItem", position: 3, name: "Energy-Efficient Roofing", item: `${BASE}/services/commercial/energy-efficient` },
+    ],
+  }
+  const service = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Energy-Efficient Commercial Roofing",
+    description:
+      "Cool roofing solutions to lower energy bills and improve building comfort for commercial properties in Alabama and Georgia.",
+    provider: { "@type": "RoofingContractor", name: "Summit Roofing Professionals", url: BASE },
+    areaServed: ["Alabama", "Georgia"],
+    serviceType: "Commercial Roofing",
+    url: `${BASE}/services/commercial/energy-efficient`,
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
       <ServicePageHero
         title="Energy-Efficient Roofing Systems"
         subtitle="Lower your energy bills and improve your building's comfort with our cool roofing solutions."

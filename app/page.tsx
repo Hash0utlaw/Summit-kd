@@ -42,6 +42,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 const ServicesOverview = dynamic(() => import("@/components/services-overview"))

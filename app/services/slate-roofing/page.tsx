@@ -86,9 +86,33 @@ const benefits = [
   },
 ]
 
+const BASE = "https://www.summitroofingprofessionals.com"
+
 export default function SlateRoofingPage() {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+      { "@type": "ListItem", position: 2, name: "Roofing Services", item: `${BASE}/roofing` },
+      { "@type": "ListItem", position: 3, name: "Slate Roofing", item: `${BASE}/services/slate-roofing` },
+    ],
+  }
+  const product = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Slate Roofing",
+    description:
+      "Elegant, century-lasting slate roofing installed and repaired by experts in Alabama and Georgia. Natural slate adds timeless beauty and unmatched durability.",
+    category: "Roofing Material",
+    brand: { "@type": "Brand", name: "Summit Roofing Professionals" },
+    manufacturer: { "@type": "Organization", name: "Summit Roofing Professionals", url: BASE },
+    url: `${BASE}/services/slate-roofing`,
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(product) }} />
       <ServicePageHero
         title="Elegant & Enduring Slate Roofing"
         subtitle="Experience the pinnacle of roofing with natural slate—unmatched in beauty, durability, and prestige."

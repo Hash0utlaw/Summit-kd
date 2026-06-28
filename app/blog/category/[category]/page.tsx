@@ -26,11 +26,25 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   return {
     title: `${category.name} Articles | Summit Roofing Blog`,
     description: `${category.description} - Expert insights from Summit Roofing Professionals serving Alabama and Georgia.`,
+    keywords: [category.name, "roofing tips", "roofing Alabama", "roofing Georgia", "Summit Roofing"],
     openGraph: {
       title: `${category.name} | Summit Roofing Blog`,
       description: category.description,
       type: "website",
-      url: `https://summitroofingprofessionals.com/blog/category/${category.slug}`,
+      url: `https://www.summitroofingprofessionals.com/blog/category/${category.slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${category.name} Articles | Summit Roofing Blog`,
+      description: `${category.description} - Expert insights from Summit Roofing Professionals serving Alabama and Georgia.`,
+      images: ["/og-image.png"],
+    },
+    alternates: {
+      canonical: `https://www.summitroofingprofessionals.com/blog/category/${category.slug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
     },
   }
 }
@@ -44,9 +58,30 @@ export default function CategoryPage({ params }: CategoryPageProps) {
     notFound()
   }
 
+  const collectionPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: `${category!.name} Articles | Summit Roofing Blog`,
+    description: `${category!.description} - Expert insights from Summit Roofing Professionals serving Alabama and Georgia.`,
+    url: `https://www.summitroofingprofessionals.com/blog/category/${category!.slug}`,
+    author: { "@type": "Organization", name: "Summit Roofing Professionals" },
+  }
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.summitroofingprofessionals.com" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.summitroofingprofessionals.com/blog" },
+      { "@type": "ListItem", position: 3, name: category!.name, item: `https://www.summitroofingprofessionals.com/blog/category/${category!.slug}` },
+    ],
+  }
+
   return (
-    <div className="min-h-screen bg-white">
-      {/* Breadcrumb */}
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <div className="min-h-screen bg-white">
+        {/* Breadcrumb */}
       <div className="bg-gray-50 py-4">
         <div className="container mx-auto px-4 md:px-6">
           <nav className="flex items-center space-x-2 text-sm text-gray-600">
@@ -236,5 +271,6 @@ export default function CategoryPage({ params }: CategoryPageProps) {
         </div>
       </section>
     </div>
+    </>
   )
 }

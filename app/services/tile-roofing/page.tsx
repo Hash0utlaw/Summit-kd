@@ -93,9 +93,33 @@ const tileGalleryImages = [
   { src: "/images/tile/gallery-4.png", alt: "Complex roof with expertly installed concrete tiles and copper flashing" },
 ]
 
+const BASE = "https://www.summitroofingprofessionals.com"
+
 export default function TileRoofingPage() {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+      { "@type": "ListItem", position: 2, name: "Roofing Services", item: `${BASE}/roofing` },
+      { "@type": "ListItem", position: 3, name: "Tile Roofing", item: `${BASE}/services/tile-roofing` },
+    ],
+  }
+  const product = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Tile Roofing",
+    description:
+      "Durable clay and concrete tile roofing adding timeless character and long-lasting protection to homes in Alabama and Georgia.",
+    category: "Roofing Material",
+    brand: { "@type": "Brand", name: "Summit Roofing Professionals" },
+    manufacturer: { "@type": "Organization", name: "Summit Roofing Professionals", url: BASE },
+    url: `${BASE}/services/tile-roofing`,
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(product) }} />
       <ServicePageHero
         title="Durable & Stylish Tile Roofing"
         subtitle="Add timeless character and long-lasting protection to your home with clay or concrete tile."

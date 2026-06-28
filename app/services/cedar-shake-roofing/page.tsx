@@ -85,9 +85,33 @@ const benefits = [
   },
 ]
 
+const BASE = "https://www.summitroofingprofessionals.com"
+
 export default function CedarShakeRoofingPage() {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+      { "@type": "ListItem", position: 2, name: "Roofing Services", item: `${BASE}/roofing` },
+      { "@type": "ListItem", position: 3, name: "Cedar Shake Roofing", item: `${BASE}/services/cedar-shake-roofing` },
+    ],
+  }
+  const product = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Cedar Shake Roofing",
+    description:
+      "Authentic cedar shake roofing bringing warm, rustic elegance to homes in Alabama and Georgia. Natural beauty with excellent insulation and durability.",
+    category: "Roofing Material",
+    brand: { "@type": "Brand", name: "Summit Roofing Professionals" },
+    manufacturer: { "@type": "Organization", name: "Summit Roofing Professionals", url: BASE },
+    url: `${BASE}/services/cedar-shake-roofing`,
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(product) }} />
       <ServicePageHero
         title="Natural Beauty of Cedar Shake Roofing"
         subtitle="Bring a warm, rustic elegance to your home with authentic cedar shake roofing."

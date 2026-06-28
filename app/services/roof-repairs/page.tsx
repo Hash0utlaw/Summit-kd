@@ -87,9 +87,33 @@ const commonProblems = [
   },
 ]
 
+const BASE = "https://www.summitroofingprofessionals.com"
+
 export default function RoofRepairsPage() {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+      { "@type": "ListItem", position: 2, name: "Roofing Services", item: `${BASE}/roofing` },
+      { "@type": "ListItem", position: 3, name: "Roof Repairs", item: `${BASE}/services/roof-repairs` },
+    ],
+  }
+  const service = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Roof Repair Services",
+    description:
+      "Fast and reliable roof repair services for leaks, storm damage, and missing shingles in Alabama and Georgia. Rapid response available for urgent issues.",
+    provider: { "@type": "RoofingContractor", name: "Summit Roofing Professionals", url: BASE },
+    areaServed: ["Alabama", "Georgia"],
+    serviceType: "Roof Repair",
+    url: `${BASE}/services/roof-repairs`,
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
       <ServicePageHero
         title="Prompt & Reliable Roof Repairs"
         subtitle="Quickly addressing leaks, storm damage, and wear to protect your property."

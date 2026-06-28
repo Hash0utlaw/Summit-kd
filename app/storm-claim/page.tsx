@@ -149,9 +149,32 @@ const testimonials = [
   },
 ]
 
+const BASE = "https://www.summitroofingprofessionals.com"
+
 export default function StormDamageInsuranceLandingPage() {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+      { "@type": "ListItem", position: 2, name: "Storm Damage Claims", item: `${BASE}/storm-claim` },
+    ],
+  }
+  const service = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Storm Damage Roof Claim Assistance",
+    description:
+      "Free roof inspection and expert storm damage insurance claim assistance for homeowners in Alabama and Georgia. From inspection to fast approval and quality roof replacement.",
+    provider: { "@type": "RoofingContractor", name: "Summit Roofing Professionals", url: BASE },
+    areaServed: ["Alabama", "Georgia"],
+    serviceType: "Storm Damage Insurance Claims",
+    url: `${BASE}/storm-claim`,
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
       <ServicePageHero
         title="Storm Damaged Your Roof? We'll Handle Your Insurance Claim"
         subtitle="Free inspection • Expert claim assistance • Fast approval • Quality roof replacement"

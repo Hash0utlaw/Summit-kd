@@ -87,9 +87,33 @@ const benefits = [
   },
 ]
 
+const BASE = "https://www.summitroofingprofessionals.com"
+
 export default function MetalShinglesPage() {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+      { "@type": "ListItem", position: 2, name: "Roofing Services", item: `${BASE}/roofing` },
+      { "@type": "ListItem", position: 3, name: "Metal Roofing", item: `${BASE}/services/metal-shingles` },
+    ],
+  }
+  const product = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Metal Shingle Roofing",
+    description:
+      "Durable metal shingles and standing seam systems with 40–70 year lifespan, energy savings, and superior storm resistance for Alabama and Georgia homes.",
+    category: "Roofing Material",
+    brand: { "@type": "Brand", name: "Summit Roofing Professionals" },
+    manufacturer: { "@type": "Organization", name: "Summit Roofing Professionals", url: BASE },
+    url: `${BASE}/services/metal-shingles`,
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(product) }} />
       <ServicePageHero
         title="Modern & Lasting Metal Roofing"
         subtitle="From classic shingles to sleek standing seam, discover the strength and style of metal."

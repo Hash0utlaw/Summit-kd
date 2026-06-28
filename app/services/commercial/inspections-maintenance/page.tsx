@@ -57,9 +57,33 @@ const inspectionFaqs = [
   },
 ]
 
+const BASE = "https://www.summitroofingprofessionals.com"
+
 export default function InspectionsMaintenancePage() {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+      { "@type": "ListItem", position: 2, name: "Commercial Roofing", item: `${BASE}/services/commercial-roofing` },
+      { "@type": "ListItem", position: 3, name: "Inspections & Maintenance", item: `${BASE}/services/commercial/inspections-maintenance` },
+    ],
+  }
+  const service = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Commercial Roof Inspections & Maintenance",
+    description:
+      "Proactive roof inspections and preventative maintenance plans to protect commercial roofing investments in Alabama and Georgia.",
+    provider: { "@type": "RoofingContractor", name: "Summit Roofing Professionals", url: BASE },
+    areaServed: ["Alabama", "Georgia"],
+    serviceType: "Roof Inspection and Maintenance",
+    url: `${BASE}/services/commercial/inspections-maintenance`,
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
       <ServicePageHero
         title="Roof Inspections & Maintenance"
         subtitle="Protect your investment with proactive inspections and preventative maintenance plans."

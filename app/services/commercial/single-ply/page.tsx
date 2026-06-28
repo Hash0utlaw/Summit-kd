@@ -67,9 +67,33 @@ const benefits = [
   },
 ]
 
+const BASE = "https://www.summitroofingprofessionals.com"
+
 export default function SinglePlyPage() {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+      { "@type": "ListItem", position: 2, name: "Commercial Roofing", item: `${BASE}/services/commercial-roofing` },
+      { "@type": "ListItem", position: 3, name: "Single-Ply Roofing", item: `${BASE}/services/commercial/single-ply` },
+    ],
+  }
+  const service = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Single-Ply Commercial Roofing",
+    description:
+      "Modern, energy-efficient, and durable single-ply roofing systems including TPO and EPDM membranes for commercial buildings in Alabama and Georgia.",
+    provider: { "@type": "RoofingContractor", name: "Summit Roofing Professionals", url: BASE },
+    areaServed: ["Alabama", "Georgia"],
+    serviceType: "Commercial Roofing",
+    url: `${BASE}/services/commercial/single-ply`,
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
       <ServicePageHero
         title="Single-Ply Roofing Systems"
         subtitle="Modern, energy-efficient, and durable solutions for your commercial roof."

@@ -46,9 +46,30 @@ export const metadata: Metadata = {
   },
 }
 
+const BASE = "https://www.summitroofingprofessionals.com"
+
 export default function GalleryPage() {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+      { "@type": "ListItem", position: 2, name: "Project Gallery", item: `${BASE}/gallery` },
+    ],
+  }
+  const gallery = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    name: "Summit Roofing Project Gallery",
+    description:
+      "Photos of residential and commercial roofing projects completed by Summit Roofing Professionals across Alabama and Georgia.",
+    url: `${BASE}/gallery`,
+    author: { "@type": "Organization", name: "Summit Roofing Professionals", url: BASE },
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(gallery) }} />
       <ServicePageHero
         imageUrl="/images/gallery-hero-brick-home.png"
         title="Our Project Gallery"

@@ -63,9 +63,33 @@ const repairFaqs = [
   },
 ]
 
+const BASE = "https://www.summitroofingprofessionals.com"
+
 export default function CommercialRepairPage() {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+      { "@type": "ListItem", position: 2, name: "Commercial Roofing", item: `${BASE}/services/commercial-roofing` },
+      { "@type": "ListItem", position: 3, name: "Commercial Roof Repair", item: `${BASE}/services/commercial/repair` },
+    ],
+  }
+  const service = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Commercial Roof Repair",
+    description:
+      "Fast, reliable, and effective commercial roof repair services for all roofing systems in Alabama and Georgia.",
+    provider: { "@type": "RoofingContractor", name: "Summit Roofing Professionals", url: BASE },
+    areaServed: ["Alabama", "Georgia"],
+    serviceType: "Commercial Roof Repair",
+    url: `${BASE}/services/commercial/repair`,
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
       <ServicePageHero
         title="Commercial Roof Repair"
         subtitle="Fast, reliable, and effective repairs for all commercial roofing systems."

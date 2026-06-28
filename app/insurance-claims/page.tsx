@@ -136,9 +136,32 @@ const insuranceFaqs = [
   },
 ]
 
+const BASE = "https://www.summitroofingprofessionals.com"
+
 export default function InsuranceClaimsPage() {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+      { "@type": "ListItem", position: 2, name: "Insurance Claims", item: `${BASE}/insurance-claims` },
+    ],
+  }
+  const service = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Roof Insurance Claims Assistance",
+    description:
+      "Expert guidance through every step of the roof insurance claims process, from damage inspection to final payment, serving Alabama and Georgia.",
+    provider: { "@type": "RoofingContractor", name: "Summit Roofing Professionals", url: BASE },
+    areaServed: ["Alabama", "Georgia"],
+    serviceType: "Insurance Claims Assistance",
+    url: `${BASE}/insurance-claims`,
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
       <ServicePageHero
         title="Stress-Free Roof Insurance Claims"
         subtitle="Let our experts guide you through every step of the insurance process, from damage inspection to final payment."
